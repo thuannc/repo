@@ -1,0 +1,114 @@
+{
+    "id": "1747",
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1747",
+    "name": "Recurring Charge for Business Firewall",
+    "description": "This pricing describes the recurring charge for a firewall service that can be deployed in business customer premise.",
+    "version": "2.0",
+    "validFor": {
+      "startDateTime": "2020-09-22T00:00:00Z",
+      "endDateTime": "2021-09-22T00:00:00Z"
+    },
+    "priceType": "recurring",
+    "recurringChargePeriodType": "monthly",
+    "recurringChargePeriodLength": 1,
+    "lastUpdate": "2020-09-23T00:00:00Z",
+    "isBundle": false,
+    "lifecycleStatus": "Active",
+    "unitOfMeasure": {
+      "amount": 1,
+      "units": "Month"
+    },
+    "price": {
+      "unit": "EUR",
+      "value": 50
+    },
+    "percentage": 0,
+    "productOfferingTerm": [
+      {
+        "name": "12 Month",
+        "description": "12 month contract",
+        "duration": {
+          "amount": 12,
+          "units": "Month"
+        },
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        },
+        "@type": "ProductOfferingTerm",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingTerm.schema.json"
+      }
+    ],
+    "place": [
+      {
+        "id": "2707",
+        "href": "https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/2707",
+        "name": "San Francisco Bay Area",
+        "@referredType": "GeographicAddress",
+        "@type": "PlaceRef",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/PlaceRef.schema.json"
+      }
+    ],
+    "constraint": [
+      {
+        "@referredType": "PriceConstraint",
+        "name": "PriceRuleNo1",
+        "id": "2503",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/constraint/2503",
+        "@type": "ConstraintRef",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/ConstraintRef.schema.json"
+      }
+    ],
+    "pricingLogicAlgorithm": [
+      {
+        "id": "2777",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/2777",
+        "name": "RecurringRatingPLA",
+        "description": "Algorithm that rates Recurring event",
+        "plaSpecId": "2801",
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        },
+        "@type": "PricingLogicAlgorithm",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/PricingLogicAlgorithm.schema.json"
+      }
+    ],
+    "tax": [
+      {
+        "taxAmount": {
+          "unit": "EUR",
+          "value": 10
+        },
+        "taxCategory": "VAT",
+        "taxRate": 20,
+        "@type": "TaxItem",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Customer/TaxItem.schema.json"
+      }
+    ],
+    "popRelationship": [
+      {
+        "id": "1741",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1741",
+        "relationshipType": "discountedBy",
+        "validFor": {
+          "startDateTime": "2020-09-23T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        },
+        "role": "A-Charge",
+        "@referredType": "ProductOfferingPriceAlteration",
+        "@type": "ProductOfferingPriceRelationship",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+      }
+    ],
+    "bundledPopRelationship": [],
+    "@type": "ProductOfferingPriceCharge",
+    "@baseType": "ProductOfferingPrice",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+  }
