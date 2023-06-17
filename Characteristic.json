@@ -1,0 +1,10 @@
+{
+  "name":"Characteristic Name",
+  "dataType":"list/range/boolean/string/date/number",
+  "valueType":"string/integer/float",
+  "unitOfMeasure":"Mbps/GB/g",
+  "isConfigurable":true,
+  "isVisible":true,
+  "isExtensible":true,
+  "isDefault":true
+}
