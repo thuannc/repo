@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Downspeed",
+    "dataType": "list",
+    "valueType": "integer",
+    "unitOfMeasure": "Mbps",
+    "isConfigurable": true,
+    "isVisible": true,
+    "isExtensible": true,
+    "isDefault": true,
+    "value": [
+      {
+        "isDefault": true,
+        "valueType": "number",
+        "validFor": {
+          "startDateTime": "2020-09-23T00:00:00Z",
+          "endDateTime": "2022-11-24T00:00:00Z"
+        },
+        "value": 8
+      },
+      {
+        "isDefault": false,
+        "valueType": "number",
+        "validFor": {
+          "startDateTime": "2020-09-23T00:00:00Z",
+          "endDateTime": "2022-11-24T00:00:00Z"
+        },
+        "value": 16
+      }
+    ]
+  }
+]
