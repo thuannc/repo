@@ -28,5 +28,24 @@
         "value": 16
       }
     ]
+  },
+  {
+    "name": "Color",
+    "dataType": "string",
+    "valueType": "string",
+    "unitOfMeasure": "",
+    "isConfigurable": true,
+    "isVisible": true,
+    "isExtensible": true,
+    "isDefault": true,
+    "value": {
+        "isDefault": true,
+        "valueType": "string",
+        "validFor": {
+          "startDateTime": "2020-09-23T00:00:00Z",
+          "endDateTime": "2022-11-24T00:00:00Z"
+        },
+        "value": "black"
+      }
   }
 ]
