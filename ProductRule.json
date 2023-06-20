@@ -4,7 +4,7 @@
   "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/Rule.schema.json",
   "id": "9881",
   "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Rule/9881",
-  "name": "Name of Rule",
+  "name": "Offer for GenZ",
   "description": "Rule Resource is used to provide the additional discount, voucher, bonus or gift to the customer who meets the pre-defined criteria. Using promotion, the enterprise is able to attract the users and encourage more consumption, especially continuous purchases.   Normally Promotion is not regarded as one type of product or product offering. It is often applied when the customer buys the product offerings with the price or amount surpassing the certain limit.",
   "lastUpdate": "2020-09-23T16:42:23.0Z",
   "lifecycleStatus": "Active",
