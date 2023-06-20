@@ -1,0 +1,67 @@
+{
+  "@baseType": "",
+  "@type": "Rule",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/Rule.schema.json",
+  "id": "9881",
+  "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/Rule/9881",
+  "name": "Name of Rule",
+  "description": "Rule Resource is used to provide the additional discount, voucher, bonus or gift to the customer who meets the pre-defined criteria. Using promotion, the enterprise is able to attract the users and encourage more consumption, especially continuous purchases.   Normally Promotion is not regarded as one type of product or product offering. It is often applied when the customer buys the product offerings with the price or amount surpassing the certain limit.",
+  "lastUpdate": "2020-09-23T16:42:23.0Z",
+  "lifecycleStatus": "Active",
+  "validFor": {
+    "startDateTime": "2020-09-23T00:00:00.0Z",
+    "endDateTime": "2022-11-24T16:42:23.0Z"
+  },
+  "type": "Award/Discount/Reduction",
+  "pattern": [
+    {
+      "@baseType": "",
+      "@type": "RulePattern",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/RulePattern.schema.json",
+      "id": "9881",
+      "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",
+      "name": "Name of RulePattern",
+      "description": "Promotion  is used to provide the additional discount, voucher, bonus or gift to the customer who meets the pre-defined criteria. Using promotion, the enterprise is able to attract the users and encourage more consumption, especially continuous purchases.   Normally Promotion is not regarded as one type of product or product offering. It is often applied when the customer buys the product offerings with the price or amount surpassing the certain limit.",
+      "lastUpdate": "2020-09-23T16:42:23.0Z",
+      "lifecycleStatus": "Active",
+      "validFor": {
+        "startDateTime": "2020-09-23T00:00:00.0Z",
+        "endDateTime": "2022-11-24T16:42:23.0Z"
+      },
+      "action": [
+        {
+          "@baseType": "",
+          "@type": "RuleAction",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/RuleAction.schema.json",
+          "actionObjectId": "",
+          "actionType": "voice/data/SMS/bonus-point/physical-gift/voucher/promotion",
+          "actionValue": 5,
+          "id": "9881"
+        }
+      ],
+      "criteriaGroup": [
+        {
+          "@baseType": "",
+          "@type": "RuleCriteriaGroup",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/RuleCriteriaGroup.schema.json",
+          "groupName": "Name of the group.",
+          "id": "9881",
+          "relationTypeInGroup": "AND/OR",
+          "criteria": [
+            {
+              "@baseType": "",
+              "@type": "RuleCriteria",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/RuleCriteria.schema.json",
+              "criteriaOperator": ">,<,>=,<=",
+              "criteriaPara": "ParameterName",
+              "criteriaValue": "Value",
+              "id": "9881"
+            }
+          ]
+        }
+      ],
+      "priority": 1,
+      "relationTypeAmongGroup": "AND/OR"
+    }
+  ]
+}
