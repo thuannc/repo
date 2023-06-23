@@ -33,16 +33,7 @@
       "@baseType": "",
       "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/SLARef.schema.json"
     },
-    "productSpecification": {
-      "id": "9881",
-      "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",
-      "version": "1.1",
-      "name": "Robotics999",
-      "@referredType": "DeviceSpecification",
-      "@type": "ProductSpecificationRef",
-      "@baseType": "",
-      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationRef.schema.json"
-    },
+    
     "channel": [
       {
         "id": "4406",
@@ -165,6 +156,16 @@
         "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingRelationship.schema.json"
       }
     ],
+    "productSpecification": {
+      "id": "9881",
+      "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",
+      "version": "1.1",
+      "name": "Robotics999",
+      "@referredType": "DeviceSpecification",
+      "@type": "ProductSpecificationRef",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationRef.schema.json"
+    },
     "prodSpecCharValueUse": [
       {
         "name": "Number of Ports",
@@ -205,17 +206,7 @@
             "@baseType": "",
             "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/CharacteristicValueSpecification.schema.json"
           }
-        ],
-        "productSpecification": {
-          "id": "9881",
-          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",
-          "version": "1.1",
-          "name": "Robotics999",
-          "@referredType": "DeviceSpecification",
-          "@type": "ProductSpecificationRef",
-          "@baseType": "",
-          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationRef.schema.json"
-        }
+        ]
       }
     ],
     "@type": "ProductOffering",
