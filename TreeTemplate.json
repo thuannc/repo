@@ -1,0 +1,29 @@
+{
+  "rootType":["Category","Catalog","ProductOffering"],
+  "Category":{
+    "id":"id",
+    "name":"name",
+    "parentId":"parentId",
+    "children":[
+        {"attName":"subCategory","attType":"CategoryRef"},
+        {"attName":"productOffering","attType":"ProductOfferingRef"}
+     ]
+  },
+  "Catalog":{
+    "id":"id",
+    "name":"name",
+    "parentId":"parentId",
+    "children":[
+      {"attName":"category","attType":"CategoryRef"}
+    ]
+  },
+  "ProductOffering":{
+    "id":"id",
+    "name":"name",
+    "parentId":"parentId",
+    "children":[
+      {"attName":"bundledProductOffering","attType":"ProductOffering"},
+      {"attName":"productOfferingPrice","attType":"ProductOfferingPriceRefOrValue"}
+    ]
+  }
+}
