@@ -22,7 +22,7 @@
     "name":"name",
     "parentId":"parentId",
     "children":[
-      {"attName":"bundledProductOffering","attType":"ProductOffering"},
+      {"attName":"bundledProductOffering","attType":"ProductOfferingRef"},
       {"attName":"productOfferingPrice","attType":"ProductOfferingPriceRefOrValue"}
     ]
   }
