@@ -1,0 +1,58 @@
+{
+  "objType":"",
+  "page":[
+    {
+        "name":"General",
+        "icon":"gen.icon",
+        "groupType":"normal",
+        "group":[{
+              "name":"",
+              "properties":[
+                {"title":"Display Name","attName":"name","ctlType":"textbox"},
+                {"title":"Description","attName":"description","ctlType":"textbox"}
+               ]
+            }
+          ]
+    },
+    {
+        "name":"Characteristics",
+        "icon":"char.icon",
+         "groupType":"normal",
+        "group":[{
+              "name":"General",
+              "properties":[
+                {"title":"Included Services","attName":"description","ctlType":"textbox"}
+               ]
+            },
+              {
+              "name":"Postpaid",
+              "properties":[
+                {"title":"Payment Options","attName":"name","ctlType":"textbox"},
+                {"title":"Description","attName":"description","ctlType":"textbox"}
+               ]
+            }
+          ]
+    },
+    {
+        "name":"OC/RC Pricing",
+        "icon":"char.icon",
+        "search":{},
+        "view":{},
+        "groupType":"tabbed",
+        "group":[{              
+              "name":"One Time",
+              "properties":[
+                {"title":"Included Services","attName":"description","ctlType":"textbox"}
+               ]
+            },
+              {
+              "name":"Recurring",
+              "properties":[
+                {"title":"Payment Options","attName":"name","ctlType":"textbox"},
+                {"title":"Description","attName":"description","ctlType":"textbox"}
+               ]
+            }
+          ]
+    }
+   ]
+}
