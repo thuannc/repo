@@ -1,5 +1,5 @@
 {
-  "rootType":["Category","Catalog","ProductOffering"],
+  "rootType":["Category","Catalog","ProductOffering","ProductSpecification"],
   "Category":{
     "id":"id",
     "name":"name",
@@ -23,7 +23,20 @@
     "parentId":"parentId",
     "children":[
       {"attName":"bundledProductOffering","attType":"ProductOfferingRef"},
-      {"attName":"productOfferingPrice","attType":"ProductOfferingPriceRefOrValue"}
+      {"attName":"productOfferingPrice","attType":"ProductOfferingPriceRefOrValue"},
+      {"attName":"productSpecification","attType":"ProductSpecificationRef"},
+      {"attName":"serviceCandidate","attType":"SelectionGroup"},
+      {"attName":"resouceCandidate","attType":"SelectionGroup"}
+    ]
+  },
+  "ProductSpecification":{
+    "id":"id",
+    "name":"name",
+    "parentId":"parentId",
+    "children":[
+      {"attName":"productSpecCharacteristic","attType":"ProductSpecificationCharacteristic"},
+      {"attName":"serviceSpecification","attType":"ServiceSpecificationRef"},
+      {"attName":"resourceSpecification","attType":"ResourceSpecificationRef"}
     ]
   }
 }
