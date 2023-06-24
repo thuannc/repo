@@ -1,5 +1,5 @@
 {
-  "objType":"",
+  "objType":"ProductOffering",
   "page":[
     {
         "name":"General",
@@ -17,11 +17,14 @@
     {
         "name":"Characteristics",
         "icon":"char.icon",
-         "groupType":"normal",
+        "groupType":"normal",
         "group":[{
               "name":"General",
               "properties":[
-                {"title":"Included Services","attName":"description","ctlType":"textbox"}
+                {"title":"Plan Type","attName":"planType","ctlType":"textbox"},
+                {"title":"Talk","attName":"voice","ctlType":"textbox"},
+                {"title":"Data","attName":"data","ctlType":"textbox"},
+                {"title":"Text","attName":"text","ctlType":"textbox"}
                ]
             },
               {
@@ -30,26 +33,36 @@
                 {"title":"Payment Options","attName":"name","ctlType":"textbox"},
                 {"title":"Description","attName":"description","ctlType":"textbox"}
                ]
+            },
+                 {
+              "name":"Messaging",
+              "properties":[
+                {"title":"Premium SMS Barring","attName":"name","ctlType":"textbox"},
+                {"title":"MMS Barring","attName":"name","ctlType":"textbox"},
+                {"title":"SMS Outgoing Barring","attName":"description","ctlType":"textbox"}
+               ]
             }
           ]
     },
     {
         "name":"OC/RC Pricing",
-        "icon":"char.icon",
+        "icon":"price.icon",
         "search":{},
         "view":{},
         "groupType":"tabbed",
         "group":[{              
               "name":"One Time",
               "properties":[
-                {"title":"Included Services","attName":"description","ctlType":"textbox"}
+                {"title":"Enrollment fee","attName":"enrollmentFee","ctlType":"textbox"},
+                {"title":"Replace number fee","attName":"replaceNumberFee","ctlType":"textbox"},
+                {"title":"Replace offer fee","attName":"replaceOfferFee","ctlType":"textbox"},
+                {"title":"Termination fee","attName":"terminationFee","ctlType":"textbox"}
                ]
             },
               {
               "name":"Recurring",
               "properties":[
-                {"title":"Payment Options","attName":"name","ctlType":"textbox"},
-                {"title":"Description","attName":"description","ctlType":"textbox"}
+                {"title":"Monthly Charge","attName":"name","ctlType":"textbox"}
                ]
             }
           ]
