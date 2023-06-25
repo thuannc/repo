@@ -4,8 +4,12 @@
     {
         "name":"General",
         "icon":"gen.icon",
+        "attName":"",
+        "attType":"ProductOffering",
         "groupType":"normal",
         "group":[{
+              "attName":"",
+              "attType":"",
               "name":"",
               "properties":[
                 {"title":"Display Name","attName":"name","ctlType":"textbox"},
@@ -17,6 +21,8 @@
     {
         "name":"Characteristics",
         "icon":"char.icon",
+        "attName":"productSpecification",
+        "attType":"ProductSpecificationRef",
         "groupType":"normal",
         "group":[{
               "name":"General",
@@ -47,6 +53,8 @@
     {
         "name":"OC/RC Pricing",
         "icon":"price.icon",
+        "attName":"productOfferingPrice",
+        "attType":"ProductOfferingPriceRef",
         "search":{},
         "view":{},
         "groupType":"tabbed",
