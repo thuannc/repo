@@ -1,5 +1,6 @@
-[
-  {
+{
+  "list":["Category","ProductOffering"],
+  "Category":{
   "objType":"Category",
   "page":[
     {
@@ -24,7 +25,7 @@
     }
   ]
   },
-  {
+  "ProductOffering":{
   "objType":"ProductOffering",
   "page":[
     {
@@ -104,5 +105,4 @@
     }
    ]
 }
-]
 }
