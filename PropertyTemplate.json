@@ -18,7 +18,7 @@
                 {"title":"Display Name","attName":"name","ctlType":"textbox"},
                 {"title":"Description","attName":"description","ctlType":"textbox"},
                 {"title":"Version","attName":"version","ctlType":"textbox"},
-                {"title":"Valid For","attName":"validFor","ctlType":"period"}
+                {"title":"Valid For","attName":"validFor","ctlType":"TimePeriod"}
                ]
             }
           ]
