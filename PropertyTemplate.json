@@ -1,4 +1,30 @@
-{
+[
+  {
+  "objType":"Category",
+  "page":[
+    {
+        "name":"General",
+        "icon":"gen.icon",
+        "attName":"",
+        "attType":"Category",
+        "attId":"id",
+        "groupType":"normal",
+        "group":[{
+              "attName":"",
+              "attType":"",
+              "name":"",
+              "properties":[
+                {"title":"Display Name","attName":"name","ctlType":"textbox"},
+                {"title":"Description","attName":"description","ctlType":"textbox"},
+                {"title":"Version","attName":"version","ctlType":"textbox"},
+                {"title":"Valid For","attName":"validFor","ctlType":"period"}
+               ]
+            }
+          ]
+    }
+  ]
+  },
+  {
   "objType":"ProductOffering",
   "page":[
     {
@@ -6,6 +32,7 @@
         "icon":"gen.icon",
         "attName":"",
         "attType":"ProductOffering",
+        "attId":"id",
         "groupType":"normal",
         "group":[{
               "attName":"",
@@ -77,3 +104,4 @@
     }
    ]
 }
+]
