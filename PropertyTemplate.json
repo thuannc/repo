@@ -4,105 +4,150 @@
   "objType":"Category",
   "page":[
     {
-        "name":"General",
-        "icon":"gen.icon",
-        "attName":"",
-        "attType":"Category",
-        "attId":"id",
-        "groupType":"normal",
-        "group":[{
-              "attName":"",
-              "attType":"",
-              "name":"",
-              "properties":[
-                {"title":"Display Name","attName":"name","ctlType":"textbox"},
-                {"title":"Description","attName":"description","ctlType":"textbox"},
-                {"title":"Version","attName":"version","ctlType":"textbox"},
-                {"title":"Valid For","attName":"validFor","ctlType":"TimePeriod"}
-               ]
-            }
-          ]
-    }
+          "name":"General",
+          "icon":"-ap icon_fluent_text_bullet_list_ltr_24_regular",
+          "idx":0,
+          "attName":"",
+          "attType":"",
+          "attId":"id",
+          "groupType":"normal",
+          "group":[{
+                "attName":"",
+                "attType":"",
+                "name":"General Details",
+                "prefix":"",
+                "properties":{
+                    "name": {"type": "string","title": "Display Name","ctlType":"textbox","minLength": 4,"default": "category"},
+                    "description": {"type": "string","title": "Description","ctlType":"textbox"}
+                }
+              },
+              {
+                "attName":"",
+                "attType":"",
+                "name":"Others Info",
+                "prefix":"",
+                "properties":{
+                    "name": {"type": "string","title": "Version","ctlType":"textbox"},
+                    "version": {"type": "string","title": "Valid For","ctlType":"TimePeriod"},
+                    "status": {"type": "string","title": "Status","ctlType":"togglecheck"}
+                }
+              }
+            ]
+      }
   ]
   },
   "ProductOffering":{
-  "objType":"ProductOffering",
-  "page":[
-    {
-        "name":"General",
-        "icon":"gen.icon",
-        "attName":"",
-        "attType":"ProductOffering",
-        "attId":"id",
-        "groupType":"normal",
+    "title":"Product Offering",
+    "subtitle":"",
+    "objType":"ProductOffering",
+    "pages":[
+      {
+          "name":"General",
+          "icon":"-ap icon_fluent_text_bullet_list_ltr_24_regular",
+          "idx":0,
+          "attName":"",
+          "attType":"",
+          "attId":"id",
+          "groupType":"normal",
+          "group":[{
+                "attName":"",
+                "attType":"",
+                "name":"General Details",
+                "prefix":"",
+                "properties":{
+                    "name": {"type": "string","title": "Display Name","ctlType":"textbox","minLength": 4,"default": "category"},
+                    "description": {"type": "string","title": "Description","ctlType":"textbox"}
+                }
+              },
+              {
+                "attName":"",
+                "attType":"",
+                "name":"Others Info",
+                "prefix":"",
+                "properties":{
+                    "name": {"type": "string","title": "Version","ctlType":"textbox"},
+                    "version": {"type": "string","title": "Valid For","ctlType":"TimePeriod"},
+                    "status": {"type": "string","title": "Status","ctlType":"togglecheck"}
+                }
+              }
+            ]
+      },
+      {
+        "name":"OR/OC Price",
+        "icon":"-ap icon_fluent_document_briefcase_24_regular",
+        "idx":1,
+        "attName":"productOfferingPrice",
+        "attType":"ProductOfferingPrice",
+        "attId":"",
+        "groupType":"tabbed",
         "group":[{
               "attName":"",
               "attType":"",
-              "name":"",
-              "properties":[
-                {"title":"Display Name","attName":"name","ctlType":"textbox"},
-                {"title":"Description","attName":"description","ctlType":"textbox"}
-               ]
-            }
+              "name":"One Time",
+              "prefix":"productOfferingPrice-",
+              "properties":{
+                    "enrollmentFee": {"type": "string","title": "Enrollment fee","ctlType":"textbox"},
+                    "replaceNumberFee": {"type": "string","title": "Replace number fee","ctlType":"textbox"},
+                    "replaceOfferFee": {"type": "string","title": "Replace offer fee","ctlType":"textbox"},
+                    "terminationFee": {"type": "string","title": "Termination fee","ctlType":"textbox"}
+                }
+            },
+            {
+                "attName":"",
+                "attType":"",
+                "name":"Reccuring",
+                "prefix":"productOfferingPrice-",
+                "properties":[
+                    {"title":"Monthly Charge","attName":"monthlyCharge","ctlType":"textbox"}
+                 ]
+              }
           ]
     },
     {
         "name":"Characteristics",
-        "icon":"char.icon",
+        "icon":"-ap icon_fluent_plug_disconnected_24_regular",
+        "idx":2,
         "attName":"productSpecification",
         "attType":"ProductSpecificationRef",
+        "attId":"id",
         "groupType":"normal",
         "group":[{
-              "name":"General",
-              "properties":[
-                {"title":"Plan Type","attName":"planType","ctlType":"textbox"},
-                {"title":"Talk","attName":"voice","ctlType":"textbox"},
-                {"title":"Data","attName":"data","ctlType":"textbox"},
-                {"title":"Text","attName":"text","ctlType":"textbox"}
-               ]
-            },
-              {
-              "name":"Postpaid",
-              "properties":[
-                {"title":"Payment Options","attName":"name","ctlType":"textbox"},
-                {"title":"Description","attName":"description","ctlType":"textbox"}
-               ]
-            },
-                 {
-              "name":"Messaging",
-              "properties":[
-                {"title":"Premium SMS Barring","attName":"name","ctlType":"textbox"},
-                {"title":"MMS Barring","attName":"name","ctlType":"textbox"},
-                {"title":"SMS Outgoing Barring","attName":"description","ctlType":"textbox"}
-               ]
+            "name":"General",
+            "attName":"",
+            "attType":"",
+            "prefix":"productSpecification-",
+            "properties":{
+                "planType": {"type": "string","title": "Plan Type","ctlType":"textbox"},
+                "voice": {"type": "string","title": "Talk","ctlType":"textbox"},
+                "data": {"type": "string","title": "Data","ctlType":"textbox"},
+                "text": {"type": "string","title": "Text","ctlType":"textbox"}
             }
-          ]
-    },
-    {
-        "name":"OC/RC Pricing",
-        "icon":"price.icon",
-        "attName":"productOfferingPrice",
-        "attType":"ProductOfferingPriceRef",
-        "search":{},
-        "view":{},
-        "groupType":"tabbed",
-        "group":[{              
-              "name":"One Time",
-              "properties":[
-                {"title":"Enrollment fee","attName":"enrollmentFee","ctlType":"textbox"},
-                {"title":"Replace number fee","attName":"replaceNumberFee","ctlType":"textbox"},
-                {"title":"Replace offer fee","attName":"replaceOfferFee","ctlType":"textbox"},
-                {"title":"Termination fee","attName":"terminationFee","ctlType":"textbox"}
-               ]
             },
-              {
-              "name":"Recurring",
-              "properties":[
-                {"title":"Monthly Charge","attName":"name","ctlType":"textbox"}
-               ]
+            {
+            "name":"Postpaid",
+            "attName":"",
+            "attType":"",
+            "prefix":"productSpecification-",
+            "properties":{
+                "paymentOption": {"type": "string","title": "Payment Options","ctlType":"textbox"},
+                "paymentMethod": {"type": "string","title": "Payment Method","ctlType":"textbox"}
             }
-          ]
+           
+            },
+                {
+            "name":"Messaging",
+            "attName":"",
+            "attType":"",
+            "prefix":"productSpecification-",
+            "properties":{
+                "premiumSMS": {"type": "string","title": "Premium SMS","ctlType":"textbox"},
+                "outgoingSMS": {"type": "string","title": "SMS Outgoing","ctlType":"textbox"},
+                "mms": {"type": "string","title": "MMS","ctlType":"textbox"}
+            }
+            
+            }
+        ]
     }
-   ]
+    ]
 }
 }
