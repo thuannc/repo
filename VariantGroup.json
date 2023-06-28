@@ -1,0 +1,15 @@
+{
+    "id": "1",
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/VariantGroup/1",
+    "name": "Select Service",
+    "description": "Select one service",
+    "lastUpdate": "2020-09-27T00:00:00Z",
+    "itemType":"ServiceSpecificationRef/ResourceSpecificationRef",
+    "contains":[],
+    "inclusionMandatory":false,
+    "inclusionOptional":false,
+    "quantitySelection":3,
+    "selectMoreThanOne":true,
+    "switchWithinGroup":false,
+    "lifecycleStatus": "Active"
+}
