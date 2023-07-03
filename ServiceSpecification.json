@@ -1,0 +1,305 @@
+{
+    "id": "1",
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881",
+    "name": "Cisco Firepower NGFW",
+    "brand": "Cisco",
+    "productNumber": "CSC-340-NGFW",
+    "description": "Powerful product that integrates with a firewall, including intrusion prevention, advanced malware protection, cloud-based sandboxing, URL filtering, endpoint protection, web gateway, email security, network traffic analysis, network access control and CASB.",
+    "isBundle": true,
+    "lastUpdate": "2020-09-23T16:42:23.0Z",
+    "lifecycleStatus": "Active",
+    "validFor": {
+      "startDateTime": "2020-09-23T00:00:00.0Z",
+      "endDateTime": "2022-11-24T16:42:23.0Z"
+    },
+    "version": "2.0",
+    "relatedParty": [
+      {
+        "id": "1234",
+        "href": "https://mycsp.com:8080/tmf-api/partyManagement/v4/partyRole/1234",
+        "role": "Owner",
+        "name": "Gustave Flaubert",
+        "validFor": {
+          "startDateTime": "2020-09-23T16:42:23-04:00"
+        },
+        "@referredType": "PartyRole",
+        "@type": "RelatedParty",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/RelatedParty.schema.json"
+      }
+    ],
+    "attachment": [
+      {
+        "id": "22",
+        "href": "https://mycsp.com:8080/tmf-api/documentManagement/v4/attachment/22",
+        "name": "Product Picture",
+        "mimeType": "image/jpeg",
+        "url": "https://mycsp.com:7070/docloader?docnum=774451234",
+        "@referredType": "Attachment",
+        "@type": "AttachmentRefOrValue",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/AttachmentRefOrValue.schema.json"
+      },
+      {}
+    ],
+    "bundledProductSpecification": [
+      {
+        "id": "15",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/15",
+        "name": "URL Filter",
+        "@type": "BundledProductSpecification",
+        "@baseType": "",
+        "lifecycleStatus": "Active",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/PProduct/BundledProductSpecification.schema.json"
+      },
+      {
+        "id": "64",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/64",
+        "name": "Malware Protector",
+        "@type": "BundledProductSpecification",
+        "@baseType": "",
+        "lifecycleStatus": "Active",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/PProduct/BundledProductSpecification.schema.json"
+      }
+    ],
+    "targetProductSchema": {
+      "@type": "Firewall",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/Firewall.schema.json"
+    },
+    "productSpecificationRelationship": [
+      {
+        "id": "33",
+        "href": "https://mycsp.com:8080/tmf-api/documentManagement/v4/attachment/22",
+        "relationshipType": "OptionalFor",
+        "validFor": {
+          "startDateTime": "2020-09-23T16:42:23.0Z"
+        },
+        "name": "DataPlan",
+        "mimeType": "application/pdf",
+        "url": "https://mycsp.com:7070/docloader?docnum=774454321",
+        "@referredType": "ProductSpecification",
+        "@type": "ProductSpecificationRelationship",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationRelationship.schema.json",
+        "role": "A-Item"
+      }
+    ],
+    "serviceSpecification": [
+      {
+        "id": "22",
+        "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/22",
+        "name": "Firewall",
+        "version": "1.0",
+        "@referredType": "CustomerFacingServiceSpecification",
+        "@type": "ServiceSpecificationRef",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceSpecificationRef.schema.json"
+      }
+    ],
+    "resourceSpecification": [
+      {
+        "id": "63",
+        "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceSpecification/63",
+        "name": "Firewall Port",
+        "version": "1.0",
+        "@referredType": "PhysicalResourceSpecification",
+        "@type": "ResourceSpecificationRef",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Resource/ResourceSpecificationRef.schema.json"
+      }
+    ],
+    "productSpecCharacteristic": [
+      {
+        "name": "Number of Ports",
+        "description": "The total Number of Ports for this product",
+        "valueType": "number",
+        "configurable": true,
+        "minCardinality": 1,
+        "maxCardinality": 1,
+        "isUnique": true,
+        "@type": "ProductSpecificationCharacteristic",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
+        "productSpecCharRelationship": [
+          {
+            "id": "43",
+            "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/43",
+            "relationshipType": "Dependency",
+            "name": "Bandwidth",
+            "validFor": {
+              "startDateTime": "2020-09-23T16:42:23-04:00"
+            },
+            "@type": "ProductSpecificationCharacteristicRelationship",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristicRelationship.schema.json"
+          }
+        ],
+        "productSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "valueType": "number",
+            "validFor": {
+              "startDateTime": "2020-09-23T00:00:00Z",
+              "endDateTime": "2022-11-24T00:00:00Z"
+            },
+            "value": 8
+          },
+          {
+            "isDefault": false,
+            "valueType": "number",
+            "validFor": {
+              "startDateTime": "2020-09-23T00:00:00Z",
+              "endDateTime": "2022-11-24T00:00:00Z"
+            },
+            "value": 16
+          },
+          {
+            "isDefault": false,
+            "valueType": "number",
+            "validFor": {
+              "startDateTime": "2020-09-23T00:00:00Z",
+              "endDateTime": "2022-11-24T00:00:00Z"
+            },
+            "value": 24
+          }
+        ],
+        "validFor": {
+          "startDateTime": "2020-09-23T16:42:23.0Z"
+        }
+      },
+      {
+        "name": "Color",
+        "description": "Color of the Firewall housing",
+        "valueType": "string",
+        "configurable": true,
+        "minCardinality": 1,
+        "maxCardinality": 1,
+        "extensible": true,
+        "isUnique": true,
+        "@type": "ProductSpecificationCharacteristic",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
+        "productSpecCharacteristicValue": [
+          {
+            "isDefault": true,
+            "valueType": "string",
+            "value": "Black"
+          },
+          {
+            "isDefault": false,
+            "valueType": "string",
+            "value": "White"
+          }
+        ],
+        "validFor": {
+          "startDateTime": "2020-09-23T16:42:23.0Z"
+        }
+      }
+    ],
+    "@type": "ProductSpecification",
+    "@baseType": "",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecification.schema.json"
+  }
+
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ServiceSpecification.schema.json",
+  "title": "ServiceSpecification",
+  "definitions": {
+    "ServiceSpecification": {
+      "$id": "#ServiceSpecification",
+      "description": "ServiceSpecification is a class that offers characteristics to describe a type of service.\nFunctionally, it acts as a template by which Services may be instantiated. By sharing the same  specification, these services would therefore share the same set of characteristics.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the service specification"
+        },
+        "href": {
+          "type": "string",
+          "description": "Reference of the service specification"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the service specification"
+        },
+        "description": {
+          "type": "string",
+          "description": "A narrative that explains in detail what the service specification is"
+        },
+        "version": {
+          "type": "string",
+          "description": "Service specification version"
+        },
+        "validFor": {
+          "$ref": "../Common/TimePeriod.schema.json#TimePeriod",
+          "description": "The period for which the service specification is valid"
+        },
+        "lastUpdate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Date and time of the last update of the service specification"
+        },
+        "lifecycleStatus": {
+          "type": "string",
+          "description": "Used to indicate the current lifecycle status of the service specification"
+        },
+        "isBundle": {
+          "type": "boolean",
+          "description": "isBundle determines whether a ServiceSpecification represents a single ServiceSpecification (false), or a bundle of ServiceSpecification (true)."
+        },
+        "resourceSpecification": {
+          "type": "array",
+          "description": "A list of resource specification references (ResourceSpecificationRef [*]). The ResourceSpecification is required for a service specification with type ResourceFacingServiceSpecification (RFSS).",
+          "items": {
+            "$ref": "../Resource/ResourceSpecificationRef.schema.json#ResourceSpecificationRef"
+          }
+        },
+        "attachment": {
+          "type": "array",
+          "description": "A list of attachments (Attachment [*]). Complements the description of the specification through video, pictures...",
+          "items": {
+            "$ref": "../Common/AttachmentRef.schema.json#AttachmentRef"
+          }
+        },
+        "serviceSpecCharacteristic": {
+          "type": "array",
+          "description": "A list of service spec characteristics (ServiceSpecCharacteristic [*]). This class represents the key features of this service specification.",
+          "items": {
+            "$ref": "../Service/ServiceSpecCharacteristic.schema.json#ServiceSpecCharacteristic"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "description": "A list of related party references (RelatedParty [*]). A related party defines party or party role linked to a specific entity.",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+          }
+        },
+        "serviceSpecRelationship": {
+          "type": "array",
+          "description": "A list of service specifications related to this specification, e.g. migration, substitution, dependency or exclusivity relationship",
+          "items": {
+            "$ref": "../Service/ServiceSpecRelationship.schema.json#ServiceSpecRelationship"
+          }
+        },
+        "serviceLevelSpecification": {
+          "type": "array",
+          "description": "A list of service level specifications related to this service specification, and which will need to be satisifiable for corresponding service instances; e.g. Gold, Platinum",
+          "items": {
+            "$ref": "../Service/ServiceLevelSpecificationRef.schema.json#ServiceLevelSpecificationRef"
+          }
+        },
+        "targetServiceSchema": {
+          "description": "A target service schema reference (TargetServiceSchemaRef). The reference object to the schema and type of target service which is described by service specification.",
+          "$ref": "../Service/TargetServiceSchema.schema.json#TargetServiceSchema"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Entity.schema.json#Entity"
+        }
+      ]
+    }
+  }
+}
