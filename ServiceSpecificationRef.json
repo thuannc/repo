@@ -1,0 +1,10 @@
+{
+  "id": "22",
+  "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/22",
+  "name": "Firewall",
+  "version": "1.0",
+  "@referredType": "CustomerFacingServiceSpecification",
+  "@type": "ServiceSpecificationRef",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceSpecificationRef.schema.json"
+}
