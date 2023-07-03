@@ -1,11 +1,10 @@
 {
-    "id": "1",
-    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/BundledProductOffering/1",
-    "name": "Select Service",
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/BundledProductOffering/?",
+    "id": "2",
+    "name": "Cloud Storage",
     "lifecycleStatus": "Active",
     "bundledProductOfferingOption":{},
     "@referredType": "ProductOffering",
     "@type": "BundledProductOffering",
     "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/BundledProductOffering.schema.json"
 }
-
