@@ -1,0 +1,9 @@
+{
+"id": "1747",
+"href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1747", 
+"name": "Recurring Monthly Price for Business Firewall",
+"@referredType": "ProductOfferingPriceCharge",
+"@type": "ProductOfferingPriceRef",
+"@baseType": "",
+"@schemaLocation": "https://mycsp.com:8080/tmf-soapi/schemas/Product/ProductOfferingPriceRef.schema.json"
+}
