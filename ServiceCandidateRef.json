@@ -1,0 +1,10 @@
+{
+      "id": "8167",
+      "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceCandidate/8167",
+      "version": "1.0",
+      "name": "Mega Max",
+      "@referredType": "ServiceCandidate",
+      "@type": "ServiceCandidateRef",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceCandidateRef.schema.json"
+    }
