@@ -1,0 +1,29 @@
+{
+  "id": "7655",
+  "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/ResourceCandidate/7655",
+  "name": "Firewall Service",
+  "description": "This service specification describes a firewall service that can be deployed in customer-premisesequipment.",
+  "version": "2.1",
+  "validFor": {
+    "startDateTime": "2017-08-23T00:00",
+    "endDateTime": "2021-03-25T00:00"
+  },
+  "lastUpdate": "2020-08-15T00:00",
+  "lifecycleStatus": "Active",
+  "category": [],
+  "serviceSpecification": [
+    {
+      "id": "22",
+      "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v4/serviceSpecification/22",
+      "name": "Firewall",
+      "version": "1.0",
+      "@referredType": "CustomerFacingServiceSpecification",
+      "@type": "ServiceSpecificationRef",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceSpecificationRef.schema.json"
+    }
+  ],
+  "@type": "ResourceCandidate",
+  "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Resource/ResourceCandidate.schema.json",
+  "@baseType": ""
+}
