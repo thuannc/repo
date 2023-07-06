@@ -1,0 +1,9 @@
+{
+      "id": "8937",
+      "href": "https://mycsp.com:8080/tmf-api/resourceCatalogManagement/v4/resourceCandidate/8937",
+      "name": "Mega Band",
+      "@referredType": "ResourceCandidate",
+      "@type": "ResourceCandidateRef",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Resource/ResourceCandidateRef.schema.json"
+    }
