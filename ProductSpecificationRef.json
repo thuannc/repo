@@ -1,0 +1,9 @@
+{
+"id": "1",
+"href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productSpecification/9881", "version": "1.1",
+"name": "Robotics999",
+"@referredType": "DeviceSpecification",
+"@type": "ProductSpecificationRef",
+"@baseType": "",
+"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationRef.schema.json"
+}
