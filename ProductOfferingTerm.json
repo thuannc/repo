@@ -1,0 +1,16 @@
+{
+  "id":"1",
+  "name": "New Client Condition",
+  "description": "This product offering term is for a new client at a fixed duration of less than a year.",
+  "duration": {
+    "amount": 12,
+    "units": "Month"
+  },
+  "validFor": {
+    "startDateTime": "2020-09-23T00:00:00Z",
+    "endDateTime": "2021-09-23T00:00:00Z"
+  },
+  "@type": "ProductOfferingTerm",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingTerm.schema.json"
+}
