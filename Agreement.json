@@ -1,9 +1,30 @@
 {
-    "id": "1",
-    "href": "https://mycsp.com:8080/tmf-api/agreementManagement/v4/agreement/1",
-    "name": "Moon",
-    "@referredType": "Agreement",
-    "@type": "Agreement",
-    "@baseType": "",
-    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/Agreement.schema.json"
-  }
+  "id": "1",
+  "href": "https://mycsp.com:8080/tmf-api/agreementManagement/v4/agreement/1",
+  "name": "Moon",
+  "description": "Moon",
+  "agreementPeriod": {
+    "startDateTime": "2020-09-23T00:00:00.0Z",
+    "endDateTime": "2022-11-24T16:42:23.0Z"
+  },
+  "completionDate": {
+    "startDateTime": "2020-09-23T00:00:00.0Z",
+    "endDateTime": "2022-11-24T16:42:23.0Z"
+  },
+  "documentNumber": 1,
+  "initialDate": "2020-09-23T00:00:00.0Z",
+  "statementOfIntent": "An overview and goals of the Agreement",
+  "status": "inprocess,approved,rejected",
+  "agreementType": "commercial",
+  "version": "1.0",
+  "agreementSpecification": {},
+  "agreementItem": [],
+  "engagedParty": [],
+  "agreementAuthorization": [],
+  "characteristic": [],
+  "associatedAgreement": [],
+  "@referredType": "Agreement",
+  "@type": "Agreement",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/Agreement.schema.json"
+}
