@@ -1,0 +1,9 @@
+{
+        "id": "1",
+        "href": "https://mycsp.com:8080/tmf-api/salesChannelManagement/v4/channel/4406",
+        "name": "Online Channel",
+        "@referredType": "SalesChannel",
+        "@type": "Channel",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/Channel.schema.json"
+      }
