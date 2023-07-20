@@ -1,0 +1,24 @@
+
+{
+        "id": "1",
+        "href": "https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicAddress/1",
+        "name": "Toronto",
+  "city": "Toronto",
+        "country": "Canada",
+        "locality": "",
+        "postcode": "",
+        "stateOrProvince": "",
+        "streetName": "",
+        "streetNr": "",
+        "streetNrLast": "",
+        "streetNrLastSuffix": "",
+        "streetNrSuffix": "",
+        "streetSuffix": "",
+        "streetType": "alley, avenue, boulevard, brae, crescent, drive, highway, lane, terrace, parade, place, tarn, way, wharf",
+        "geographicLocation": {},
+        "geographicSubAddress": ,
+        "@referredType": "",
+        "@type": "PlaceRef",
+        "@baseType": "Place",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/GeographicAddress.schema.json"
+      }
