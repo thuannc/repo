@@ -1,0 +1,17 @@
+{
+  "id": "1",
+  "href": "https://mycsp.com:8080/tmf-api/geographicAddressManagement/v4/geographicSubAddress/1",
+  "name": "Toronto",
+  "buildingName": "allows for buildings that have well-known names",
+  "levelNumber": "BASEMENT 1",
+  "levelType": "describes level types within a building",
+  "privateStreetName": "private streets internal to a property (e.g. a university) may have internal names that are not recorded by the land title office.",
+  "privateStreetNumber": "private streets numbers internal to a private street",
+  "subUnitNumber": "the discriminator used for the subunit\noften just a simple number e.g. FLAT 5, may also be a range",
+  "subUnitType": "BERTH, FLAT, PIER, SUITE, SHOP, TOWER, UNIT, WHARF",
+  "subAddressType": "Type of subAddress : it can be a subunit or a private street",
+  "@referredType": "",
+  "@type": "GeographicSubAddress",
+  "@baseType": "Place",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Common/GeographicSubAddress.schema.json"
+}
