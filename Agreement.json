@@ -1,0 +1,9 @@
+{
+    "id": "1",
+    "href": "https://mycsp.com:8080/tmf-api/agreementManagement/v4/agreement/1",
+    "name": "Moon",
+    "@referredType": "Agreement",
+    "@type": "Agreement",
+    "@baseType": "",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/Agreement.schema.json"
+  }
