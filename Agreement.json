@@ -1,30 +1,52 @@
 {
-  "id": "1",
-  "href": "https://mycsp.com:8080/tmf-api/agreementManagement/v4/agreement/1",
-  "name": "Moon",
-  "description": "Moon",
-  "agreementPeriod": {
-    "startDateTime": "2020-09-23T00:00:00.0Z",
-    "endDateTime": "2022-11-24T16:42:23.0Z"
-  },
-  "completionDate": {
-    "startDateTime": "2020-09-23T00:00:00.0Z",
-    "endDateTime": "2022-11-24T16:42:23.0Z"
-  },
-  "documentNumber": 1,
-  "initialDate": "2020-09-23T00:00:00.0Z",
-  "statementOfIntent": "An overview and goals of the Agreement",
-  "status": "inprocess,approved,rejected",
-  "agreementType": "commercial",
-  "version": "1.0",
-  "agreementSpecification": {},
-  "agreementItem": [],
-  "engagedParty": [],
-  "agreementAuthorization": [],
-  "characteristic": [],
-  "associatedAgreement": [],
-  "@referredType": "Agreement",
   "@type": "Agreement",
-  "@baseType": "",
-  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/EngagedParty/Agreement.schema.json"
+  "href": "https://host:port/tmf-api/agreementManagement/v4/agreement/1",
+  "id": "1",
+  "name": "Moon",
+  "status": "Pending",
+  "documentNumber": "97867",
+  "version": "1.0",
+  "agreementSpecification": {
+    "href": "https://host:port/tmf-api/agreementManagement/v4/agreementSpecification/1140",
+    "id": "1140",
+    "name": "Moon Agreement Template"
+  },
+  "validFor": {
+    "startDateTime": "2018-06-12T00:00Z",
+    "endDateTime": "2019-01-11T00:00Z"
+  },
+  "engagedParty": [
+    {
+      "@type": "Organization",
+      "href": "https://host:port/tmf-api/partyManagement/v4/organization/500",
+      "id": "500",
+      "name": "Happy Travellers"
+    }
+  ],
+  "characteristic": [
+    {
+      "name": "fidelityProgram",
+      "value": "premium",
+      "valueType": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "href": "https://host:port/tmf-api/partyManagement/v4/organization/2777",
+      "id": "2777",
+      "role": "bill receiver"
+    }
+  ],
+  "agreementItem": [
+    {
+      "productOffering": {
+        "href": "https://host:port/tmf-api/productCatalogManagement/v4/productOffering/61",
+        "name": "ChristmasToy"
+      },
+      "termOrCondition": {
+        "id": "1",
+        "description": "delivery should be done in France"
+      }
+    }
+  ]
 }
