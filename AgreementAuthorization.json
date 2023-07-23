@@ -1,0 +1,10 @@
+{
+  "@type": "AgreementAuthorization",
+  "href": "https://host:port/tmf-api/agreementManagement/v4/agreementAuthorization/1",
+  "id": "1",
+  "name": "Moon",
+  "date": "2018-06-12T00:00Z",
+  "signatureRepresentation": "97867",
+  "state": "inprocess,approved,rejected"
+}
+
