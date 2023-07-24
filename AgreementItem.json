@@ -1,0 +1,16 @@
+{
+      "id":"1",
+      "name":"",
+      "@type":"AgreementItem",
+      "productOffering": {
+        "@type": "ProductOfferingRef",
+        "id": "1",
+        "href": "https://host:port/tmf-api/productCatalogManagement/v4/productOffering/61",
+        "name": "ChristmasToy"
+      },
+      "termOrCondition": {
+        "@type": "AgreementTermOrCondition",
+        "id": "1",
+        "description": "delivery should be done in France"
+      }
+}
