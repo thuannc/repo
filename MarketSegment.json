@@ -2,7 +2,7 @@
   "id": "1",
   "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegment/1",
   "name": "North Region",
-  "description": "North Region",
+  "description": "North Region",
   "@referredType": "",
   "@type": "MarketSegment",
   "@baseType": "",
