@@ -10,5 +10,5 @@
     "quantitySelection":3,
     "sameOfferMoreThanOne":true,
     "switchOfferInGroup":false,
-    "lifecycleStatus": "Active"
+    "effective": true
 }
