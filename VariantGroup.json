@@ -7,9 +7,8 @@
     "itemType":"ServiceSpecificationRef/ResourceSpecificationRef",
     "contains":[],
     "inclusionMandatory":false,
-    "inclusionOptional":false,
     "quantitySelection":3,
-    "selectMoreThanOne":true,
-    "switchWithinGroup":false,
+    "sameOfferMoreThanOne":true,
+    "switchOfferInGroup":false,
     "lifecycleStatus": "Active"
 }
