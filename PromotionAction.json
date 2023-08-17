@@ -1,0 +1,19 @@
+{
+    "id": "1",
+    "name":"Promotion 1",
+    "@baseType": "",
+    "@type": "PromotionAction",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/PromotionAction.schema.json",
+    "actionObjectId": "",
+    "actionType": "discount",
+    "actionValue": {
+      "id":"1",
+      "name":"name of discount",
+      "discountWhat":"onetime/recurring",
+      "pricePolicy":{},
+      "type":"percentage/byAmount/toAmount",
+      "value":10,
+      "expire":{"type":"Never/AfterPeriod/OnDate","value":"6","units":"month"},
+      "@type": "Discount",
+    }
+}
