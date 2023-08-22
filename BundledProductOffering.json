@@ -4,9 +4,9 @@
     "name": "Cloud Storage",
     "lifecycleStatus": "Active",
     "bundledProductOfferingOption":{
-        numberRelOfferDefault:"1",
-        numberRelOfferLowerLimit:"1",
-        numberRelOfferUpperLimit:"1",
+        "numberRelOfferDefault":"1",
+        "numberRelOfferLowerLimit":"1",
+        "numberRelOfferUpperLimit":"1",
         "@referredType": "",
         "@type": "BundledProductOfferingOption",
         "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/BundledProductOfferingOption.schema.json"
