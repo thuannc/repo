@@ -139,7 +139,25 @@
         "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/MarketingSales/MarketSegmentRef.schema.json"
       }
     ],
-    "bundledProductOffering": [],
+    "bundledProductOffering": [
+        {
+    "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/BundledProductOffering/?",
+    "id": "2",
+    "name": "Cloud Storage",
+    "lifecycleStatus": "Active",
+    "bundledProductOfferingOption":{
+        "numberRelOfferDefault":"1",
+        "numberRelOfferLowerLimit":"1",
+        "numberRelOfferUpperLimit":"1",
+        "@referredType": "",
+        "@type": "BundledProductOfferingOption",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/BundledProductOfferingOption.schema.json"
+    },
+    "@referredType": "ProductOffering",
+    "@type": "BundledProductOffering",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/BundledProductOffering.schema.json"
+}
+    ],
     "productOfferingRelationship": [
       {
         "id": "331",
