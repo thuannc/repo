@@ -1,6 +1,6 @@
 {
       "@type": "AgreementSpecCharacteristic",
-      "href": "https://host:port/tmf-api/agreementManagement/v4/AgreementSpecificationRelationship/?",
+      "href": "https://host:port/tmf-api/agreementManagement/v4/AgreementSpecCharacteristic/?",
        "id": "1",
       "name": "Moon Agreement Template",
       "description": "Moon Agreement Template",
