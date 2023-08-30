@@ -1,0 +1,14 @@
+{
+      "@type": "AgreementSpecCharacteristicValue",
+      "href": "https://host:port/tmf-api/agreementManagement/v4/AgreementSpecCharacteristicValue/?",
+      "unitOfMeasure": "GB",
+      "default": true,
+      "valueType": "numeric",
+      "value": "Any",
+      "valueFrom": "0",
+      "valueTo": "100",
+      "validFor": {
+        "startDateTime": "2018-06-12T00:00Z",
+        "endDateTime": "2019-01-11T00:00Z"
+      }
+}
