@@ -1,0 +1,14 @@
+{
+      "@type": "AgreementSpecCharacteristic",
+      "href": "https://host:port/tmf-api/agreementManagement/v4/AgreementSpecificationRelationship/?",
+       "id": "1",
+      "name": "Moon Agreement Template",
+      "description": "Moon Agreement Template",
+      "configurable": true,
+      "valueType": "numeric",
+      "validFor": {
+        "startDateTime": "2018-06-12T00:00Z",
+        "endDateTime": "2019-01-11T00:00Z"
+      },
+      "specCharacteristicValue":[]
+}
