@@ -1,0 +1,14 @@
+{
+  "name": "Relationship 1",
+  "id": "1",
+  "href": "",
+  "relationshipType": "exchangableTo, optionalFor",
+  "role": "text",
+  "validFor": {
+    "startDateTime": "2020-09-23T00:00:00Z",
+    "endDateTime": "2021-09-23T00:00:00Z"
+  },
+  "@type": "ProductOfferingRelationship",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingRelationship.schema.json",
+}
