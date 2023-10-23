@@ -12,25 +12,6 @@
     "startDateTime": "1985-04-12T23:20:50.52Z",
     "endDateTime": "1985-04-12T23:20:50.52Z"
   },
-  "note": [
-    {
-      "@type": "Note",
-      "@baseType": "string",
-      "@schemaLocation": "string",
-      "id": [
-        "afa9-3d90aaa8da0f"
-      ],
-      "author": [
-        "Mr. N. Bene"
-      ],
-      "date": [
-        "2020-11-20T08:00:00Z"
-      ],
-      "text": [
-        "This is important"
-      ]
-    }
-  ],
   "policyDomainFilter": [
     {
       "id": "string",
@@ -101,26 +82,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     },
     {
       "actionExecutionStrategy": "DoAll",
@@ -199,26 +161,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     }
   ],
   "policyEvent": [
@@ -236,25 +179,6 @@
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
       },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ],
       "additionalProp1": {}
     },
     {
@@ -273,26 +197,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     }
   ],
   "policyCondition": [
@@ -311,26 +216,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     },
     {
       "@type": "string",
@@ -350,26 +236,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     }
   ],
   "policyExpression": [
@@ -387,25 +254,6 @@
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
       },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ],
       "expression": "string",
       "expressionLanguage": "JS"
     }
@@ -425,25 +273,6 @@
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
       },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ],
       "variable": {
         "id": "string",
         "name": "string",
@@ -482,26 +311,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     },
     {
       "@type": "string",
@@ -519,26 +329,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     }
   ],
   "policyAction": [
@@ -565,26 +356,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     },
     {
       "constraint": {
@@ -611,26 +383,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     }
   ],
   "policyConstraint": [
@@ -650,26 +403,7 @@
       "validFor": {
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
-      },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ]
+      }
     },
     {
       "@baseType": "string",
@@ -684,25 +418,6 @@
         "startDateTime": "1985-04-12T23:20:50.52Z",
         "endDateTime": "1985-04-12T23:20:50.52Z"
       },
-      "note": [
-        {
-          "@type": "Note",
-          "@baseType": "string",
-          "@schemaLocation": "string",
-          "id": [
-            "afa9-3d90aaa8da0f"
-          ],
-          "author": [
-            "Mr. N. Bene"
-          ],
-          "date": [
-            "2020-11-20T08:00:00Z"
-          ],
-          "text": [
-            "This is important"
-          ]
-        }
-      ],
       "isResultNegated": false,
       "statement": {}
     }
