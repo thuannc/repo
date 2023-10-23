@@ -1,0 +1,710 @@
+{
+  "@type": "PolicyCatalog",
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "href": "string",
+  "id": "string",
+  "name": "string",
+  "version": "string",
+  "description": "string",
+  "lifecycleState": "inDesign",
+  "validFor": {
+    "startDateTime": "1985-04-12T23:20:50.52Z",
+    "endDateTime": "1985-04-12T23:20:50.52Z"
+  },
+  "note": [
+    {
+      "@type": "Note",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "id": [
+        "afa9-3d90aaa8da0f"
+      ],
+      "author": [
+        "Mr. N. Bene"
+      ],
+      "date": [
+        "2020-11-20T08:00:00Z"
+      ],
+      "text": [
+        "This is important"
+      ]
+    }
+  ],
+  "policyDomainFilter": [
+    {
+      "id": "string",
+      "name": "string",
+      "@referredType": "string"
+    }
+  ],
+  "policy": [
+    {
+      "actionExecutionStrategy": "DoAll",
+      "sequencedActions": "Mandatory",
+      "priority": 0,
+      "policyDomainRef": [
+        {
+          "id": "string",
+          "name": "string",
+          "@referredType": "string"
+        }
+      ],
+      "policyEventRelationship": [
+        {
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          },
+          "policyEventRefOrValue": {
+            "@type": "PolicyEventRef",
+            "@referredType": "string"
+          }
+        }
+      ],
+      "policyActionRelationship": [
+        {
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          },
+          "policyActionRefOrValue": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyActionRef"
+          }
+        }
+      ],
+      "@type": "string",
+      "targetPolicyEffect": "Permit",
+      "policyConditionRefOrValue": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConditionRef"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    },
+    {
+      "actionExecutionStrategy": "DoAll",
+      "sequencedActions": "Mandatory",
+      "priority": 0,
+      "policyDomainRef": [
+        {
+          "id": "string",
+          "name": "string",
+          "@referredType": "string"
+        }
+      ],
+      "policyEventRelationship": [
+        {
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          },
+          "policyEventRefOrValue": {
+            "@type": "PolicyEventRef",
+            "@referredType": "string"
+          }
+        }
+      ],
+      "policyActionRelationship": [
+        {
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          },
+          "policyActionRefOrValue": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyActionRef"
+          }
+        }
+      ],
+      "@type": "string",
+      "combiningAlgorithm": "DenyOverrides",
+      "policyRelationship": [
+        {
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          },
+          "policyRefOrValue": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "href": "string",
+            "version": "string",
+            "@type": "PolicyRef",
+            "@baseType": "string",
+            "@schemaLocation": "string"
+          }
+        }
+      ],
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    }
+  ],
+  "policyEvent": [
+    {
+      "@type": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ],
+      "additionalProp1": {}
+    },
+    {
+      "@type": "string",
+      "policyEventRelationship": [
+        "string"
+      ],
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    }
+  ],
+  "policyCondition": [
+    {
+      "@type": "string",
+      "isResultNegated": false,
+      "statement": {},
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "string",
+      "condition": [
+        "string"
+      ],
+      "conditionCombinationLogic": "anyOf",
+      "isResultNegated": false,
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    }
+  ],
+  "policyExpression": [
+    {
+      "@type": "ManagedPolicyExpression",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ],
+      "expression": "string",
+      "expressionLanguage": "JS"
+    }
+  ],
+  "policyOperator": [
+    {
+      "@type": "ManagedPolicyOperator",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ],
+      "variable": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyVariableRef"
+      }
+    }
+  ],
+  "policyVariable": [
+    {
+      "@type": "string",
+      "valueType": "string",
+      "format": "string",
+      "resolver": [
+        {
+          "@type": "string",
+          "source": "event",
+          "path": "string",
+          "priority": 0,
+          "constraint": {
+            "id": "string",
+            "name": "string",
+            "@referredType": "string",
+            "@type": "PolicyConstraintRef"
+          }
+        }
+      ],
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "string",
+      "valueType": "string",
+      "format": "string",
+      "value": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    }
+  ],
+  "policyAction": [
+    {
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "executedAt": [
+        "beforeAll"
+      ],
+      "@type": "string",
+      "action": {},
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    },
+    {
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "executedAt": [
+        "beforeAll"
+      ],
+      "@type": "string",
+      "action": [
+        "string"
+      ],
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    }
+  ],
+  "policyConstraint": [
+    {
+      "@type": "string",
+      "policyEventType": [
+        "string"
+      ],
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ]
+    },
+    {
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "href": "string",
+      "id": "string",
+      "name": "string",
+      "version": "string",
+      "description": "string",
+      "lifecycleState": "inDesign",
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z",
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "note": [
+        {
+          "@type": "Note",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "id": [
+            "afa9-3d90aaa8da0f"
+          ],
+          "author": [
+            "Mr. N. Bene"
+          ],
+          "date": [
+            "2020-11-20T08:00:00Z"
+          ],
+          "text": [
+            "This is important"
+          ]
+        }
+      ],
+      "isResultNegated": false,
+      "statement": {}
+    }
+  ]
+}
