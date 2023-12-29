@@ -1,0 +1,46 @@
+{
+  "id": "Prms123",
+  "href": "endpoint/usersandroles/v1/permission/Prms123",
+  "date": "2016-03-25T12:00:00",
+  "description": "this is the permission to access TV and mobile line",
+  "period": {
+    "startDateTime": "2016-03-25T12:00:00",
+    "endDateTime": "2017-03-25T12:00:00"
+  },
+  "user": {
+    "id": "u123",
+    "href": "http://server:port/PartyManagement/individual/u123",
+    "name": "John Doe"
+  },
+  "granter": {
+    "id": "u987",
+    "href": "http://server:port/PartyManagement/individual/u987",
+    "name": "Jim Grants"
+  },
+  "privilege": [
+    {
+      "manageableAsset": {
+        "id": "Asset987",
+        "entityType": "IPTV license"
+      },
+      "function": "Netflix configuration",
+      "action": "R&W"
+    },
+    {
+      "manageableAsset": {
+        "id": "Asset987",
+        "entityType": "IPTV license"
+      },
+      "function": "Sport basic package",
+      "action": "watch"
+    },
+    {
+      "manageableAsset": {
+        "id": "Asset123",
+        "entityType": "mobile line"
+      },
+      "function": "last calls",
+      "action": "R/O"
+    }
+  ]
+}
