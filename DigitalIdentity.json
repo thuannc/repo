@@ -1,0 +1,88 @@
+{
+  "id": "11",
+  "href": "https://host:port/digitalIdentityManagement:v4:digitalIdentity/11",
+  "creationDate": "2021-10-05T08:36:12.275Z",
+  "lastUpdate": "2021-10-05T08:36:12.275Z",
+  "nickname": "BigJuanito7",
+  "status": "active",
+  "attachment": [
+    {
+      "attachmentType": "avatarPicture",
+      "description": "avatar",
+      "mimeType": "jpeg",
+      "name": "BigJuanito7Avatar",
+      "url": "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+      "size": {
+        "amount": 91,
+        "units": "Ko"
+      },
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@type": "Attachment"
+    }
+  ],
+  "contactMedium": [
+    {
+      "id": "1",
+      "contactType": "Private",
+      "preferred": true,
+      "validFor": {
+        "endDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@type": "EmailMedium",
+      "emailAddress": "BigJuanito7@tmf.com"
+    }
+  ],
+  "credential": [
+    {
+      "id": "1",
+      "state": "active",
+      "trustLevel": "high",
+      "contactMedium": [
+        {
+          "id": "2",
+          "contactType": "Private",
+          "preferred": true,
+          "validFor": {
+            "endDateTime": "1985-04-12T23:20:50.52Z"
+          },
+          "@type": "PhoneMedium",
+          "phoneNumber": "415798565"
+        }
+      ],
+      "validFor": {
+        "startDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@type": "Credential"
+    }
+  ],
+  "individualIdentified": {
+    "id": "78",
+    "href": "https://host:port/partyManagement/v4/individual/78",
+    "name": "Jean",
+    "@type": "PartyRef",
+    "@referredType": "Individual"
+  },
+  "partyRoleIdentified": [
+    {
+      "id": "78-89",
+      "href": "https://host:port/CustomerManagement/v4/customer/78-89",
+      "@type": "RelatedParty",
+      "@referredType": "Customer"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "25",
+      "href": "https://host:port/partyManagement/v4/organization/25",
+      "name": "TMF",
+      "role": "DigitalIdentityProvider",
+      "@type": "PartyRef"
+    }
+  ],
+  "validFor": {
+    "startDateTime": "1985-04-12T23:20:50.52Z"
+  },
+  "@type": "DigitalIdentity"
+}
