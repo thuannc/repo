@@ -1,0 +1,15 @@
+{
+  "id": "UR123",
+  "href": "endpoint/usersandroles/v1/role/UR123",
+  "involvementRole": "configure IPTV and watch news",
+  "entitlement": [
+    {
+      "function": "Netflix configuration",
+      "action": "R&W"
+    },
+    {
+      "function": "Sport basic package",
+      "action": "watch"
+    }
+  ]
+}
