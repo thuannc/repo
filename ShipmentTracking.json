@@ -1,0 +1,128 @@
+{
+  "carrier": "string",
+  "trackingCode": "string",
+  "carrierTrackingUrl": "string",
+  "trackingDate": "2024-10-16T02:46:00.450Z",
+  "status": "string",
+  "statusChangeDate": "2024-10-16T02:46:00.450Z",
+  "statusChangeReason": "string",
+  "weight": 0,
+  "estimatedDeliveryDate": "2024-10-16T02:46:00.450Z",
+  "addressFrom": {
+    "streetNr": "string",
+    "streetNrSuffix": "string",
+    "streetNrLast": "string",
+    "streetNrLastSuffix": "string",
+    "streetName": "string",
+    "streetType": "string",
+    "streetSuffix": "string",
+    "postcode": "string",
+    "locality": "string",
+    "city": "string",
+    "stateOrProvince": "string",
+    "country": "string",
+    "@type": "string",
+    "@schemaLocation": "string",
+    "geographicLocation": {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "type": "string",
+      "geographicPoint": [
+        {
+          "x": "string",
+          "y": "string",
+          "z": "string"
+        }
+      ],
+      "accuracy": "string",
+      "spatialRef": "string",
+      "@baseType": "string",
+      "@type": "string",
+      "@schemaLocation": "string"
+    },
+    "geographicSubAddress": {
+      "id": "string",
+      "href": "string",
+      "type": "string",
+      "name": "string",
+      "subUnitType": "string",
+      "subUnitNumber": "string",
+      "levelType": "string",
+      "levelNumber": "string",
+      "buildingName": "string",
+      "privateStreetName": "string",
+      "privateStreetNumber": "string",
+      "@type": "string",
+      "@schemaLocation": "string"
+    }
+  },
+  "addressTo": {
+    "streetNr": "string",
+    "streetNrSuffix": "string",
+    "streetNrLast": "string",
+    "streetNrLastSuffix": "string",
+    "streetName": "string",
+    "streetType": "string",
+    "streetSuffix": "string",
+    "postcode": "string",
+    "locality": "string",
+    "city": "string",
+    "stateOrProvince": "string",
+    "country": "string",
+    "@type": "string",
+    "@schemaLocation": "string",
+    "geographicLocation": {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "type": "string",
+      "geographicPoint": [
+        {
+          "x": "string",
+          "y": "string",
+          "z": "string"
+        }
+      ],
+      "accuracy": "string",
+      "spatialRef": "string",
+      "@baseType": "string",
+      "@type": "string",
+      "@schemaLocation": "string"
+    },
+    "geographicSubAddress": {
+      "id": "string",
+      "href": "string",
+      "type": "string",
+      "name": "string",
+      "subUnitType": "string",
+      "subUnitNumber": "string",
+      "levelType": "string",
+      "levelNumber": "string",
+      "buildingName": "string",
+      "privateStreetName": "string",
+      "privateStreetNumber": "string",
+      "@type": "string",
+      "@schemaLocation": "string"
+    }
+  },
+  "checkpoint": [
+    {
+      "status": "string",
+      "message": "string",
+      "date": "2024-10-16T02:46:00.451Z",
+      "checkPost": "string",
+      "city": "string",
+      "stateOrProvince": "string",
+      "country": "string"
+    }
+  ],
+  "order": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "@referredType": "string"
+    }
+  ]
+}
