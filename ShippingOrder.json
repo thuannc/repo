@@ -1,0 +1,156 @@
+{
+  "@type": "ShippingOrder",
+  "productOrderRef": {
+    "@type": "ProductOrderRef",
+    "id": "48a28acb-9cf6-4255-8954-660eaa7ea37c",
+    "href": "https://example.com/tmf-api/productOrderingManagement/v5/productOrder/48a28acb-9cf6-4255-8954-660eaa7ea37c"
+  },
+  "relatedParty": [
+    {
+      "@type": "RelatedPartyOrPartyRole",
+      "role": "Recepient",
+      "partyOrPartyRole": {
+        "@type": "Individual",
+        "name": "Joe Doe",
+        "contactMedium": [
+          {
+            "@type": "PhoneContactMedium",
+            "contactMediumIdentifier": "TelephoneNumber",
+            "preferred": true,
+            "validFor": {
+              "startDateTime": "2018-06-12T00:00:00Z",
+              "endDateTime": "2019-01-01T00:00:00Z"
+            },
+            "phoneNumber": "01 09 75 83 51"
+          },
+          {
+            "@type": "GeographicAddressContactMedium",
+            "postCode": "OX11 6TR",
+            "city": "Oxford",
+            "street1": "23 Borney Road"
+          }
+        ]
+      }
+    }
+  ],
+  "shippingInstruction": {
+    "@type": "ShippingInstruction",
+    "deliveryAttempts": 3,
+    "deliverySpeed": "SameDay",
+    "labelMessage": "FAO Ink Industries",
+    "packageType": "Bottle",
+    "receiptConfirmation": "SignatureRequired",
+    "shippingType": "largePackage",
+    "signatureRequired": true,
+    "signatureRequiredBy": "adult",
+    "instructionCharacteristic": [
+      {
+        "@type": "StringCharacteristic",
+        "name": "CustomerCall",
+        "value": "Yes, 1h before arriving"
+      }
+    ]
+  },
+  "shippingOrderItem": [
+    {
+      "@type": "ShippingOrderItemItem",
+      "id": "1",
+      "action": "add",
+      "productOrderItem": {
+        "@type": "ProductOrderItemRef",
+        "ProductOrderHref": "https://example.com/tmf-api/productOrder/v4/productOrder/14505b4c-2740-4546-9c3a-eea7c983d261",
+        "productOrderId": "14505b4c-2740-4546-9c3a-eea7c983d261",
+        "productOrderItemId": "2"
+      },
+      "product": {
+        "@type": "ProductRef",
+        "href": "https://example.com/tmf-api/productInventoryManagement/v5/product/552e4c10-a650-487b-b9c4-fbbb73879f24",
+        "id": "552e4c10-a650-487b-b9c4-fbbb73879f24",
+        "name": "Apple Iphone"
+      },
+      "quantity": 1,
+      "productOffering": {
+        "@type": "ProductOfferingRef",
+        "id": "2c3ec5b4-43a1-4d55-8b02-c292e577f6f9",
+        "name": "Apple Iphone",
+        "href": "https://example.com/tmf-api/productCatalogManagement/v4/productOffering/2c3ec5b4-43a1-4d55-8b02-c292e577f6f9"
+      }
+    },
+    {
+      "@type": "ShippingOrderItemItem",
+      "id": "2",
+      "action": "add",
+      "productOrderItem": {
+        "@type": "ProductOrderItemRef",
+        "ProductOrderHref": "https://example.com/tmf-api/productOrder/v4/productOrder/d63a2841-19b2-4730-9485-7c4d9d348565",
+        "productOrderId": "d63a2841-19b2-4730-9485-7c4d9d348565",
+        "productOrderItemId": "2"
+      },
+      "product": {
+        "@type": "ProductRef",
+        "href": "https://example.com/tmf-api/productInventoryManagement/v5/product/c70ba0ba-4cf4-457f-8700-d014d1cbe2f5",
+        "id": "c70ba0ba-4cf4-457f-8700-d014d1cbe2f5",
+        "name": "Plantronics X100"
+      },
+      "quantity": 1,
+      "productOffering": {
+        "@type": "ProductOfferingRef",
+        "id": "f96744fd-d0d3-4abb-929c-9f68a527892b",
+        "name": "Plantronics X100",
+        "href": "https://example.com/tmf-api/productCatalogManagement/v4/productOffering/f96744fd-d0d3-4abb-929c-9f68a527892b"
+      }
+    },
+    {
+      "@type": "ShippingOrderItemItem",
+      "id": "3",
+      "action": "add",
+      "productOrderItem": {
+        "@type": "ProductOrderItemRef",
+        "ProductOrderHref": "https://example.com/tmf-api/productOrder/v4/productOrder/4b3c5916-6bc3-4f01-9402-6fc57e2db606",
+        "productOrderId": "4b3c5916-6bc3-4f01-9402-6fc57e2db606",
+        "productOrderItemId": "2"
+      },
+      "product": {
+        "@type": "ProductRef",
+        "href": "https://example.com/tmf-api/productInventoryManagement/v5/product/046acef8-d397-434a-9334-b57f47393db8",
+        "id": "046acef8-d397-434a-9334-b57f47393db8",
+        "name": "Red 75"
+      },
+      "quantity": 1,
+      "productOffering": {
+        "@type": "ProductOfferingRef",
+        "id": "45f53a72-92a3-42f6-89cc-a04277f905af",
+        "name": "Red 75",
+        "href": "https://example.com/tmf-api/productCatalogManagement/v4/productOffering/45f53a72-92a3-42f6-89cc-a04277f905af"
+      }
+    }
+  ],
+  "shippingOrderPrice": {
+    "@type": "Price",
+    "dutyFreeAmount": {
+      "unit": "EUR",
+      "value": 5
+    },
+    "percentage": 0,
+    "taxIncludedAmount": {
+      "unit": "EUR",
+      "value": 10
+    }
+  },
+  "shippingOrderOffering": {
+    "@type": "ProductOfferingRef",
+    "href": "https://example.com/tmf-api/productCatalogManagement/v4/productOffering/1f5efe5b-b3c9-4307-844a-5a6a288ef7e5",
+    "id": "1f5efe5b-b3c9-4307-844a-5a6a288ef7e5"
+  },
+  "state": "acknowledged",
+  "placeTo": {
+    "@type": "RelatedPlaceRefOrValue",
+    "role": "installationAddress",
+    "place": {
+      "id": "8b103e6d-6ceb-459b-be59-5cec85732064",
+      "href": "https://example.com/geographicAddressManagement/v5/geographicAddress/8b103e6d-6ceb-459b-be59-5cec85732064",
+      "@referredType": "GeographicAddress",
+      "@type": "PlaceRef"
+    }
+  }
+}
