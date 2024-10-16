@@ -1,0 +1,152 @@
+{
+  "id": "string",
+  "href": "string",
+  "description": "string",
+  "isBundle": true,
+  "lastUpdate": "2024-10-16T02:42:20.757Z",
+  "lifecycleStatus": "string",
+  "name": "string",
+  "version": "string",
+  "attachment": [
+    {
+      "id": "4aafacbd-11ff-4dc8-b445-305f2215715f",
+      "href": "http://host/Attachment/4aafacbd-11ff-4dc8-b445-305f2215715f",
+      "attachmentType": "video",
+      "content": "string",
+      "description": "Photograph of the Product",
+      "mimeType": "string",
+      "name": "string",
+      "url": "http://host/Content/4aafacbd-11ff-4dc8-b445-305f2215715f",
+      "size": {
+        "amount": 1,
+        "units": "string"
+      },
+      "validFor": {
+        "endDateTime": "1985-04-12T23:20:50.52Z",
+        "startDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "constraint": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "version": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "role": "string",
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@referredType": "string"
+    }
+  ],
+  "shipmentSpecRelationship": [
+    {
+      "id": "string",
+      "href": "string",
+      "name": "string",
+      "relationshipType": "string",
+      "role": "string",
+      "associationSpec": {
+        "id": "string",
+        "href": "string",
+        "name": "string",
+        "@baseType": "string",
+        "@schemaLocation": "string",
+        "@type": "string",
+        "@referredType": "string"
+      },
+      "validFor": {
+        "endDateTime": "1985-04-12T23:20:50.52Z",
+        "startDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string"
+    }
+  ],
+  "signatureRequiredBy": "adult",
+  "specCharacteristic": [
+    {
+      "id": "string",
+      "configurable": true,
+      "description": "string",
+      "extensible": true,
+      "isUnique": true,
+      "maxCardinality": 0,
+      "minCardinality": 0,
+      "name": "string",
+      "regex": "string",
+      "valueType": "string",
+      "charSpecRelationship": [
+        {
+          "characteristicSpecificationId": "string",
+          "name": "string",
+          "parentSpecificationHref": "string",
+          "parentSpecificationId": "string",
+          "relationshipType": "string",
+          "validFor": {
+            "endDateTime": "1985-04-12T23:20:50.52Z",
+            "startDateTime": "1985-04-12T23:20:50.52Z"
+          },
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "characteristicValueSpecification": [
+        {
+          "isDefault": true,
+          "rangeInterval": "string",
+          "regex": "string",
+          "unitOfMeasure": "string",
+          "valueFrom": 0,
+          "valueTo": 0,
+          "valueType": "string",
+          "validFor": {
+            "endDateTime": "1985-04-12T23:20:50.52Z",
+            "startDateTime": "1985-04-12T23:20:50.52Z"
+          },
+          "value": "string",
+          "@baseType": "string",
+          "@schemaLocation": "string",
+          "@type": "string"
+        }
+      ],
+      "validFor": {
+        "endDateTime": "1985-04-12T23:20:50.52Z",
+        "startDateTime": "1985-04-12T23:20:50.52Z"
+      },
+      "@baseType": "string",
+      "@schemaLocation": "string",
+      "@type": "string",
+      "@valueSchemaLocation": "string"
+    }
+  ],
+  "targetShipmentSchema": {
+    "@schemaLocation": "string",
+    "@type": "string"
+  },
+  "validFor": {
+    "endDateTime": "1985-04-12T23:20:50.52Z",
+    "startDateTime": "1985-04-12T23:20:50.52Z"
+  },
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "@type": "string"
+}
