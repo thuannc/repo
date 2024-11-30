@@ -75,34 +75,57 @@
       ]
     },
     {
-      "name": "Option",
+      "name": "Searh",
       "icon": "pi pi-list",
-      "groups": [
+      "pageType":"Search",
+      "attrName":"",
+      "attrType":"",
+      "filter": [
         {
-          "name": "General Details",
-          "layoutType":"I",
-          "properties": [
+              "name": "name",
+              "title": "Tìm kiếm",
+              "oprType":"like",
+              "dataType":"STRING",
+              "ctlType": "TEXTBOX"
+        }
+      ],
+      "apiList": [
+        {
+              "name": "searchAPI",
+              "uri": "/api/search/",
+              "param":"name"
+        },
+        {
+              "name": "addAPI",
+              "uri": "/api/add/",
+              "param":"object"
+        },
+        {
+              "name": "deleteAPI",
+              "uri": "/api/delete/",
+              "param":"id"
+        }
+      ],
+      "listView": [
             {
               "name": "numberRelOfferDefault",
               "title": "numberRelOfferDefault",
               "dataType":"NUMBER",
-              "ctlType": "TEXTBOX"
+              "size": "20"
             },
             {
               "name": "numberRelOfferLowerLimit",
               "title": "numberRelOfferLowerLimit",
               "dataType":"NUMBER",
-              "ctlType": "TEXTBOX"
+              "size": "50"
             },
             {
               "name": "numberRelOfferUpperLimit",
               "title": "numberRelOfferUpperLimit",
               "dataType":"NUMBER",
-              "ctlType": "TEXTBOX"
+              "size": "30"
             }
           ]
-        }
-      ]
     }
   ]
 }
