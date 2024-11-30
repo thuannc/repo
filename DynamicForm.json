@@ -1,0 +1,99 @@
+{
+  title: 'BundleProductOffering',
+  id:"BundleProductOffering",
+  code:"BundleProductOffering"
+  formType:"Property",
+  status:"ACTIVE",
+
+  pages: [
+    {
+      name: 'General',
+      icon: 'pi pi-info-circle',
+      pageType:"Property",
+      attrName:"",
+      attrType:"",
+      
+      groups: [
+        {
+          name: 'General',
+          layoutType:"I",
+          properties: [
+            {
+              title: 'name',
+              dataType:"STRING",
+              ctlType: "TEXTBOX",
+              validateRules: ["REQUIRED"]
+            },
+            {
+              title: 'code',
+              dataType:"STRING",
+              ctlType: "TEXTBOX",
+              validateRules: ["REQUIRED"]
+            },
+            {
+              title: 'description',
+              dataType:"STRING",
+              ctlType: "TEXTAREA",
+              validateRules: ["REQUIRED"]
+            },
+            {
+              title: 'dataType',
+              dataType:"STRING",
+              ctlType: "SELECT-LIST",
+              items: [{ label: 'Danh sách', value: 'list' }],
+            },
+            {
+              title: 'status',
+              dataType:"STRING",
+              ctlType: "SELECT-LOV",
+              ctlUrl: 'http://10.1.122.100:9093/api/productCatalogManagement/ListOfValue?code=status-list'
+            },
+          ],
+        },
+        {
+          name: 'General 2',
+          layoutType:"I",
+          properties: [
+            {
+              title: 'active',
+              dataType:"BOOL",
+              ctlType: "SWITCH-BOX"
+            },
+            {
+              title: 'validFor',
+              dataType:"DATERANGE",
+              ctlType: "DATE-RANGE"
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: 'Option',
+      icon: 'pi pi-list',
+      groups: [
+        {
+          name: 'General Details',
+          layoutType:"I",
+          properties: [
+            {
+              title: 'numberRelOfferDefault',
+              dataType:"NUMBER",
+              ctlType: "TEXTBOX"
+            },
+            {
+              title: 'numberRelOfferLowerLimit',
+              dataType:"NUMBER",
+              ctlType: "TEXTBOX"
+            },
+            {
+              title: 'numberRelOfferUpperLimit',
+              dataType:"NUMBER",
+              ctlType: "TEXTBOX"
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
