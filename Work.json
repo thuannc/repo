@@ -1,0 +1,96 @@
+{
+  "@baseType": "WorkOrder",
+  "@schemaLocation": "WorkOrder",
+  "@type": "WorkOrder",
+  "href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/f8ec1c38-4e4d-4378-a693-f95680e51e25",
+  "id": "f8ec1c38-4e4d-4378-a693-f95680e51e25",
+  "name": "Fixed Fibre Broadband Installation",
+  "description": "Fixed Fibre Broadband Installation",
+  
+  "plannedDuration": {"amount":1,"units":"day"},
+  "actualDuration": { "amount": 4, "units": "hour" },
+  "currentDuration": { "amount": 4, "units": "hour" },
+  "scheduledDuration": { "amount": 1, "units": "day" },
+  "workTimeSlot": {
+    "startDateTime": "2024-04-12T23:20:50.52Z"
+  },
+  "orderDate": "2024-04-22T14:23:06.528Z",
+  "completionDate": "2024-04-22T14:23:06.528Z",
+  "expectedCompletionDate": "2024-04-22T14:23:06.528Z",
+  "percentageComplete": 80,
+  "quantity": {"amount":1,"units":"hour"},
+  "state": "acknowledged",
+  "workPriority": "high",
+  "workType": "???",
+  "note": {
+    "@type": "Note",
+    "id": "afa9-3d90aaa8da0f",
+    "author": "Mr. N. Bene",
+    "date": "2020-11-20T08:00:00Z",
+    "text": "Demand Point Type: SDU"
+  },
+  "relatedParty": [
+    {
+      "@type": "RelatedPartyRef",
+      "href": "https://mycsp.com/tmf-api/partyManagement/v5/organisation/94c14d12-14a5-4c61-a0b1-9f59f7117a5e",
+      "id": "94c14d12-14a5-4c61-a0b1-9f59f7117a5e",
+      "name": "Workforce Engineering Group",
+      "role": "Installation Partner"
+    }
+  ],
+  "appointment": {
+    "@type": "AppointmentRef",
+    "href": "https://mycsp.com/tmf-api/v5/appointmentManagement/appointment/2552dab7-bf70-487a-b78b-914f4d3bba71",
+    "id": "2552dab7-bf70-487a-b78b-914f4d3bba71",
+    "name": "Installation Appointment",
+    "description": "Installation Appointment for Fixed Fibre Broadband"
+  },
+  "relatedWorkOrderItem": [
+    {
+      "@type": "RelatedWorkOrderItem",
+      "orderItemAction": "add",
+      "orderItemId": "f231dc85-d583-47fb-94de-26fc0f1509d-f",
+      "role":"",
+      "workOrderHref": "",
+      "workOrderId": "",
+    }
+  ],
+  "agreement": [
+    {
+      "@type": "AgreementRef",
+      "href": "https://mycsp.com/tmf-api/v5/API",
+      "id": "a99a4a2c-df8b-46d1-ba49-42cbb0623b3c",
+      "name": "Fixed Fibre Broadband Agreement"
+    }
+  ],
+  
+  "workRelationship": [
+    {
+      "@type": "WorkRelationship",
+      "href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+      "id": "0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+      "relationshipType": "reliesOn"
+    }
+  ],
+  "workCharacteristic": [],
+  "workSpecification": [],
+  "workPrice": [],
+  "place": [],
+  "workforceEmployeeTravel": {
+      "description":"",
+      "state":"acknowledged"
+  },
+  "workforceEmployeeAssignment": [{
+      "id":"",
+      "description":"",
+      "skillType":"acknowledged",
+      "state":"acknowledged"
+  }],
+  "relatedWork": {
+      "@type": "RelatedWork",
+      "id": "f231dc85-d583-47fb-94de-26fc0f1509d-f",
+      "name":"",
+      "href": ""
+    }
+  
+}
