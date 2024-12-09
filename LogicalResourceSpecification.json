@@ -1,0 +1,75 @@
+{
+  "isBundle": false,
+  "lifecycleStatus": "Active",
+  "validFor": {
+    "startDateTime": "2017-08-12T00:00:00.000Z",
+    "endDateTime": "2018-03-07T00:00:00.000Z"
+  },
+  "@type": "ResourceSpecification",
+  "description": "This resource specification defines the virtual storage medium",
+  "relatedParty": [
+    {
+      "partyOrPartyRole": {
+        "@referredType": "Supplier",
+        "@type": "PartyRoleRef",
+        "name": "Gustave Flaubert",
+        "id": "5858",
+        "href": "https://mycsp.com:8080/tmf-api/partyRole/v5/supplier/5858"
+      },
+      "role": "Supplier",
+      "@type": "RelatedPartyRefOrPartyRoleRef"
+    }
+  ],
+  "version": "3.2",
+  "resourceSpecCharacteristic": [
+    {
+      "minCardinality": 1,
+      "@type": "CharacteristicSpecification",
+      "valueType": "integer",
+      "characteristicValueSpecification": [
+        {
+          "@type": "IntegerCharacteristicValueSpecification",
+          "value": 1024000
+        },
+        {
+          "@type": "IntegerCharacteristicValueSpecification",
+          "value": 2048000
+        }
+      ],
+      "name": "Maximum Allowed Storage",
+      "isUnique": true,
+      "description": "The storage limit in the virtual storage medium, ",
+      "configurable": true,
+      "maxCardinality": 1
+    }
+  ],
+  "resourceSpecRelationship": [
+    {
+      "relationshipType": "dependency",
+      "@type": "ResourceSpecificationRelationship",
+      "name": "Underlying Physical Disk",
+      "id": "556788",
+      "href": "https://mycsp.com:8080/tmf-api/resourceCatalog/v5/resourceSpecification/556788"
+    }
+  ],
+  "attachment": [
+    {
+      "@type": "Attachment",
+      "name": "Configuration Instructions",
+      "id": "25552",
+      "href": "https://mycsp.com:8080/tmf-api/document/v5/attachment/25552",
+      "mimeType": "application/pdf",
+      "url": "https://mycsp.com:7070/docloader?docnum=9567457677"
+    }
+  ],
+  "lastUpdate": "2017-08-09T00:00:00.000Z",
+  "name": "Virtual Storage Medium",
+  "targetResourceSchema": {
+    "@type": "VirtualStorage",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/v5/VirtualStorage.schema.json"
+  },
+  "id": "42",
+  "href": "https://mycsp.com:8080/tmf-api/resourceCatalog/v5/resourceSpecification/42",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Resource/ResourceSpecification.schema.json",
+  "category": "Cloud resource"
+}
