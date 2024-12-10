@@ -1,0 +1,25 @@
+{
+  "@type": "Consumer",
+  "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRole/8",
+  "id": "8",
+  "name": "ClosedLoop A consumer",
+  "role": "Consumer",
+  "engagedParty": {
+    "@type": "PartyRef",
+    "href": "https:/host:port/tmf-api/partyManagement/v2/organization/15",
+    "id": "15",
+    "name": "Top Network",
+    "@referredType": "Organization"
+  },
+  "partyRoleSpecification": {
+    "@type": "PartyRoleSpecificationRef",
+    "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRoleSpecification/4",
+    "id": "4",
+    "name": "ClosedLoop consumer organization"
+  },
+  "status": "validationInProgress",
+  "validFor": {
+    "startDateTime": "2022-06-24T00:00:00.000Z",
+    "endDateTime": "2024-06-24T00:00:00.000Z"
+  }
+}
