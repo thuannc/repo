@@ -1,0 +1,138 @@
+{
+  "note": [
+    {
+      "date": "2020-08-27T09:37:40.508Z",
+      "author": "Harvey Poupon",
+      "@type": "Note",
+      "id": "1",
+      "text": "Some text"
+    }
+  ],
+  "@type": "ServiceOrder",
+  "description": "Service order description",
+  "priority": "1",
+  "relatedParty": [
+    {
+      "partyOrPartyRole": {
+        "@referredType": "Individual",
+        "@type": "PartyRef",
+        "name": "Jean Pontus",
+        "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/individual/456",
+        "id": "456"
+      },
+      "role": "requester",
+      "@type": "RelatedPartyRefOrPartyRoleRef"
+    }
+  ],
+  "requestedStartDate": "2020-08-31T09:37:40.508Z",
+  "serviceOrderItem": [
+    {
+      "service": {
+        "@type": "Service",
+        "serviceSpecification": {
+          "@referredType": "ServiceSpecification",
+          "@type": "ServiceSpecificationRef",
+          "name": "vCPE",
+          "id": "1212",
+          "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v5/serviceSpecification/1212",
+          "version": "1.0.0"
+        },
+        "state": "active",
+        "serviceCharacteristic": [
+          {
+            "@type": "ObjectCharacteristic",
+            "valueType": "object",
+            "name": "vCPE",
+            "id": "452-gh6",
+            "value": {
+              "MaxTxRate": 300,
+              "@type": "VCPE",
+              "vCPE_IP": "193.218.236.21",
+              "maxTream": "OFF",
+              "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/VCPE.schema.json",
+              "TransmitPower": "11 dBm"
+            }
+          }
+        ]
+      },
+      "@type": "ServiceOrderItem",
+      "action": "add",
+      "id": "1",
+      "state": "InProgress"
+    },
+    {
+      "service": {
+        "serviceRelationship": [
+          {
+            "relationshipType": "reliesOn",
+            "service": {
+              "@referredType": "Service",
+              "@type": "ServiceRef",
+              "href": "https://mycsp.com:8080/tmf-api/serviceInventory/v5/service/5645",
+              "id": "5645"
+            },
+            "@type": "ServiceRelationship"
+          }
+        ],
+        "feature": [
+          {
+            "featureCharacteritic": [
+              {
+                "@type": "BooleanCharacteristic",
+                "valueType": "boolean",
+                "name": "VolumeCapped",
+                "id": "444",
+                "value": true
+              }
+            ],
+            "@type": "Feature",
+            "isEnabled": true,
+            "name": "DataDownload",
+            "id": "Feat1"
+          }
+        ],
+        "@type": "Service",
+        "serviceSpecification": {
+          "@referredType": "ServiceSpecification",
+          "@type": "ServiceSpecificationRef",
+          "name": "genericDataService48",
+          "id": "48",
+          "href": "https://mycsp.com:8080/tmf-api/serviceCatalogManagement/v5/serviceSpecification/48",
+          "version": "2.0.0"
+        },
+        "state": "active"
+      },
+      "@type": "ServiceOrderItem",
+      "action": "add",
+      "id": "2",
+      "state": "acknowledged"
+    }
+  ],
+  "milestone": [
+    {
+      "serviceOrderItem": [
+        {
+          "itemId": "2",
+          "@type": "ServiceOrderItemRef",
+          "serviceOrderHref": "http://serverlocation:port/serviceOrdering/v5/serviceOrder/42",
+          "serviceOrderId": "42"
+        }
+      ],
+      "milestoneDate": "2020-08-27T23:17:45.450Z",
+      "@type": "ServiceOrderMilestone",
+      "name": "Port Allocation",
+      "description": "Port Allocation",
+      "id": "143",
+      "message": "Port Allocation",
+      "status": "Completed"
+    }
+  ],
+  "expectedCompletionDate": "2020-08-31T09:37:40.508Z",
+  "id": "42",
+  "href": "http://serverlocation:port/serviceOrdering/v5/serviceOrder/42",
+  "state": "InProgress",
+  "category": "TMF resource illustration",
+  "orderDate": "2020-08-27T09:37:40.508Z",
+  "startDate": "2020-08-31T09:37:40.508Z",
+  "requestedCompletionDate": "2020-08-31T09:37:40.508Z"
+}
