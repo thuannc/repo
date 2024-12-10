@@ -1,0 +1,60 @@
+{
+  "permissionSpecificationSet": [
+    {
+      "@type": "PermissionSpecificationSetRef",
+      "href": "https:/host:port/tmf-api/userRolePermissionManagement/v4/permissionSpecificationSet/2473-dc10",
+      "id": "2473-dc10"
+    },
+    {
+      "@type": "PermissionSpecificationSetRef",
+      "href": "https:/host:port/tmf-api/userRolePermissionManagement/v4/permissionSpecificationSet/920e-01df",
+      "id": "920e-01df"
+    }
+  ],
+  "lifecycleStatus": "validationInProgress",
+  "validFor": {
+    "startDateTime": "2022-06-01T00:00:00.000Z"
+  },
+  "@type": "PartyRoleSpecification",
+  "name": "Catalog administration",
+  "specCharacteristic": [
+    {
+      "@type": "CharacteristicSpecification",
+      "valueType": "string",
+      "characteristicValueSpecification": [
+        {
+          "@type": "StringCharacteristicValueSpecification",
+          "valueType": "string",
+          "value": "mobile catalog"
+        },
+        {
+          "@type": "StringCharacteristicValueSpecification",
+          "valueType": "string",
+          "value": "internet/TV catalog"
+        },
+        {
+          "@type": "StringCharacteristicValueSpecification",
+          "valueType": "string",
+          "value": "B2B catalog"
+        }
+      ],
+      "name": "CatalogDomain",
+      "id": "1"
+    }
+  ],
+  "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRoleSpecification/5713",
+  "id": "5713",
+  "relatedParty": [
+    {
+      "partyOrPartyRole": {
+        "@referredType": "Individual",
+        "@type": "PartyRef",
+        "name": "John Doe",
+        "href": "https:/host:port/tmf-api/partyManagement/v4/individual/62ac-01fb",
+        "id": "62ac-01fb"
+      },
+      "role": "Rights&access manager",
+      "@type": "RelatedPartyOrPartyRole"
+    }
+  ]
+}
