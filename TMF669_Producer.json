@@ -1,0 +1,25 @@
+{
+  "@type": "Producer",
+  "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRole/9",
+  "id": "9",
+  "name": "ClosedLoop B producer",
+  "role": "Producer",
+  "engagedParty": {
+    "@type": "PartyRef",
+    "href": "https:/host:port/tmf-api/partyManagement/v2/organization/16",
+    "id": "16",
+    "name": "Tip Network",
+    "@referredType": "Organization"
+  },
+  "partyRoleSpecification": {
+    "@type": "PartyRoleSpecificationRef",
+    "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRoleSpecification/5",
+    "id": "5",
+    "name": "ClosedLoop producer organization"
+  },
+  "status": "validationInProgress",
+  "validFor": {
+    "startDateTime": "2022-06-24T00:00:00.000Z",
+    "endDateTime": "2024-06-24T00:00:00.000Z"
+  }
+}
