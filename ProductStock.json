@@ -1,5 +1,6 @@
-// TMF687 Stock Management
+
 {
+  // TMF687 Stock Management
   "id": "42",
   "href": "http://serverlocation:port/stockManagement/v4/productStock/42",
   "creationDate": "2020-01-14T08:31:48.243Z",
