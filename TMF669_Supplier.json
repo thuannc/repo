@@ -1,0 +1,53 @@
+{
+  "@type": "Supplier",
+  "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRole/123",
+  "id": "123",
+  "name": "Good Phone supplier",
+  "role": "Supplier",
+  "engagedParty": {
+    "@type": "PartyRef",
+    "href": "https:/host:port/tmf-api/partyManagement/v2/organization/14",
+    "id": "14",
+    "name": "Good Phone",
+    "@referredType": "Organization"
+  },
+  "partyRoleSpecification": {
+    "@type": "PartyRoleSpecificationRef",
+    "href": "https:/host:port/tmf-api/partyRoleManagement/v4/partyRoleSpecification/3",
+    "id": "3",
+    "name": "Devices supplier"
+  },
+  "characteristic": [
+    {
+      "@type": "StringCharacteristic",
+      "name": "CommercialDomain",
+      "valueType": "string",
+      "value": "devices"
+    }
+  ],
+  "contactMedium": [
+    {
+      "@type": "EmailContactMedium",
+      "id": "1",
+      "phoneNumber": "contact@goodphone.com"
+    }
+  ],
+  "relatedParty": [
+    {
+      "@type": "RelatedPartyOrPartyRole",
+      "role": "CEO",
+      "partyOrPartyRole": {
+        "@type": "PartyRef",
+        "href": "https:/host:port/tmf-api/partyManagement/v4/individual/1a0b-961h",
+        "id": "1a0b-961h",
+        "name": "Marion Smith",
+        "@referredType": "Individual"
+      }
+    }
+  ],
+  "status": "validationInProgress",
+  "validFor": {
+    "startDateTime": "2022-06-24T00:00:00.000Z",
+    "endDateTime": "2024-06-24T00:00:00.000Z"
+  }
+}
