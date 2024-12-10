@@ -1,0 +1,93 @@
+{
+  "id": "21",
+  "href": "https://host:port/appointment/appointment/21",
+  "category": "intervention",
+  "creationDate": "2018-02-01T14:40:43.000Z",
+  "description": "Fix an internet connexion problem for a customer",
+  "externalId": "432113",
+  "lastUpdate": "2018-02-04T14:40:43.000Z",
+  "validFor": {
+    "startDateTime": "2018-02-15T14:00:00.000Z",
+    "endDateTime": "2018-02-15T16:00:00.000Z"
+  },
+  "attachment": [
+    {
+      "id": "4444",
+      "href": "https://host:port/documentManagement/customerContract/4444",
+      "isRef": true,
+      "@referredType": "CustomerContract",
+      "@baseType": "attachment"
+    }
+  ],
+  "calendarEvent": {
+    "id": "33",
+    "href": "https://host:port/timeManagement/calendarEvent/33",
+    "name": "Outlook calendar event"
+  },
+  "contactMedium": [
+    {
+      "mediumType": "phoneNumber",
+      "preferred": true,
+      "characteristic": {
+        "phoneNumber": "+33650981065",
+        "type": "mobile"
+      },
+      "validFor": {
+        "startDateTime": "2018-02-01T14:40:43.000Z",
+        "endDateTime": ""
+      }
+    }
+  ],
+  "note": [
+    {
+      "date": "2018-02-04T11:00:18.000Z",
+      "author": "Ludovic Robert",
+      "text": "Problem explained to the technician"
+    },
+    {
+      "date": "2018-02-04T14:40:43.000Z",
+      "author": "Ludovic Robert",
+      "text": "Work order generated"
+    }
+  ],
+  "relatedEntity": [
+    {
+      "id": "789",
+      "href": "https://host:port/troubleTicket/troubleTicket/789",
+      "role": "Problem description",
+      "name": "Internet connexion problem to solve",
+      "@referredType": "TroubleTicket"
+    },
+    {
+      "id": "465",
+      "href": "https://host:port/workForceManagement/workOrder/465",
+      "role": "work order description",
+      "name": "Work order generated for technician intervention",
+      "@referredType": "WorkOrder"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "32",
+      "href": "https://host:port/partyManagement/individual/32",
+      "role": "customer",
+      "name": "Kate Smith",
+      "@referredType": "Individual"
+    },
+    {
+      "id": "56",
+      "href": "https://host:port/partyManagement/individual/56",
+      "role": "technician",
+      "name": "John Doe",
+      "@referredType": "Individual"
+    }
+  ],
+  "RelatedPlace": {
+    "id": "888",
+    "href": "https://host:port/addressManagement /geographicAddress /888",
+    "name": "Main Home",
+    "role": "interventionAddress",
+    "@referredType": "GeographicAddress"
+  },
+  "status": "confirmed"
+}
