@@ -1,0 +1,78 @@
+{
+  "id": "99",
+  "href": "https://host:port/appointment/searchTimeSlot/99",
+  "searchDate": "2018-02-01T14:40:43.000Z",
+  "searchResult": "success",
+  "status": "done",
+  "RelatedPlace": {
+    "id": "888",
+    "href": "https://host:port/addressManagement /geographicAddress /888",
+    "name": "Main Home",
+    "role": "interventionAddress",
+    "@referredType": "GeographicAddress"
+  },
+  "relatedEntity": [
+    {
+      "id": "789",
+      "href": "https://host:port/troubleTicket/troubleTicket/789",
+      "name": "Internet connexion problem to solve",
+      "role": "Problem description",
+      "@referredType": "TroubleTicket"
+    }
+  ],
+  "requestedTimeSlot": [
+    {
+      "validFor": {
+        "startDateTime": "2018-02-15T00:00:00.000Z",
+        "endDateTime": "2018-02-18T00:00:00.000Z"
+      }
+    }
+  ],
+  "availableTimeSlot": [
+    {
+      "id": "365",
+      "href": "https://host:port/appointment/searchtimeslot/99/availableTimeSlot/365",
+      "validFor": {
+        "startDateTime": "2018-02-15T14:00:00.000Z",
+        "endDateTime": "2018-02-15T16:00:00.000Z"
+      },
+      "relatedParty": {
+        "id": "56",
+        "href": "https://host:port/partyManagement/individual/56",
+        "name": "John Doe",
+        "role": "technician",
+        "@referredType": "Individual"
+      }
+    },
+    {
+      "id": "921",
+      "href": "https://host:port/appointment/searchtimeslot/99/availableTimeSlot/921",
+      "validFor": {
+        "startDateTime": "2018-02-16T16:30:00.000Z",
+        "endDateTime": "2018-02-16T18:00:00.000Z"
+      },
+      "relatedParty": {
+        "id": "56",
+        "href": "https://host:port/partyManagement/individual/56",
+        "name": "John Doe",
+        "role": "technician",
+        "@referredType": "Individual"
+      }
+    },
+    {
+      "id": "325",
+      "href": "https://host:port/appointment/searchtimeslot/99/availableTimeSlot/325",
+      "validFor": {
+        "startDateTime": "2018-02-15T16:00:00.000Z",
+        "endDateTime": "2018-02-15T17:00:00.000Z"
+      },
+      "relatedParty": {
+        "id": "58",
+        "href": "https://host:port/partyManagement/individual/58",
+        "name": "Adam Smith",
+        "role": "technician",
+        "@referredType": "Individual"
+      }
+    }
+  ]
+}
