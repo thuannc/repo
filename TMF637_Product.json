@@ -1,0 +1,88 @@
+[
+  {
+    "isBundle": false,
+    "productSpecification": {
+      "@referredType": "ProductSpecification",
+      "@type": "ProductSpecificationRef",
+      "id": "PS-101",
+      "href": "https://host:port/productCatalogManagement/v5/productSpecification/PS-101",
+      "version": "1"
+    },
+    "productOffering": {
+      "@referredType": "ProductOffering",
+      "@type": "ProductOfferingRef",
+      "name": "Voice Over IP Basic",
+      "id": "PO-101-1",
+      "href": "https://host:port/productCatalogManagement/v5/productOffering/PO-101-1"
+    },
+    "@type": "Product",
+    "productCharacteristic": [
+      {
+        "@type": "StringCharacteristic",
+        "valueType": "string",
+        "name": "Number",
+        "value": "415 279 7439"
+      }
+    ],
+    "description": "product description",
+    "productOrderItem": [
+      {
+        "@referredType": "ProductOrder",
+        "role": "Install order",
+        "orderId": "1023-98gh",
+        "orderItemId": "2",
+        "@type": "RelatedOrderItem",
+        "orderderHref": "https...",
+        "orderItemAction": "add"
+      },
+      {
+        "@referredType": "ProductOrder",
+        "role": "change management order",
+        "orderId": "df65-gh12",
+        "orderItemId": "2",
+        "@type": "RelatedOrderItem",
+        "orderderHref": "https...",
+        "orderItemAction": "change"
+      },
+      {
+        "@referredType": "ProductOrder",
+        "role": "change management order",
+        "orderId": "5ghh-sd12",
+        "orderItemId": "3",
+        "@type": "RelatedOrderItem",
+        "orderderHref": "https...",
+        "orderItemAction": "change"
+      }
+    ],
+    "relatedParty": [
+      {
+        "partyOrPartyRole": {
+          "@referredType": "Individual",
+          "@type": "PartyRef",
+          "name": "Jean",
+          "id": "45hj-8888",
+          "href": "https://host:port/partyManagement/v5/individual/45hj-8888"
+        },
+        "role": "User",
+        "@type": "RelatedPartyOrPartyRole"
+      }
+    ],
+    "realizingService": [
+      {
+        "@referredType": "Service",
+        "@type": "ServiceRef",
+        "id": "123t-78k",
+        "href": "https://host:port/serviceInventory/v5/service/123t-78k"
+      }
+    ],
+    "productSerialNumber": "N/A",
+    "@baseType": "Product",
+    "name": "Voice Over IP Basic instance for Jean",
+    "id": "g265-tf85",
+    "href": "https://host:port/productInventory/v5/product/g265-tf85",
+    "isCustomerVisible": true,
+    "@schemaLocation": "https:://host:port/standardProduct.json",
+    "startDate": "2017-11-01T09:37:29.961Z",
+    "status": "active"
+  }
+]
