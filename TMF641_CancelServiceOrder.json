@@ -1,0 +1,15 @@
+{
+  "requestedCancellationDate": "2020-08-27T12:56:21.931Z",
+  "cancellationReason": "Duplicate service order",
+  "@type": "CancelServiceOrder",
+  "serviceOrder": {
+    "@referredType": "ServiceOrder",
+    "@type": "ServiceOrderRef",
+    "id": "45f-98f-ss45",
+    "href": "https://host:port/serviceOrdering/v5/serviceOrder/45f-98f-ss45"
+  },
+  "id": "789-fsds5-kjp",
+  "href": "https://host:port/serviceOrdering/v5/cancelServiceOrder/789-fsds5-kjp",
+  "state": "done",
+  "effectiveCancellationDate": "2020-08-27T12:58:35.489Z"
+}
