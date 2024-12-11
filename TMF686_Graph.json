@@ -1,0 +1,10 @@
+{
+"id": "b965a5b8",
+"href": "/topologyDiscovery/v4/graph/b965a5b8", "name": "5GC",
+"description": "5G Core Subnet",
+"@type": "Graph",
+"vertex": {
+"href": "/topologyDiscovery/v4/graph/b965a5b8/vertex" },
+"edge": {
+"href": "/topologyDiscovery/v4/graph/b965a5b8/edge" }
+}
