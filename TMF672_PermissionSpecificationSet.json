@@ -1,0 +1,16 @@
+{
+  "id": "413920",
+  "href": "http://serverlocation:port/userRolePermission/v5/permissionSpecificationSet/413920",
+  "involvementRole": "MyTV familyAdmin Profile",
+  "@type": "PermissionSpecificationSet",
+  "permissionSpecification": [
+    {
+      "id": "gdf-1324",
+      "href": "http://serverlocation:port/userRolePermission/v5/permissionSpecification/gdf-1324"
+    },
+    {
+      "id": "eq-120",
+      "href": "http://serverlocation:port/userRolePermission/v5/permissionSpecification/eq-120"
+    }
+  ]
+}
