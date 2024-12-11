@@ -1,0 +1,25 @@
+{
+  "id": "333c231a",
+  "href": "/topologyDiscovery/v4/MergeTopologyGraphJob/333c231a",
+  "@type": "MergeTopologyGraphJob",
+  "creationDate": "2021-04-15T14:37:18.762Z",
+  "completionDate": "2021-04-15T14:37:19.114Z",
+  "status": "done",
+  "mergeTopologyGraph": [
+    {
+      "id": "91f9e74a",
+      "href": "/topologyDiscovery/v4/graph/91f9e74a",
+      "@referredType": "Graph"
+    },
+    {
+      "id": "0319108c",
+      "href": "/topologyDiscovery/v4/graph/0319108c",
+      "@referredType": "Graph"
+    }
+  ],
+  "graph": {
+    "id": "ded3c8be",
+    "href": "/topologyDiscovery/v4/graph/ded3c8be",
+    "@referredType": "Graph"
+  }
+}
