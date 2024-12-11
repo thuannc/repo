@@ -1,0 +1,18 @@
+{
+  "id": "95e66eb7",
+  "href": "/topologyDiscovery/v4/edgeSpecification/95e66eb7",
+  "@type": "EdgeSpecification",
+  "name": "Transport",
+  "description": "Link transport domain",
+  "lastUpdate": "2021-04-08T13:54:32Z",
+  "lifecycleStatus": "Active",
+  "version": "1",
+  "edgeSpecCharacteristic": [
+    {
+      "name": "provider",
+      "description": "Identifies the transport provider of the link",
+      "valueType": "String",
+      "configurable": true
+    }
+  ]
+}
