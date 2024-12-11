@@ -1,0 +1,39 @@
+{
+  "id": "8e516fb0",
+  "href": "/topologyDiscovery/v4/graph/b965a5b8/vertex/8e516fb0",
+  "name": "AMF",
+  "description": "5G Core AMF",
+  "@type": "Vertex",
+  "vertexSpecification": {
+    "id": "6106de14",
+    "href": "/topologyDiscovery/v4/vertexSpecification/6106de14",
+    "name": "VNF",
+    "@referredType": "VertexSpecification"
+  },
+  "graph": {
+    "id": "b965a5b8",
+    "href": "/topologyDiscovery/v4/graph/b965a5b8",
+    "name": "5GC",
+    "@referredType": "Graph"
+  },
+  "edge": [
+    {
+      "id": "446d7249",
+      "href": "/topologyDiscovery/v4/graph/b965a5b8/vertex/446d7249",
+      "name": "N8",
+      "@referredType": "Edge"
+    }
+  ],
+  "vertexCharacteristic": [
+    {
+      "name": "datacenter",
+      "value": "DC005"
+    }
+  ],
+  "entity": {
+    "id": "5e86ec0a",
+    "href": "/resourceInventory/v4/resource/5e86ec0a",
+    "name": "NetworkSliceSubnet=1,ManagedElement=1,AMFFunction=1",
+    "@referredType": "ResourceFunction"
+  }
+}
