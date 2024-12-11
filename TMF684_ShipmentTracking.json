@@ -1,0 +1,70 @@
+{
+  "id": "123",
+  "href": "/shipmentTracking/v1/tracking/123",
+  "carrier": "Fodex",
+  "trackingCode": "FFFFXXXX987",
+  "carrierTrackingUrl": "fodexDeliveryInc/shipments/FFFFXXXX987",
+  "trackingDate": "2017-11-05T14:19:11.460Z",
+  "status": "in customs",
+  "statusChangeDate": "2017-11-10T14:19:11.460Z",
+  "statusChangeReason": "Arrived at customs office",
+  "weight": 2500,
+  "estimatedDeliveryDate": "2017-11-16T14:19:11.460Z",
+  "addressFrom": {
+    "streetNr": "3",
+    "streetName": "Evergreen Terrace",
+    "streetType": "street",
+    "postcode": "87654",
+    "city": "Springfield",
+    "stateOrProvince": "Oregon",
+    "country": "USA"
+  },
+  "addressTo": {
+    "streetNr": "S/N",
+    "streetName": "Ronda de la Comunicación",
+    "streetType": "Calle",
+    "postcode": "28050",
+    "locality": "Madrid",
+    "city": "Madrid",
+    "stateOrProvince": "Madrid",
+    "country": "ESP"
+  },
+  "checkpoint": [
+    {
+      "status": "shipped",
+      "message": "Shipped from warehouse facilities",
+      "trackingDate": "2017-11-05T14:19:11.460Z",
+      "checkPost": "Springfield warehouse",
+      "city": "Springfield",
+      "stateOrProvince": "Oregon",
+      "country": "USA",
+      "postcode": "87654"
+    },
+    {
+      "status": "in progress",
+      "message": "Arrived at Dallas to be shipped by plane",
+      "date": "2017-11-07T14:19:11.460Z",
+      "checkPost": "Dallas airport",
+      "city": "Dallas",
+      "stateOrProvince": "Texas",
+      "country": "USA",
+      "postcode": "75261"
+    },
+    {
+      "status": "in customs",
+      "message": "Arrived at Madrid airport customs office",
+      "date": "2017-11-10T14:19:11.460Z",
+      "checkPost": "Madrid Barajas airport",
+      "city": "Madrid",
+      "stateOrProvince": "Madrid",
+      "country": "ESP",
+      "postcode": "28042"
+    }
+  ],
+  "order": {
+    "id": "654",
+    "href": "https://host:port/productOrderingManagement/productOrder/654",
+    "name": "New telco pack",
+    "description": "Telco pack with black Friday offer"
+  }
+}
