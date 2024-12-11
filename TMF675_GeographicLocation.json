@@ -1,0 +1,30 @@
+{
+  "id": "8980",
+  "href": "https://host:port/location/geographicLocation/4164",
+  "name": "London",
+  "geometryType": "polygon",
+  "accuracy": "",
+  "spatialRef": "WGS84",
+  "geometry": [
+    {
+      "x": "1.430937",
+      "y": "43.597208",
+      "z": ""
+    },
+    {
+      "x": "22.65899",
+      "y": "43.597208",
+      "z": ""
+    },
+    {
+      "x": "13.26589",
+      "y": "53.236589",
+      "z": ""
+    },
+    {
+      "x": "1.430937",
+      "y": "53.597208",
+      "z": ""
+    }
+  ]
+}
