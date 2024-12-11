@@ -1,0 +1,26 @@
+{
+  "id": "2008",
+  "href": "https://host:port/location/geographicLocation/4264",
+  "status": "done",
+  "requestedAccuracy": 34.78,
+  "time": "2017-07-18T00:00",
+  "geographicLocation": {
+    "id": "3488",
+    "href": "https://host:port/location/geographicLocation/4164",
+    "name": "London",
+    "geometryType": "point",
+    "accuracy": "0.01",
+    "spatialRef": "WGS84",
+    "geometry": [
+      {
+        "x": "1.430937",
+        "y": "43.597208",
+        "z": ""
+      }
+    ]
+  },
+  "thing": {
+    "type": "tel",
+    "uri": "00447572116425"
+  }
+}
