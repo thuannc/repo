@@ -1,6 +1,6 @@
 {
   "id": "2008",
-  "href": "https://host:port/location/geographicLocation/4264",
+  "href": "https://host:port/location/retrieveGeographicLocation/4264",
   "status": "done",
   "requestedAccuracy": 34.78,
   "time": "2017-07-18T00:00",
