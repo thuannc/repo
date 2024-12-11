@@ -27,7 +27,11 @@
       "href": "{AccountsManagementAPI}/account/321654",
       "name": "Abbey S King’s account"
     },
-    {}
+    {
+      "id": "987654",
+      "href": "{AccountsManagementAPI}/account/987654",
+      "name": "The account of Abbey S King’s daughter"
+    }
   ],
   "relatedParty": {
     "id": "66665555",
