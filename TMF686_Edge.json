@@ -1,0 +1,46 @@
+{
+  "id": "446d7249",
+  "href": "/topologyDiscovery/v4/graph/b965a5b8/vertex/446d7249",
+  "name": "N8",
+  "description": "5G Core N8 Reference Interface",
+  "@type": "Edge",
+  "edgeSpecification": {
+    "id": "95e66eb7",
+    "href": "/topologyDiscovery/v4/edgeSpecification/95e66eb7",
+    "name": "Transport",
+    "@referredType": "EdgeSpecification"
+  },
+  "graph": {
+    "id": "b965a5b8",
+    "href": "/topologyDiscovery/v4/graph/b965a5b8",
+    "name": "5GC",
+    "@referredType": "Graph"
+  },
+  "edgeCharacteristic": [
+    {
+      "name": "provider",
+      "value": "SDN45"
+    }
+  ],
+  "bidirectional": true,
+  "vertex": [
+    {
+      "id": "8e516fb0",
+      "href": "/topologyDiscovery/v4/graph/b965a5b8/vertex/8e516fb0",
+      "name": "AMF",
+      "@referredType": "Vertex"
+    },
+    {
+      "id": "9b9f1c66",
+      "href": "/topologyDiscovery/v4/graph/b965a5b8/vertex/9b9f1c66",
+      "name": "UDM",
+      "@referredType": "Vertex"
+    }
+  ],
+  "entity": {
+    "id": "1fbfac41",
+    "href": "/resourceInventory/v4/resource/1fbfac41",
+    "name": "NetworkSlice=1,NetworkSliceSubnet=1,ManagedElement=1,Link_AMF_UDM=1",
+    "@referredType": "ResourceFunction"
+  }
+}
