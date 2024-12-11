@@ -1,0 +1,17 @@
+{
+  "@type": "CheckPermission",
+  "state": "done",
+  "permissionSpecification": {
+    "function": "ProductOffering",
+    "action": "create"
+  },
+  "user": {
+    "role": "ProductManager",
+    "@type": "RelatedPartyRefOrPartyRoleRef",
+    "partyOrPartyRole": {
+      "id": "Jonathan.Goldberg",
+      "@type": "PartyRef",
+      "@referredType": "PartyRole"
+    }
+  }
+}
