@@ -1,0 +1,18 @@
+{
+  "id": "714733ce",
+  "href": "/topologyDiscovery/v4/topologyQueryJob/714733ce",
+  "@type": "TopologyQueryJob",
+  "creationDate": "2021-04-16T33:21:54.776Z",
+  "completionDate": "2021-04-16T33:21:55.245Z",
+  "status": "done",
+  "query": "TUFUQ0ggKG4pClJFVFVSTiBu",
+  "graphTemplate": {
+    "description": "Query result subgraph",
+    "contained": false
+  },
+  "graphResult": {
+    "id": "c765bfa9",
+    "href": "/topologyDiscovery/v4/graph/c765bfa9",
+    "@referredType": "Graph"
+  }
+}
