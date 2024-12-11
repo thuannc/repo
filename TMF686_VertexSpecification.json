@@ -1,0 +1,18 @@
+{
+  "id": "6106de14",
+  "href": "/topologyDiscovery/v4/vertexSpecification/6106de14",
+  "@type": "VertexSpecification",
+  "name": "VNF",
+  "description": "Virtual Network Function (VNF)",
+  "lastUpdate": "2021-04-08T12:22:08Z",
+  "lifecycleStatus": "Active",
+  "version": "1",
+  "vertexSpecCharacteristic": [
+    {
+      "name": "datacenter",
+      "description": "Identifies the datacenter where the VNF is located",
+      "valueType": "String",
+      "configurable": true
+    }
+  ]
+}
