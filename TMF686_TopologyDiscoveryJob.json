@@ -1,0 +1,23 @@
+{
+  "id": "b32a6d3b",
+  "href": "/topologyDiscovery/v4/topologyDiscoveryJob/b32a6d3b",
+  "@type": "TopologyDiscoveryJob",
+  "creationDate": "2021-04-15T14:17:04.908Z",
+  "completionDate": "2021-04-15T14:17:11.845Z",
+  "status": "done",
+  "topologyProvider": [
+    {
+      "url": "/resourceInventoryManagement/v4/resource?category=5GC"
+    }
+  ],
+  "graphTemplate": {
+    "name": "5GC",
+    "description": "5G Core Subnet",
+    "contained": true
+  },
+  "graphResult": {
+    "id": "41fbbd95",
+    "href": "/topologyDiscovery/v4/graph/41fbbd95",
+    "@referredType": "Graph"
+  }
+}
