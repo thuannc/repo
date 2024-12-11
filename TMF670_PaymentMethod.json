@@ -1,0 +1,43 @@
+{
+  "id": "123456",
+  "href": "{PaymentMethodAPI}/paymentMethod/12345",
+  "name": "Main credit card",
+  "description": "My gold mastercard",
+  "isPreferred": true,
+  "validFor": {
+    "startDateTime": "2021-03-17T00:00:00.000Z",
+    "endDateTime": "2021-04-16T00:00:00.000Z"
+  },
+  "authorizationCode": "1234567890",
+  "status": "InActive",
+  "statusDate": "2021-03-17T00:00:00.000Z",
+  "statusReason": "This payment method has expired, therefore its status is now inactive.",
+  "@type": "BankCard",
+  "brand": "MasterCard",
+  "cardType": "Debit",
+  "cardNumber": "0000-0000-0000-0000",
+  "expirationDate": "2025-11-25T12:00:00.000Z",
+  "cvv": "123",
+  "lastFourDigits": "0000",
+  "nameOnCard": "Abbey S King",
+  "bank": "Fictitious Bank Inc",
+  "account": [
+    {
+      "id": "321654",
+      "href": "{AccountsManagementAPI}/account/321654",
+      "name": "Abbey S King’s account"
+    },
+    {}
+  ],
+  "relatedParty": {
+    "id": "66665555",
+    "href": "{PartyManagementAPI}/individual/66665555",
+    "name": "Abbey S King",
+    "role": "Owner"
+  },
+  "relatedPlace": {
+    "id": "55554444",
+    "href": "{GeographicAddressManagementAPI}/geographicAddress/55554444",
+    "@referredType": "GeographicAddress"
+  }
+}
