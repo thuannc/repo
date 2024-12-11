@@ -1,0 +1,39 @@
+{
+  "id": "3870",
+  "href": "https://host:port/geographicLocation/retrieveLocationRelation/3870",
+  "status": "inProgress",
+  "distance": 123,
+  "time": "2017-07-18T00:00",
+  "intersection": [
+    {
+      "id": "3759",
+      "href": "https://host:port/location/geographicLocation/4164",
+      "name": "London",
+      "geometryType": "line",
+      "accuracy": "0.01",
+      "spatialRef": "WGS84",
+      "geometry": [
+        {
+          "x": "1.430937",
+          "y": "43.597208",
+          "z": ""
+        },
+        {
+          "x": "2.369825",
+          "y": "44.2365",
+          "z": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "id": "9207",
+      "href": "https://host:port/location/geographicLocation/9207"
+    },
+    {
+      "id": "4164",
+      "href": "https://host:port/location/geographicLocation/4164"
+    }
+  ]
+}
