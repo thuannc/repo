@@ -1,0 +1,47 @@
+{
+  "id": "Prms-jnzgh456",
+  "href": "http://serverlocation:port/userRolePermission/v5/permissionSet/Prms-jnzgh456",
+  "creationDate": "2017-11-01T09:37:29.961Z",
+  "description": "superProfile Granted for user",
+  "validFor": {
+    "startDateTime": "2019-10-01T00:00:00.000Z",
+    "endDateTime": "2019-10-31T23:59:59.000Z"
+  },
+  "@type": "PermissionSet",
+  "granter": {
+    "role": "customer advisor",
+    "@type": "RelatedPartyRefOrPartyRoleRef",
+    "partyOrPartyRole": {
+      "id": "cclt-456745",
+      "href": "https://host:port/partyManagement/v5/party/cclt-456745",
+      "name": "John Baker",
+      "@type": "PartyRef",
+      "@referredType": "Individual"
+    }
+  },
+  "user": {
+    "role": "client",
+    "@type": "RelatedPartyRefOrPartyRoleRef",
+    "partyOrPartyRole": {
+      "id": "cust-745712-A",
+      "href": "https://host:port/partyManagement/v5/party/cust-745712-A",
+      "name": "Jack Marshall",
+      "@type": "PartyRef",
+      "@referredType": "Individual"
+    }
+  },
+  "permission": [
+    {
+      "permissionSpecification": {
+        "action": "update",
+        "function": "ProductOrder"
+      },
+      "managedAssetGroup": {
+        "entityType": "ProductOrder",
+        "filter": "relatedParty.id=\"cid3366116688\"&relatedParty.@referredType=\"Customer\"",
+        "@baseType": "AssetGroup",
+        "@type": "FilterAssetGroup"
+      }
+    }
+  ]
+}
