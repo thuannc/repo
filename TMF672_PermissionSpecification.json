@@ -1,0 +1,18 @@
+{
+  "id": "eq-125",
+  "href": "http://serverlocation:port/userRolePermission/v5/permissionSpecification/eq-125",
+  "@type": "PermissionSpecification",
+  "action": "grantAlteration",
+  "function": "ProductOrder",
+  "specificationCharacteristic": [
+    {
+      "@type": "CharacteristicSpecification",
+      "name": "reductionPercentage",
+      "characteristicValueSpecification": {
+        "@type": "FloatCharacteristicValueSpecification",
+        "valueType": "number",
+        "value": 10
+      }
+    }
+  ]
+}
