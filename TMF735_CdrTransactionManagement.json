@@ -1,0 +1,268 @@
+{
+  "transactionItem": [
+    {
+      "cdr": [
+        {
+          "taxRate": 0,
+          "isBilled": true,
+          "amount": {
+            "unit": "USD",
+            "value": 50000
+          },
+          "cdrType": "revenue share",
+          "productRef": {
+            "@referredType": "Product",
+            "@type": "ProductRef",
+            "name": "Mobile handset 2023 product of MyFirstPartner",
+            "href": "https://mycsp.com:8080/tmf-api/ProductManagement/v5/Product/7810",
+            "id": "7810"
+          },
+          "description": "Mobile handset 2023 distribution price",
+          "cdrDate": "2020-09-21T09:13:16-07:00",
+          "id": "181011",
+          "taxExcludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "relatedParty": {
+            "partyOrPartyRole": {
+              "@referredType": "Organization",
+              "@type": "PartyRef",
+              "name": "MyFirstPartner",
+              "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+              "id": "2777"
+            },
+            "role": "distributor",
+            "@type": "RelatedPartyRefOrPartyRoleRef"
+          },
+          "taxIncludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "status": "charged"
+        }
+      ],
+      "@type": "CdrTransactionItem",
+      "action": "add",
+      "bill": [
+        {
+          "@referredType": "CustomerBill",
+          "@type": "CustomerBillRef",
+          "name": "Customer 202302 bill of MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/CustomerManagement/v5/CustomerBill/2001",
+          "id": "2001"
+        }
+      ],
+      "payment": [
+        {
+          "@referredType": "Payment",
+          "@type": "PaymentRef",
+          "name": "Customer 202302 bill payment of MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/CustomerManagement/v5/Payment/5001",
+          "id": "5001"
+        }
+      ],
+      "state": "billed",
+      "id": "18101",
+      "relatedParty": {
+        "partyOrPartyRole": {
+          "@referredType": "Organization",
+          "@type": "PartyRef",
+          "name": "MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+          "id": "2777"
+        },
+        "role": "distributor",
+        "@type": "RelatedPartyRefOrPartyRoleRef"
+      }
+    },
+    {
+      "cdr": [
+        {
+          "taxRate": 0,
+          "isBilled": true,
+          "amount": {
+            "unit": "USD",
+            "value": 30000
+          },
+          "cdrType": "revenue share",
+          "productRef": {
+            "@referredType": "Product",
+            "@type": "ProductRef",
+            "name": "Smart speakers 2023 product of MyFirstPartner",
+            "href": "https://mycsp.com:8080/tmf-api/ProductManagement/v5/Product/7811",
+            "id": "7811"
+          },
+          "description": "smart speakers 2023 distribution price",
+          "cdrDate": "2020-09-21T09:13:16-07:00",
+          "id": "181021",
+          "taxExcludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "relatedParty": {
+            "partyOrPartyRole": {
+              "@referredType": "Organization",
+              "@type": "PartyRef",
+              "name": "MyFirstPartner",
+              "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+              "id": "2777"
+            },
+            "role": "distributor",
+            "@type": "RelatedPartyRefOrPartyRoleRef"
+          },
+          "taxIncludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "status": "charged"
+        }
+      ],
+      "@type": "CdrTransactionItem",
+      "action": "add",
+      "bill": [
+        {
+          "@referredType": "CustomerBill",
+          "@type": "CustomerBillRef",
+          "name": "Customer 202302 bill of MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/CustomerManagement/v5/CustomerBill/2001",
+          "id": "2001"
+        }
+      ],
+      "payment": [
+        {
+          "@referredType": "Payment",
+          "@type": "PaymentRef",
+          "name": "Customer 202302 bill payment of MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/CustomerManagement/v5/Payment/5001",
+          "id": "5001"
+        }
+      ],
+      "state": "billed",
+      "id": "18102",
+      "relatedParty": {
+        "partyOrPartyRole": {
+          "@referredType": "Organization",
+          "@type": "PartyRef",
+          "name": "MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+          "id": "2777"
+        },
+        "role": "distributor",
+        "@type": "RelatedPartyRefOrPartyRoleRef"
+      }
+    },
+    {
+      "cdr": [
+        {
+          "taxRate": 0,
+          "isBilled": true,
+          "amount": {
+            "unit": "USD",
+            "value": 60000
+          },
+          "cdrType": "revenue share",
+          "productRef": {
+            "@referredType": "Product",
+            "@type": "ProductRef",
+            "name": "Mobile handset 2023 product of MyFirstPartner",
+            "href": "https://mycsp.com:8080/tmf-api/ProductManagement/v5/Product/7810",
+            "id": "7810"
+          },
+          "description": "Mobile handset 2023 distribution price",
+          "cdrDate": "2020-09-21T09:13:16-07:00",
+          "id": "181031",
+          "taxExcludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "relatedParty": {
+            "partyOrPartyRole": {
+              "@referredType": "Organization",
+              "@type": "PartyRef",
+              "name": "Mobi Service Providor",
+              "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2779",
+              "id": "2779"
+            },
+            "role": "revenueSharingModelOwner",
+            "@type": "RelatedPartyRefOrPartyRoleRef"
+          },
+          "taxIncludedRatingAmount": {
+            "unit": "USD",
+            "value": 0
+          },
+          "status": "charged"
+        }
+      ],
+      "@type": "CdrTransactionItem",
+      "action": "add",
+      "bill": [
+        {
+          "@referredType": "CustomerBill",
+          "@type": "CustomerBillRef",
+          "name": "Customer 202302 bill of MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/CustomerManagement/v5/CustomerBill/2002",
+          "id": "2002"
+        }
+      ],
+      "state": "billed",
+      "id": "18103",
+      "relatedParty": {
+        "partyOrPartyRole": {
+          "@referredType": "Organization",
+          "@type": "PartyRef",
+          "name": "MyFirstPartner",
+          "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+          "id": "2777"
+        },
+        "role": "distributor",
+        "@type": "RelatedPartyRefOrPartyRoleRef"
+      }
+    }
+  ],
+  "requestedInitialState": "charged",
+  "@type": "CdrTransaction",
+  "channel": [
+    {
+      "role": "revenueSharingDepartment",
+      "@type": "RelatedChannel",
+      "channel": {
+        "@referredType": "Channel",
+        "@type": "ChannelRef",
+        "name": "revenue sharing department",
+        "href": "https://mycsp.com:8080/tmf-api/channelManagement/v5/channel/1777",
+        "id": "1777"
+      }
+    }
+  ],
+  "description": "the transaction of MyFirstPartner revenue share",
+  "completionDate": "2023-03-10T07:37:23.112Z",
+  "href": "https://mycsp.com:8080/tmf-api/CdrTransactionManagement/v5/CdrTransaction/1810",
+  "id": "1810",
+  "state": "charged",
+  "relatedParty": [
+    {
+      "partyOrPartyRole": {
+        "@referredType": "Organization",
+        "@type": "PartyRef",
+        "name": "MyFirstPartner",
+        "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2777",
+        "id": "2777"
+      },
+      "role": "distributor",
+      "@type": "RelatedPartyRefOrPartyRoleRef"
+    },
+    {
+      "partyOrPartyRole": {
+        "@referredType": "Organization",
+        "@type": "PartyRef",
+        "name": "Mobi Service Providor",
+        "href": "https://mycsp.com:8080/tmf-api/partyManagement/v5/organization/2779",
+        "id": "2779"
+      },
+      "role": "revenueSharingModelOwner",
+      "@type": "RelatedPartyRefOrPartyRoleRef"
+    }
+  ],
+  "creationDate": "2023-03-10T07:37:23.112Z"
+}
