@@ -1,0 +1,70 @@
+{
+  "id": "8675309",
+  "href": "https://host:port/incidentManagement/v4/incident/8675309",
+  "ackTime": "2022-03-10T04:01:12Z",
+  "category": "Antenna feeder system failure",
+  "clearTime": "2022-03-10T04:01:12Z",
+  "domain": "RAN",
+  "impact": "minor",
+  "resolutionSuggestion": "For root cause 1: 1.Run the RST BRDPWROFF command",
+  "name": "Antenna circuit abnormality",
+  "detail": "Antenna circuit abnormality: cabinet number=0, frame number=0, slot number=0, antenna feeder port number=0, board type=please replace, ALD working current (mA)=0, specific problem=please replace",
+  "occurTime": "2022-03-10T04:01:12Z",
+  "priority": "low",
+  "state": "raised",
+  "ackState": "acknowledged",
+  "updateTime": "2022-03-10T04:01:12Z",
+  "urgency": "critical",
+  "affectedEntity": {
+    "id": "93051825",
+    "href": "/resourceInventoryManagement/v4/resource/93051825"
+  },
+  "sourceObject": {
+    "id": "12345678",
+    "href": "/resourceInventoryManagement/v4/resource/12345678"
+  },
+  "eventId": [
+    {
+      "href": "http://myservice.com/resource-path"
+    }
+  ],
+  "rootCause": [
+    {
+      "id": "1234567",
+      "href": "http://myservice.com/resource-path",
+      "location": "Ne Name=cc_lte1, Cabinet No.=0, Subrack No.=0, Slot No.=0"
+    }
+  ],
+  "extensionInfo": [
+    {
+      "id": "anotherParam",
+      "name": "anotherParam",
+      "valueType": "string",
+      "characteristicRelationship": [
+        {
+          "id": "name",
+          "href": "http://someSchema.com/location",
+          "relationshipType": "string",
+          "@baseType": "string",
+          "@schemaLocation": "http://someSchema.com/location",
+          "@type": "string"
+        }
+      ],
+      "value": "string",
+      "@baseType": "string",
+      "@schemaLocation": "http://someSchema.com/location",
+      "@type": "string"
+    }
+  ],
+  "externalIdentifier": [
+    {
+      "id": "14054200259",
+      "href": "https://acme-ims.com:8080/incidentManagement/v4/incident/14054200259",
+      "externalIdentifierType": "Incident",
+      "owner": "ACME Incident Management System"
+    }
+  ],
+  "@baseType": "Incident",
+  "@schemaLocation": "http://example.com",
+  "@type": "Incident"
+}
