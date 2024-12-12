@@ -1,0 +1,87 @@
+{
+  "id": "1b7fec0f-168c-4513-9ec7-d0233e32b6e4",
+  "href": "/resourceCatalog/v4/resourceSpecification/1b7fec0f-168c-4513-9ec7-d0233e32b6e4",
+  "name": "Encabulator Software Specification",
+  "description": "This specification describes the Encabulator software",
+  "@type": "SoftwareSpecification",
+  "validFor": {
+    "startDateTime": "2022-11-28T08:00:00Z",
+    "endDateTime": "2023-11-29T00:00:00Z"
+  },
+  "lastUpdate": "2022-02-03T07:59:59Z",
+  "lifecycleStatus": "Active",
+  "isBundle": false,
+  "category": "Software",
+  "targetResourceSchema": {
+    "@type": "InstalledSoftware"
+  },
+  "relatedParty": [
+    {
+      "id": "ab5660aa-064d-440c-b7d1-b943e42b904e",
+      "href": "/partyManagement/v4/organization/ab5660aa-064d-440c-b7d1-b943e42b904e",
+      "role": "supplier",
+      "name": "General Electric"
+    }
+  ],
+  "releaseStatus": "firstCustomerShipment",
+  "buildNumber": "encabulator-1.0.0",
+  "majorVersion": "1",
+  "minorVersion": "0",
+  "maintenanceVersion": "0",
+  "otherDesignator": "alpha",
+  "isDistributable": true,
+  "installSize": {
+    "amount": 9143256,
+    "units": "bytes"
+  },
+  "isExperimental": false,
+  "numUsersMax": 8,
+  "numberProcessActiveTotal": 0,
+  "resourceSpecRelationship": [
+    {
+      "id": "de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+      "href": "/resourceCatalog/v4/resourceSpecification/de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+      "name": "Encabulator Platform Requirement Specification",
+      "relationshipType": "requires"
+    },
+    {
+      "id": "68337aed-d83f-4aef-8a7e-064b1fc3a241",
+      "href": "/resourceCatalog/v4/resourceSpecification/68337aed-d83f-4aef-8a7e-064b1fc3a241",
+      "name": "Encabulator Function Specification",
+      "relationshipType": "provides"
+    }
+  ],
+  "softwareSupportPackage": {
+    "id": "d4843e6e-bf6f-409a-85c7-e74afb7a64d7",
+    "href": "/resourceInventory/v4/resource/d4843e6e-bf6f-409a-85c7-e74afb7a64d7",
+    "name": "Encabulator Software Package",
+    "@referredType": "SoftwareSupportPackage"
+  },
+  "resourceSpecCharacteristic": [
+    {
+      "name": "OperatingSystem",
+      "description": "Operating System",
+      "valueType": "String",
+      "configurable": true,
+      "@type": "ResourceSpecificationCharacteristic",
+      "minCardinality": 1,
+      "maxCardinality": 3,
+      "isUnique": true,
+      "extensible": false,
+      "resourceSpecCharacteristicValue": [
+        {
+          "isDefault": true,
+          "value": "Debian 11 (bullseye)"
+        },
+        {
+          "isDefault": false,
+          "value": "Ubuntu 20.04 LTS (focal)"
+        },
+        {
+          "isDefault": false,
+          "value": "RHEL 9"
+        }
+      ]
+    }
+  ]
+}
