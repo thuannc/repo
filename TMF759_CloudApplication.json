@@ -1,0 +1,36 @@
+{
+  "id": "2287",
+  "href": "http://server:port/privateOptimizedBinding/v5/cloudApplication/2287",
+  "operationalState": "enable",
+  "name": "Security Application ABC",
+  "note": [
+    {
+      "text": "this is a security application supporting TMF759 binding",
+      "@type": "Note"
+    }
+  ],
+  "resourceCharacteristic": [
+    {
+      "name": "cloudProvider",
+      "value": "MS",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "name": "cloudRegion",
+      "value": "eastus",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "value": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/vnet-rg/providers/Microsoft.Compute/virtualMachines/vmX",
+      "@type": "StringCharacteristic"
+    }
+  ],
+  "resourceSpecification": {
+    "id": "11140",
+    "href": "http://server:port/privateOptimizedBinding/v5/cloudApplicationSpecification/11140",
+    "@type": "ResourceSpecificationRef"
+  },
+  "@type": "CloudApplication",
+  "@schemaLocation": "http://server:port/CloudApplication.schema.json",
+  "@baseType": "LogicalResource"
+}
