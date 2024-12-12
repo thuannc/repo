@@ -1,27 +1,72 @@
 {
-  "@baseType": "WorkOrder",
-  "@schemaLocation": "WorkOrder",
-  "@type": "WorkOrder",
-  "href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/f8ec1c38-4e4d-4378-a693-f95680e51e25",
-  "id": "f8ec1c38-4e4d-4378-a693-f95680e51e25",
-  "name": "Fixed Fibre Broadband Installation",
-  "description": "Fixed Fibre Broadband Installation",
-  
-  "plannedDuration": {"amount":1,"units":"day"},
-  "actualDuration": { "amount": 4, "units": "hour" },
-  "currentDuration": { "amount": 4, "units": "hour" },
-  "scheduledDuration": { "amount": 1, "units": "day" },
+  "id": "a833c6f7-b5f8-4e58-8af0-616fba1fba7f",
+  "@type": "Work",
+  "workType": "CPEInst1",
+  "orderDate": "2024-04-22T14:23:06.528Z",
+  "description": "Cabinet Configuration",
+  "expectedCompletionDate": "2024-04-22T14:23:06.528Z",
+  "name": "FTTH Installation",
+  "workPriority": "high",
+  "workCharacteristic": [
+    {
+      "id": "db1b00d6-acaa-428f-9af6-fd7b337b9f17",
+      "name": "cityCode",
+      "valueType": "string",
+      "value": "MK",
+      "@type": "StringCharacteristic"
+    }
+  ],
+  "place": [
+    {
+      "@type": "RelatedPlaceRefOrValue",
+      "role": "string",
+      "place": {
+        "@type": "GeographicSite",
+        "href": "https://mycsp.com/tmf-api/geographicSiteManagement/v5/geographicSite/ae4b915f-16f5-4f05-a3c7-8c6a99c7d24b",
+        "id": "ae4b915f-16f5-4f05-a3c7-8c6a99c7d24b",
+        "code": "BS-9283",
+        "description": "This is the site for the base station BS-9283",
+        "place": [
+          {
+            "@type": "GeographicAddress",
+            "href": "https://mycsp.com/tmf-api/geographicAddressManagement/v5/geographicAddress/fcdb7157-3df9-4c49-93a6-8a3a248d9a27",
+            "id": "fcdb7157-3df9-4c49-93a6-8a3a248d9a27",
+            "city": "New York",
+            "country": "United Kingdom",
+            "locality": "Oxford",
+            "postcode": "OX23 232",
+            "stateOrProvince": "Oxfordshire",
+            "streetName": "Broadway",
+            "streetNr": "123",
+            "geographicAddressType": "Building"
+          },
+          {
+            "href": "https://mycsp.com/tmf-api/geographicLocationManagement/v5/geographicLocation/0c8563f3-26e6-4673-9f82-9784d3df257d",
+            "id": "0c8563f3-26e6-4673-9f82-9784d3df257d",
+            "@type": "GeoJsonPolygon",
+            "coordinates": [
+              "12.14",
+              "12.45",
+              "34.54",
+              "65.34"
+            ],
+            "type": "Polygon"
+          }
+        ]
+      }
+    }
+  ],
+  "actualDuration": {
+    "amount": 4,
+    "units": "hour"
+  },
   "workTimeSlot": {
     "startDateTime": "2024-04-12T23:20:50.52Z"
   },
-  "orderDate": "2024-04-22T14:23:06.528Z",
-  "completionDate": "2024-04-22T14:23:06.528Z",
-  "expectedCompletionDate": "2024-04-22T14:23:06.528Z",
-  "percentageComplete": 80,
-  "quantity": {"amount":1,"units":"hour"},
-  "state": "acknowledged",
-  "workPriority": "high",
-  "workType": "???",
+  "currentDuration": {
+    "amount": 4,
+    "units": "hour"
+  },
   "note": {
     "@type": "Note",
     "id": "afa9-3d90aaa8da0f",
@@ -29,6 +74,17 @@
     "date": "2020-11-20T08:00:00Z",
     "text": "Demand Point Type: SDU"
   },
+  "scheduledDuration": {
+    "amount": 1,
+    "units": "day"
+  },
+  "relatedWork": [
+    {
+      "@type": "WorkRefOrValue",
+      "href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/82000258-ecf8-47a6-a7b9-b972475bff5a",
+      "id": "82000258-ecf8-47a6-a7b9-b972475bff5a"
+    }
+  ],
   "relatedParty": [
     {
       "@type": "RelatedPartyRef",
@@ -38,59 +94,45 @@
       "role": "Installation Partner"
     }
   ],
-  "appointment": {
-    "@type": "AppointmentRef",
-    "href": "https://mycsp.com/tmf-api/v5/appointmentManagement/appointment/2552dab7-bf70-487a-b78b-914f4d3bba71",
-    "id": "2552dab7-bf70-487a-b78b-914f4d3bba71",
-    "name": "Installation Appointment",
-    "description": "Installation Appointment for Fixed Fibre Broadband"
+  "workSpecification": {
+    "@type": "WorkSpecificationRef",
+    "id": "aebb358a-4630-41f7-be2d-1756f13b8b90",
+    "name": "FTTH Installation"
   },
-  "relatedWorkOrderItem": [
+  "workforceEmployeeAssignment": [
     {
-      "@type": "RelatedWorkOrderItem",
-      "orderItemAction": "add",
-      "orderItemId": "f231dc85-d583-47fb-94de-26fc0f1509d-f",
-      "role":"",
-      "workOrderHref": "",
-      "workOrderId": "",
+      "@type": "WorkforceEmployeeAssignment",
+      "id": "50e8c30a-77f4-4308-804e-a24b321ff1e1",
+      "skillType": "FTTH Installation Engineer",
+      "state": "acknowledged",
+      "timeSlot": [
+        {
+          "@type": "TimeSlot",
+          "validFor": {
+            "startDateTime": "2024-04-12T23:20:50.52Z",
+            "endDateTime": "2024-04-12T23:20:50.52Z"
+          }
+        }
+      ],
+      "workforceEmployee": {
+        "@type": "Individual",
+        "name": "Athelstan Amos",
+        "id": "12231244",
+        "contactMedium": [
+          {
+            "@type": "PhoneContactMedium",
+            "@baseType": "ContactMedium",
+            "contactType": "private",
+            "id": "c0181f3d83e144a59162fd6136a98462",
+            "preferred": true,
+            "validFor": {
+              "startDateTime": "2018-09-21T23:20:50.52Z"
+            },
+            "verified": true,
+            "phoneNumber": "+1 202-918-2132"
+          }
+        ]
+      }
     }
-  ],
-  "agreement": [
-    {
-      "@type": "AgreementRef",
-      "href": "https://mycsp.com/tmf-api/v5/API",
-      "id": "a99a4a2c-df8b-46d1-ba49-42cbb0623b3c",
-      "name": "Fixed Fibre Broadband Agreement"
-    }
-  ],
-  
-  "workRelationship": [
-    {
-      "@type": "WorkRelationship",
-      "href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
-      "id": "0a848092-9cea-4d64-b582-c8bcb8dd57ca",
-      "relationshipType": "reliesOn"
-    }
-  ],
-  "workCharacteristic": [],
-  "workSpecification": [],
-  "workPrice": [],
-  "place": [],
-  "workforceEmployeeTravel": {
-      "description":"",
-      "state":"acknowledged"
-  },
-  "workforceEmployeeAssignment": [{
-      "id":"",
-      "description":"",
-      "skillType":"acknowledged",
-      "state":"acknowledged"
-  }],
-  "relatedWork": {
-      "@type": "RelatedWork",
-      "id": "f231dc85-d583-47fb-94de-26fc0f1509d-f",
-      "name":"",
-      "href": ""
-    }
-  
+  ]
 }
