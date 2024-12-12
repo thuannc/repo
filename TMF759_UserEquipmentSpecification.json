@@ -1,6 +1,6 @@
 {
-  "id": "11140",
-  "href": "http://server:port/privateOptimizedBinding/v5/userEquipmentSpecification/11140",
+  "id": "11143",
+  "href": "http://server:port/privateOptimizedBinding/v5/userEquipmentSpecification/11143",
   "description": "This is an example of a user equipment specification that we want for or binded UE.",
   "version": "1.0",
   "isPortable": false,
@@ -10,6 +10,26 @@
   "model": "MyUEModel",
   "name": "MySpecificationName",
   "isBundle": false,
+  "featureSpecification": [
+    {
+      "name": "privateOptimizedBindingFeature",
+      "featureSpecRelationship": [
+        {
+          "relationshipType": "requires",
+          "name": "privateOptimizedBindingFeature",
+          "@type": "FeatureSpecificationRelationship"
+        }
+      ],
+      "featureSpecCharacteristic": [
+        {
+          "name": "privateOptimizedBindingCloudAppHref",
+          "valueType": "text",
+          "@type": "CharacteristicSpecification"
+        }
+      ],
+      "@type": "FeatureSpecification"
+    }
+  ],
   "resourceSpecCharacteristic": [
     {
       "name": "MSISDN",
