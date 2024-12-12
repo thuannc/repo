@@ -1,0 +1,23 @@
+{
+  "id": "11140",
+  "href": "http://server:port/privateOptimizedBinding/v5/userEquipmentSpecification/11140",
+  "description": "This is an example of a user equipment specification that we want for or binded UE.",
+  "version": "1.0",
+  "isPortable": false,
+  "isWearable": false,
+  "hasNetworkInterface": true,
+  "vendor": "MyUEVendor",
+  "model": "MyUEModel",
+  "name": "MySpecificationName",
+  "isBundle": false,
+  "resourceSpecCharacteristic": [
+    {
+      "name": "MSISDN",
+      "valueType": "text",
+      "@type": "CharacteristicSpecification"
+    }
+  ],
+  "@type": "UserEquipmentSpecification",
+  "@schemaLocation": "http://server:port/UserEquipmentSpecification.schema.json",
+  "@baseType": "PhysicalResourceSpecification"
+}
