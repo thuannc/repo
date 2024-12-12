@@ -1,0 +1,30 @@
+{
+  "id": "d4843e6e-bf6f-409a-85c7-e74afb7a64d7",
+  "href": "/resourceInventory/v4/resource/d4843e6e-bf6f-409a-85c7-e74afb7a64d7",
+  "name": "Encabulator Software Package",
+  "description": "Package providing the files containing the Encabulator software",
+  "@type": "SoftwareSupportPackage",
+  "startOperatingDate": "2022-11-28T08:00:00Z",
+  "endOperatingDate": "2023-11-29T00:00:00Z",
+  "category": "Software",
+  "resourceSpecification": {
+    "id": "632547af-e850-45a1-a569-31531ea81eb7",
+    "href": "/resourceCatalog/v4/resourceSpecification/632547af-e850-45a1-a569-31531ea81eb7",
+    "name": "Software Package Repository Specification"
+  },
+  "resourceRelationship": [],
+  "resourceCharacteristic": [
+    {
+      "name": "repoName",
+      "value": "Local"
+    },
+    {
+      "name": "repoBase",
+      "value": "https://repo.example.net"
+    },
+    {
+      "name": "imagePath",
+      "value": "/cnf/9c53e70b-5e78-41e8-826b-8c70c2b65a8e"
+    }
+  ]
+}
