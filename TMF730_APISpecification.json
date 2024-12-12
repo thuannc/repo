@@ -1,0 +1,55 @@
+{
+  "id": "30dcb35e-b643-4381-a619-df424a3a52c8",
+  "href": "/resourceCatalog/v4/resourceSpecification/30dcb35e-b643-4381-a619-df424a3a52c8",
+  "name": "TMF635 Specification",
+  "description": "Open API for Usage Management",
+  "@type": "APISpecification",
+  "validFor": {
+    "startDateTime": "2021-07-01T08:00:00Z"
+  },
+  "lifecycleStatus": "Active",
+  "lastUpdate": "2022-11-27T07:59:59Z",
+  "isBundle": false,
+  "category": "Software",
+  "targetResourceSchema": {
+    "@type": "API"
+  },
+  "releaseStatus": "generalDeployment",
+  "buildNumber": "20.5.0",
+  "majorVersion": "4",
+  "minorVersion": "0",
+  "maintenanceVersion": "0",
+  "isDistributable": true,
+  "isExperimental": false,
+  "apiProtocolType": "REST",
+  "externalUrl": "https://example.net/tmf-api/usageManagement/v4",
+  "internalUrl": "/tmf-api/usageManagement/v4",
+  "externalSchema": "https://tmf-open-api-table-documents.s3.eu-west- 1.amazonaws.com/OpenAPITable/4.0.0/swagger/TMF635-UsageManagement-v4.0.0.swagger.json",
+  "internalSchema": "/tmf-api/usageManagement/v4/schema/TMF635-UsageManagement-v4.0.0.swagger.json",
+  "authenticationType": "Basic",
+  "allowedOperations": [
+    "GET",
+    "HEAD",
+    "POST",
+    "PATCH",
+    "DELETE"
+  ],
+  "allowedAPIEntities": [
+    "usageSpecification",
+    "usage"
+  ],
+  "responseTypeFormat": [
+    "application/json",
+    "application/problem+json"
+  ],
+  "resourceSpecRelationship": [],
+  "relatedParty": [
+    {
+      "id": "ab5660aa-064d-440c-b7d1-b943e42b904e",
+      "href": "/partyManagement/v4/organization/ab5660aa-064d-440c-b7d1-b943e42b904e",
+      "name": "TM Forum",
+      "role": "supplier"
+    }
+  ],
+  "resourceSpecCharacteristic": []
+}
