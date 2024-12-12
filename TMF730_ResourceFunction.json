@@ -1,0 +1,28 @@
+{
+  "id": "03c5a7d1-6cd5-4467-b0f5-fe7c06fb5e77",
+  "href": "/resourceInventory/v4/resource/03c5a7d1-6cd5-4467-b0f5-fe7c06fb5e77",
+  "name": "Encabulator Function",
+  "description": "The Encabulator function.",
+  "@type": "ResourceFunction",
+  "startOperatingDate": "2022-11-28T08:00:00Z",
+  "endOperatingDate": "2023-11-29T00:00:00Z",
+  "category": "Software",
+  "resourceSpecification": {
+    "id": "68337aed-d83f-4aef-8a7e-064b1fc3a241",
+    "href": "/resourceCatalog/v4/resourceSpecification/68337aed-d83f-4aef-8a7e-064b1fc3a241",
+    "name": "Encabulator Function Specification",
+    "@referredType": "ResourceFunctionSpecification"
+  },
+  "resourceRelationship": [],
+  "connectionPoint": [
+    {
+      "id": "87839f7e-e490-4cfb-b371-6d1edeb85856",
+      "href": "/resourceInventory/v4/resource/87839f7e-e490-4cfb-b371-6d1edeb85856",
+      "name": "TMF635",
+      "@referredType": "API"
+    }
+  ],
+  "connectivity": [],
+  "activationFeature": [],
+  "resourceCharacteristic": []
+}
