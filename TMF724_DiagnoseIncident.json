@@ -1,0 +1,7 @@
+{
+"id": "189669",
+"href": "/incidentManagement/v5/diagnoseIncident/189669", "state": "accepted",
+"incident": {
+"id": "26576876",
+"href": "/incidentManagement/v5/incident/26576876", "name": "IncidentA"
+} }
