@@ -1,0 +1,88 @@
+{
+  "id": "de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+  "href": "/resourceCatalog/v4/resourceSpecification/de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+  "name": "Encabulator Platform Requirement Specification",
+  "description": "This specification describes requirements on platforms hosting the Encabulator software",
+  "@type": "HostingPlatformRequirementSpecification",
+  "validFor": {
+    "startDateTime": "2022-11-28T08:00:00Z",
+    "endDateTime": "2023-11-29T00:00:00Z"
+  },
+  "lifecycleStatus": "Active",
+  "isBundle": false,
+  "category": "Compute",
+  "targetResourceSchema": {
+    "@type": "HostingPlatformRequirement"
+  },
+  "resourceSpecRelationship": [],
+  "featureSpecification": [
+    {
+      "name": "scale",
+      "featureSpecCharacteristic": [
+        {
+          "name": "cpuSize",
+          "description": "Vertical CPU scaling dimension",
+          "valueType": "string",
+          "featureSpecCharacteristicValue": [
+            {
+              "isDefault": true,
+              "value": "micro"
+            },
+            {
+              "isDefault": false,
+              "value": "small"
+            },
+            {
+              "isDefault": false,
+              "value": "medium"
+            },
+            {
+              "isDefault": false,
+              "value": "large"
+            }
+          ]
+        },
+        {
+          "name": "cpuNum",
+          "description": "Minimum number of CPUs",
+          "valueType": "integer",
+          "featureSpecCharacteristicValue": [
+            {
+              "valueFrom": 1,
+              "valueTo": 24
+            }
+          ]
+        },
+        {
+          "name": "memory",
+          "description": "Minimum amount of memory required",
+          "valueType": "integer",
+          "featureSpecCharacteristicValue": [
+            {
+              "unitOfMeasure": "MiB",
+              "valueFrom": 640,
+              "valueTo": 16384
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "resourceSpecCharacteristic": [
+    {
+      "name": "virtualization",
+      "description": "Type of virtualization required",
+      "valueType": "string",
+      "resourceSpecCharacteristicValue": [
+        {
+          "isDefault": true,
+          "value": "container-runtime"
+        },
+        {
+          "isDefault": false,
+          "value": "hypervisor"
+        }
+      ]
+    }
+  ]
+}
