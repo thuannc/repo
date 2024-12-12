@@ -1,0 +1,27 @@
+{
+  "id": "11140",
+  "href": "http://server:port/privateOptimizedBinding/v5/cloudApplicationSpecification/11140",
+  "description": "This is an example of a cloud application specification.",
+  "version": "1.0",
+  "name": "MyAppSpecificationName",
+  "resourceSpecCharacteristic": [
+    {
+      "name": "cloudProvider",
+      "valueType": "text",
+      "@type": "CharacteristicSpecification"
+    },
+    {
+      "name": "cloudRegion",
+      "valueType": "text",
+      "@type": "CharacteristicSpecification"
+    },
+    {
+      "name": "cloudReference",
+      "valueType": "text",
+      "@type": "CharacteristicSpecification"
+    }
+  ],
+  "@type": "CloudApplicationSpecification",
+  "@schemaLocation": "http://server:port/CloudApplicationSpecification.schema.json",
+  "@baseType": "LogicalResourceSpecification"
+}
