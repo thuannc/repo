@@ -1,0 +1,61 @@
+{
+  "id": "6381aee0-6e5a-436f-8e20-b231d3efd712",
+  "href": "/resourceInventory/v4/resource/6381aee0-6e5a-436f-8e20-b231d3efd712",
+  "name": "Encabulator Software",
+  "description": "This software realizes an instance of Encabulator",
+  "@type": "InstalledSoftware",
+  "startOperatingDate": "2022-11-28T08:00:00Z",
+  "endOperatingDate": "2023-11-29T00:00:00Z",
+  "lastUpdate": "2022-02-04T15:10:05Z",
+  "category": "Software",
+  "resourceSpecification": {
+    "id": "1b7fec0f-168c-4513-9ec7-d0233e32b6e4",
+    "href": "/resourceCatalog/v4/resourceSpecification/1b7fec0f-168c-4513-9ec7-d0233e32b6e4",
+    "name": "Encabulator Software Specification",
+    "@referredType": "SoftwareSpecification"
+  },
+  "isUTCTime": true,
+  "lastStartTime": "2022-02-04T15:10:01Z",
+  "targetPlatform": "server",
+  "numProcessesActiveCurrent": 1,
+  "numUsersCurrent": 0,
+  "pagingFileSizeCurrent": {
+    "amount": 49152,
+    "units": "4 KiB"
+  },
+  "processMemorySizeCurrent": {
+    "amount": 1399714284,
+    "units": "bytes"
+  },
+  "swapSpaceUsedCurrent": {
+    "amount": 0,
+    "units": "bytes"
+  },
+  "serialNumber": "831038429801",
+  "resourceRelationship": [
+    {
+      "relationshipType": "uses",
+      "resource": {
+        "id": "a1976344-3933-4942-874a-ded80c1e5d83",
+        "href": "/resourceInventory/v4/resource/a1976344-3933-4942-874a-ded80c1e5d83",
+        "name": "Encabulator Platform Requirement",
+        "@referredType": "HostingPlatformRequirement"
+      }
+    },
+    {
+      "relationshipType": "provides",
+      "resource": {
+        "id": "03c5a7d1-6cd5-4467-b0f5-fe7c06fb5e77",
+        "href": "/resourceInventory/v4/resource/03c5a7d1-6cd5-4467-b0f5-fe7c06fb5e77",
+        "name": "Encabulator Function",
+        "@referredType": "ResourceFunction"
+      }
+    }
+  ],
+  "resourceCharacteristic": [
+    {
+      "name": "OperatingSystem",
+      "value": "Debian 11 (bullseye)"
+    }
+  ]
+}
