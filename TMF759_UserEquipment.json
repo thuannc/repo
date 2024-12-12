@@ -1,0 +1,66 @@
+{
+  "id": "1114",
+  "href": "http://server:port/privateOptimizedBinding/v5/userEquipment/1114",
+  "description": "This is an example of a user equipment that we want to bind to a cloud application.",
+  "name": "Security Device XYZ",
+  "operationalState": "enable",
+  "note": [
+    {
+      "text": "something about this resource",
+      "@type": "Note"
+    }
+  ],
+  "place": [
+    {
+      "role": "HeadQuarter",
+      "place": {
+        "id": "2b8cea8f-642d-42e0-bdb2-6f47fabb3f07",
+        "href": "https://host/tmf-api/geographicAddressManagement/v4/geographicAddress/2b8cea8f-642d-42e0-bdb2-6f47fabb3f07",
+        "streetNr": "225",
+        "streetNrSuffix": "B",
+        "streetNrLast": "",
+        "streetNrLastSuffix": "",
+        "streetName": " Strathmore",
+        "streetType": "Terrace",
+        "streetSuffix": "",
+        "postcode": "5004",
+        "locality": "Brighton.",
+        "city": "Brighton",
+        "stateOrProvince": "SA",
+        "country": "Australia",
+        "@type": "GeographicAddress"
+      },
+      "@type": "RelatedPlaceRefOrValue"
+    }
+  ],
+  "activationFeature": [
+    {
+      "id": "2",
+      "isEnabled": true,
+      "name": "randomFeature",
+      "featureCharacteristic": [
+        {
+          "name": "testCharecteristic",
+          "value": "testValue",
+          "@type": "StringCharacteristic"
+        }
+      ],
+      "@type": "Feature"
+    }
+  ],
+  "resourceCharacteristic": [
+    {
+      "name": "MSISDN",
+      "value": "3345667788643",
+      "@type": "StringCharacteristic"
+    }
+  ],
+  "resourceSpecification": {
+    "id": "11140",
+    "href": "http://server:port/privateOptimizedBinding/v5/userEquipmentSpecification/11140",
+    "@type": "ResourceSpecificationRef"
+  },
+  "@type": "UserEquipment",
+  "@schemaLocation": "http://server:port/UserEquipment.schema.json",
+  "@baseType": "PhysicalResource"
+}
