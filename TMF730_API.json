@@ -1,0 +1,18 @@
+{
+  "id": "87839f7e-e490-4cfb-b371-6d1edeb85856",
+  "href": "/resourceInventory/v4/resource/87839f7e-e490-4cfb-b371-6d1edeb85856",
+  "name": "TMF635",
+  "description": "Open API for Usage Management",
+  "@type": "API",
+  "startOperatingDate": "2021-07-01T08:00:00Z",
+  "lastUpdate": "2022-11-27T20:51:14.457Z",
+  "category": "Software",
+  "resourceSpecification": {
+    "id": "30dcb35e-b643-4381-a619-df424a3a52c8",
+    "href": "/resourceCatalog/v4/resourceSpecification/30dcb35e-b643-4381-a619-df424a3a52c8",
+    "name": "TMF635 Specification",
+    "@referredType": "APISpecification"
+  },
+  "resourceRelationship": [],
+  "resourceCharacteristic": []
+}
