@@ -1,0 +1,42 @@
+{
+  "id": "a1976344-3933-4942-874a-ded80c1e5d83",
+  "href": "/resourceInventory/v4/resource/a1976344-3933-4942-874a-ded80c1e5d83",
+  "name": "Encabulator Platform Requirement",
+  "description": "The requirements on platforms hosting the Encabulator software",
+  "@type": "HostingPlatformRequirement",
+  "startOperatingDate": "2022-11-28T08:00:00Z",
+  "endOperatingDate": "2023-11-29T00:00:00Z",
+  "category": "Compute",
+  "resourceSpecification": {
+    "id": "de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+    "href": "/resourceCatalog/v4/resourceSpecification/de29d1fd-cbf8-4bd8-9e75-3f3905db4389",
+    "name": "Encabulator Platform Requirement Specification",
+    "@referredType": "HostingPlatformRequirementSpecification"
+  },
+  "resourceRelationship": [],
+  "activationFeature": [
+    {
+      "name": "scale",
+      "featureCharacteristic": [
+        {
+          "name": "cpuSize",
+          "value": "micro"
+        },
+        {
+          "name": "cpuNum",
+          "value": 2
+        },
+        {
+          "name": "memory",
+          "value": 1024
+        }
+      ]
+    }
+  ],
+  "resourceCharacteristic": [
+    {
+      "name": "virtualization",
+      "value": "container-runtime"
+    }
+  ]
+}
