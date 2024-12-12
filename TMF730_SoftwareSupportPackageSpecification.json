@@ -1,0 +1,35 @@
+{
+  "id": "632547af-e850-45a1-a569-31531ea81eb7",
+  "href": "/resourceCatalog/v4/resourceSpecification/632547af-e850-45a1-a569-31531ea81eb7",
+  "name": "Software Package Repository Specification",
+  "description": "This specification describes Software Package in a repository",
+  "@type": "SoftwareSupportPackageSpecification",
+  "validFor": {
+    "startDateTime": "2022-11-28T08:00:00Z",
+    "endDateTime": "2023-11-29T00:00:00Z"
+  },
+  "lifecycleStatus": "Active",
+  "isBundle": false,
+  "category": "Software",
+  "targetResourceSchema": {
+    "@type": "SoftwareSupportPackage"
+  },
+  "resourceSpecRelationship": [],
+  "resourceSpecCharacteristic": [
+    {
+      "name": "repoName",
+      "description": "Name of the image repository",
+      "valueType": "string"
+    },
+    {
+      "name": "repoBase",
+      "description": "Base URL of the image repository",
+      "valueType": "string"
+    },
+    {
+      "name": "imagePath",
+      "description": "Path of the image in the repository",
+      "valueType": "string"
+    }
+  ]
+}
