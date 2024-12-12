@@ -1,0 +1,11 @@
+{
+  "id": "189668",
+  "href": "/incidentManagement/v5/resolveIncident/189668",
+  "state": "accepted",
+  "clearTime": "2022-03-10T23:15:33.008Z",
+  "incident": {
+    "id": "26576876",
+    "href": "/incidentManagement/v5/incident/26576876",
+    "name": "IncidentA"
+  }
+}
