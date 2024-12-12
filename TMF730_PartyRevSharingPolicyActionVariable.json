@@ -1,0 +1,59 @@
+{
+  "actionVariable": [
+    {
+      "policyAction": {
+        "@referredType": "PolicyAction",
+        "@type": "PolicyActionRef",
+        "name": "The revenue share percentage of sold price is 5%",
+        "href": "https://mycsp.com:8080/tmf-api/PolicyManagement/v5/PolicyAction/5021",
+        "id": "5021"
+      },
+      "@type": "PartyRevSharingPolicyActionVariable",
+      "id": "5011",
+      "value": "5%",
+      "policyActionVariable": {
+        "@referredType": "PolicyVariable",
+        "@type": "PolicyVariableRef",
+        "name": "The revenue share percentage of sold price",
+        "href": "https://mycsp.com:8080/tmf-api/PolicyManagement/v5/PolicyVariable/5041",
+        "id": "5041"
+      }
+    }
+  ],
+  "conditionVariable": [
+    {
+      "policyConditionVariable": {
+        "@referredType": "PolicyVariable",
+        "@type": "PolicyVariableRef",
+        "name": "sold price",
+        "href": "https://mycsp.com:8080/tmf-api/PolicyManagement/v5/PolicyVariable/5040",
+        "id": "5040"
+      },
+      "@type": "PartyRevSharingPolicyConditionVariable",
+      "policyCondition": {
+        "@referredType": "PolicyCondition",
+        "@type": "PolicyConditionRef",
+        "name": "The sold price of single handset more than 300$",
+        "href": "https://mycsp.com:8080/tmf-api/PolicyManagement/v5/PolicyCondition/5020",
+        "id": "5020"
+      },
+      "id": "5010",
+      "value": "300"
+    }
+  ],
+  "@type": "PartyRevSharingAlgorithm",
+  "name": "distribute charge revenue share calculate policy for Mobile handset 2023 distribution price",
+  "description": "distribute charge revenue share calculate policy for Mobile handset 2023 distribution price",
+  "href": "https://mycsp.com:8080/tmf-api/PartyRevSharingModelManagement/v5/PartyRevSharingAlgorithm/4840",
+  "id": "4840",
+  "policy": [
+    {
+      "@referredType": "PolicySet",
+      "@type": "PolicyRef",
+      "name": "distribute charge revenue share calculate policy for Mobile handset 2023 distribution price",
+      "href": "https://mycsp.com:8080/tmf-api/PolicyManagement/v5/Policy/5840",
+      "id": "5840",
+      "version": "1.0"
+    }
+  ]
+}
