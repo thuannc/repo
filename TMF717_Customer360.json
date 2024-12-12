@@ -1,0 +1,311 @@
+{
+  "@type": "Customer360",
+  "href": "https://host:port/tmf-api/customer360/v5/customer/1140",
+  "id": "1140",
+  "customer": {
+    "@type": "Customer",
+    "href": "https://host:port/tmf-api/customerManagement/v5/customer/1140",
+    "id": "1140",
+    "contactMedium": [
+      {
+        "@type": "PhoneContactMedium",
+        "preferred": true,
+        "contactType": "homePhone",
+        "validFor": {
+          "startDateTime": "2018-06-13T00:00:00Z",
+          "endDateTime": "2019-01-11T00:00:00Z"
+        },
+        "phoneNumber": "01 09 75 83 51"
+      },
+      {
+        "@type": "GeographicAddressContactMedium",
+        "preferred": false,
+        "contactType": "homeAddress",
+        "validFor": {
+          "startDateTime": "2018-06-13T00:00:00Z",
+          "endDateTime": "2019-01-11T00:00:00Z"
+        },
+        "city": "Paris",
+        "country": "France",
+        "postCode": "75014",
+        "street1": "15 Rue des Canards"
+      }
+    ],
+    "engagedParty": {
+      "@type": "PartyRef",
+      "href": "https://host:port/tmf-api/partyManagement/v4/organization/500",
+      "id": "500",
+      "name": "Happy Travellers",
+      "@referredType": "PartyRef"
+    },
+    "name": "Moon Football Club",
+    "relatedParty": [
+      {
+        "@type": "RelatedPartyOrPartyRole",
+        "role": "bill receiver",
+        "partyOrPartyRole": {
+          "@type": "PartyRef",
+          "href": "https://host:port/tmf-api/partyManagement/v5/organization/2777",
+          "id": "2777",
+          "name": "John Doe (Accounting) Ltd"
+        }
+      }
+    ],
+    "status": "Approved",
+    "validFor": {
+      "startDateTime": "2018-06-12T00:00:00Z",
+      "endDateTime": "2019-01-11T00:00:00Z"
+    }
+  },
+  "account": [
+    {
+      "@type": "BillingAccount",
+      "href": "https://host:port/tmf-api/accountManagement/v5/account/5430",
+      "id": "5430",
+      "accountType": "Business",
+      "description": "This  billing account ...",
+      "lastUpdate": "2018-06-14T00:00:00Z",
+      "name": "Home Account",
+      "state": "Inactive"
+    }
+  ],
+  "agreement": [
+    {
+      "@type": "Agreement",
+      "href": "https://host:port/tmf-api/agreementManagement/v4/agreement/28",
+      "id": "28",
+      "agreementPeriod": {
+        "startDateTime": "2024-04-25T00:00:00Z",
+        "endDateTime": "2028-04-25T00:00:00Z"
+      },
+      "agreementSpecification": {
+        "@type": "AgreementSpecificationRef",
+        "href": "http://...",
+        "id": "9834-11",
+        "name": "Bandwith extender",
+        "@referredType": "AgreementSpecification",
+        "description": "Special agreement with higher bandwith."
+      },
+      "agreementType": "commercial",
+      "name": "Summer Contract Agreement"
+    }
+  ],
+  "appointment": [
+    {
+      "@type": "Appointment",
+      "href": "https://serverRoot/tmf-api/appointment/v4/appointment/21",
+      "id": "21",
+      "calendarEvent": {
+        "@type": "CalendarEvent",
+        "href": "https://serverRoot/tmf-api/timeManagement/v4/calendarEvent/33",
+        "id": "33",
+        "name": "Intervention calendar event"
+      },
+      "category": "intervention",
+      "creationDate": "2018-02-01T14:40:43Z",
+      "description": "Fix an internet connexion problem for a customer",
+      "externalId": "432113",
+      "lastUpdate": "2018-02-04T14:40:43Z",
+      "status": "confirmed",
+      "validFor": {
+        "startDateTime": "2018-02-15T14:00:00Z",
+        "endDateTime": "2018-02-15T16:00:00Z"
+      }
+    }
+  ],
+  "customerBill": [
+    {
+      "@type": "CustomerBill",
+      "href": "https://server:port/tmf-api/Customer_Bill_Management/v5/customerBill/CB-123",
+      "id": "CB-123",
+      "billNo": "33-3419823740981023948701987340912365912873487927635901?2084370129347-23A",
+      "category": "Monthly",
+      "state": "sent"
+    },
+    {
+      "@type": "CustomerBill",
+      "href": "https://server:port/tmf-api/Customer_Bill_Management/v5/customerBill/CB-123",
+      "id": "CB-123",
+      "billNo": "780123456",
+      "category": "normal",
+      "state": "settled"
+    }
+  ],
+  "loyaltyAccount": [
+    {
+      "@type": "loyaltyAccount",
+      "href": "https://host:port/loyaltyAccount/12345",
+      "id": "12345",
+      "accountBalance": {
+        "@type": "AccountBalance",
+        "href": "https://host:port/loyaltyAccount/accountBalance/AB123",
+        "id": "AB123",
+        "amount": {
+          "unit": "EUR",
+          "value": "50"
+        },
+        "balanceType": "loyalty balance",
+        "validFor": {
+          "endDateTime": "2021-03-17T00:00:00Z",
+          "startDateTime": "2021-04-16T00:00:00Z"
+        }
+      },
+      "name": "LoyaltyAccount",
+      "state": "Active"
+    }
+  ],
+  "partyInteraction": [
+    {
+      "@type": "PartyInteraction",
+      "href": "https://host:port/partyInteraction/v5/partyInteraction/123",
+      "id": "123",
+      "interactionDate": {
+        "startDateTime": "2019-10-02T11:36:18.758Z",
+        "endDateTime": "2019-10-02T11:53:21.789Z"
+      },
+      "description": "Visit to store",
+      "reason": "The user wanted to buy TV and internet plan",
+      "status": "ongoing"
+    }
+  ],
+  "paymentMethod": [
+    {
+      "@type": "BankCard",
+      "href": "{PaymentMethodAPI}/paymentMethod/12345",
+      "id": "123456",
+      "description": "My gold mastercard",
+      "isPreferred": true,
+      "validFor": {
+        "startDateTime": "2021-03-17T00:00:00Z",
+        "endDateTime": "2021-04-16T00:00:00Z"
+      },
+      "name": "Main credit card"
+    }
+  ],
+  "productOrder": [
+    {
+      "@type": "ProductOrder",
+      "href": "https://host:port/productOrderingManagement/v5/productOrder/30001",
+      "id": "30001",
+      "category": "B2C product order",
+      "completionDate": "2019-05-02T08:13:59.506Z",
+      "description": "Product Order illustration sample",
+      "expectedCompletionDate": "2019-05-02T08:13:59.506Z",
+      "externalId": "PO-456",
+      "creationDate": "2019-04-30T08:13:59.506Z",
+      "priority": "1",
+      "state": "completed"
+    }
+  ],
+  "product": [
+    {
+      "@type": "Product",
+      "href": "https://host:port/productInventoryManagement/v5/product/g265-tf85",
+      "id": "g265-tf85",
+      "description": "product description",
+      "name": "Voice Over IP Basic instance for Jean",
+      "productOffering": {
+        "@type": "ProductOffering",
+        "href": "https://host:port/productCatalogManagement/v5/productOffering/PO-101-1",
+        "id": "PO-101-1",
+        "name": "Voice Over IP Basic",
+        "@referredType": "ProductOffering"
+      },
+      "status": "active"
+    }
+  ],
+  "promotion": [
+    {
+      "@type": "Promotion",
+      "href": "https:/host:port/tmf-api/promotion/v5/promotion/8474",
+      "id": "PREPAIDOFFER_5GB",
+      "description": "Top-up by ?20 or more and get 5GB of data for only ?5",
+      "lastUpdate": "2021-01-19T00:00:00Z",
+      "lifecycleStatus": "release",
+      "name": "More 5GB data when ?20 top-up",
+      "validFor": {
+        "startDateTime": "2020-01-05T12:00:56.982Z",
+        "endDateTime": "9999-12-31T23:59:59.999Z"
+      }
+    }
+  ],
+  "quote": [
+    {
+      "@type": "Quote",
+      "href": "https://host:port/quoteManagement/v4/quote/12dd-78hg",
+      "id": "12dd-78hg",
+      "category": "BSBS Quote",
+      "description": "Quote illustration",
+      "effectiveQuoteCompletionDate": "2021-05-21T12:45:12.028Z",
+      "expectedFulfillmentStartDate": "2021-05-21T12:45:12.028Z",
+      "expectedQuoteCompletionDate": "2021-05-14T12:45:12.028Z",
+      "state": "approved",
+      "validFor": {
+        "startDateTime": "2021-05-06T12:45:12.033Z",
+        "endDateTime": "2021-05-06T12:45:12.033Z"
+      },
+      "version": "1"
+    }
+  ],
+  "recommendation": [
+    {
+      "@type": "recommendation",
+      "@schemaLocation": "http://serverlocation:port/recommendation/schema/recommendation.schema.json",
+      "href": "http://serverlocation:port/recommendation/v1/queryProductRecommendation/1001",
+      "id": "1001",
+      "description": "Recommendation of the latest TMFone, for the customers with a high level of requirements",
+      "name": " recommendation of the latest TMFone",
+      "recommendationType": "offer",
+      "category": {
+        "@type": "Mobileapp",
+        "href": "https://serverlocation:port/recommendation/v5/category/21",
+        "id": "21",
+        "name": "mobile app category"
+      }
+    }
+  ],
+  "serviceProblem": [
+    {
+      "@type": "ServiceProblem",
+      "href": "https://mycsp.com:8080/tmf-api/serviceProblemManagement/v5/serviceProblem/problemxxxx0000",
+      "id": "problemxxxx0000",
+      "affectedService": [
+        {
+          "@type": "ServiceRef",
+          "href": "https://mycsp.com:8080/tmf-api/serviceInventory/v5/service/NW1_Tokyo_Osaka",
+          "id": "NP1_Tokyo_Osaka"
+        },
+        {
+          "@type": "ServiceRef",
+          "href": "https://mycsp.com:8080/tmf-api/serviceInventory/v5/service/NW1_Tokyo_xxxx",
+          "id": "NP1_Tokyo_xxxx"
+        }
+      ],
+      "category": "supplier.originated",
+      "description": "connection failure between Tokyo and Osaka",
+      "originatingSystem": "System_001",
+      "priority": 1,
+      "status": "resolved"
+    }
+  ],
+  "troubleTicket": [
+    {
+      "@type": "TroubleTicket",
+      "href": "https://mycsp.com:8080/tmf-api/troubleTicket/v5/troubleTicket/3180",
+      "id": "3180",
+      "creationDate": "2019-05-31T07:34:45.968Z",
+      "description": "I do not accept the last VOD charge, since the movie was constantly interrupted, I had to quick watching the movie in the middle ",
+      "expectedResolutionDate": "2019-06-10T07:34:45.968Z",
+      "externalIdentifier": "213-9909",
+      "lastUpdate": "2019-05-31T07:34:45.968Z",
+      "name": "Compliant over last bill",
+      "priority": "High",
+      "requestedResolutionDate": "2019-05-31T07:34:45.968Z",
+      "severity": "Urgent",
+      "status": "pending",
+      "statusChangeDate": "2019-05-31T07:34:45.968Z",
+      "statusChangeReason": "Need more information from the customer",
+      "ticketType": "Bill Dispute"
+    }
+  ]
+}
