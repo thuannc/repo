@@ -1,0 +1,53 @@
+{
+  "id": "68337aed-d83f-4aef-8a7e-064b1fc3a241",
+  "href": "/resourceCatalog/v4/resourceSpecification/68337aed-d83f-4aef-8a7e-064b1fc3a241",
+  "name": "Encabulator Function Specification",
+  "description": "This specification describes the Encabulator Function",
+  "@type": "ResourceFunctionSpecification",
+  "validFor": {
+    "startDateTime": "2022-11-28T08:00:00Z",
+    "endDateTime": "2023-11-29T00:00:00Z"
+  },
+  "lastUpdate": "2022-02-03T07:59:59Z",
+  "lifecycleStatus": "Active",
+  "isBundle": false,
+  "category": "Software",
+  "targetResourceSchema": {
+    "@type": "ResourceFunction"
+  },
+  "resourceSpecRelationship": [],
+  "featureSpecification": [],
+  "resourceSpecCharacteristic": [
+    {
+      "name": "numMarzelvanes",
+      "description": "Number of antigravic marzelvanes.",
+      "valueType": "integer",
+      "resourceSpecCharacteristicValue": [
+        {
+          "valueFrom": 6,
+          "valueTo": 32
+        }
+      ]
+    },
+    {
+      "name": "numStatorSlots",
+      "description": "Number of panandermic semi-boloid stator slots.",
+      "valueType": "integer",
+      "resourceSpecCharacteristicValue": [
+        {
+          "valueFrom": 0,
+          "valueTo": 50
+        }
+      ]
+    }
+  ],
+  "connectionPointSpecification": [
+    {
+      "id": "30dcb35e-b643-4381-a619-df424a3a52c8",
+      "href": "/resourceCatalog/v4/resourceSpecification/30dcb35e-b643-4381-a619-df424a3a52c8",
+      "name": "TMF635 Specification",
+      "@referredType": "APISpecification"
+    }
+  ],
+  "connectivitySpecification": []
+}
