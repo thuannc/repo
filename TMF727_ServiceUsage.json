@@ -1,0 +1,73 @@
+{
+  "id": "5130d5131a23",
+  "href": "https://api.csp.com/serviceUsageManagement/v5/serviceUsage/5130d5131a23",
+  "usageDate": "2020-11-20T16:07:00Z",
+  "description": "Voice Call",
+  "usageType": "Voice",
+  "status": "generated",
+  "@type": "ServiceUsage",
+  "service": {
+    "id": "8132-b246a6746137",
+    "href": "https://api.csp.com/serviceInventory/v5/service/8132-b246a6746137",
+    "name": "Ivor voice service",
+    "@type": "Service"
+  },
+  "usageSpecification": {
+    "id": "8b64-0cfd1a90c9ed",
+    "href": "https://api.csp.com/serviceUsageManagement/v5/serviceUsageSpecification/8b64-0cfd1a90c9ed",
+    "name": "Voice Call Usage Specification",
+    "@referredType": "ServiceUsageSpecification",
+    "@type": "ServiceUsageSpecificationRef"
+  },
+  "relatedParty": [
+    {
+      "role": "Customer",
+      "@type": "RelatedPartyRefOrPartyRoleRef",
+      "partyOrPartyRole": {
+        "@type": "PartyRef",
+        "id": "8185-b246a6746136",
+        "href": "https://serverlocation:port/partyManagement/v5/individual/8185-b246a6746136",
+        "name": "Ivor Message",
+        "@referredType": "Individual"
+      }
+    }
+  ],
+  "usageCharacteristic": [
+    {
+      "name": "originatingCountryCode",
+      "value": "43",
+      "valueType": "string",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "name": "originatingNumber",
+      "value": "676123456789",
+      "valueType": "string",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "name": "destinationCountryCode",
+      "value": "49",
+      "valueType": "string",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "name": "destinationNumber",
+      "value": "170123456789",
+      "valueType": "string",
+      "@type": "StringCharacteristic"
+    },
+    {
+      "name": "duration",
+      "value": 20,
+      "valueType": "number",
+      "@type": "NumberCharacteristic"
+    },
+    {
+      "name": "unit",
+      "value": "SEC",
+      "valueType": "string",
+      "@type": "StringCharacteristic"
+    }
+  ]
+}
