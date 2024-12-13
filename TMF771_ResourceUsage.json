@@ -1,0 +1,77 @@
+{
+  "@type": "ResourceUsage",
+  "href": "https://api.csp.com/tmf-api/resourceUsageManagement/v5/resourceUsage/5130d5131a23",
+  "id": "5130d5131a23",
+  "usageDate": "2024-08-25T12:19:14Z",
+  "usageType": "VOICE",
+  "usageCharacteristic": [
+    {
+      "@type": "StringCharacteristic",
+      "name": "originatingCountryCode",
+      "valueType": "string",
+      "value": "43"
+    },
+    {
+      "@type": "StringCharacteristic",
+      "name": "destinationCountryCode",
+      "valueType": "string",
+      "value": "49"
+    },
+    {
+      "@type": "StringCharacteristic",
+      "name": "destinationNumber",
+      "valueType": "string",
+      "value": "170123456789"
+    },
+    {
+      "@type": "StringCharacteristic",
+      "name": "duration",
+      "valueType": "string",
+      "value": "20"
+    },
+    {
+      "@type": "StringCharacteristic",
+      "name": "startDateTime",
+      "valueType": "datetime",
+      "value": "2024-08-25T12:19:14Z"
+    },
+    {
+      "@type": "StringCharacteristic",
+      "name": "endDateTime",
+      "valueType": "datetime",
+      "value": "2024-08-25T12:19:34Z"
+    }
+  ],
+  "relatedParty": [
+    {
+      "@type": "RelatedPartyRefOrPartyRoleRef",
+      "role": "Individual",
+      "partyOrPartyRole": {
+        "@type": "PartyRef",
+        "href": "http://api.csp.com/tmf-api/partyManagement/individual/8a41-d6451fe98963",
+        "id": "8a41-d6451fe98963"
+      }
+    },
+    {
+      "@type": "RelatedPartyRefOrPartyRoleRef",
+      "role": "Organization",
+      "partyOrPartyRole": {
+        "@type": "PartyRef",
+        "href": "http://api.csp.com/tmf-api/partyManagement/organization/a396-5c90a41a23ea",
+        "id": "a396-5c90a41a23ea"
+      }
+    }
+  ],
+  "resource": {
+    "@type": "ResourceRef",
+    "href": "https://api.csp.com/tmf-api//resource/qerr-475",
+    "id": "qerr-475",
+    "name": "Voice resource"
+  },
+  "usageSpecification": {
+    "@type": "ResourceUsageSpecificationRef",
+    "href": "https://api.csp.com/tmf-api/resourceUsageManagement/v5/resourceUsageSpecification/af59-b504c742900e",
+    "id": "af59-b504c742900e",
+    "name": "VoiceCall"
+  }
+}
