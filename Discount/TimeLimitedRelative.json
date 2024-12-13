@@ -1,0 +1,28 @@
+{
+    "targetProductId": "ed7a3d38-bdd0-4db2-b047-2bc5d7b67336",
+    "promotionType": "discount",
+    "condition": {
+        "type": "time_limited",
+        "requiredHistory": {
+            "cycles": 0,
+            "months": 1
+        }
+    },
+    "promotionModel": {
+        "discountRatio": 0.1,
+        "type": "relative",
+        "measure": {
+            "type": "total_price"
+        },
+        "requiredHistory": {
+            "cycles": 0,
+            "months": 1
+        },
+        "totalMaxDiscount": 100,
+        "cycleMaxDiscount": 20
+    },
+    "id": "6aa33aa2-daf5-47b1-80c0-394127f383e7",
+    "type": "generic_product_promotion",
+    "promotionName": "55ed6c54-a201-4bfe-aaba-d9bd1b759d7c",
+    "lockingStatus": "open"
+}
