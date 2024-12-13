@@ -1,0 +1,19 @@
+{
+    "targetProductId": "1",
+    "promotionTimeLimit": {
+        "cycles": 18,
+        "months": 0
+    },
+    "priceToDiscountMap": {
+        "0": 0.1,
+        "10": 0.2
+    },
+    "discountCalculationStrategy": "step_function",
+    "totalMaxDiscount": 100,
+    "cycleMaxDiscount": 19,
+    "id": "67a63178-cdd4-48f6-a305-2038033abd9a",
+    "type": "time_limited_tiered_relative_product_discount",
+    "promotionName": "my promo",
+    "lockingStatus": "open"
+
+}
