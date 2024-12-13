@@ -1,0 +1,55 @@
+{
+    "targetItemId": "ca288a7c-9944-41d4-a7e2-d47eabce1496",
+    "promotionType": "discount",
+    "condition": {
+        "type": "and_condition",
+        "conditions": [
+            {
+                "type": "after_item_price_threshold",
+                "itemId": null,
+                "requiredHistory": {
+                    "cycles": 5,
+                    "months": 0
+                },
+                "minThreshold": 10
+            },
+            {
+                "type": "after_product_price_threshold",
+                "requiredHistory": {
+                    "cycles": 5,
+                    "months": 0
+                },
+                "minThreshold": 500
+            },
+            {
+                "type": "same_plan"
+            },
+            {
+                "type": "time_limited",
+                "requiredHistory": {
+                    "cycles": 0,
+                    "months": 12
+                }
+            }
+        ]
+    },
+    "promotionModel": {
+        "discountRatio": 0.1,
+        "type": "relative",
+        "measure": {
+            "type": "total_price"
+        },
+        "requiredHistory": {
+            "cycles": 10,
+            "months": null
+        },
+        "totalMaxDiscount": 100,
+        "cycleMaxDiscount": 20
+    },
+    "id": "f2aac76a-840a-4608-b268-bae52615e637",
+    "type": "generic_item_promotion",
+    "promotionName": "d6a2eb2a-91f5-407d-bde9-2bfa2f1d6e7d",
+    "description": null,
+    "lockingStatus": "open",
+    "lastUpdateTimeInMillis": 0
+}
