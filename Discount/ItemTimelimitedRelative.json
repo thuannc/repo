@@ -1,0 +1,14 @@
+{
+    "targetProductItemId": "acde888f-7720-4138-918d-f9442febc96e",
+    "promotionTimeLimit": {
+        "cycles": 18,
+        "months": 0
+    },
+    "discountRatio": 0.1,
+    "totalMaxDiscount": 100,
+    "cycleMaxDiscount": null,
+    "id": "768dbdb4-932b-430b-be8c-aae3a9a2c1ca",
+    "type": "time_limited_relative_item_discount",
+    "promotionName": "my promo",
+    "lockingStatus": "open"
+}
