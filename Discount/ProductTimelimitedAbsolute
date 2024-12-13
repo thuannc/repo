@@ -1,0 +1,13 @@
+{
+    "targetProductId": "4d228d9e-0683-4636-b21f-81c4127298dc",
+    "promotionTimeLimit": {
+        "cycles": 0,
+        "months": 12
+    },
+    "discount": 25,
+    "totalMaxDiscount": 100,
+    "id": "10de0900-7751-43f7-a415-fec4fa835009",
+    "type": "time_limited_absolute_product_discount",
+    "promotionName": "my promo",
+    "lockingStatus": "open"
+}
