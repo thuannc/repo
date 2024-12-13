@@ -1,0 +1,16 @@
+{
+    "discountValueMap": {
+        "50": 1
+        "100": 10
+    },
+    "type": "price_tiered_absolute",
+    "measure": {
+        "type": "total_price"
+    },
+    "requiredHistory": {
+        "cycles": 0,
+        "months": 0
+    },
+    "totalMaxDiscount": null,
+    "cycleMaxDiscount": null
+}
