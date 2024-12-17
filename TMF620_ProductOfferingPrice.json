@@ -20,7 +20,8 @@
     },
     "price": {
       "unit": "EUR",
-      "value": 50
+      "value": 50,
+      "tiers":[{"upTo":999,"value":2,"blockSize":1}]
     },
     "percentage": 0,
     "productOfferingTerm": [
