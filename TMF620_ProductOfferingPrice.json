@@ -18,6 +18,18 @@
       "amount": 1,
       "units": "Month"
     },
+    "prodSpecCharValueUse": [
+      {
+         "name": "storageSize",
+         "productSpecCharacteristicValue": [
+            {
+               "valueType": "number",
+               "valueFrom": 1,
+               "valueTo": 100
+            }
+         ]
+      }
+   ],
     "price": {
       "unit": "EUR",
       "value": 50,
