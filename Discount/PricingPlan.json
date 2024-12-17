@@ -1,0 +1,107 @@
+{
+    "productPlan": {
+        "id": "6a00892e-3e02-42c8-9559-6d2e95957848",
+        "productId": "1",
+        "billingPeriod": {
+            "interval": "month",
+            "intervalsCount": 1
+        },
+        "planLevelFreeTier": 10,
+        "productPlanName": "Pricing Plan 1",
+        "description": "",
+        "lastUpdateTimeInMillis": 1654722838307,
+        "lockingStatus": "close_to_changes",
+        "isDefault": true,
+        "successorPlanId": null,
+        "transitionStrategy": null,
+        "fees": [
+            {
+                "id": "b9c46a7b-ca07-4164-b2ba-e75a77fdc4e7",
+                "name": "Fixed Rate Add-On 1",
+                "description": "one time fee",
+                "cost": 10,
+                "isOneTimeFee": true,
+                "isProrated": false,
+                "prorateToDay": false,
+                "discountable": true,
+                "prepayable": true
+            }
+        ],
+        "productItems": [
+            {
+                "lockingStatus": "close_to_deletions",
+                "lastUpdateTimeInMillis": 1654722838307,
+                "productItemPrice": {
+                    "id": "ab408cd7-3444-4280-b1c5-68b424da4a92",
+                    "price": {
+                        "type": "PricePerUnitLeafNode",
+                        "tiers": [
+                            {
+                                "startAfterUnit": 100,
+                                "batchSize": 1,
+                                "pricePerBatch": 2
+                            }
+                        ],
+                        "allowPartialBatch": false
+                    },
+                    "productItemPriceName": "ab408cd7-3444-4280-b1c5-68b424da4a92",
+                    "lockingStatus": "close_to_changes",
+                    "lastUpdateTimeInMillis": 1654722838307
+                },
+                "id": "ef79342b-814c-4df3-bac7-e36875b2c870"
+            },
+            {
+                "lockingStatus": "close_to_deletions",
+                "lastUpdateTimeInMillis": 1654722838307,
+                "productItemPrice": {
+                    "id": "968fdf41-dda1-4f7b-a0c8-d9f5cf86258b",
+                    "price": {
+                        "type": "max_reducer",
+                        "granularity": "hourly",
+                        "nextNode": {
+                            "type": "LeafNode",
+                            "tiers": [
+                                {
+                                    "startAfterUnit": 1,
+                                    "batchSize": 100,
+                                    "pricePerBatch": 20
+                                },
+                                {
+                                    "startAfterUnit": 10001,
+                                    "batchSize": 100,
+                                    "pricePerBatch": 15
+                                }
+                            ],
+                            "allowPartialBatch": false
+                        }
+                    },
+                    "productItemPriceName": "968fdf41-dda1-4f7b-a0c8-d9f5cf86258b",
+                    "lockingStatus": "close_to_changes",
+                    "lastUpdateTimeInMillis": 1654722838307
+                },
+                "id": "3ac48ee8-e7f9-4d3c-a7c7-1f2ad0206da3"
+            }
+        ]
+    },
+    "promotions": [
+        {
+            "productId": "1",
+            "appliedTimeInSeconds": 1654723079,
+            "promotion": {
+                "targetProductItemId": "ef79342b-814c-4df3-bac7-e36875b2c870",
+                "promotionTimeLimit": {
+                    "cycles": 1,
+                    "months": 0
+                },
+                "discount": 50,
+                "totalMaxDiscount": null,
+                "id": "a21bc4d7-a826-4895-a92d-5bde340bd0e3",
+                "type": "time_limited_absolute_item_discount",
+                "promotionName": "Promotion 2",
+                "description": "",
+                "lockingStatus": "close_to_changes",
+                "lastUpdateTimeInMillis": 1654722948604
+            }
+        }
+    ]
+}
