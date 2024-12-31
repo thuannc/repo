@@ -11,6 +11,16 @@
       "@referredType": "PolicyEvent"
     }
   ],
+  "policyCondition": [
+    {
+      "id": "PC2",
+      "@referredType": "PolicyCondition"
+    },
+    {
+      "id": "PC3",
+      "@referredType": "PolicyCondition"
+    }
+  ],
   "policyAction": [
     {
       "id": "PA2",
