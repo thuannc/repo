@@ -1,0 +1,98 @@
+{
+  "PO": [
+    {
+      "@type": "ProductOffering",
+      "name": "Handset ABC",
+      "prodSpecCharValueUse": [
+        {
+          "@type": "ProductSpecificationCharacteristicValueUse",
+          "name": "colour",
+          "productSpecCharacteristicValue": [
+            {
+              "value": "Green"
+            },
+            {
+              "value": "Yellow"
+            },
+            {
+              "value": "Orange"
+            },
+            {
+              "value": "Gold"
+            }
+          ],
+          "productSpecification": {
+            "@type": "ProductSpecificationRef",
+            "name": "handset PS"
+          }
+        }
+      ],
+      "productOfferingPrice": [
+        {
+          "id": "POP1",
+          "name": "one-time price for Handset ABC"
+        },
+        {
+          "id": "POP2",
+          "name": "one-time price for Handset ABC in Gold"
+        }
+      ]
+    }
+  ],
+  "POP": [
+    {
+      "@type": "ProductOfferingPrice",
+      "Id": "POP1",
+      "name": "one-time price for Handset ABC",
+      "popRelationship": [],
+      "price": {
+        "unit": "EUR",
+        "value": 500
+      },
+      "prodSpecCharValueUse": []
+    },
+    {
+      "@type": "ProductOfferingPrice",
+      "Id": "POP2",
+      "name": "one-time price for Handset ABC",
+      "popRelationship": [
+        {
+          "id": "POP1",
+          "relationshipType": "overrides"
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 550
+      },
+      "prodSpecCharValueUse": [
+        {
+          "name": "colour",
+          "productSpecCharacteristicValue": [
+            {
+              "value": "Gold"
+            }
+          ],
+          "productSpecification": {
+            "name": "handset PS"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ProductOfferingPrice",
+      "prodSpecCharValueUse": [
+        {
+          "name": "storageSize",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 1,
+              "valueTo": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
