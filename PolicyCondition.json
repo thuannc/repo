@@ -1,0 +1,50 @@
+{
+  "id": "PCS1",
+  "policyConditionStrategy": 1,
+  " isConjustiveNormalForm ": true,
+  "policyCondition": [
+    {
+      "id": "PCS1-1",
+      "policyConditionStrategy": 1,
+      "isConjustiveNormalForm ": true,
+      "policyConditionStatement": [
+        {
+          "policyConditionVariable": {
+            "id": "1",
+            "path": "shoppingCart.relatedParty.id",
+            "fields": "creditScore.ratingScore",
+            "filter": "shoppingCart.relatedParty.role=customer"
+          },
+          "opType": "<",
+          "policyConditionvalue": {
+            "id": "1",
+            "@type": "PolicyConditionInteger",
+            "value": 699
+          }
+        }
+      ]
+    },
+    {
+      "id": "PCS1-2",
+      "policyConditionStrategy": 1,
+      "isConjustiveNormalForm ": true,
+      "policyConditionStatement": [
+        {
+          "policyConditionVariable": {
+            "id": "1",
+            "path": "shoppingCart.relatedParty.id",
+            "fields": "creditScore.riskRating",
+            "filter": " shoppingCart.relatedParty.role=customer"
+          },
+          "opType": ">",
+          "policyConditionvalue": {
+            "id": "1",
+            "@type": "PolicyConditionInteger",
+            "value": 3
+          }
+        }
+      ]
+    }
+  ],
+  "@type": "PolicyCondition"
+}
