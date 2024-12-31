@@ -1,0 +1,16 @@
+{
+  "id": "PA1",
+  "description": "Policy Action for Entertainment Plus commercial eligibility",
+  "name": "Policy Action for Entertainment Plus",
+  "@type": "PolicyActionAlarm",
+  "alarm": {
+    "state": "raised",
+    "alarmType": "nonEligibleOffer",
+    "perceivedSeverity": "minor",
+    "probableCause": "Customer profile incompatible with offer",
+    "alarmedObject": {
+      "id": "93051825",
+      "href": "https://host:port/productCatalogManagement/v4/productOffering/93051825"
+    }
+  }
+}
