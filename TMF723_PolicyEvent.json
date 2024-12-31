@@ -1,0 +1,6 @@
+{
+  "id": "PE1",
+  "eventType": "shoppingCartCreateEvent",
+  "query": "cartItem.action=add&cartItem.productOffering.name= EntertainmentPlus",
+  "@type": "PolicyEvent"
+}
