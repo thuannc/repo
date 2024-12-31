@@ -1,0 +1,6 @@
+{
+  "id": "PE2",
+  "eventType": "shoppingCartCreateEvent",
+  "query": "cartItem.productOffering.name=BroadbandOffering",
+  "@type": "PolicyEvent"
+}
