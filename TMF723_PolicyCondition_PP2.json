@@ -1,0 +1,20 @@
+{
+  "id": "PC3",
+  "policyConditionStrategy": 1,
+  "policyConditionStatement": [
+    {
+      "policyConditionVariable": {
+        "id": "1",
+        "path": "shoppingCart.cartItem.product.productCharacteristic",
+        "fields": "value",
+        "filter": "$.shoppingCart.cartItem[*].[?(@.productOffering.id==PO_Broadband&&@.product.productC haracteristic.id==SpeedLimit&&@.action==add)]"
+      },
+      "opType": "=",
+      "policyConditionvalue": {
+        "id": "1",
+        "@type": "PolicyConditionString",
+        "value": "Unlimited"
+      }
+    }
+  ]
+}
