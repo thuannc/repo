@@ -1,0 +1,33 @@
+{
+  "id": "PR2",
+  "description": "Policy rule to compute POP accordingly to broadband speed",
+  "name": "Policy rule pricing broadband speed",
+  "state": "active",
+  "executionStrategy": 1,
+  "sequencedActions": 1,
+  "policyEvent": [
+    {
+      "id": "PE2",
+      "@referredType": "PolicyEvent"
+    }
+  ],
+  "policyAction": [
+    {
+      "id": "PA2",
+      "@referredType": "PolicyActionAlarm"
+    }
+  ],
+  "policyDomain": [
+    {
+      "id": "Domain1",
+      "name": "product catalog domain"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "Jean Pontus",
+      "@referredType": "Individual",
+      "role": "rule owner"
+    }
+  ]
+}
