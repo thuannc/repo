@@ -84,3 +84,20 @@ Then I can get my 2 prices:
         ]
     }
 ]
+
+{
+   "@type": "ProductOfferingPrice",
+   "prodSpecCharValueUse": [
+      {
+         "name": "storageSize",
+         "productSpecCharacteristicValue": [
+            {
+               "valueType": "number",
+               "valueFrom": 1,
+               "valueTo": 100
+            }
+         ]
+      }
+   ],
+   ...
+}
