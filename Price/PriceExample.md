@@ -1,0 +1,33 @@
+{
+  "note1": "Giá của một ProductOfferingSpecification hoặc một gói có thể đơn giản hoặc khá phức tạp. 
+    Một mức giá đơn giản có thể là khoản phí liên quan đến việc thuê modem cáp hàng tháng. 
+    Hoặc, một mức giá có thể bao gồm nhiều thành phần khác nhau. 
+    Ví dụ, một dịch vụ không dây giới thiệu thông thường sẽ có chi phí kích hoạt, chi phí hàng tháng, 
+    số phút miễn phí, chi phí cho các phút thêm và một số loại thành phần khuyến mại. 
+    Nó cũng có thể bao gồm chiết khấu của công ty dành cho người dùng doanh nghiệp. 
+    Mỗi yếu tố này phải được mô tả để có thể đưa ra bức tranh chính xác về mức giá chung được tính cho bất kỳ ProductOfferingSpecification nào. 
+    Phần này của mô hình SID trình bày một tập hợp các thành phần có thể được kết hợp để đưa ra mô tả đầy đủ và chính xác về mức giá được tính cho một dịch vụ. 
+    Một cân nhắc thứ cấp là xác định các thành phần đó theo cách có thể dễ dàng triển khai trong hệ thống thanh toán thông thường. 
+    Một ProductOfferingSpecification có thể có bất kỳ số lượng giá nào, mỗi mức giá được tạo thành từ một thành phần duy nhất hoặc hợp thành từ một số thành phần. 
+    Mô hình Giá chào bán sản phẩm sử dụng mẫu mô hình tổng hợp/thành phần được sử dụng trong toàn bộ SID để biểu diễn giá đơn giản và phức tạp, 
+    như minh họa trong hình bên dưới. ProductOfferingPrices có thể phụ thuộc vào ProductSpecCharValueUse như thể hiện trong hình trên. 
+    Ví dụ: nhà cung cấp có thể cung cấp dịch vụ in ảnh cho ảnh chụp bằng điện thoại di động. Giá có thể phụ thuộc vào kích thước của ảnh hoặc loại hoàn thiện của ảnh; 
+    0,20 đô la cho ảnh 3 x 5, hoàn thiện trơn, 
+    0,25 đô la cho ảnh 5 x 7, hoàn thiện trơn, v.v. 
+    Các giá trị liên quan đến kích thước (3 x 5, 5 x 7, v.v.) và hoàn thiện (trơn, bóng, mờ, v.v.) có thể được lưu trữ dưới dạng ProductSpecCharacteristicValues. 
+    ProductOfferingPrice, có thể có cấu trúc phức tạp (thành phần) và liên quan đến khả năng lập hóa đơn/đánh giá phức tạp, 
+    có thể được định nghĩa trong 'danh mục giá' dưới dạng thành phần có thể tái sử dụng được xác định trước cho các ProductSpec nhất định 
+    và sau đó được ProductOfferingSpecification chọn để sử dụng để xuất bản trong ProductCatalog. Liên kết ProductSpecification với ProductOfferingPrice 
+    cho phép sử dụng thực thể ProductOfferingPrice làm 'thành phần thông số kỹ thuật định giá' được xác định cho ProductSpecification. 
+    Đối với một ProductSpecification nhất định, 'danh mục định giá' có thể chứa một số ứng viên thành phần định giá để sử dụng. 
+    Khi xác định ProductOfferingSpecification, các thành phần định giá được xác định trước (ProductOfferingPrices) cho ProductSpecs có thể được chọn 
+    để định giá ProductOfferingSpecification. Các thành phần định giá hiện có cũng có thể được thay đổi riêng lẻ hoặc các thành phần mới được xác định 
+    cho một ProductOfferingSpecification nhất định. Hình Pr.8 cũng hiển thị liên kết giữa ProductOfferingPrice và PriceEvent. 
+    Thực thể kinh doanh PriceEvent biểu thị một sự kiện (sự việc đang diễn ra) hoặc lịch trình kích hoạt việc tạo phí thanh toán cho một ProductOfferingSpecification. 
+    Ví dụ: một thể hiện PriceEvent có thể biểu thị ngày kết thúc của tháng khi các khoản phí thanh toán định kỳ hàng tháng được tạo. 
+    Trong một số trường hợp, việc tạo ra một khoản phí liên quan đến ProductOfferingPrice có thể được kích hoạt bởi nhiều sự kiện. 
+    Ví dụ, một hình phạt (ProductOfferingPrice) có thể được kích hoạt bởi việc sử dụng quá mức hoặc không đủ một dịch vụ. 
+    Sử dụng quá mức và không đủ được biểu thị dưới dạng hai trường hợp thực thể PriceEvent riêng biệt."
+
+
+}
