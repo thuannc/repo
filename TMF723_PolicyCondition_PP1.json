@@ -7,7 +7,7 @@
         "id": "1",
         "path": "shoppingCart.cartItem.product.productCharacteristic",
         "fields": "value",
-        "filter": "$.shoppingCart.cartItem[*].[?(@.productOffering.id==PO_Broadband&&@.product.productC haracteristic.id==SpeedLimit&&@.action==add)]"
+        "filter": "$.shoppingCart.cartItem[*].[?(@.productOffering.id==PO_Broadband&&@.product.productCharacteristic.id==SpeedLimit&&@.action==add)]"
       },
       "opType": "=",
       "policyConditionvalue": {
