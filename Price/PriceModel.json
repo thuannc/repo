@@ -81,7 +81,20 @@
     },
     {
       "@type": "ProductOfferingPrice",
+      "price": {
+        "unit": "EUR",
+        "value": 550
+      },
       "prodSpecCharValueUse": [
+        {
+          "name": "color",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "value": "red"
+            }
+          ]
+        },
         {
           "name": "storageSize",
           "productSpecCharacteristicValue": [
