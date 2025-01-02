@@ -1,10 +1,31 @@
 {
-  "description": "Phí phát sinh cho ProductOfferingSpecification có thể có nhiều hình thức khác nhau",
-  "recurringCharge": "Phí định kỳ được tính nhiều lần. Phí này có thời hạn, chẳng hạn như hàng tháng, hàng quý hoặc hàng năm. Ví dụ, phí hàng tháng cho cuộc gọi đường dài. Phí định kỳ cũng có thể giới hạn thời hạn áp dụng. Ví dụ, phí định kỳ chỉ được áp dụng trong 6 tháng cho một thiết bị đắt tiền.",
-  "onetimeCharge": "Phí một lần được tính một lần. Ví dụ, chi phí cho một ống nghe điện thoại di động hoặc phí cài đặt (FeeProdOfferingPrice định giá AllowedProductAction).",
-  "usage": {
-    "description": "Phí được tính cho việc sử dụng (ProductUsageSpec), dựa trên các sự kiện đo lường. Mô hình này phân biệt giữa sử dụng đơn giản và sử dụng trong đó phí được mô tả bằng biểu giá.",
-    "simpleUsage": "Sử dụng đơn giản mô tả mức phí trong đó phí giống nhau cho tất cả các sự kiện. Ví dụ, gói cước 10 xu một phút cho cuộc gọi đường dài là một ví dụ.",
-    "tariffUsage": "Sử dụng giá cước mô tả mức phí có các loại phí khác nhau cho các loại sự kiện khác nhau. Điều này có thể bao gồm các gói cước có giá khác nhau cho phút gọi buổi tối và phút gọi bất kỳ lúc nào. Cách sử dụng này tổng hợp một số cách sử dụng đơn giản."
+  "pop": {
+    "description": "Phí phát sinh cho ProductOfferingSpecification có thể có nhiều hình thức khác nhau",
+    "recurringCharge": "Phí định kỳ được tính nhiều lần. Phí này có thời hạn, chẳng hạn như hàng tháng, hàng quý hoặc hàng năm. Ví dụ, phí hàng tháng cho cuộc gọi đường dài. Phí định kỳ cũng có thể giới hạn thời hạn áp dụng. Ví dụ, phí định kỳ chỉ được áp dụng trong 6 tháng cho một thiết bị đắt tiền.",
+    "onetimeCharge": "Phí một lần được tính một lần. Ví dụ, chi phí cho một ống nghe điện thoại di động hoặc phí cài đặt (FeeProdOfferingPrice định giá AllowedProductAction).",
+    "usage": {
+      "description": "Phí được tính cho việc sử dụng (ProductUsageSpec), dựa trên các sự kiện đo lường. Mô hình này phân biệt giữa sử dụng đơn giản và sử dụng trong đó phí được mô tả bằng biểu giá.",
+      "simpleUsage": "Sử dụng đơn giản mô tả mức phí trong đó phí giống nhau cho tất cả các sự kiện. Ví dụ, gói cước 10 xu một phút cho cuộc gọi đường dài là một ví dụ.",
+      "tariffUsage": "Sử dụng giá cước mô tả mức phí có các loại phí khác nhau cho các loại sự kiện khác nhau. Điều này có thể bao gồm các gói cước có giá khác nhau cho phút gọi buổi tối và phút gọi bất kỳ lúc nào. Cách sử dụng này tổng hợp một số cách sử dụng đơn giản."
+    }
+  },
+  "popAlteration": {
+    "description": "Tương tự như vậy, các thay đổi được thực hiện đối với các ProductOfferingPrice khác phát sinh cho một ProductOfferingSpecification có thể có nhiều hình thức khác nhau, chẳng hạn như",
+    "discount": "Giảm giá là giảm giá. Có thể là một khoản phí cố định như 10 đô la hoặc một phần trăm, chẳng hạn như giảm giá 50%. Giảm giá luôn áp dụng cho và do đó liên quan đến một hoặc nhiều ProdOfferPrice khác. Vì vậy, giảm giá sẽ là giảm 10 đô la cho phí cài đặt hoặc giảm 50% cho giá theo phút.",
+    "replacement": "Mức giá thay thế cho một ProductOfferingPrice khác (được tính thay cho một mức giá khác). Ví dụ, mua hai sản phẩm trong cùng một sản phẩm có thể dẫn đến mức giá giảm cho cả hai.",
+    "taxation": "Số tiền thuế là mức tăng giá do một khoản thuế bắt buộc của một khu vực pháp lý được ủy quyền. Đối với ProductOfferingPrice, đây là số tiền dự kiến. Số tiền thuế thực tế sẽ được áp dụng trong ProductPrice. Xem phần dành riêng bên dưới về thuế để biết thêm chi tiết."
+  },
+  "completePopModel": {
+    "description": "Đặt các khoản phí và thay đổi trong một ví dụ duy nhất cung cấp cái nhìn toàn diện về một ProductOfferingPrice. Một gói cước không dây đơn giản bao gồm một chiếc điện thoại 75 đô la, một khoản phí kích hoạt 50 đô la, một khoản phí hàng tháng 20 đô la được thay thế bằng 10 đô la trong 6 tháng, 10 xu một phút cho các phút bổ sung và 25 xu một phút cho cuộc gọi đường dài. Các thành phần là",
+    "note1": "Một khoản phí một lần 75 đô la (OneTimeProdOfferPriceCharge)",
+    "note2": "Một khoản phí 50 đô la (FeeProdOfferingPrice)",
+    "note3": "Một khoản phí định kỳ 20 đô la mỗi tháng (RecurringProdOfferPriceCharge)",
+    "note4": "Một khoản phí thay thế 10 đô la cho khoản phí định kỳ trong 6 tháng (ReplacementProdOfferPriceAlteration)",
+    "note5": "Một mức sử dụng cước phí bao gồm 10 xu cho mỗi phút sử dụng đơn giản và 25 xu cho mỗi phút sử dụng đơn giản cho cuộc gọi đường dài (SimpleUsageProdOfferPriceCharge)",
+    "discountWithAgreement": {
+      "description": "Thêm vào ví dụ, giả sử Sue là nhân viên của một công ty có thỏa thuận giảm giá theo khối lượng với nhà cung cấp dịch vụ. Thỏa thuận này là miễn phí cài đặt và giảm giá 20 phần trăm cho các phút gọi nội hạt.",
+      "note1": "Giá tổng hợp liên kết Giảm giá 50 đô la (DiscountProdOfferPriceAlteration) với Phí 50 đô la",
+      "note2": "Giá tổng hợp liên kết Giảm giá 20 phần trăm (DiscountProdOfferPriceAlteration) với 10 xu mỗi phút Sử dụng đơn giản Ngoài ra, Thuế (TaxProdOfferPriceAlteration) có thể được áp dụng cho mỗi thành phần hoặc ProductOfferingPrice tổng hợp."
+    }
   }
 }
