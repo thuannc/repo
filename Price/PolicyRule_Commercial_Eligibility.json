@@ -8,19 +8,79 @@
   "policyEvent": [
     {
       "id": "PE1",
-      "@referredType": "PolicyEvent"
+      "eventType": "shoppingCartCreateEvent",
+      "query": "cartItem.action=add&cartItem.productOffering.name= EntertainmentPlus",
+      "@type": "PolicyEvent"
     }
   ],
   "policyCondition": [
     {
       "id": "PCS1",
-      "@referredType": "PolicyCondition"
+      "policyConditionStrategy": 1,
+      " isConjustiveNormalForm ": true,
+      "policyCondition": [
+        {
+          "id": "PCS1-1",
+          "policyConditionStrategy": 1,
+          "isConjustiveNormalForm ": true,
+          "policyConditionStatement": [
+            {
+              "policyConditionVariable": {
+                "id": "1",
+                "path": "shoppingCart.relatedParty.id",
+                "fields": "creditScore.ratingScore",
+                "filter": "shoppingCart.relatedParty.role=customer"
+              },
+              "opType": "<",
+              "policyConditionvalue": {
+                "id": "1",
+                "@type": "PolicyConditionInteger",
+                "value": 699
+              }
+            }
+          ]
+        },
+        {
+          "id": "PCS1-2",
+          "policyConditionStrategy": 1,
+          "isConjustiveNormalForm ": true,
+          "policyConditionStatement": [
+            {
+              "policyConditionVariable": {
+                "id": "1",
+                "path": "shoppingCart.relatedParty.id",
+                "fields": "creditScore.riskRating",
+                "filter": " shoppingCart.relatedParty.role=customer"
+              },
+              "opType": ">",
+              "policyConditionvalue": {
+                "id": "1",
+                "@type": "PolicyConditionInteger",
+                "value": 3
+              }
+            }
+          ]
+        }
+      ],
+      "@type": "PolicyCondition"
     }
   ],
   "policyAction": [
     {
       "id": "PA1",
-      "@referredType": "PolicyActionAlarm"
+      "description": "Policy Action for Entertainment Plus commercial eligibility",
+      "name": "Policy Action for Entertainment Plus",
+      "@type": "PolicyActionAlarm",
+      "alarm": {
+        "state": "raised",
+        "alarmType": "nonEligibleOffer",
+        "perceivedSeverity": "minor",
+        "probableCause": "Customer profile incompatible with offer",
+        "alarmedObject": {
+          "id": "93051825",
+          "href": "https://host:port/productCatalogManagement/v4/productOffering/93051825"
+        }
+      }
     }
   ],
   "policyDomain": [
