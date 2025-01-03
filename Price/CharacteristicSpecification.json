@@ -1,0 +1,40 @@
+{
+  "name": "Platform",
+  "id": "4441",
+  "description": "This characteristic describes the platform of the node",
+  "valueType": "string",
+  "configurable": true,
+  "validFor": {
+    "startDateTime": "2020-12-05T00:00",
+    "endDateTime": "2023-12-31T11:59:59"
+  },
+  "@valueSchemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/StringCharacteristic.schema.json",
+  "minCardinality": 0,
+  "maxCardinality": 1,
+  "isUnique": true,
+  "regex": "",
+  "extensible": false,
+  "characteristicValueSpecification": [
+    {
+      "valueType": "string",
+      "isDefault": true,
+      "value": "Windows",
+      "validFor": {
+        "startDateTime": "2020-12-05T00:00",
+        "endDateTime": "2023-12-31T11:59:59"
+      },
+      "regex": "",
+      "valueFrom": "",
+      "valueTo": "",
+      "unitOfMeasure": "",
+      "rangeInterval": "open",
+      "@type": "CharacteristicValueSpecification",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
+    }
+  ],
+  "charSpecRelationship": [],
+  "@type": "SpecCharacteristic",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
+}
