@@ -34,7 +34,7 @@
     }
   ],
   "charSpecRelationship": [],
-  "@type": "SpecCharacteristic",
-  "@baseType": "",
+  "@type": "MatrixCharacteristicSpec",
+  "@baseType": "CharacteristicSpecification",
   "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
 }
