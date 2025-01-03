@@ -1,0 +1,65 @@
+{
+  "MatrixCharacteristicSpec":{
+    "derivationFormula":"",
+    "id": "2777",
+    "name": "OneTimeRatingPLA",
+    "description": "Algorithm that rates OneTime event",
+    "validFor": {
+      "startDateTime": "2020-09-22T16:42:23.0Z",
+      "endDateTime": "2021-09-22T00:00:00.0Z"
+    },
+    "extensible":true,
+    "maxCardinality":1,
+    "minCardinality":0,
+    "unique":true,
+    "valueType":""
+  },
+  "MatrixSpecDimension":{
+    "seqNum":"",
+    "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+    }
+  },
+  
+  "PricingLogicAlgorithmSpec":{
+      "status":"active",
+      "id": "2777",
+      "name": "PricingLogicAlgorithmSpec",
+      "description": "Algorithm that rates Recurring event",
+      "validFor": {
+        "startDateTime": "2020-09-22T16:42:23.0Z",
+        "endDateTime": "2021-09-22T00:00:00.0Z"
+      }
+  }
+  "OneTimePLASpec":{
+        "status":"active",
+        "id": "2777",
+        "name": "OneTimeRatingPLA",
+        "description": "Algorithm that rates OneTime event",
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        }
+  },
+  "RecurringPLASpec":{
+        "status":"active",
+        "id": "2777",
+        "name": "RecurringRatingPLA",
+        "description": "Algorithm that rates Recurring event",
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        }
+  },
+  "UsagePLASpec":{
+        "status":"active",
+        "id": "2777",
+        "name": "UsageRatingPLA",
+        "description": "Algorithm that rates Usage event",
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        }
+  }
+}
