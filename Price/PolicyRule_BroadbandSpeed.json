@@ -1,0 +1,129 @@
+{
+  "id": "PR2",
+  "description": "Policy rule to compute POP accordingly to broadband speed",
+  "name": "Policy rule pricing broadband speed",
+  "state": "active",
+  "executionStrategy": 1,
+  "sequencedActions": 1,
+  "policyEvent": [
+    {
+      "id": "PE1",
+      "eventType": "shoppingCartCreateEvent",
+      "query": "cartItem.action=add&cartItem.productOffering.name= EntertainmentPlus",
+      "@type": "PolicyEvent"
+    }
+  ],
+  "policyCondition": [
+    {
+      "id": "PC2",
+      "policyConditionStrategy": 1,
+      "policyConditionStatement": [
+        {
+          "policyConditionVariable": {
+            "id": "1",
+            "path": "shoppingCart.cartItem.product.productCharacteristic",
+            "fields": "value",
+            "filter": "$.shoppingCart.cartItem[*].[?(@.productOffering.id==PO_Broadband&&@.product.productCharacteristic.id==SpeedLimit&&@.action==add)]"
+          },
+          "opType": "=",
+          "policyConditionvalue": {
+            "id": "1",
+            "@type": "PolicyConditionString",
+            "value": "Limited"
+          }
+        }
+      ]
+    },
+    {
+      "id": "PC3",
+      "policyConditionStrategy": 1,
+      "policyConditionStatement": [
+        {
+          "policyConditionVariable": {
+            "id": "1",
+            "path": "shoppingCart.cartItem.product.productCharacteristic",
+            "fields": "value",
+            "filter": "$.shoppingCart.cartItem[*].[?(@.productOffering.id==PO_Broadband&&@.product.productC haracteristic.id==SpeedLimit&&@.action==add)]"
+          },
+          "opType": "=",
+          "policyConditionvalue": {
+            "id": "1",
+            "@type": "PolicyConditionString",
+            "value": "Unlimited"
+          }
+        }
+      ]
+    }
+  ],
+  "policyAction": [
+    {
+      "id": "PA2",
+      "name": "Pricing rule for Broadband",
+      "actionStrategy": 1,
+      "@type": "PolicyActionOperation",
+      "policyAction": [
+        {
+          "id": "PA2-1",
+          "name": "Broadband limited price rule",
+          "@type": "PolicyActionOperation",
+          "actionSequence": 1,
+          "actionCondition": [
+            {
+              "id": "PC2"
+            }
+          ],
+          "operation": "add",
+          "path": "cartItem",
+          "filter": "cartItem.productOffering.name=BroadbandOffering",
+          "field": "itemPrice",
+          "actionValue": {
+            "@type": "PolicyActionObjectValue",
+            "value": {
+              "productOfferingPrice": {
+                "id": "POPC45",
+                "name": "Limited Broadband recurring plan"
+              }
+            }
+          }
+        },
+        {
+          "id": "PA2-2",
+          "name": "Broadband unlimited price rule",
+          "@type": "PolicyActionOperation",
+          "actionSequence": 2,
+          "actionCondition": [
+            {
+              "id": "PC3"
+            }
+          ],
+          "operation": "add",
+          "path": "cartItem",
+          "filter": "cartItem.productOffering.name=BroadbandOffering",
+          "field": "itemPrice",
+          "actionValue": {
+            "@type": "PolicyActionObjectValue",
+            "value": {
+              "productOfferingPrice": {
+                "id": "POPC46",
+                "name": "Unlimited Broadband recurring plan"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "policyDomain": [
+    {
+      "id": "Domain1",
+      "name": "product catalog domain"
+    }
+  ],
+  "relatedParty": [
+    {
+      "id": "Jean Pontus",
+      "@referredType": "Individual",
+      "role": "rule owner"
+    }
+  ]
+}
