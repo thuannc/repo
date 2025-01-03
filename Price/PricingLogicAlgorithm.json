@@ -1,0 +1,14 @@
+{
+        "id": "2777",
+        "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/2777",
+        "name": "RecurringRatingPLA",
+        "description": "Algorithm that rates Recurring event",
+        "plaSpecId": "2801",
+        "validFor": {
+          "startDateTime": "2020-09-22T16:42:23.0Z",
+          "endDateTime": "2021-09-22T00:00:00.0Z"
+        },
+        "@type": "PricingLogicAlgorithm",
+        "@baseType": "",
+        "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/PricingLogicAlgorithm.schema.json"
+      }
