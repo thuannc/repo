@@ -8,6 +8,7 @@
           "startDateTime": "2020-09-22T16:42:23.0Z",
           "endDateTime": "2021-09-22T00:00:00.0Z"
         },
+        "characteristicSpecValue":[],
         "@type": "PricingLogicAlgorithm",
         "@baseType": "",
         "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/PricingLogicAlgorithm.schema.json"
