@@ -1,0 +1,121 @@
+{
+  "id": "11716346003",
+  "href": "http://plm-ws-multi-dev-env.k8s-svc.marand.si/plm-tmf620-marand-plmstage-sb3/tmf-ws/tmf-api/productCatalogManagement/v4/productOffering/11716346003",
+  "@type": "MarandProductOffering",
+  "productOfferingPrice": [
+    {
+      "id": "11716350001-70",
+      "href": "http://plm-ws-multi-dev-env.k8s-svc.marand.si/plm-tmf620-marand-plmstage-sb3/tmf-ws/tmf-api/productCatalogManagement/v4/productOfferingPrice/11716350001-70?version=11716351001&productOfferingId=11716346003",
+      "lastUpdate": "2023-02-16T09:44:00.711+01:00",
+      "lifecycleStatus": "Active",
+      "name": "NAROČNINA za Testna ponudba GAL-794-1",
+      "priceType": "RecurringCharge",
+      "recurringChargePeriod": "month",
+      "recurringChargePeriodLength": 1,
+      "version": "11716351001",
+      "constraint": [
+        {
+          "id": "70",
+          "name": "(TNAR) Naročnina"
+        }
+      ],
+      "price": {
+        "taxCategory": "DDV",
+        "taxRate": 22,
+        "dutyFreeAmount": {
+          "unit": "EUR",
+          "value": 19.95
+        },
+        "@type": "MarandProductPriceValue",
+        "isRegulated": false,
+        "isDiscountable": false
+      },
+      "priceAlteration": [
+        {
+          "id": "11716350002-315450001",
+          "href": "http://plm-ws-multi-dev-env.k8s-svc.marand.si/plm-tmf620-marand-plmstage-sb3/tmf-ws/tmf-api/productCatalogManagement/v4/productOfferingPrice/11716350002-315450001?version=11716350002",
+          "description": "Popust - na naročnino",
+          "name": "PONAVLJAJOČI SE POPUST za Testni popust za GAL-794-1",
+          "priceType": "RecurringDiscount",
+          "priority": 1117000,
+          "recurringChargePeriod": "month",
+          "price": {
+            "percentage": 50,
+            "@type": "ProductPriceValue"
+          },
+          "unitOfMeasure": {
+            "amount": 1
+          },
+          "validFor": {
+            "endDateTime": "3000-01-01T00:00:00+01:00",
+            "startDateTime": "2023-02-16T00:00:00+01:00"
+          }
+        },
+        {
+          "id": "11716350003-315450001",
+          "href": "http://plm-ws-multi-dev-env.k8s-svc.marand.si/plm-tmf620-marand-plmstage-sb3/tmf-ws/tmf-api/productCatalogManagement/v4/productOfferingPrice/11716350003-315450001?version=11716350003",
+          "description": "Ponavljajoči se popust - Testna ponudba GAL-794-3 (akcija)",
+          "name": "PONAVLJAJOČI SE POPUST za Testna ponudba GAL-794-3 (akcija)",
+          "priceType": "RecurringDiscount",
+          "priority": 1117100,
+          "recurringChargePeriod": "month",
+          "applicationDuration": {
+            "amount": 12,
+            "units": "month"
+          },
+          "price": {
+            "percentage": 66.67,
+            "@type": "ProductPriceValue"
+          },
+          "unitOfMeasure": {
+            "amount": 1
+          },
+          "validFor": {
+            "endDateTime": "3000-01-01T00:00:00+01:00",
+            "startDateTime": "2023-02-16T00:00:00+01:00"
+          }
+        }
+      ],
+      "unitOfMeasure": {
+        "amount": 1,
+        "units": "month"
+      },
+      "validFor": {
+        "endDateTime": "3000-01-01T00:00:00+01:00",
+        "startDateTime": "2023-02-16T00:00:00+01:00"
+      },
+      "@type": "MarandProductOfferingPriceRefOrValue",
+      "isParametricPrice": false,
+      "isPriceAlteration": false,
+      "isGrossAmount": false
+    },
+    {
+      "id": "11716350003-315450001",
+      "href": "http://plm-ws-multi-dev-env.k8s-svc.marand.si/plm-tmf620-marand-plmstage-sb3/tmf-ws/tmf-api/productCatalogManagement/v4/productOfferingPrice/11716350003-315450001?version=11716355002&productOfferingId=11716346003",
+      "lastUpdate": "2023-02-16T09:51:10.585+01:00",
+      "lifecycleStatus": "Active",
+      "name": "PONAVLJAJOČI SE POPUST za Testna ponudba GAL-794-3 (akcija)",
+      "priceType": "RecurringDiscount",
+      "version": "11716355002",
+      "constraint": [
+        {
+          "id": "315450001",
+          "name": "(1015) Ponavljajoči se popust"
+        }
+      ],
+      "price": {
+        "percentage": 66.67,
+        "@type": "ProductPriceValue"
+      },
+      "priceAlteration": [],
+      "validFor": {
+        "endDateTime": "3000-01-01T00:00:00+01:00",
+        "startDateTime": "2023-02-16T00:00:00+01:00"
+      },
+      "@type": "MarandProductOfferingPriceRefOrValue",
+      "isParametricPrice": false,
+      "isPriceAlteration": true,
+      "isGrossAmount": false
+    }
+  ]
+}
