@@ -51,6 +51,44 @@
     "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
   }],
   "entitySpecCharUse": [{
+    "derivationFormula":"",
+    "description": "This characteristic describes the platform of the node",
+    "extensible": false,
+    "id": "4441",
+    "minCardinality": 0,
+    "maxCardinality": 1,
+    "name": "Platform",
+    "isUnique": true,
+    "validFor": {
+      "startDateTime": "2020-12-05T00:00",
+      "endDateTime": "2023-12-31T11:59:59"
+    },
+    "valueType": "string",
+    
+    "configurable": true,
+    "@valueSchemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/StringCharacteristic.schema.json",
+    "regex": "",
+  
+  "characteristicValueSpecification": [
+    {
+      "valueType": "string",
+      "isDefault": true,
+      "value": "Windows",
+      "validFor": {
+        "startDateTime": "2020-12-05T00:00",
+        "endDateTime": "2023-12-31T11:59:59"
+      },
+      "regex": "",
+      "valueFrom": "",
+      "valueTo": "",
+      "unitOfMeasure": "",
+      "rangeInterval": "open",
+      "@type": "CharacteristicValueSpecification",
+      "@baseType": "",
+      "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
+    }
+  ],
+  "charSpecRelationship": [],
     
     "matrixSpecDimension":[{
         "seqNum": 1,
