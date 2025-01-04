@@ -9,106 +9,114 @@
   },
   "@type": "PricingLogicAlgorithmSpec",
   "@baseType": "EntitySpecification",
-  "productSpecCharacteristic": [{
-    "name": "Platform",
-    "id": "4441",
-    "description": "This characteristic describes the platform of the node",
-    "valueType": "string",
-    "configurable": true,
-    "validFor": {
-      "startDateTime": "2020-12-05T00:00",
-      "endDateTime": "2023-12-31T11:59:59"
-    },
-    "@valueSchemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/StringCharacteristic.schema.json",
-    "minCardinality": 0,
-    "maxCardinality": 1,
-    "isUnique": true,
-    "regex": "",
-    "extensible": false,
-    "characteristicValueSpecification": [
-      {
-        "valueType": "string",
-        "isDefault": true,
-        "value": "Windows",
-        "validFor": {
-          "startDateTime": "2020-12-05T00:00",
-          "endDateTime": "2023-12-31T11:59:59"
-        },
-        "regex": "",
-        "valueFrom": "",
-        "valueTo": "",
-        "unitOfMeasure": "",
-        "rangeInterval": "open",
-        "@type": "CharacteristicValueSpecification",
-        "@baseType": "",
-        "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
-      }
-    ],
-    "charSpecRelationship": [],
-    
-    "@type": "ProductSpecCharacteristic",
-    "@baseType": "CharacteristicSpecification",
-    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
-  }],
-  "entitySpecCharUse": [{
-    "@type": "MatrixCharacteristicSpec",
-    "@baseType": "CharacteristicSpecification",
-    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json",
-    "derivationFormula":"",
-    "description": "This characteristic describes the platform of the node",
-    "extensible": false,
-    "id": "4441",
-    "minCardinality": 0,
-    "maxCardinality": 1,
-    "name": "Platform",
-    "isUnique": true,
-    "validFor": {
-      "startDateTime": "2020-12-05T00:00",
-      "endDateTime": "2023-12-31T11:59:59"
-    },
-    "valueType": "string",
-    
-    "configurable": true,
-    "@valueSchemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/StringCharacteristic.schema.json",
-    "regex": "",
-  
-  "characteristicValueSpecification": [
+  "productSpecCharacteristic": [
     {
+      "name": "Platform",
+      "id": "4441",
+      "description": "This characteristic describes the platform of the node",
       "valueType": "string",
-      "isDefault": true,
-      "value": "Windows",
+      "configurable": true,
       "validFor": {
         "startDateTime": "2020-12-05T00:00",
         "endDateTime": "2023-12-31T11:59:59"
       },
+      "@valueSchemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/StringCharacteristic.schema.json",
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "isUnique": true,
       "regex": "",
-      "valueFrom": "",
-      "valueTo": "",
-      "unitOfMeasure": "",
-      "rangeInterval": "open",
-
-      
-      "@type": "MatrixCharValue",
-      "@baseType": "CharacteristicValue",
-      "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
+      "extensible": false,
+      "characteristicValueSpecification": [
+        {
+          "valueType": "string",
+          "isDefault": true,
+          "value": "Windows",
+          "validFor": {
+            "startDateTime": "2020-12-05T00:00",
+            "endDateTime": "2023-12-31T11:59:59"
+          },
+          "regex": "",
+          "valueFrom": "",
+          "valueTo": "",
+          "unitOfMeasure": "",
+          "rangeInterval": "open",
+          "@type": "CharacteristicValueSpecification",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
+        }
+      ],
+      "charSpecRelationship": [],
+      "@type": "ProductSpecCharacteristic",
+      "@baseType": "CharacteristicSpecification",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
     }
   ],
-  "charSpecRelationship": [],
-    
-    "matrixSpecDimension":[{
-        "seqNum": 1,
-        "validFor": {
-          "startDateTime": "2020-12-05T00:00",
-          "endDateTime": "2023-12-31T11:59:59"
-        },
-        "productSpecCharacteristic":[{
-            "id": "2777",
-            "name": "PricingLogicAlgorithmSpec",
-            "description": "Algorithm that rates Recurring event",
-            "@type": "CharacteristicSpecificationRef",
-            "@referredType": "ProductSpecCharacteristic",
-        }]
-    }],
-    
-  }]
+  "entitySpecCharUse": [
+    {
+      "@type": "MatrixCharacteristicSpec",
+      "@baseType": "CharacteristicSpecification",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json",
+      "derivationFormula": "",
+      "description": "This characteristic describes the platform of the node",
+      "extensible": false,
+      "id": "4441",
+      "minCardinality": 0,
+      "maxCardinality": 1,
+      "name": "Platform",
+      "isUnique": true,
+      "validFor": {
+        "startDateTime": "2020-12-05T00:00",
+        "endDateTime": "2023-12-31T11:59:59"
+      },
+      "valueType": "string",
+      "matrixCharValue": [
+        {
+          "validFor": {
+            "startDateTime": "2020-12-05T00:00",
+            "endDateTime": "2023-12-31T11:59:59"
+          },
+          "value": "",
+          "matrixCharValueIndex": [
+            {
+              "seqNum": 1,
+              "@type": "MatrixCharValueIndex"
+            }
+          ],
+          "matrixCellCharValue": [
+            {
+              "validFor": {
+                "startDateTime": "2020-12-05T00:00",
+                "endDateTime": "2023-12-31T11:59:59"
+              },
+              "value": "",
+              "@type": "MatrixCellCharValue",
+              "@baseType": "CharacteristicValue"
+            }
+          ],
+          "@type": "MatrixCharValue",
+          "@baseType": "CharacteristicValue",
+          "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
+        }
+      ],
+      "charSpecRelationship": [],
+      "matrixSpecDimension": [
+        {
+          "seqNum": 1,
+          "validFor": {
+            "startDateTime": "2020-12-05T00:00",
+            "endDateTime": "2023-12-31T11:59:59"
+          },
+          "productSpecCharacteristic": [
+            {
+              "id": "2777",
+              "name": "PricingLogicAlgorithmSpec",
+              "description": "Algorithm that rates Recurring event",
+              "@type": "CharacteristicSpecificationRef",
+              "@referredType": "ProductSpecCharacteristic"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
