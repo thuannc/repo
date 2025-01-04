@@ -51,6 +51,9 @@
     "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
   }],
   "entitySpecCharUse": [{
+    "@type": "MatrixCharacteristicSpec",
+    "@baseType": "CharacteristicSpecification",
+    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json",
     "derivationFormula":"",
     "description": "This characteristic describes the platform of the node",
     "extensible": false,
@@ -83,8 +86,10 @@
       "valueTo": "",
       "unitOfMeasure": "",
       "rangeInterval": "open",
-      "@type": "CharacteristicValueSpecification",
-      "@baseType": "",
+
+      
+      "@type": "MatrixCharValue",
+      "@baseType": "CharacteristicValue",
       "@schemaLocation": "https://mycsp.com:8080/tmf- api/schema/Common/CharacteristicValueSpecification.schema.json"
     }
   ],
@@ -101,11 +106,9 @@
             "name": "PricingLogicAlgorithmSpec",
             "description": "Algorithm that rates Recurring event",
             "@type": "CharacteristicSpecificationRef",
-            "@referedType": "ProductSpecCharacteristic",
+            "@referredType": "ProductSpecCharacteristic",
         }]
     }],
-    "@type": "MatrixCharacteristicSpec",
-    "@baseType": "CharacteristicSpecification",
-    "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/SpecCharacteristic.schema.json"
-  }],
+    
+  }]
 }
