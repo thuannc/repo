@@ -1,0 +1,10 @@
+{
+  "id": "1",
+  "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegment/1",
+  "name": "North Region",
+  "description": "North Region",
+  "@referredType": "",
+  "@type": "MarketSegment",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegment.schema.json"
+}
