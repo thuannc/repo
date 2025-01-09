@@ -1,0 +1,72 @@
+{
+  "@type": "MarketingCampaign",
+  "@baseType": "",
+  "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketingCampaign.schema.json",
+  "href": "https://mycsp.com:8080/tmf-api/MarketingSales/v4/marketingCampaign/1",
+  "id": "1",
+  "name": "Middle Income California Internet Consumer Customer",
+  "description": "Middle Income California Internet Consumer Customer",
+  "mcType": "",
+  "excutionPeriod": {
+    "startDateTime": "2018-06-12T00:00Z",
+    "endDateTime": "2019-01-11T00:00Z"
+  },
+  "validFor": {
+    "startDateTime": "2020-09-23T16:42:23.0Z"
+  },
+  "marketingCampaignRole": [],
+  "budget": [],
+  "MarketSegment": [],
+  "ContactMedium": [],
+  "ProductOfferingStrategy": [],
+  "Media": [],
+  "AtomicOperationalMktPlan": [],
+  "SalesChannel": [],
+  "productOffering": [],
+  "productSpecification": [],
+  "MktCampaignRule": [],
+  "MarketingOperator": [],
+  "MarketingManager": [],
+  "MarketingDesigner": [],
+  "MktCampaignWave": [],
+  "Attachment": [],
+  "marketingObjectiveDefinition": [],
+  "partyProfileSpec": [],
+  "partyProfile": [],
+  "marketingCampaignCharacteristic": [
+    {
+      "@type": "MarketSegmentCharacteristic",
+      "@baseType": "Characteristic",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
+      "ID": "1",
+      "name": "State of Residence",
+      "description": "State of Residence",
+      "valueType": "number",
+      "configurable": true,
+      "minCardinality": 1,
+      "maxCardinality": 1,
+      "isUnique": true,
+      "validFor": {
+        "startDateTime": "2020-09-23T16:42:23.0Z"
+      },
+      "marketingCampaignCharacteristicValue": [
+        {
+          "@type": "MarketSegmentCharacteristicValue",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegmentCharacteristicValue.schema.json",
+          "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentCharacteristicValue/1",
+          "isDefault": false,
+          "rangeInterval": "",
+          "valueType": "String",
+          "fromValue": "",
+          "toValue": "",
+          "unitOfMeasure": "",
+          "validFor": {
+            "startDateTime": "2018-06-12T00:00Z",
+            "endDateTime": "2019-01-11T00:00Z"
+          }
+        }
+      ]
+    }
+  ]
+}
