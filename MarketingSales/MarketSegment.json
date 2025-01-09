@@ -7,5 +7,45 @@
   "name": "North Region",
   "description": "North Region",
   "category": "North Region",
-  "subCategory": "North Region"
+  "subCategory": "North Region",
+  
+  "marketSegmentCharacteristic": [
+    {
+      "@type": "MarketSegmentCharacteristic",
+      "@baseType": "Characteristic",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
+      "name": "Number of Ports",
+      "description": "The total Number of Ports for this product",
+      "valueType": "number",
+      "configurable": true,
+      "minCardinality": 1,
+      "maxCardinality": 1,
+      "isUnique": true,
+      "validFor": {
+        "startDateTime": "2020-09-23T16:42:23.0Z"
+      }
+      "marketSegmentCharacteristicValue": [
+        {
+          "@type": "MarketSegmentCharacteristicValue",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegmentCharacteristicValue.schema.json",
+          "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentCharacteristicValue/1",
+          "id": "1",
+          "name": "North Region",
+          "description": "North Region",
+          "fromValue": "",
+          "isDefault": false,
+          "rangeInterval": "",
+          "toValue": "",
+          "unitOfMeasure": "",
+          "validFor": {
+            "startDateTime": "2018-06-12T00:00Z",
+            "endDateTime": "2019-01-11T00:00Z"
+          },
+          "valueType": ""
+        }
+      ]
+      
+    }
+  ]
 }
