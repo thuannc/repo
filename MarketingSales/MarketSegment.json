@@ -4,8 +4,8 @@
   "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegment.schema.json",
   "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegment/1",
   "id": "1",
-  "name": "North Region",
-  "description": "North Region",
+  "name": "Middle Income California Internet Consumer Customer",
+  "description": "Middle Income California Internet Consumer Customer",
   "category": "North Region",
   "subCategory": "North Region",
   
@@ -14,8 +14,9 @@
       "@type": "MarketSegmentCharacteristic",
       "@baseType": "Characteristic",
       "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
-      "name": "Number of Ports",
-      "description": "The total Number of Ports for this product",
+      "ID": "1",
+      "name": "State of Residence",
+      "description": "State of Residence",
       "valueType": "number",
       "configurable": true,
       "minCardinality": 1,
@@ -30,19 +31,16 @@
           "@baseType": "",
           "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegmentCharacteristicValue.schema.json",
           "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentCharacteristicValue/1",
-          "id": "1",
-          "name": "North Region",
-          "description": "North Region",
-          "fromValue": "",
           "isDefault": false,
           "rangeInterval": "",
+          "valueType": "String"
+          "fromValue": "",
           "toValue": "",
           "unitOfMeasure": "",
           "validFor": {
             "startDateTime": "2018-06-12T00:00Z",
             "endDateTime": "2019-01-11T00:00Z"
-          },
-          "valueType": ""
+          }
         }
       ]
       
