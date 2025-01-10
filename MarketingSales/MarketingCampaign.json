@@ -15,7 +15,16 @@
     "startDateTime": "2020-09-23T16:42:23.0Z"
   },
   "marketingCampaignRole": [],
-  "budget": [],
+  "budget": [
+    {
+      "@type": "Budget",
+      "@baseType": "",
+      "achievedBudget": 0,
+      "allocatedBudget": 0,
+      "forecastBudget": 0,
+      "unit": ""
+    }
+  ],
   "marketSegment": [],
   "contactMedium": [],
   "productOfferingStrategy": [],
@@ -32,8 +41,6 @@
     {
       "@type": "MktCampaignWave",
       "@baseType": "",
-      "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MktCampaignWave.schema.json",
-      "href": "https://mycsp.com:8080/tmf-api/MarketingSales/v4/mktCampaignWave/1",
       "id": "1",
       "type": "",
       "validFor": {
@@ -50,7 +57,6 @@
     {
       "@type": "MarketSegmentCharacteristic",
       "@baseType": "Characteristic",
-      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductSpecificationCharacteristic.schema.json",
       "ID": "1",
       "name": "State of Residence",
       "description": "State of Residence",
@@ -66,8 +72,6 @@
         {
           "@type": "MarketSegmentCharacteristicValue",
           "@baseType": "",
-          "@schemaLocation": "https://mycsp.com:8080/tmfapi/schemas/MarketingSales/MarketSegmentCharacteristicValue.schema.json",
-          "href": "https://mycsp.com:8080/tmf-api/productOfferingReferences/v4/marketSegmentCharacteristicValue/1",
           "isDefault": false,
           "rangeInterval": "",
           "valueType": "String",
