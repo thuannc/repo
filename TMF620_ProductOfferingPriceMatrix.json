@@ -1,0 +1,164 @@
+{
+  "ProductOfferingPrice": [
+    {
+      "id": "1747",
+      "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1747",
+      "name": "Usage Charge for Business Firewall",
+      "description": "This pricing describes the Usage charge for a firewall service that can be deployed in business customer premise.",
+      "version": "2.0",
+      "validFor": {
+        "startDateTime": "2020-09-22T00:00:00Z",
+        "endDateTime": "2021-09-22T00:00:00Z"
+      },
+      "priceType": "usage",
+      "lastUpdate": "2020-09-23T00:00:00Z",
+      "isBundle": true,
+      "lifecycleStatus": "Active",
+      "unitOfMeasure": {
+        "amount": 6,
+        "units": "Seconds"
+      },
+      "prodSpecCharValueUse": [
+        {
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "USA"
+            }
+          ]
+        },
+        {
+          "name": "quantityConsume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 0,
+              "valueTo": 100
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 50
+      },
+      "pricingLogicAlgorithm": [
+        {
+          "id": "2777",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/PricingLogicAlgorithm/2777",
+          "name": "UsageRatingPLA",
+          "description": "Algorithm that rates Usage event",
+          "plaSpecId": "2801",
+          "validFor": {
+            "startDateTime": "2020-09-22T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "@type": "PricingLogicAlgorithm",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/PricingLogicAlgorithm.schema.json"
+        }
+      ],
+      "popRelationship": [
+        {
+          "id": "1748",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1748",
+          "relationshipType": "matrixCell",
+          "validFor": {
+            "startDateTime": "2020-09-23T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "role": "A-Charge",
+          "@referredType": "ProductOfferingPriceAlteration",
+          "@type": "ProductOfferingPriceRelationship",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+        },
+        {
+          "id": "1749",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1748",
+          "relationshipType": "matrixCell",
+          "validFor": {
+            "startDateTime": "2020-09-23T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "role": "A-Charge",
+          "@referredType": "ProductOfferingPriceAlteration",
+          "@type": "ProductOfferingPriceRelationship",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+        }
+      ],
+      "bundledPopRelationship": [],
+      "@type": "ProductOfferingPriceMatrix",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    },
+    {
+      "id": "1748",
+      "priceType": "usage",
+      "isBundle": false,
+      "prodSpecCharValueUse": [
+        {
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "USA"
+            }
+          ]
+        },
+        {
+          "name": "quantityConsume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 101,
+              "valueTo": 200
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 45
+      },
+      "@type": "ProductOfferingPriceMatrixCell",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    },
+    {
+      "id": "1749",
+      "priceType": "usage",
+      "isBundle": false,
+      "prodSpecCharValueUse": [
+        {
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "USA"
+            }
+          ]
+        },
+        {
+          "name": "quantityConsume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 201,
+              "valueTo": 1000
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 40
+      },
+      "@type": "ProductOfferingPriceMatrixCell",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    }
+  ]
+}
