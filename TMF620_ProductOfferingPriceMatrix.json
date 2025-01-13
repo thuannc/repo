@@ -29,7 +29,7 @@
           ]
         },
         {
-          "name": "quantityConsume",
+          "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
@@ -109,7 +109,7 @@
           ]
         },
         {
-          "name": "quantityConsume",
+          "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
@@ -142,7 +142,7 @@
           ]
         },
         {
-          "name": "quantityConsume",
+          "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
