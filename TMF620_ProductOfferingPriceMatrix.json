@@ -20,6 +20,7 @@
       },
       "prodSpecCharValueUse": [
         {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
           "name": "region",
           "productSpecCharacteristicValue": [
             {
@@ -29,19 +30,22 @@
           ]
         },
         {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
           "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
-              "valueFrom": 0,
-              "valueTo": 100
+              "valueFrom": 1,
+              "valueTo": 10
             }
           ]
         }
       ],
       "price": {
         "unit": "EUR",
-        "value": 50
+        "value": 100,
+        "blockSize": 1,
+        "overagePrice": 5
       },
       "pricingLogicAlgorithm": [
         {
@@ -69,7 +73,7 @@
             "endDateTime": "2021-09-22T00:00:00.0Z"
           },
           "role": "A-Charge",
-          "@referredType": "ProductOfferingPriceAlteration",
+          "@referredType": "ProductOfferingPriceMatrixCell",
           "@type": "ProductOfferingPriceRelationship",
           "@baseType": "",
           "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
@@ -83,7 +87,49 @@
             "endDateTime": "2021-09-22T00:00:00.0Z"
           },
           "role": "A-Charge",
-          "@referredType": "ProductOfferingPriceAlteration",
+          "@referredType": "ProductOfferingPriceMatrixCell",
+          "@type": "ProductOfferingPriceRelationship",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+        },
+        {
+          "id": "1750",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1748",
+          "relationshipType": "matrixCell",
+          "validFor": {
+            "startDateTime": "2020-09-23T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "role": "A-Charge",
+          "@referredType": "ProductOfferingPriceMatrixCell",
+          "@type": "ProductOfferingPriceRelationship",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+        },
+        {
+          "id": "1751",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1748",
+          "relationshipType": "matrixCell",
+          "validFor": {
+            "startDateTime": "2020-09-23T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "role": "A-Charge",
+          "@referredType": "ProductOfferingPriceMatrixCell",
+          "@type": "ProductOfferingPriceRelationship",
+          "@baseType": "",
+          "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+        },
+        {
+          "id": "1752",
+          "href": "https://mycsp.com:8080/tmf-api/productCatalogManagement/v4/productOfferingPrice/1748",
+          "relationshipType": "matrixCell",
+          "validFor": {
+            "startDateTime": "2020-09-23T16:42:23.0Z",
+            "endDateTime": "2021-09-22T00:00:00.0Z"
+          },
+          "role": "A-Charge",
+          "@referredType": "ProductOfferingPriceMatrixCell",
           "@type": "ProductOfferingPriceRelationship",
           "@baseType": "",
           "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
@@ -100,6 +146,7 @@
       "isBundle": false,
       "prodSpecCharValueUse": [
         {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
           "name": "region",
           "productSpecCharacteristicValue": [
             {
@@ -109,19 +156,22 @@
           ]
         },
         {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
           "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
-              "valueFrom": 101,
-              "valueTo": 200
+              "valueFrom": 11,
+              "valueTo": 20
             }
           ]
         }
       ],
       "price": {
         "unit": "EUR",
-        "value": 45
+        "value": 175,
+        "blockSize": 1,
+        "overagePrice": 5
       },
       "@type": "ProductOfferingPriceMatrixCell",
       "@baseType": "ProductOfferingPrice",
@@ -133,6 +183,7 @@
       "isBundle": false,
       "prodSpecCharValueUse": [
         {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
           "name": "region",
           "productSpecCharacteristicValue": [
             {
@@ -142,19 +193,133 @@
           ]
         },
         {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
           "name": "volume",
           "productSpecCharacteristicValue": [
             {
               "valueType": "number",
-              "valueFrom": 201,
-              "valueTo": 1000
+              "valueFrom": 21,
+              "valueTo": 30
             }
           ]
         }
       ],
       "price": {
         "unit": "EUR",
-        "value": 40
+        "value": 250,
+        "blockSize": 1,
+        "overagePrice": 5
+      },
+      "@type": "ProductOfferingPriceMatrixCell",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    },
+    {
+      "id": "1750",
+      "priceType": "usage",
+      "isBundle": false,
+      "prodSpecCharValueUse": [
+        {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "ASIA"
+            }
+          ]
+        },
+        {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
+          "name": "volume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 1,
+              "valueTo": 10
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 100,
+        "blockSize": 1,
+        "overagePrice": 3
+      },
+      "@type": "ProductOfferingPriceMatrixCell",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    },
+    {
+      "id": "1751",
+      "priceType": "usage",
+      "isBundle": false,
+      "prodSpecCharValueUse": [
+        {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "ASIA"
+            }
+          ]
+        },
+        {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
+          "name": "volume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 11,
+              "valueTo": 20
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 120,
+        "blockSize": 1,
+        "overagePrice": 3
+      },
+      "@type": "ProductOfferingPriceMatrixCell",
+      "@baseType": "ProductOfferingPrice",
+      "@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceCharge.schema.json"
+    },
+    {
+      "id": "1752",
+      "priceType": "usage",
+      "isBundle": false,
+      "prodSpecCharValueUse": [
+        {
+          "id":"7a288866-9d6c-46da-871b-7d3b7ca8b641",
+          "name": "region",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "String",
+              "value": "ASIA"
+            }
+          ]
+        },
+        {
+          "id":"afce4aa5-a043-4437-88ca-a93740aaaf63",
+          "name": "volume",
+          "productSpecCharacteristicValue": [
+            {
+              "valueType": "number",
+              "valueFrom": 21,
+              "valueTo": 30
+            }
+          ]
+        }
+      ],
+      "price": {
+        "unit": "EUR",
+        "value": 180,
+        "blockSize": 1,
+        "overagePrice": 2
       },
       "@type": "ProductOfferingPriceMatrixCell",
       "@baseType": "ProductOfferingPrice",
