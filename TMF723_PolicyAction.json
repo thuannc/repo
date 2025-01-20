@@ -1,20 +1,20 @@
 [
   {
-    "@type": "string",
-    "@baseType": "string",
+    "@type": "PolicyActionOperation",
+    "@baseType": "PolicyAction",
     "@schemaLocation": "string",
     "href": "string",
-    "id": "string",
-    "name": "string",
-    "version": "string",
-    "description": "string",
+    "id": "PA2",
+    "name": "PA2",
+    "version": "1.0",
+    "description": "PA2",
     "lifecycleState": "inDesign",
     "validFor": {
       "startDateTime": "1985-04-12T23:20:50.52Z",
       "endDateTime": "1985-04-12T23:20:50.52Z"
     },
     "note": [],
-    
+    "actionStrategy": 1,
     "constraint": {
       "id": "string",
       "name": "string",
@@ -24,8 +24,55 @@
     "executedAt": [
       "beforeAll"
     ],
-    
-    "action": {},
-    
+    "policyAction": [
+      {
+        "id": "PA2-1",
+        "name": "Broadband limited price rule",
+        "@type": "PolicyActionOperation",
+        "actionSequence": 1,
+        "actionCondition": [
+          {
+            "id": "PC2"
+          }
+        ],
+        "operation": "add",
+        "path": "cartItem",
+        "filter": "cartItem.productOffering.name=BroadbandOffering",
+        "field": "itemPrice",
+        "actionValue": {
+          "@type": "PolicyActionObjectValue",
+          "value": {
+            "productOfferingPrice": {
+              "id": "POPC45",
+              "name": "Limited Broadband recurring plan"
+            }
+          }
+        }
+      },
+      {
+        "id": "PA2-2",
+        "name": "Broadband unlimited price rule",
+        "@type": "PolicyActionOperation",
+        "actionSequence": 2,
+        "actionCondition": [
+          {
+            "id": "PC3"
+          }
+        ],
+        "operation": "add",
+        "path": "cartItem",
+        "filter": "cartItem.productOffering.name=BroadbandOffering",
+        "field": "itemPrice",
+        "actionValue": {
+          "@type": "PolicyActionObjectValue",
+          "value": {
+            "productOfferingPrice": {
+              "id": "POPC46",
+              "name": "Unlimited Broadband recurring plan"
+            }
+          }
+        }
+      }
+    ]
   }
 ]
