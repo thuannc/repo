@@ -1,0 +1,31 @@
+[
+  {
+    "@type": "string",
+    "@baseType": "string",
+    "@schemaLocation": "string",
+    "href": "string",
+    "id": "string",
+    "name": "string",
+    "version": "string",
+    "description": "string",
+    "lifecycleState": "inDesign",
+    "validFor": {
+      "startDateTime": "1985-04-12T23:20:50.52Z",
+      "endDateTime": "1985-04-12T23:20:50.52Z"
+    },
+    "note": [],
+    
+    "constraint": {
+      "id": "string",
+      "name": "string",
+      "@referredType": "string",
+      "@type": "PolicyConstraintRef"
+    },
+    "executedAt": [
+      "beforeAll"
+    ],
+    
+    "action": {},
+    
+  }
+]
