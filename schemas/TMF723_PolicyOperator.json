@@ -1,0 +1,63 @@
+{
+  "opType": {
+    "type": "string",
+    "description": "This is an enumerated integer that specifies the various types of operators that are allowed for this PolicyStatement. ",
+    "enum": [
+      "1: Match",
+      "2: Greater than",
+      "3: Greater than or equals",
+      "4: Less than",
+      "5: Less than or equals",
+      "6: Equals",
+      "7: Not equals",
+      "8: IN",
+      "9: NOT IN",
+      "10: SET",
+      "11: CLEAR"
+    ]
+  },
+  "keywords": {
+    "type": "string",
+    "description": "This is a string attribute that defines a set of one or more keywords that a policy administrator may use to assist in characterizing or categorizing a policy object to facilitate search operations",
+    "enum": [
+      "Unknown",
+      "InstallPermissions",
+      "ConfigChange",
+      "InstallMethod",
+      "Default",
+      "Error",
+      "Usage",
+      "InternalError",
+      "Security",
+      "ExternalError",
+      "Authentication",
+      "Notification",
+      "Authorization",
+      "Publish",
+      "Accounting",
+      "Subscribe",
+      "Auditing",
+      "Publish-Subscribe",
+      "Service",
+      "Exception",
+      "CustomerFacingService",
+      "ResourceFacingService"
+    ]
+  },
+  "policyName": {
+    "type": "string",
+    "description": "This is a generic naming attribute that can be used to identify different policy entities. This enables commonName to be used to enforce enterprise or service provider generic naming and this attribute to be used to fine tune the naming of policy entities. Thus, commonName is public in scope and policyName is private to policy"
+  },
+  "description": {
+    "type": "string",
+    "description": "This is a string, and defines a textual free-form description of the object."
+  },
+  "ID": {
+    "type": "string",
+    "description": "Unambiguously distinguishes different object instances."
+  },
+  "name": {
+    "type": "string",
+    "description": "Represents a user-friendly identifier of an object. It is a (possibly ambiguous) name by which the object is commonly known in some limited scope (such as an organization) and conforms to the naming conventions of the country or culture with which it is associated. It is NOT used as a naming attribute (i.e., to uniquely identify an instance of the object)."
+  }
+}
