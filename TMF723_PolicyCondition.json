@@ -1,8 +1,7 @@
-[{
-    "@type": "string",
-    "isResultNegated": false,
-    "statement": {},
-    "@baseType": "string",
+[
+  {
+    "@type": "PolicyConditionComposite",
+    "@baseType": "PolicyCondition",
     "@schemaLocation": "string",
     "href": "string",
     "id": "string",
@@ -14,16 +13,22 @@
       "startDateTime": "1985-04-12T23:20:50.52Z",
       "endDateTime": "1985-04-12T23:20:50.52Z"
     },
-    "note": []
-  },
-  {
-    "@type": "string",
-    "condition": [
-      "string"
-    ],
+    "note": [],
     "conditionCombinationLogic": "anyOf",
     "isResultNegated": false,
-    "@baseType": "string",
+    "condition": [
+      {
+        "id": "string",
+        "name": "string",
+        "description": "string",
+        "@type": "PolicyConditionRef",
+        "@referredType": "PolicyConditionAtomic"
+      }
+    ]
+  },
+  {
+    "@type": "PolicyConditionAtomic",
+    "@baseType": "PolicyCondition",
     "@schemaLocation": "string",
     "href": "string",
     "id": "string",
@@ -35,6 +40,8 @@
       "startDateTime": "1985-04-12T23:20:50.52Z",
       "endDateTime": "1985-04-12T23:20:50.52Z"
     },
-    "note": []
+    "note": [],
+    "isResultNegated": false,
+    "statement": {}
   }
 ]
