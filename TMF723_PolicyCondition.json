@@ -1,0 +1,40 @@
+[{
+    "@type": "string",
+    "isResultNegated": false,
+    "statement": {},
+    "@baseType": "string",
+    "@schemaLocation": "string",
+    "href": "string",
+    "id": "string",
+    "name": "string",
+    "version": "string",
+    "description": "string",
+    "lifecycleState": "inDesign",
+    "validFor": {
+      "startDateTime": "1985-04-12T23:20:50.52Z",
+      "endDateTime": "1985-04-12T23:20:50.52Z"
+    },
+    "note": []
+  },
+  {
+    "@type": "string",
+    "condition": [
+      "string"
+    ],
+    "conditionCombinationLogic": "anyOf",
+    "isResultNegated": false,
+    "@baseType": "string",
+    "@schemaLocation": "string",
+    "href": "string",
+    "id": "string",
+    "name": "string",
+    "version": "string",
+    "description": "string",
+    "lifecycleState": "inDesign",
+    "validFor": {
+      "startDateTime": "1985-04-12T23:20:50.52Z",
+      "endDateTime": "1985-04-12T23:20:50.52Z"
+    },
+    "note": []
+  }
+]
