@@ -1,0 +1,105 @@
+{
+  "PolicySet_FVO_FVO":{
+     "comment":"A PolicySet is an aggregation of PolicyRules or PolicySets combined according to provided algorithm", 
+    "@type":"",
+    "combiningAlgorithm":""
+  }
+}
+PolicySet
+PolicyGroup
+PolicyRuleBase
+PolicyCondition
+- PolicyConditionAtomic
+PolicyAction
+- PolicyActionAtomic
+PolicyStatement
+PolicyVariable
+PolicyOperator:{"opType":""}
+"PolicyOperator": {
+        "opType":{
+          "type": "string",
+          "format": "string",
+          "description": "This is an enumerated integer that specifies the various types of operators that are allowed for this PolicyStatement. "
+        },
+}
+"sample": {
+          "type": "array",
+          "items": {
+            "$ref": "../EngagedParty/RelatedParty.schema.json#RelatedParty"
+          }
+        },
+PolicyValue
+
+PolicySet_FVO_FVO:
+      allOf:
+        - $ref: '#/components/schemas/PolicyBase_FVO'
+        - type: object
+          description: >-
+            A PolicySet is an aggregation of PolicyRules or PolicySets combined according to
+            provided algorithm
+          properties:
+            '@type':
+              type: string
+            combiningAlgorithm:
+              type: string
+              description: >-
+                defines a procedure for arriving at the result given the individual results of
+                PolicyRule evaluations: 
+                 * DenyOverrides - if a Policy element is encountered that evaluates to DENY, then, regardless of the evaluation result of the other Policy elements, the combined result is DENY. 
+                 * PermitOverrides - if a Policy element is encountered that evaluates to PERMIT, then, regardless of the evaluation result of the other Policy elements, the combined result is PERMIT. 
+                 * FirstApplicable - the combined result is the same as the result of successfull evaluating the first Policy. 
+                 * OnlyOneApplicable - The result of this combining algorithm ensures that one and only one Policy is applicable by virtue of their targets.  If no Policy applies, then the result is NOT_APPLICABLE, but if more than one Policy is applicable, then the result is INDETERMINATE.  When exactly one Policy is applicable, the result of the combining algorithm is the result of that Policy. 
+                 * DenyUnlessPermit - intended for those cases where a PERMIT decision should have priority over a DENY decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result. 
+                 * PermitUnlessDeny - intended for those cases where a DENY decision should have priority over a PERMIT decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result.
+              enum:
+                - DenyOverrides
+                - PermitOverrides
+                - FirstApplicable
+                - OnlyOneApplicable
+                - DenyUnlessPermit
+                - PermitUnlessDeny
+            policyRelationship:
+              type: array
+              description: List of all Policies that need to be executed
+              items:
+                $ref: '#/components/schemas/PolicyRelationship_FVO'
+              minItems: 1
+          required:
+            - '@type'
+            - combiningAlgorithm
+            - policyRelationship
+        - type: object
+          description: >-
+            A PolicySet is an aggregation of PolicyRules or PolicySets combined according to
+            provided algorithm
+          properties:
+            '@type':
+              type: string
+            combiningAlgorithm:
+              type: string
+              description: >-
+                defines a procedure for arriving at the result given the individual results of
+                PolicyRule evaluations: 
+                 * DenyOverrides - if a Policy element is encountered that evaluates to DENY, then, regardless of the evaluation result of the other Policy elements, the combined result is DENY. 
+                 * PermitOverrides - if a Policy element is encountered that evaluates to PERMIT, then, regardless of the evaluation result of the other Policy elements, the combined result is PERMIT. 
+                 * FirstApplicable - the combined result is the same as the result of successfull evaluating the first Policy. 
+                 * OnlyOneApplicable - The result of this combining algorithm ensures that one and only one Policy is applicable by virtue of their targets.  If no Policy applies, then the result is NOT_APPLICABLE, but if more than one Policy is applicable, then the result is INDETERMINATE.  When exactly one Policy is applicable, the result of the combining algorithm is the result of that Policy. 
+                 * DenyUnlessPermit - intended for those cases where a PERMIT decision should have priority over a DENY decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result. 
+                 * PermitUnlessDeny - intended for those cases where a DENY decision should have priority over a PERMIT decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result.
+              enum:
+                - DenyOverrides
+                - PermitOverrides
+                - FirstApplicable
+                - OnlyOneApplicable
+                - DenyUnlessPermit
+                - PermitUnlessDeny
+            policyRelationship:
+              type: array
+              description: List of all Policies that need to be executed
+              items:
+                $ref: '#/components/schemas/PolicyRelationship_FVO'
+              minItems: 1
+          required:
+            - '@type'
+            - combiningAlgorithm
+            - policyRelationship
