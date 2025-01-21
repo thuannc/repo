@@ -12,25 +12,7 @@
     "startDateTime": "1985-04-12T23:20:50.52Z",
     "endDateTime": "1985-04-12T23:20:50.52Z"
   },
-  "note": [
-    {
-      "@type": "Note",
-      "@baseType": "string",
-      "@schemaLocation": "string",
-      "id": [
-        "afa9-3d90aaa8da0f"
-      ],
-      "author": [
-        "Mr. N. Bene"
-      ],
-      "date": [
-        "2020-11-20T08:00:00Z"
-      ],
-      "text": [
-        "This is important"
-      ]
-    }
-  ],
+  "note": [],
   "valueType": "string",
   "format": "string",
   "resolver": [
