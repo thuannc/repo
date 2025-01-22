@@ -1,0 +1,68 @@
+[{
+  "@type": "ManagedPolicy",
+  "@baseType": "string",
+  "@schemaLocation": "string",
+  "href": "string",
+  "id": "string",
+  "name": "string",
+  "version": "string",
+  "description": "string",
+  "lifecycleState": "inDesign",
+  "validFor": {"@type": "TimePeriod"},
+  "note": [{"@type": "Note"}],
+  "oneOf":[{"@type": "PolicyRule"},{"@type": "PolicySet"}]
+},
+  {
+    "@type": "PolicyRule",
+    "description": "string",
+    "actionExecutionStrategy": "DoAll",
+    "sequencedActions": "Mandatory",
+    "priority": 0,
+    "policyDomainRef": [
+      {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string"
+      }
+    ],
+  "policyEventRelationship": [
+    {
+      "priority": 0,
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "policyEventRefOrValue": {
+        "@type": "PolicyEventRef",
+        "@referredType": "string"
+      }
+    }
+  ],
+  "policyActionRelationship": [
+    {
+      "priority": 0,
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "policyActionRefOrValue": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyActionRef"
+      }
+    }
+  ],
+  "targetPolicyEffect": "Permit",
+  "policyConditionRefOrValue": {
+    "id": "string",
+    "name": "string",
+    "@referredType": "string",
+    "@type": "PolicyConditionRef"
+  }
+  }
+]
