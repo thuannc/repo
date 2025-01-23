@@ -1,11 +1,11 @@
 {
   "Entity":{
-    "Extensible":{
+    "&Extensible":{
       "@type":"Entity",
       "@baseType":"string",
       "@schemaLocation":"string"
     },
-    "Addressable":{
+    "&Addressable":{
       "href":"string",
       "id":"string"
     }
@@ -14,7 +14,7 @@
     "href":"string"
   },
    "Characteristic": {
-     "Extensible":{
+     "&Extensible":{
       "@type":"Characteristic",
       "@baseType":"string",
       "@schemaLocation":"string"
@@ -25,7 +25,7 @@
      "name":"string"
    },
   "CharacteristicRelationship": {
-     "Extensible":{
+     "&Extensible":{
       "@type":"CharacteristicRelationship",
       "@baseType":"string",
       "@schemaLocation":"string"
@@ -34,7 +34,7 @@
      "relationshipType": "string"
    },
   "Event": {
-     "Extensible":{
+     "&Extensible":{
       "@type":"Event",
       "@baseType":"string",
       "@schemaLocation":"string"
@@ -59,7 +59,7 @@
     "event":"object"
    },
   "Note": {
-     "Extensible":{
+     "&Extensible":{
       "@type":"Note",
       "@baseType":"string",
       "@schemaLocation":"string"
@@ -74,4 +74,36 @@
      "name":"string",
      "@referredType": "string"
    },  
+  "RelatedParty": {
+    "&Extensible":{
+      "@type":"RelatedParty",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+    "&EntityRef":{
+      "href":"string"
+    },
+    "&Reference": {
+     "id":"string",
+     "name":"string",
+     "@referredType": "string"
+   }, 
+   "role":"string"
+  },
+  "TimePeriod": {
+     "startDateTime":"string:date-time",
+     "endDateTime":"string:date-time"
+   },  
+  "Error": {
+     "&Extensible":{
+      "@type":"Error",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+    "code":"string",
+    "reason": "string",
+    "message":"string",
+    "status":"string",
+    "referenceError": "string"
+   },
 }
