@@ -1,0 +1,77 @@
+{
+  "Entity":{
+    "Extensible":{
+      "@type":"Entity",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+    "Addressable":{
+      "href":"string",
+      "id":"string"
+    }
+  },
+  "EntityRef":{
+    "href":"string"
+  },
+   "Characteristic": {
+     "Extensible":{
+      "@type":"Characteristic",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+     "id":"string",
+     "valueType": "string",
+     "characteristicRelationship":[{"@type":"CharacteristicRelationship"}],
+     "name":"string"
+   },
+  "CharacteristicRelationship": {
+     "Extensible":{
+      "@type":"CharacteristicRelationship",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+     "id":"string",
+     "relationshipType": "string"
+   },
+  "Event": {
+     "Extensible":{
+      "@type":"Event",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+    "id":"string",
+    "correlationId": "string",
+    "domain":"string",
+    "id":"string",
+    "correlationId": "string",
+    "domain":"string",
+    "title":"string",
+    "description": "string",
+    "priority":"string",
+    "timeOccurred":"string:date-time",
+    "source": {"@type":"EntityRef"},
+    "reportingSystem":{"@type":"EntityRef"},
+    "relatedParty":[{"@type":"relatedParty"}],
+    "analyticCharacteristic":[{"@type":"Characteristic"}],
+    "eventId":"string",
+    "eventTime": "string:date-time",
+    "eventType":"string",
+    "event":"object"
+   },
+  "Note": {
+     "Extensible":{
+      "@type":"Note",
+      "@baseType":"string",
+      "@schemaLocation":"string"
+    },
+    "id":"string",
+    "author": "string",
+    "date":"string:date-time",
+    "text":"string"
+   },
+   "Reference": {
+     "id":"string",
+     "name":"string",
+     "@referredType": "string"
+   },  
+}
