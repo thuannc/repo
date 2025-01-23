@@ -1,0 +1,48 @@
+{
+  "PolicyManagedEntity":{
+    "&Entity":{
+      "@type":"PolicyManagedEntity",
+      "@baseType":"string",
+      "@schemaLocation":"string",
+      "href":"string",
+      "id":"string"
+    },
+    "name":"string",
+    "version":"string",
+    "description":"string",
+    "lifecycleState":{"type":"string","enum": ["inDesign","designed","active","retired","rejected"]},
+    "validFor":{"@type":"TimePeriod"},
+    "note":[{"@type":"Note"}]
+  },
+  "PolicyBase":{
+    "actionExecutionStrategy":{"@type":"string","enum": ["DoUntilSuccess","DoAll","DoUntilFailure","DoAllWithoutFailureOrDoNothing"]},
+    "sequencedActions":{"@type":"string","enum": ["Mandatory","Recommended","BestEffort"]},
+    "priority":"integer",
+    "policyDomainRef":[{"@type":"Reference"}],
+    "policyEventRelationship":[{"@type":"PolicyEventRelationship"}],
+    "policyActionRelationship":[{"@type":"PolicyActionRelationship"}]
+  },
+  "PolicySet":{
+    "&PolicyManagedEntity":{"@type":"PolicyBase"},
+    "@type": "PolicySet",
+    "combiningAlgorithm":{"@type":"string","enum": ["DenyOverrides","PermitOverrides","FirstApplicable","OnlyOneApplicable","DenyUnlessPermit","PermitUnlessDeny"]},
+    "policyRelationship":[{"@type":"PolicyRelationship"}]
+  },
+  "PolicyRule":{
+    "&PolicyManagedEntity":{"@type":"PolicyBase"},
+    "@type": "PolicyRule",
+    "targetPolicyEffect":{"@type":"string","enum": ["Permit","Deny"]},
+    "policyConditionRefOrValue":[{"@type":"PolicyConditionRefOrValue"}]
+  },
+  "Policy":{
+    "#PolicyRule":{"@type":"PolicyRule"},
+    "#PolicySet":{"@type":"PolicySet"}
+  },
+  "ManagedPolicy":{
+    "&PolicyManagedEntity":{"@type":"PolicyManagedEntity"},
+    "&Policy":{"@type":"Policy"}
+  },
+  
+  
+  
+}
