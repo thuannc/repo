@@ -38,11 +38,126 @@
     "#PolicyRule":{"@type":"PolicyRule"},
     "#PolicySet":{"@type":"PolicySet"}
   },
-  "ManagedPolicy":{
+ 
+  "seperator-1":"/**********************************************************************************************************************************/",
+  
+  "PolicyActionBase":{
+    "constraint": {"@type":"PolicyConstraintRefOrValue"},
+    "executedAt":[{"@type":"string","enum": ["beforeAll","beforePolicy","onPermit","onDeny","onIndeterminate","onResolved","always","afterAll"]}],
+  },
+  "PolicyActionAtomic":{
+    "&PolicyActionAtomic":{"@type":"PolicyActionBase"},
+    "@type": "PolicyActionAtomic",
+    "action": {"@type":"PolicyStatement"},
+  },
+  "PolicyActionRelationship":{
+    "priority":"integer",
+    "constraint": {"@type":"PolicyConstraintRefOrValue"},
+    "policyActionRefOrValue": {"@type":"PolicyActionRefOrValue"}
+  },
+  "PolicyActionComposite":{
+    "&PolicyActionAtomic":{"@type":"PolicyActionBase"},
+    "@type": "PolicyActionComposite",
+    "action": [{"@type":"PolicyActionRelationship"}],
+  },
+  "PolicyAction":{
+    "#PolicyActionAtomic":{"@type":"PolicyActionAtomic"},
+    "#PolicyActionComposite":{"@type":"PolicyActionComposite"}
+  },
+  "ManagedPolicyAction":{
     "&PolicyManagedEntity":{"@type":"PolicyManagedEntity"},
-    "&Policy":{"@type":"Policy"}
+    "&PolicyAction":{"@type":"PolicyAction"}
   },
   
+  "seperator-2":"/**********************************************************************************************************************************/",
   
+  "PolicyVariableStatic":{
+    "@type": "PolicyVariableStatic",
+    "valueType":{"@type":"string","enum": ["string","number","integer","boolean","array"]},
+    "format": "string",
+    "value": {"@type":"AnyValue"}
+  },
+  "PolicyVariableResolver":{
+    "@type": "PolicyVariableResolver",
+    "source":{"@type":"string","enum": ["event","environment","subject","result"]},
+    "path": "string",
+    "priority": "integer",
+    "constraint": {"@type":"PolicyConstraintRefOrValue"}
+  },
+  "PolicyVariableDynamic":{
+    "@type": "PolicyVariableDynamic",
+    "valueType":{"@type":"string","enum": ["string","number","integer","boolean","array"]},
+    "format": "string",
+    "resolver": [{"@type":"PolicyVariableResolver"}]
+  },
+  "PolicyVariable":{
+    "#PolicyVariableDynamic":{"@type":"PolicyVariableDynamic"},
+    "#PolicyVariableStatic":{"@type":"PolicyVariableStatic"}
+  },
+  "ManagedPolicyVariable":{
+    "&PolicyConditionAtomic":{"@type":"PolicyManagedEntity"},
+    "&PolicyVariable":{"@type":"PolicyVariable"}
+  },
+  "PolicyOperator":{
+    "&Extensible":{"@type":"Extensible"},
+    "variable": [{"@type":"PolicyVariableRefOrValue"}]
+  },
+  "ManagedPolicyExpression":{
+    "&PolicyConditionAtomic":{"@type":"PolicyManagedEntity"},
+    "&PolicyOperator":{"@type":"PolicyOperator"}
+  },
+  "PolicyExpression":{
+    "@type": "PolicyExpression",
+    "expression": "string",
+    "expressionLanguage": "string"
+  },
+  "ManagedPolicyExpression":{
+    "&PolicyConditionAtomic":{"@type":"PolicyManagedEntity"},
+    "&PolicyExpression":{"@type":"PolicyExpression"}
+  },
+  "PolicyStatement":{
+    "#PolicyOperatorRefOrValue":{"@type":"PolicyOperatorRefOrValue"},
+    "#PolicyExpressionRefOrValue":{"@type":"PolicyExpressionRefOrValue"}
+  },
+
+  "seperator-3":"/**********************************************************************************************************************************/",
+  
+  "PolicyConditionAtomic":{
+    "@type": "PolicyConditionAtomic",
+    "isResultNegated":"boolean",
+    "statement": {"@type":"PolicyStatement"},
+  },
+  "PolicyConditionComposite":{
+    "@type": "PolicyActionComposite",
+    "condition": [{"@type":"PolicyActionRelationship"}],
+    "conditionCombinationLogic":[{"@type":"string","enum": ["anyOf","allOf","oneOf","none"]}],
+    "isResultNegated":"boolean"
+  },
+  
+  "PolicyAction":{
+    "#PolicyConditionAtomic":{"@type":"PolicyConditionAtomic"},
+    "#PolicyConditionComposite":{"@type":"PolicyConditionRefOrValue"}
+  },
+  "ManagedPolicyCondition":{
+    "&PolicyConditionAtomic":{"@type":"PolicyManagedEntity"},
+    "&PolicyCondition":{"@type":"PolicyCondition"}
+  },
+
+  "seperator-4":"/**********************************************************************************************************************************/",
+  
+  "PolicyEventConstraint":{
+    "@type": "PolicyEventConstraint",
+    "policyEventType": ["string"],
+  },
+  "PolicyConstraint":{
+    "#PolicyEventConstraint":{"@type":"PolicyEventConstraint"},
+    "#PolicyCondition":{"@type":"PolicyCondition"}
+  },
+  "ManagedPolicyConstraint":{
+    "&PolicyManagedEntity":{"@type":"PolicyManagedEntity"},
+    "&PolicyConstraint":{"@type":"PolicyConstraint"}
+  },
+
+  "seperator-5":"/**********************************************************************************************************************************/",
   
 }
