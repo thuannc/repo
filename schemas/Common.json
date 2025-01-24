@@ -169,6 +169,305 @@
           }
         }
       },
+      "ContactMedium": {
+            "type": "object",
+            "description": "Indicates the contact medium that could be used to contact the party.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "unique identifier"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Hyperlink reference"
+                },
+                "mediumType": {
+                    "type": "string",
+                    "description": "Type of the contact medium, such as: email address, telephone number, postal address"
+                },
+                "preferred": {
+                    "type": "boolean",
+                    "description": "If true, indicates that is the preferred contact medium"
+                },
+                "characteristic": {
+                    "$ref": "#/definitions/MediumCharacteristic",
+                    "description": "Any additional characteristic(s) of this contact medium"
+                },
+                "validFor": {
+                    "$ref": "#/definitions/TimePeriod",
+                    "description": "The time period that the contact medium is valid for"
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class"
+                },
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class Extensible name"
+                }
+            }
+        },
+      "MediumCharacteristic": {
+            "type": "object",
+            "description": "Describes the contact medium characteristics that could be used to contact a party (an individual or an organization)",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "unique identifier"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Hyperlink reference"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "The city"
+                },
+                "contactType": {
+                    "type": "string",
+                    "description": "The type of contact, for example: phone number such as mobile, fixed home, fixed office. postal address such as shipping instalation…"
+                },
+                "country": {
+                    "type": "string",
+                    "description": "The country"
+                },
+                "emailAddress": {
+                    "type": "string",
+                    "description": "Full email address in standard format"
+                },
+                "faxNumber": {
+                    "type": "string",
+                    "description": "The fax number of the contact"
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "description": "The primary phone number of the contact"
+                },
+                "postCode": {
+                    "type": "string",
+                    "description": "Postcode"
+                },
+                "socialNetworkId": {
+                    "type": "string",
+                    "description": "Identifier as a member of a social network"
+                },
+                "stateOrProvince": {
+                    "type": "string",
+                    "description": "State or province"
+                },
+                "street1": {
+                    "type": "string",
+                    "description": "Describes the street"
+                },
+                "street2": {
+                    "type": "string",
+                    "description": "Complementary street description"
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class"
+                },
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class Extensible name"
+                }
+            }
+        },
+      "Money": {
+            "type": "object",
+            "description": "A base / value business entity used to represent money",
+            "properties": {
+                "unit": {
+                    "type": "string",
+                    "description": "Currency (ISO4217 norm uses 3 letters to define the currency)"
+                },
+                "value": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "A signed floating point number, the meaning of the sign is according to the context of the API that uses this Data type"
+                }
+            }
+        },
+      "Place": {
+            "type": "object",
+            "description": "Place reference. Place defines the places where the products are sold or delivered.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Unique identifier of the place"
+                },
+                "href": {
+                    "type": "string",
+                    "description": "Unique reference of the place"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "A user-friendly name for the place, such as [Paris Store], [London Store], [Main Home]"
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class"
+                },
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class Extensible name"
+                }
+            }
+        },
+      "Price": {
+            "type": "object",
+            "description": "Provides all amounts (tax included, duty free, tax rate), used currency and percentage to apply for Price Alteration.",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "unique identifier"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Hyperlink reference"
+                },
+                "percentage": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Percentage to apply for ProdOfferPriceAlteration"
+                },
+                "taxRate": {
+                    "type": "number",
+                    "format": "float",
+                    "description": "Tax rate"
+                },
+                "dutyFreeAmount": {
+                    "$ref": "#/definitions/Money",
+                    "description": "All taxes excluded amount (expressed in the given currency)"
+                },
+                "taxIncludedAmount": {
+                    "$ref": "#/definitions/Money",
+                    "description": "All taxes included amount (expressed in the given currency)"
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class"
+                },
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class Extensible name"
+                }
+            }
+        },
+        "PriceAlteration": {
+            "type": "object",
+            "description": "Is an amount, usually of money, that modifies the price charged for an order item.",
+            "required": [
+                "price",
+                "priceType"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "unique identifier"
+                },
+                "href": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Hyperlink reference"
+                },
+                "applicationDuration": {
+                    "type": "integer",
+                    "description": "Duration during which the alteration applies on the order item price (for instance 2 months free of charge for the recurring charge)"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "A narrative that explains in detail the semantics of this order item price alteration"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name of the order item price alteration"
+                },
+                "priceType": {
+                    "type": "string",
+                    "description": "A category that describes the price such as recurring, one time and usage."
+                },
+                "priority": {
+                    "type": "integer",
+                    "description": "Priority level for applying this alteration among all the defined alterations on the order item price"
+                },
+                "recurringChargePeriod": {
+                    "type": "string",
+                    "description": "Could be month, week..."
+                },
+                "unitOfMeasure": {
+                    "type": "string",
+                    "description": "Could be minutes, GB..."
+                },
+                "price": {
+                    "$ref": "#/definitions/Price"
+                },
+                "productOfferingPrice": {
+                    "$ref": "#/definitions/ProductOfferingPriceRef"
+                },
+                "@baseType": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the super-class"
+                },
+                "@schemaLocation": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI to a JSON-Schema file that defines additional attributes and relationships"
+                },
+                "@type": {
+                    "type": "string",
+                    "description": "When sub-classing, this defines the sub-class Extensible name"
+                }
+            }
+        },
+        "PriceType": {
+            "type": "string",
+            "description": "Describes the type of price (ex: oneTime, recurring, etc)",
+            "enum": [
+                "recurring",
+                "oneTime",
+                "usage"
+            ]
+        },
+      "Quantity": {
+            "type": "object",
+            "description": "An amount in a given unit",
+            "properties": {
+                "amount": {
+                    "default": 1,
+                    "type": "number",
+                    "format": "float",
+                    "description": "Numeric value in a given unit"
+                },
+                "units": {
+                    "type": "string",
+                    "description": "Unit"
+                }
+            }
+        },
       "Characteristic": {
         "allOf": [
           {
