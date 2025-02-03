@@ -1,0 +1,64 @@
+{
+    "@type": "PolicyRule",
+    "#description": "A PolicyRule is an intelligent data container. It contains data that define how the PolicyRule is used in a managed environment as well as a specification of behavior that dictates how the managed entities that it applies to will interact. The contained data is of four types: data and metadata that define the semantics and behavior of the policy rule and the behavior that it imposes on the rest of the system, a group of events that can be used to trigger the evaluation of the condition clause of a policy rule, a group of conditions aggregated by the PolicyRule, group of actions aggregated by the PolicyRule.",
+    "actionExecutionStrategy": {
+    "type": "string",
+    "description": "Defines the strategy to be used when executing the sequenced actions aggregated by this Policy",
+    "enum": [ "DoUntilSuccess", "DoAll", "DoUntilFailure", "DoAllWithoutFailureOrDoNothing"]
+  },
+    "sequencedActions": {
+    "type": "string",
+    "description": "Defines how the ordering of the PolicyActions associated with this Policy is to be interpreted",
+    "enum": [ "Mandatory", "Recommended", "BestEffort"]
+  },
+    "priority": {
+    "type": "integer",
+    "description": "Policy sequence value when Policy has to be executed in a specific order. Higher value means greater priority. Priority is not absolute, but relative in hierarchy. If a Policy is part of a PolicySet, priority on PolicySet overrides this priority"
+  },
+    "policyDomainRef": [
+      {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string"
+      }
+    ],
+  "policyEventRelationship": [
+    {
+      "priority": 0,
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "policyEventRefOrValue": {
+        "@type": "PolicyEventRef",
+        "@referredType": "string"
+      }
+    }
+  ],
+  "policyActionRelationship": [
+    {
+      "priority": 0,
+      "constraint": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyConstraintRef"
+      },
+      "policyActionRefOrValue": {
+        "id": "string",
+        "name": "string",
+        "@referredType": "string",
+        "@type": "PolicyActionRef"
+      }
+    }
+  ],
+  "targetPolicyEffect": "Permit",
+  "policyConditionRefOrValue": {
+    "id": "string",
+    "name": "string",
+    "@referredType": "string",
+    "@type": "PolicyConditionRef"
+  }
+  }
