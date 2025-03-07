@@ -1,0 +1,61 @@
+@startyaml
+!theme plain
+
+Mobile Line (PS):
+    Mobile Basic Plan (CFS):
+        4G Mobile Line (RFS):
+            - 4G Logical SIM (LR)
+            - HSS Subscriber Profile (LR)
+        5G Mobile Line (RFS):
+            5G Logical SIM (LR):
+                - UDM/UDR Profile (LR)
+                - PCF Profile (LR)
+        Mobile Unified Package (RFS):
+            - PCRF Profile (LR)
+            - PCF Profile (LR)
+        Characteristic:
+            Common:
+                cycleCount:1
+            BeautyNumber: 
+                msisdn:84915043333
+            Voice:
+                usageLimit:1000 min
+                nationalVoiceMinute: 100/200/500/1000 min
+                onnetVoiceMinute:2000 min
+                offnetVoiceMinute:200 min
+                internationVoiceMinute: 100/200/500/1000 min
+            SMS:
+                smsUnits: 100/200/500/1000
+                onnetVnpSmsUnits:100
+                offnetVnpSmsUnits:100
+                onnetVnptSmsUnits:100
+                offnetVnptSmsUnits:100
+                nationalSmsUnits: 100/200/500/1000
+                internationSmsUnits: 100/200/500/1000 
+                mmsUnits: 100/200/500/1000 min
+            Data:
+                dataVolume: 100/200/500/1000 min
+                dataVolumePerDay:2/5/10 GB
+                freeIP:Zalo/Facebook/Tiktok/Youtube/Whatsapp
+            Community:
+                communityMaxMember:2    
+                communityDataVolumePerDay:1 GB
+                communityMembers:0915043388,0915043399
+                communityMemberFeePerMonth:15 K
+            Content:
+                contentList: MyTV SportTV/Galaxy/VieOn/FPT Play/OnPlus
+            5G:
+                option5G:VolTE/VOWifi
+    Voice Mail (CFS):
+        VoiceMail (RFS)
+            - VMS Profile (LR)
+    VAS (CFS):
+        VAS (RFS):
+            - PCRF Profile (LR)
+            - PCF Profile (LR)
+        eSIM (CFS):
+            eSIM (RFS):
+                - eSIM Profile (LR)
+    SIM Card (PR):
+        - 
+@endyaml
