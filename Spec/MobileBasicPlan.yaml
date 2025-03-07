@@ -47,7 +47,7 @@ Mobile Line (PS):
             5G:
                 option5G:VolTE/VOWifi
     Voice Mail (CFS):
-        VoiceMail (RFS)
+        VoiceMail (RFS):
             - VMS Profile (LR)
     VAS (CFS):
         VAS (RFS):
@@ -57,5 +57,5 @@ Mobile Line (PS):
             eSIM (RFS):
                 - eSIM Profile (LR)
     SIM Card (PR):
-        - 
+        - ABC
 @endyaml
