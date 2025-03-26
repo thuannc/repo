@@ -1,0 +1,24 @@
+@startyaml
+!theme plain
+
+Fiber Contract (BPO):
+    TV Box Shipping (PO):
+        Shipping (PS):
+            Shipping (CFS):
+            Speed (C): standard
+    TV Box (PO):
+        TV Box (PS):
+            Color (C): Red
+            Storaged (C): Maxi
+    Fiber Access (PO):
+        Fiber Access (PS):
+            Landline Access (CFS):
+            Speed (C): 128
+    Connectivity (PO):
+        Connectivity (PS):
+            Landline Connectivity (CFS):
+    TV Channel (PO):
+        TV Channel (PS):
+            TV Channels (CFS):
+            Values (C): Basic
+@endyaml
