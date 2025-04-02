@@ -6,6 +6,8 @@
 
   "pages": [
     {
+      "id":"1",
+      "code":"general-page",
       "name": "General",
       "icon": "pi pi-info-circle",
       "pageType":"Property",
@@ -14,10 +16,14 @@
       
       "groups": [
         {
+          "id":"1",
+          "code":"general-group-1",
           "name": "General",
           "layoutType":"I",
           "properties": [
             {
+              "id":"1",
+              "code":"1",
               "name":"name",
               "title": "name",
               "dataType":"STRING",
@@ -25,6 +31,8 @@
               "validateRules": ["REQUIRED"]
             },
             {
+              "id":"2",
+              "code":"2",
               "name": "code",
               "title": "code",
               "dataType":"STRING",
@@ -32,6 +40,8 @@
               "validateRules": ["REQUIRED"]
             },
             {
+              "id":"3",
+              "code":"3",
               "name": "description",
               "title": "description",
               "dataType":"STRING",
@@ -39,6 +49,8 @@
               "validateRules": ["REQUIRED"]
             },
             {
+              "id":"4",
+              "code":"4",
               "name": "dataType",
               "title": "dataType",
               "dataType":"STRING",
@@ -46,6 +58,8 @@
               "items": [{ "label": "Danh sách", "value": "list" }]
             },
             {
+              "id":"5",
+              "code":"5",
               "name": "status",
               "title": "status",
               "dataType":"STRING",
@@ -55,16 +69,20 @@
           ]
         },
         {
+          "id":"2",
+          "code":"general-group-2",
           "name": "General 2",
           "layoutType":"I",
           "properties": [
             {
+              "id":"6",
               "name": "active",
               "title": "active",
               "dataType":"BOOL",
               "ctlType": "SWITCH-BOX"
             },
             {
+              "id":"7",
               "name": "validFor",
               "title": "validFor",
               "dataType":"DATERANGE",
@@ -75,6 +93,8 @@
       ]
     },
     {
+      "id":"2",
+      "code":"search-page",
       "name": "Searh",
       "icon": "pi pi-list",
       "pageType":"Search",
