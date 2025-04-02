@@ -117,17 +117,23 @@
       ],
       "apiList": [
         {
+              "id":"searchAPI",
               "name": "searchAPI",
+              "description":"Tìm kiếm",
               "uri": "/api/search/",
               "param":"name"
         },
         {
+              "id":"addAPI",
               "name": "addAPI",
+              "description":"Thêm mới",
               "uri": "/api/add/",
               "param":"object"
         },
         {
+              "id":"deleteAPI",
               "name": "deleteAPI",
+              "description":"Xóa",
               "uri": "/api/delete/",
               "param":"id"
         }
