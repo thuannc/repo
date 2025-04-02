@@ -95,7 +95,23 @@
             }
           ]
         }
-      ]
+      ],
+      "apiList": [
+        {
+              "id":"saveAPI",
+              "name": "addAPI",
+              "description":"Thêm mới",
+              "uri": "/api/add/",
+              "param":"object"
+        },
+        {
+              "id":"cancelAPI",
+              "name": "deleteAPI",
+              "description":"Xóa",
+              "uri": "/api/delete/",
+              "param":"id"
+        }
+      ],
     },
     {
       "id":"2",
