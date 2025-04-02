@@ -28,7 +28,8 @@
               "title": "name",
               "dataType":"STRING",
               "ctlType": "TEXTBOX",
-              "validateRules": ["REQUIRED"]
+              "validateRules": ["REQUIRED"],
+              "extInfo":""
             },
             {
               "id":"2",
@@ -37,7 +38,8 @@
               "title": "code",
               "dataType":"STRING",
               "ctlType": "TEXTBOX",
-              "validateRules": ["REQUIRED"]
+              "validateRules": ["REQUIRED"],
+              "extInfo":""
             },
             {
               "id":"3",
@@ -46,7 +48,8 @@
               "title": "description",
               "dataType":"STRING",
               "ctlType": "TEXTAREA",
-              "validateRules": ["REQUIRED"]
+              "validateRules": ["REQUIRED"],
+              "extInfo":""
             },
             {
               "id":"4",
@@ -55,7 +58,7 @@
               "title": "dataType",
               "dataType":"STRING",
               "ctlType": "SELECT-LIST",
-              "items": [{ "label": "Danh sách", "value": "list" }]
+              "extInfo": [{ "label": "Danh sách", "value": "list" }]
             },
             {
               "id":"5",
@@ -64,7 +67,7 @@
               "title": "status",
               "dataType":"STRING",
               "ctlType": "SELECT-LOV",
-              "ctlUrl": "http://10.1.122.100:9093/api/productCatalogManagement/ListOfValue?code=status-list"
+              "extInfo": "status-list"
             }
           ]
         },
@@ -79,14 +82,16 @@
               "name": "active",
               "title": "active",
               "dataType":"BOOL",
-              "ctlType": "SWITCH-BOX"
+              "ctlType": "SWITCH-BOX",
+              "extInfo":""
             },
             {
               "id":"7",
               "name": "validFor",
               "title": "validFor",
               "dataType":"DATERANGE",
-              "ctlType": "DATE-RANGE"
+              "ctlType": "DATE-RANGE",
+              "extInfo":""
             }
           ]
         }
@@ -106,7 +111,8 @@
               "title": "Tìm kiếm",
               "oprType":"like",
               "dataType":"STRING",
-              "ctlType": "TEXTBOX"
+              "ctlType": "TEXTBOX",
+              "extInfo":""
         }
       ],
       "apiList": [
