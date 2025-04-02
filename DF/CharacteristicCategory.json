@@ -1,0 +1,30 @@
+{
+    "id": "372",
+    "name": "PKL Color",
+    "code": "1508",
+    "description": "Danh sách mầu",
+    "attributes": [
+        {
+            "id": "CS-1",
+            "name": "Dung lượng data",
+            "valueType": "number",
+            "value": "1",
+            "characteristicRelationship": [],
+            "@type": "CharacteristicSpecification",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+        },
+        {
+            "id": "CS-2",
+            "name": "Miễn phí dung lượng data",
+            "valueType": "string",
+            "value": "Tiktok",
+            "characteristicRelationship": [],
+            "@type": "CharacteristicSpecification",
+            "@baseType": "",
+            "@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Common/CharacteristicSpecification.schema.json"
+        }
+    ],
+    "@type": "ObjectType",
+    "@baseType": "ObjectType"
+}
