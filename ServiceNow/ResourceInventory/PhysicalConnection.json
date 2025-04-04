@@ -21,22 +21,22 @@
      {
          "name": "lifeCycleStage",
          "valueType": "string",
-         "value": "DEPLOY"
+         "value": "Operational"
       },
      {
          "name": "lifeCycleStatus",
          "valueType": "string",
-         "value": "Reserved"
+         "value": "InUse"
       },
      {
          "name": "type",
          "valueType": "string",
-         "value": "ESS"
+         "value": "ENET PC"
       },
      {
          "name": "managedBy",
          "valueType": "string",
-         "value": "Chuck Farley"
+         "value": "Alene Rabeck"
       }
    ],
    "resourceRelationship": [
