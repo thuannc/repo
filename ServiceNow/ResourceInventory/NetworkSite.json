@@ -1,0 +1,210 @@
+{
+   "href": "/api/sn_ni_core/resource/00399f0aed349150f877305f29f832b2",
+   "id": "00399f0aed349150f877305f29f832b2",
+   "name": "DENVER CO CO/HUB",
+   "note": [
+      {
+         "text": "Cisco maintenance team onsite June 22, 2022."
+      }
+   ],
+   "resourceCharacteristic": [
+      {
+         "name": "altitude_units",
+         "valueType": "string",
+         "value": "feet"
+      },
+      {
+         "name": "attestation_status",
+         "valueType": "string",
+         "value": "Not Yet Reviewed"
+      },
+      {
+         "name": "attested",
+         "valueType": "boolean",
+         "value": "false"
+      },
+      {
+         "name": "can_print",
+         "valueType": "boolean",
+         "value": "false"
+      },
+      {
+         "name": "clli_code",
+         "valueType": "string",
+         "value": "DNVRCOMR02T"
+      },
+      {
+         "name": "comments",
+         "valueType": "string",
+         "value": "Site is scheduled for diesel generator test July 13, 2022 at 9am CST."
+      },
+      {
+         "name": "cost_cc",
+         "valueType": "string",
+         "value": "USD"
+      },
+      {
+         "name": "county",
+         "valueType": "string",
+         "value": "DENVER"
+      },
+      {
+         "name": "data_center_code",
+         "valueType": "string",
+         "value": "DNVR00564"
+      },
+      {
+         "name": "discovery_source",
+         "valueType": "string",
+         "value": "Resource Inventory Open API"
+      },
+      {
+         "name": "fault_count",
+         "valueType": "integer",
+         "value": "0"
+      },
+      {
+         "name": "first_discovered",
+         "valueType": "datetime",
+         "value": "2022-07-21T19:38:04.000Z"
+      },
+      {
+         "name": "install_status",
+         "valueType": "integer",
+         "value": "1"
+      },
+      {
+         "name": "last_discovered",
+         "valueType": "datetime",
+         "value": "2022-07-21T19:38:04.000Z"
+      },
+      {
+         "name": "life_cycle_stage",
+         "valueType": "reference",
+         "value": "Operational"
+      },
+      {
+         "name": "life_cycle_stage_status",
+         "valueType": "reference",
+         "value": "In Use"
+      },
+      {
+         "name": "location",
+         "valueType": "reference",
+         "value": "25ab8f300a0a0bb300d99f69c3ac24cd"
+      },
+      {
+         "name": "managed_by",
+         "valueType": "reference",
+         "value": "b0f31e5673500010c2e7660c4cf6a711"
+      },
+      {
+         "name": "monitor",
+         "valueType": "boolean",
+         "value": "false"
+      },
+      {
+         "name": "network_domain",
+         "valueType": "string",
+         "value": "core"
+      },
+      {
+         "name": "ni_type",
+         "valueType": "reference",
+         "value": "8e8f3770404d0110f8772175cacd7204"
+      },
+      {
+         "name": "pots_number",
+         "valueType": "ph_number",
+         "value": "(214) 555-1234"
+      },
+      {
+         "name": "skip_sync",
+         "valueType": "boolean",
+         "value": "false"
+      },
+      {
+         "name": "third_party_ownership",
+         "valueType": "boolean",
+         "value": "false"
+      },
+      {
+         "name": "unverified",
+         "valueType": "boolean",
+         "value": "false"
+      }
+   ],
+   "resourceRelationship": [
+      {
+         "relationshipType": "Connects to::Connected by",
+         "resource": {
+            "id": "e6f6df8d4051c910f8772175cacd72b2",
+            "href": "/api/sn_ni_core/resource/e6f6df8d4051c910f8772175cacd72b2"
+         }
+      },
+      {
+         "relationshipType": "Connects to::Connected by",
+         "resource": {
+            "id": "0ac19bc54051c910f8772175cacd724b",
+            "href": "/api/sn_ni_core/resource/0ac19bc54051c910f8772175cacd724b"
+         }
+      },
+      {
+         "relationshipType": "Connects to::Connected by",
+         "resource": {
+            "id": "997e5c11875851109a9c0f65dabb35ac",
+            "href": "/api/sn_ni_core/resource/997e5c11875851109a9c0f65dabb35ac"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "5b10e8154015c910f8772175cacd724d",
+            "href": "/api/sn_ni_core/resource/5b10e8154015c910f8772175cacd724d"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "57e73b51405dc910f8772175cacd726e",
+            "href": "/api/sn_ni_core/resource/57e73b51405dc910f8772175cacd726e"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "bf58f751405dc910f8772175cacd72e8",
+            "href": "/api/sn_ni_core/resource/bf58f751405dc910f8772175cacd72e8"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "b5711e31405d0d10f8772175cacd7232",
+            "href": "/api/sn_ni_core/resource/b5711e31405d0d10f8772175cacd7232"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "ed811e31405d0d10f8772175cacd72d3",
+            "href": "/api/sn_ni_core/resource/ed811e31405d0d10f8772175cacd72d3"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "d74937d1405dc910f8772175cacd7288",
+            "href": "/api/sn_ni_core/resource/d74937d1405dc910f8772175cacd7288"
+         }
+      },
+      {
+         "relationshipType": "Contains::Contained by",
+         "resource": {
+            "id": "da0df2e3e4e64510f877e70ec9bcacc6",
+            "href": "/api/sn_ni_core/resource/da0df2e3e4e64510f877e70ec9bcacc6"
+         }
+      }
+   ],
+   "@type": "cmdb_ci_ni_site"
+}
