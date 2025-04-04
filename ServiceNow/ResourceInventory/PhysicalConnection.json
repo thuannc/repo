@@ -1,1 +1,52 @@
-{}
+{
+   "href": "/api/sn_ni_core/resource/00399f0aed349150f877305f29f832b2",
+   "id": "00399f0aed349150f877305f29f832b2",
+   "name": "ES7450 TO FDP PHYCON-01",
+   "note": [
+      {
+         "text": "Cisco maintenance team onsite June 22, 2022."
+      }
+   ],
+   "resourceCharacteristic": [
+      {
+         "name": "siteA",
+         "valueType": "string",
+         "value": "DALLAS TX CO/HUB"
+      },
+     {
+         "name": "siteB",
+         "valueType": "string",
+         "value": "DALLAS TX CO/HUB"
+      },
+     {
+         "name": "lifeCycleStage",
+         "valueType": "string",
+         "value": "DEPLOY"
+      },
+     {
+         "name": "lifeCycleStatus",
+         "valueType": "string",
+         "value": "Reserved"
+      },
+     {
+         "name": "type",
+         "valueType": "string",
+         "value": "ESS"
+      },
+     {
+         "name": "managedBy",
+         "valueType": "string",
+         "value": "Chuck Farley"
+      }
+   ],
+   "resourceRelationship": [
+      {
+         "relationshipType": "Connects to::Connected by",
+         "resource": {
+            "id": "e6f6df8d4051c910f8772175cacd72b2",
+            "href": "/api/sn_ni_core/resource/e6f6df8d4051c910f8772175cacd72b2"
+         }
+      }
+   ],
+   "@type": "PhysicalConnection"
+}
