@@ -8,16 +8,7 @@
       }
    ],
    "resourceCharacteristic": [
-      {
-         "name": "siteA",
-         "valueType": "string",
-         "value": "DALLAS TX CO/HUB"
-      },
-     {
-         "name": "siteB",
-         "valueType": "string",
-         "value": "DALLAS TX CO/HUB"
-      },
+      
      {
          "name": "lifeCycleStage",
          "valueType": "string",
@@ -28,13 +19,134 @@
          "valueType": "string",
          "value": "InUse"
       },
+      {
+         "name": "productModel",
+         "valueType": "string",
+         "value": "ENET Section"
+      },
+      {
+         "name": "maxPercentOverSubscription",
+         "valueType": "integer",
+         "value": "80"
+      },
      {
          "name": "type",
          "valueType": "string",
          "value": "ENET PATH"
       },
      {
+         "name": "topology",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "siteA",
+         "valueType": "string",
+         "value": "DALLAS TX CO/HUB"
+      },
+     {
+         "name": "siteZ",
+         "valueType": "string",
+         "value": "DALLAS TX CO/HUB"
+      },
+      {
+         "name": "telephoneNumber",
+         "valueType": "string",
+         "value": ""
+      },
+     {
+         "name": "type",
+         "valueType": "string",
+         "value": "ENET PATH"
+      },
+     {
+         "name": "role",
+         "valueType": "string",
+         "value": "ESS TO OLT"
+      },
+     {
+         "name": "function",
+         "valueType": "string",
+         "value": ""
+      },
+     {
+         "name": "supportGroup",
+         "valueType": "string",
+         "value": ""
+      },
+     {
          "name": "managedBy",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "availability",
+         "valueType": "string",
+         "value": "Shared"
+      }
+
+      {
+         "name": "portA",
+         "valueType": "string",
+         "value": "DLLSTXMR/ES7450/IOM-01/MDA-01/NI-02"
+      },
+     {
+         "name": "portZ",
+         "valueType": "string",
+         "value": "DLLSTXMR/OLT7360/SLOT-01/LC-01/NI-02"
+      },
+     {
+         "name": "bandwidthAtoZ",
+         "valueType": "string",
+         "value": "10Gbps"
+      },
+      {
+         "name": "bandwidthZtoA",
+         "valueType": "string",
+         "value": "10Gbps"
+      },
+     {
+         "name": "framingType",
+         "valueType": "string",
+         "value": "none"
+      },
+      {
+         "name": "plannedDate",
+         "valueType": "string",
+         "value": "YYYY-MM-DD HH:mm:ss"
+      }
+      {
+         "name": "protocolVersion",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "cost",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "characteristicInformationType",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "distinguishedName",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "endpointRule",
+         "valueType": "string",
+         "value": "none"
+      },
+      {
+         "name": "distance",
+         "valueType": "string",
+         "value": ""
+      },
+      {
+         "name": "networkDomain",
          "valueType": "string",
          "value": ""
       }
