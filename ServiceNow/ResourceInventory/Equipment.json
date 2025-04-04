@@ -85,5 +85,5 @@
          }
       }
    ],
-   "@type": "cmdb_ci_ni_site"
+   "@type": "equipment"
 }
