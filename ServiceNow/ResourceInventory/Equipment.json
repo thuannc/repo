@@ -1,1 +1,89 @@
-{}
+{
+   "href": "/api/sn_ni_core/resource/00399f0aed349150f877305f29f832b2",
+   "id": "00399f0aed349150f877305f29f832b2",
+   "name": "DENVER CO CO/HUB",
+   "note": [
+      {
+         "text": "Cisco maintenance team onsite June 22, 2022."
+      }
+   ],
+   "resourceCharacteristic": [
+      {
+         "name": "asset",
+         "valueType": "string",
+         "value": ""
+      },
+     {
+         "name": "lifeCycleStage",
+         "valueType": "string",
+         "value": "DEPLOY"
+      },
+     {
+         "name": "lifeCycleStatus",
+         "valueType": "string",
+         "value": "Reserved"
+      },
+     {
+         "name": "productModel",
+         "valueType": "string",
+         "value": "Nokia 7450 ESS-1"
+      },
+     {
+         "name": "equipmentCLLI",
+         "valueType": "string",
+         "value": "DLLSTXESS01"
+      },
+      {
+         "name": "networkSite",
+         "valueType": "string",
+         "value": "DALLAS TX CO/HUB"
+      },
+     {
+         "name": "type",
+         "valueType": "string",
+         "value": "ESS"
+      },
+     {
+         "name": "role",
+         "valueType": "string",
+         "value": "GPON"
+      },
+     {
+         "name": "function",
+         "valueType": "string",
+         "value": "PON NETWORK"
+      },
+     {
+         "name": "serialNumber",
+         "valueType": "string",
+         "value": "789456568225"
+      },
+     {
+         "name": "supportGroup",
+         "valueType": "string",
+         "value": ""
+      },
+     {
+         "name": "managedBy",
+         "valueType": "string",
+         "value": "Chuck Farley"
+      },
+     {
+         "name": "replaceable",
+         "valueType": "boolean",
+         "value": true
+      }
+     
+      
+   ],
+   "resourceRelationship": [
+      {
+         "relationshipType": "Connects to::Connected by",
+         "resource": {
+            "id": "e6f6df8d4051c910f8772175cacd72b2",
+            "href": "/api/sn_ni_core/resource/e6f6df8d4051c910f8772175cacd72b2"
+         }
+      }
+   ],
+   "@type": "cmdb_ci_ni_site"
+}
