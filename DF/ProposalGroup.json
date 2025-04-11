@@ -3,7 +3,7 @@
     "name": "Ưu đãi data",
     "description": "Ưu đãi data",
     "state": "active",
-    "proposalAttribute":[
+    "proposalSpecification":[
         {
             "id": "PD-1",
             "name": "Ưu đãi nội mạng",
