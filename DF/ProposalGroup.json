@@ -7,20 +7,23 @@
         {
             "id": "PD-1",
             "name": "Ưu đãi nội mạng",
-            "@type": "ProposalAttributeRef",
-            "@referredType": "ProposalAttribute"
+            "description":"",
+            "@type": "ProposalSpecificationRef",
+            "@referredType": "ProposalSpecification"
         },
         {
             "id": "PD-2",
             "name": "Ưu đãi ngoại mạng",
-            "@type": "ProposalAttributeRef",
-            "@referredType": "ProposalAttribute"
+            "description":"",
+            "@type": "ProposalSpecificationRef",
+            "@referredType": "ProposalSpecification"
         },
         {
             "id": "PD-3",
             "name": "Ưu đãi quốc tế",
-            "@type": "ProposalAttributeRef",
-            "@referredType": "ProposalAttribute"
+            "description":"",
+            "@type": "ProposalSpecificationRef",
+            "@referredType": "ProposalSpecification"
         }
     ],
     "@type": "ProposalGroup",
