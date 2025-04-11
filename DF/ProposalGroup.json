@@ -1,0 +1,28 @@
+{
+    "id": "5351",
+    "name": "Ưu đãi data",
+    "description": "Ưu đãi data",
+    "state": "active",
+    "proposalAttribute":[
+        {
+            "id": "PD-1",
+            "name": "Ưu đãi nội mạng",
+            "@type": "ProposalAttributeRef",
+            "@referredType": "ProposalAttribute"
+        },
+        {
+            "id": "PD-2",
+            "name": "Ưu đãi ngoại mạng",
+            "@type": "ProposalAttributeRef",
+            "@referredType": "ProposalAttribute"
+        },
+        {
+            "id": "PD-3",
+            "name": "Ưu đãi quốc tế",
+            "@type": "ProposalAttributeRef",
+            "@referredType": "ProposalAttribute"
+        }
+    ],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+}
