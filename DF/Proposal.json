@@ -106,6 +106,67 @@
           ],
           "@type": "ProposalSpecification",
           "@baseType": "ProposalSpecification"
+        },
+        {
+          "id": "5351",
+          "name": "Nhóm",
+          "shortDescription": "Dịch vụ cộng thêm {1}",
+          "description": "Số lượng thành viên {1}, thu thêm {2}/{3}TB, chia sẻ cho mỗi thành viên {4}/{5}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "group-1",
+              "title": "Số lượng",
+              "dataType": "integer",
+              "value": 2,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            },
+            {
+              "id": "2",
+              "code": "group-2",
+              "title": "Thu thêm",
+              "dataType": "integer",
+              "value": 15,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            },
+            {
+              "id": "3",
+              "code": "group-3",
+              "title": "Đơn vị (TB)",
+              "dataType": "integer",
+              "value": 1,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            },
+            {
+              "id": "4",
+              "code": "group-4",
+              "title": "Chia sẻ",
+              "dataType": "integer",
+              "value": 15,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            },
+            {
+              "id": "5",
+              "code": "group-5",
+              "title": "Đơn vị",
+              "dataType": "integer",
+              "value": ["Ngày","Tháng"],
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            },
+            
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
         }
       ],
       "@type": "ProposalGroup",
@@ -116,14 +177,62 @@
       "name": "Điều kiện đăng ký",
       "groupType": "Qualification",
       "description": "Giá",
-      "specifications": [],
+      "specifications": [{
+          "id": "5351",
+          "name": "Thuê bao mới",
+          "shortDescription": "Thuê bao {1} trong {2}/ngày",
+          "description": "Thuê bao {1} trong {2}/ngày",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Thuê bao",
+              "dataType": "integer",
+              "value": ["PTM","CMGS"],
+              "layout": {
+                "ctlType": "MULTICHECK"
+              }
+            },
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Trong",
+              "dataType": "integer",
+              "value": 30,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        },{
+          "id": "5351",
+          "name": "Thuê bao hiện hữu",
+          "shortDescription": "Thuê bao có tiêu dùng bình quân 3 tháng liền kề <={1}",
+          "description": "Thuê bao có tiêu dùng bình quân 3 tháng liền kề <={1}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Ngưỡng tiêu dùng",
+              "dataType": "integer",
+              "value": 199000,
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        }],
       "@type": "ProposalGroup",
       "@baseType": "ProposalGroup"
     },
     {
       "id": "5",
       "name": "Cam kết sử dụng",
-      "description": "Ưu đãi",
+      "description": "Cam kết sử dụng",
       "groupType": "Commitment",
       "specifications": [],
       "@type": "ProposalGroup",
