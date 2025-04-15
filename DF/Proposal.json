@@ -26,7 +26,88 @@
       "name": "Ưu đãi",
       "description": "Ưu đãi",
       "groupType": "Interest",
-      "specifications": [],
+      "specifications": [
+        {
+          "id": "5351",
+          "name": "Thoại nội mạng VNP",
+          "shortDescription": "Gọi nội mạng VNP {1}",
+          "description": "Gọi nội mạng VNP {1}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Số lượng",
+              "dataType": "integer",
+              "value": "2000",
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        },
+        {
+          "id": "5351",
+          "name": "Thoại liên mạng trong nước",
+          "shortDescription": "Thoại liên mạng trong nước {1}",
+          "description": "Thoại liên mạng trong nước {1}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Số lượng",
+              "dataType": "integer",
+              "value": "250",
+              "layout": {
+                "ctlType": "TEXTBOX"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        },
+        {
+          "id": "5351",
+          "name": "Data IP",
+          "shortDescription": "Miễn phí truy cập {1}",
+          "description": "Miễn phí truy cập {1}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Danh sách",
+              "dataType": "integer",
+              "value": ["Zalo","Facebook","Youtube","Tiktok","Whatsapp"],
+              "layout": {
+                "ctlType": "MULTICHECK"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        },
+        {
+          "id": "5351",
+          "name": "Dịch vụ Add-on",
+          "shortDescription": "Dịch vụ cộng thêm {1}",
+          "description": "Dịch vụ cộng thêm {1}",
+          "attribute": [
+            {
+              "id": "1",
+              "code": "cdo-1",
+              "title": "Danh sách",
+              "dataType": "integer",
+              "value": ["VTVCab","SportTV"],
+              "layout": {
+                "ctlType": "MULTICHECK"
+              }
+            }
+          ],
+          "@type": "ProposalSpecification",
+          "@baseType": "ProposalSpecification"
+        }
+      ],
       "@type": "ProposalGroup",
       "@baseType": "ProposalGroup"
     },
