@@ -1,0 +1,57 @@
+{
+    "id": "5351",
+    "name": "Ưu đãi nội mạng",
+    "shortDescription": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+    "description": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+    "groups":[{
+      "id": "5351",
+    "name": "Ưu đãi nội mạng",
+    "shortDescription": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+    "description": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+    "specifications":[
+      {
+        "id": "5351",
+        "name": "Ưu đãi nội mạng",
+        "shortDescription": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+        "description": "Gói {1} có giá bao gồm VAT là {2}. Giá chưa có VAT là {3}. Thời gian sử dụng chu kỳ đầu là {4}{5}. Thời hạn sử dụng từ chu kỳ thứ 2 là {6}{7}.",
+        "attribute": [
+        {
+            "id":"1",
+            "code":"cdo-1",
+            "title": "Số lượng",
+            "dataType":"string",
+            "value":"0",
+            "layout":{"ctlType": "TEXTBOX"}
+        },
+        {
+            "id":"2",
+            "code":"cdo-2",
+            "title": "Giá gói",
+            "dataType":"string",
+            "value":"0",
+            "layout":{"ctlType": "TEXTBOX"}
+        },
+        {
+            "id":"3",
+            "code":"cdo-3",
+            "title": "Thời gian sử dụng chu kỳ đầu",
+            "dataType":"string",
+            "value":"",
+            "layout":{"ctlType": "TEXTBOX"}
+        },
+        {
+            "id":"4",
+            "code":"cdo-4",
+            "title": "Thời gian sử dụng từ chu kỳ thứ 2",
+            "dataType":"string",
+            "value":"",
+            "layout":{"ctlType": "TEXTBOX"}
+        }
+    ],
+    "@type": "ProposalSpecification",
+    "@baseType": "ProposalSpecification"
+      }
+    ]
+    }]   
+    
+}
