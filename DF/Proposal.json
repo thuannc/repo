@@ -78,7 +78,13 @@
               "code": "cdo-1",
               "title": "Danh sách",
               "dataType": "integer",
-              "value": ["Zalo","Facebook","Youtube","Tiktok","Whatsapp"],
+              "value": [
+                "Zalo",
+                "Facebook",
+                "Youtube",
+                "Tiktok",
+                "Whatsapp"
+              ],
               "layout": {
                 "ctlType": "MULTICHECK"
               }
@@ -98,7 +104,10 @@
               "code": "cdo-1",
               "title": "Danh sách",
               "dataType": "integer",
-              "value": ["VTVCab","SportTV"],
+              "value": [
+                "VTVCab",
+                "SportTV"
+              ],
               "layout": {
                 "ctlType": "MULTICHECK"
               }
@@ -158,12 +167,14 @@
               "code": "group-5",
               "title": "Đơn vị",
               "dataType": "integer",
-              "value": ["Ngày","Tháng"],
+              "value": [
+                "Ngày",
+                "Tháng"
+              ],
               "layout": {
                 "ctlType": "TEXTBOX"
               }
-            },
-            
+            }
           ],
           "@type": "ProposalSpecification",
           "@baseType": "ProposalSpecification"
@@ -177,7 +188,8 @@
       "name": "Điều kiện đăng ký",
       "groupType": "Qualification",
       "description": "Giá",
-      "specifications": [{
+      "specifications": [
+        {
           "id": "5351",
           "name": "Thuê bao mới",
           "shortDescription": "Thuê bao {1} trong {2}/ngày",
@@ -188,7 +200,10 @@
               "code": "cdo-1",
               "title": "Thuê bao",
               "dataType": "integer",
-              "value": ["PTM","CMGS"],
+              "value": [
+                "PTM",
+                "CMGS"
+              ],
               "layout": {
                 "ctlType": "MULTICHECK"
               }
@@ -206,7 +221,8 @@
           ],
           "@type": "ProposalSpecification",
           "@baseType": "ProposalSpecification"
-        },{
+        },
+        {
           "id": "5351",
           "name": "Thuê bao hiện hữu",
           "shortDescription": "Thuê bao có tiêu dùng bình quân 3 tháng liền kề <={1}",
@@ -225,7 +241,8 @@
           ],
           "@type": "ProposalSpecification",
           "@baseType": "ProposalSpecification"
-        }],
+        }
+      ],
       "@type": "ProposalGroup",
       "@baseType": "ProposalGroup"
     },
@@ -238,5 +255,7 @@
       "@type": "ProposalGroup",
       "@baseType": "ProposalGroup"
     }
-  ]
+  ],
+  "@type": "Proposal",
+  "@baseType": "Proposal"
 }
