@@ -38,10 +38,7 @@
               "code": "cdo-1",
               "title": "Số lượng",
               "dataType": "integer",
-              "value": "2000",
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": "2000"
             }
           ],
           "@type": "ProposalSpecification",
@@ -58,10 +55,7 @@
               "code": "cdo-1",
               "title": "Số lượng",
               "dataType": "integer",
-              "value": "250",
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": "250"
             }
           ],
           "@type": "ProposalSpecification",
@@ -84,10 +78,7 @@
                 "Youtube",
                 "Tiktok",
                 "Whatsapp"
-              ],
-              "layout": {
-                "ctlType": "MULTICHECK"
-              }
+              ]
             }
           ],
           "@type": "ProposalSpecification",
@@ -107,10 +98,7 @@
               "value": [
                 "VTVCab",
                 "SportTV"
-              ],
-              "layout": {
-                "ctlType": "MULTICHECK"
-              }
+              ]
             }
           ],
           "@type": "ProposalSpecification",
@@ -127,40 +115,28 @@
               "code": "group-1",
               "title": "Số lượng",
               "dataType": "integer",
-              "value": 2,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 2
             },
             {
               "id": "2",
               "code": "group-2",
               "title": "Thu thêm",
               "dataType": "integer",
-              "value": 15,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 15
             },
             {
               "id": "3",
               "code": "group-3",
               "title": "Đơn vị (TB)",
               "dataType": "integer",
-              "value": 1,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 1
             },
             {
               "id": "4",
               "code": "group-4",
               "title": "Chia sẻ",
               "dataType": "integer",
-              "value": 15,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 15
             },
             {
               "id": "5",
@@ -170,10 +146,7 @@
               "value": [
                 "Ngày",
                 "Tháng"
-              ],
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              ]
             }
           ],
           "@type": "ProposalSpecification",
@@ -203,20 +176,14 @@
               "value": [
                 "PTM",
                 "CMGS"
-              ],
-              "layout": {
-                "ctlType": "MULTICHECK"
-              }
+              ]
             },
             {
               "id": "1",
               "code": "cdo-1",
               "title": "Trong",
               "dataType": "integer",
-              "value": 30,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 30
             }
           ],
           "@type": "ProposalSpecification",
@@ -233,10 +200,7 @@
               "code": "cdo-1",
               "title": "Ngưỡng tiêu dùng",
               "dataType": "integer",
-              "value": 199000,
-              "layout": {
-                "ctlType": "TEXTBOX"
-              }
+              "value": 199000
             }
           ],
           "@type": "ProposalSpecification",
