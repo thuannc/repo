@@ -1,0 +1,340 @@
+{
+	"@type": "ProductSpecification",
+	"@baseType": "ProductSpecification",
+	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductSpecification.schema.json",
+	"description": "PS VIP 199",
+	"isBundle": false,
+	"version": "1",
+	"productSpecCharacteristic": [
+		{
+			"id": "id-ChuKy",
+			"name": "Chu kỳ sử dụng",
+			"description": "Chọn gói chu kỳ",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "Tháng",
+					"value": 1,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "Tháng",
+					"value": 3,
+					"isDefault": false,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "Tháng",
+					"value": 6,
+					"isDefault": false,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "Tháng",
+					"value": 12,
+					"isDefault": false,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-voice-tao-nhom",
+			"name": "Tao nhóm voice",
+			"description": "Xác định có tạo nhóm voice ngay khi mua hay không?",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Boolean",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Boolean",
+					"unitOfMeasure": "",
+					"value": true,
+					"isDefault": true,
+					"@type": "BooleanCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				},
+				{
+					"valueType": "Boolean",
+					"unitOfMeasure": "",
+					"value": false,
+					"isDefault": false,
+					"@type": "BooleanCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-so-thue-bao-chu-nhom",
+			"name": "Số thuê bao chủ nhóm",
+			"description": "Xác định số chủ nhóm",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"@type": "StringCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-SL-TV-TD",
+			"name": "Số lượng thành viên tối đa",
+			"description": "Xác định số lượng thành viên tối đa",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-danh-sach-thue-bao-thanh-vien",
+			"name": "Danh sách thuê bao thành viên",
+			"description": "Thanh viên nhóm",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": [],
+					"isDefault": true,
+					"@type": "StringArrayCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-nhom-policy",
+			"name": "Chính sách thoại trong nhóm",
+			"description": "Xác định chính sách thoại trong nhóm",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 1,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-so-phut-noi-mang-mien-phi",
+			"name": "Số phút nội mạng miễn phí (voice_onnet_vnp)",
+			"description": "Số phút nội mạng",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2000,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-so-phut-ngoai-mang-mien-phi",
+			"name": "Số phút ngoại mạng miễn phí (voice_offnet_vnp)",
+			"description": "Số phút ngoại mạng",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 250,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-so-gb-data-mien-phi",
+			"name": "Số GB data miễn phí",
+			"description": "Data miễn phí",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "GB/ngày",
+					"value": 8,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-so-gb-data-chia-se",
+			"name": "Số GB data chia sẻ",
+			"description": "Data chia sẻ",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"unitOfMeasure": "GB/ngày",
+					"value": 1,
+					"isDefault": true,
+					"@type": "IntegerCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-ip-mien-phi-truy-cap",
+			"name": "Danh sách các IP miễn phí truy cập",
+			"description": "Data IP",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"unitOfMeasure": "",
+					"value": ["Zalo", "Facebook", "Tiktok", "Youtube", "Whatsapp"],
+					"isDefault": true,
+					"@type": "StringArrayCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-5g-services",
+			"name": "Danh sách dịch vụ 5G",
+			"description": "5G",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"unitOfMeasure": "",
+					"value": ["volte", "vowifi"],
+					"isDefault": true,
+					"@type": "StringArrayCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-vas-services",
+			"name": "Danh sách dịch vụ VAS",
+			"description": "VAS",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"unitOfMeasure": "",
+					"value": ["MyTV", "SPORTTV"],
+					"isDefault": true,
+					"@type": "StringArrayCharacteristicSpecification",
+					"@baseType": "CharacteristicSpecification"
+				}
+			]
+		}
+	],
+	"serviceSpecification": [
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-VIP199",
+			"name": "CFS VIP 199",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		}
+	],
+	"lastUpdate": "2025-04-12T14:19:41.48Z",
+	"lifecycleStatus": "In design",
+	"name": "PS VIP 199",
+	"id": "PS-VIP199",
+	"validFor": {
+		"startDateTime": "2025-04-01T17:00:00Z",
+		"endDateTime": "2025-04-16T17:00:00Z"
+	}
+}
