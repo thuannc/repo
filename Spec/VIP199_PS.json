@@ -1,0 +1,61 @@
+@startyaml
+!theme plain
+
+Mobile Line (PS):
+    Mobile Basic Plan (CFS):
+        4G Mobile Line (RFS):
+            - 4G Logical SIM (LR)
+            - HSS Subscriber Profile (LR)
+        5G Mobile Line (RFS):
+            5G Logical SIM (LR):
+                - UDM/UDR Profile (LR)
+                - PCF Profile (LR)
+        Mobile Unified Package (RFS):
+            - PCRF Profile (LR)
+            - PCF Profile (LR)
+        Characteristic:
+            Common:
+                cycleCount:1
+            BeautyNumber: 
+                msisdn:84915043333
+            Voice:
+                usageLimit:-1
+                nationalVoiceMinute: -1
+                onnetVoiceMinute:2000
+                offnetVoiceMinute:250 min
+                internationVoiceMinute: -1
+            SMS:
+                smsUnits: -1
+                onnetVnpSmsUnits:-1
+                offnetVnpSmsUnits:-1
+                onnetVnptSmsUnits:-1
+                offnetVnptSmsUnits:-1
+                nationalSmsUnits: -1
+                internationSmsUnits: -1 
+                mmsUnits: -1
+            Data:
+                dataVolume: -1
+                dataVolumePerDay:8
+                freeIP:Zalo/Facebook/Tiktok/Youtube/Whatsapp
+            Community:
+                communityMaxMember:2    
+                communityDataVolumePerDay:1 GB
+                communityMembers:0915043388,0915043399
+                communityMemberFeePerMonth:15 K
+            Content:
+                contentList: MyTV SportTV/Galaxy/VieOn/FPT Play/OnPlus
+            5G:
+                option5G:VolTE/VOWifi
+    Voice Mail (CFS):
+        VoiceMail (RFS):
+            - VMS Profile (LR)
+    VAS (CFS):
+        VAS (RFS):
+            - PCRF Profile (LR)
+            - PCF Profile (LR)
+        eSIM (CFS):
+            eSIM (RFS):
+                - eSIM Profile (LR)
+    SIM Card (PR):
+        - ABC
+@endyaml
