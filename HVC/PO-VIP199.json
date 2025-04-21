@@ -1,0 +1,593 @@
+{
+	"@type": "ProductOffering",
+	"@baseType": "ProductOffering",
+	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOffering.schema.json",
+	"description": "HCV VIP 199",
+	"isBundle": true,
+	"version": "1",
+	"place": [],
+	"channel": [
+		{
+			"id": "xxx1",
+			"name": "Prepaid - SMS 900",
+			"@type": "ChannelRef"
+		}
+	],
+	"category": [],
+	"productOfferingTerm": [
+		{
+            "name": "18 tháng",
+            "description": "Cam kết 18 tháng",
+            "duration": {
+                "amount": 18,
+                "units": "Month"
+            },
+            "validFor": {
+                "startDateTime": "2020-09-22T16:42:23Z",
+                "endDateTime": "2021-09-22T00:00:00Z"
+            },
+            "@type":  "ProductOfferingTerm"
+        }
+	],
+	"productOfferingPrice": [
+		{
+			"@type": "ProductOfferingPriceRef",
+			"@baseType": "ProductOfferingPrice",
+			"id": "id-POP-VIP199-1thang",
+			"name": "POP VIP 1 tháng",
+			"@referredType": "ProductOfferingPrice",
+			"version": "1"			
+		}
+	],
+	"bundledProductOffering": [],
+	"attachment": [],
+	"productOfferingRelationship": [],
+	"productOfferingCharacteristic": [
+		{
+			"id": "id-action",
+			"name": "Action",
+			"description": "Action",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "Đăng ký",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "Gia hạn",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-cycle",
+			"name": "cycle",
+			"description": "cycle",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 1,
+					"isDefault": true,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 3,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 6,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 7,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 12,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 14,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-number",
+			"name": "Number",
+			"description": "Number",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Roaming-Options",
+			"name": "Roaming Options",
+			"description": "Roaming",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Barring-Options",
+			"name": "Barring Options",
+			"description": "Barring Options",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMaxMember",
+			"name": "communityMaxMember",
+			"description": "communityMaxMember",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityDataVolumePerDay",
+			"name": "communityDataVolumePerDay",
+			"description": "communityDataVolumePerDay",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 8,
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMembers",
+			"name": "communityMembers",
+			"description": "communityMembers",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "01912,0914",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMemberFeePerMonth",
+			"name": "communityMemberFeePerMonth",
+			"description": "communityMemberFeePerMonth",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 15000,
+					"isDefault": true,
+					"unitOfMeasure": "Đồng",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-usageLimit",
+			"name": "usageLimit",
+			"description": "usageLimit",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-onnetVoiceMinute",
+			"name": "onnetVoiceMinute",
+			"description": "onnetVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2000,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-offnetVoiceMinute",
+			"name": "offnetVoiceMinute",
+			"description": "offnetVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 250,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-nationalVoiceMinute",
+			"name": "nationalVoiceMinute",
+			"description": "nationalVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-contentList",
+			"name": "Content List",
+			"description": "Content List",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "MyTV SportTV",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "Galaxy",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "VieOn",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "FPT Play",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "OnPlus",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-dataVolumePerDay",
+			"name": "DataVolumePerDay",
+			"description": "DataVolumePerDay",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 8,
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-freeIP",
+			"name": "Free IP",
+			"description": "Free IP",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "Zalo/Facebook/Tiktok/Youtube/Whatsapp",
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		}
+	],
+	"prodSpecCharValueUse": [
+		{
+			"id": "id-action",
+			"name": "Action",
+			"description": "Action",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "Đăng ký",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "Gia hạn",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-cycle",
+			"name": "cycle",
+			"description": "cycle",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 1,
+					"isDefault": true,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 3,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 6,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 7,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 12,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 14,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-number",
+			"name": "Number",
+			"description": "Number",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMembers",
+			"name": "communityMembers",
+			"description": "communityMembers",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "01912,0914",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		}
+	],
+	"name": "VIP 199",
+	"productSpecification": {
+		"@type": "ProductSpecificationRef",
+		"@baseType": "ProductSpecification",
+		"id": "id-PS-VIP199",
+		"name": "PS VIP199",
+		"@referredType": "ProductSpecificationRef",
+		"version": "1"
+	},
+	"id": "id-PO-VIP199",
+	"isSellable": true,
+	"lifecycleStatus": ""
+}
