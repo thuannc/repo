@@ -2,9 +2,17 @@
 	"@type": "ProductSpecification",
 	"@baseType": "ProductSpecification",
 	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductSpecification.schema.json",
+	"id": "prod-spec-1",
+	"name": "PS Mobile Line",
 	"description": "PS Mobile Line",
 	"isBundle": false,
 	"version": "1",
+	"lastUpdate": "2025-04-12T14:19:41.48Z",
+	"lifecycleStatus": "InDesign",
+	"validFor": {
+		"startDateTime": "2025-04-01T17:00:00Z",
+		"endDateTime": "2025-04-16T17:00:00Z"
+	},
 	"productSpecCharacteristic": [
 		{
 			"#commnent": "//* ******** Common ******** *//",
@@ -593,19 +601,11 @@
 	"serviceSpecification": [
 		{
 			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-MobileLine",
-			"name": "CFS Mobile Line",
 			"@referredType": "CustomerFacingServiceSpecification",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "cfs-spec-1",
+			"name": "CFS Mobile Line",
 			"version": "1"
 		}
-	],
-	"lastUpdate": "2025-04-12T14:19:41.48Z",
-	"lifecycleStatus": "In design",
-	"name": "PS Mobile Line",
-	"id": "Product-Specification-1",
-	"validFor": {
-		"startDateTime": "2025-04-01T17:00:00Z",
-		"endDateTime": "2025-04-16T17:00:00Z"
-	}
+	]
 }
