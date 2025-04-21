@@ -1,0 +1,95 @@
+{
+	"@type": "CustomerFacingServiceSpecification",
+	"@baseType": "ServiceSpecification",
+	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceSpecification.schema.json",
+	"name": "CFS Voice Mail",
+	"description": "Voice Mail",
+	"version": "1",
+	"specCharacteristic": [
+		{
+			"id": "id-number",
+			"name": "Number",
+			"description": "Number",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Roaming-Options",
+			"name": "Roaming Options",
+			"description": "Roaming",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Barring-Options",
+			"name": "Barring Options",
+			"description": "Barring Options",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		}
+	],
+	"resourceSpecification": [
+		{
+            "id": "id-RFS-4GMobileLine", 
+            "name": "RFS 4G Mobile Line", 
+            "version": "1.0", 
+            "@type": "ResourceFacingServiceSpecificationRef",
+			"@baseType": "ServiceSpecificationRef"
+		},
+		{
+            "id": "id-RFS-5GMobileLine", 
+            "name": "RFS 5G Mobile Line", 
+            "version": "1.0", 
+            "@type": "ResourceFacingServiceSpecificationRef",
+			"@baseType": "ServiceSpecificationRef"
+		}
+	],
+	"id": "id-CFS-MobileLine",
+	"lifecycleStatus": "",
+	"validFor": {
+		"startDateTime": "2025-02-02T17:00:00Z",
+		"endDateTime": "2025-06-25T17:00:00Z"
+	}
+}
