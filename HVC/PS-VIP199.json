@@ -1,0 +1,446 @@
+{
+	"@type": "ProductSpecification",
+	"@baseType": "ProductSpecification",
+	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductSpecification.schema.json",
+	"description": "PS VIP 199",
+	"isBundle": false,
+	"version": "1",
+	"productSpecCharacteristic": [
+		{
+			"id": "id-cycle",
+			"name": "cycle",
+			"description": "cycle",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 1,
+					"isDefault": true,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 3,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 6,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 7,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 12,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "Integer",
+					"value": 14,
+					"isDefault": false,
+					"unitOfMeasure": "month",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-number",
+			"name": "Number",
+			"description": "Number",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Roaming-Options",
+			"name": "Roaming Options",
+			"description": "Roaming",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-Barring-Options",
+			"name": "Barring Options",
+			"description": "Barring Options",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMaxMember",
+			"name": "communityMaxMember",
+			"description": "communityMaxMember",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityDataVolumePerDay",
+			"name": "communityDataVolumePerDay",
+			"description": "communityDataVolumePerDay",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 8,
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMembers",
+			"name": "communityMembers",
+			"description": "communityMembers",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "01912,0914",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-communityMemberFeePerMonth",
+			"name": "communityMemberFeePerMonth",
+			"description": "communityMemberFeePerMonth",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 15000,
+					"isDefault": true,
+					"unitOfMeasure": "Đồng",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-usageLimit",
+			"name": "usageLimit",
+			"description": "usageLimit",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-onnetVoiceMinute",
+			"name": "onnetVoiceMinute",
+			"description": "onnetVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2000,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-offnetVoiceMinute",
+			"name": "offnetVoiceMinute",
+			"description": "offnetVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 250,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-nationalVoiceMinute",
+			"name": "nationalVoiceMinute",
+			"description": "nationalVoiceMinute",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "minute",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-contentList",
+			"name": "Content List",
+			"description": "Content List",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "MyTV SportTV",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "Galaxy",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "VieOn",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "FPT Play",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				},
+				{
+					"valueType": "String",
+					"value": "OnPlus",
+					"isDefault": false,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-dataVolumePerDay",
+			"name": "DataVolumePerDay",
+			"description": "DataVolumePerDay",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 8,
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "id-freeIP",
+			"name": "Free IP",
+			"description": "Free IP",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "Zalo/Facebook/Tiktok/Youtube/Whatsapp",
+					"isDefault": true,
+					"unitOfMeasure": "GB",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		}
+	],
+	"serviceSpecification": [
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-RecurringPackage",
+			"name": "CFS Recurring Package",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		},
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-MobileLine",
+			"name": "CFS Mobile Line",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		},
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-CommunityPackage",
+			"name": "CFS Community Package",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		},
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-NationalPackage",
+			"name": "CFS National Package",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		},
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-VAS",
+			"name": "CFS VAS",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		},
+		{
+			"@type": "ServiceSpecificationRef",
+			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
+			"id": "id-CFS-Data",
+			"name": "CFS Data",
+			"@referredType": "CustomerFacingServiceSpecification",
+			"version": "1"
+		}
+	],
+	"lastUpdate": "2025-04-12T14:19:41.48Z",
+	"lifecycleStatus": "In design",
+	"name": "PS VIP 199",
+	"id": "id-PS-VIP199",
+	"validFor": {
+		"startDateTime": "2025-04-01T17:00:00Z",
+		"endDateTime": "2025-04-16T17:00:00Z"
+	}
+}
