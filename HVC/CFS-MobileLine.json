@@ -2,9 +2,15 @@
 	"@type": "CustomerFacingServiceSpecification",
 	"@baseType": "ServiceSpecification",
 	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Service/ServiceSpecification.schema.json",
+	"id": "cfs-spec-1",
 	"name": "CFS Mobile Line",
 	"description": "Mobile Line",
 	"version": "1",
+	"lifecycleStatus": "",
+	"validFor": {
+		"startDateTime": "2025-02-02T17:00:00Z",
+		"endDateTime": "2025-06-25T17:00:00Z"
+	}
 	"specCharacteristic": [
 		{
 			"#commnent": "//* ******** Common ******** *//",
@@ -612,11 +618,6 @@
             "@type": "ResourceFacingServiceSpecificationRef",
 			"@baseType": "ServiceSpecificationRef"
 		}
-	],
-	"id": "Customer-Facing-Service-Specification-1",
-	"lifecycleStatus": "",
-	"validFor": {
-		"startDateTime": "2025-02-02T17:00:00Z",
-		"endDateTime": "2025-06-25T17:00:00Z"
-	}
+	]
+	
 }
