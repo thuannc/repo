@@ -2,15 +2,16 @@
 	"@type": "ProductSpecification",
 	"@baseType": "ProductSpecification",
 	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductSpecification.schema.json",
-	"description": "PS VIP 199",
+	"description": "PS Mobile Line",
 	"isBundle": false,
 	"version": "1",
 	"productSpecCharacteristic": [
 		{
-			"#comment":"//* ********** Common ********** *//",
-			"id": "id-cycle",
-			"name": "cycle",
-			"description": "cycle",
+			"#commnent": "//* ******** Common ******** *//",
+			"id": "char-spec-1",
+			"code": "cycleCount",
+			"name": "Chu kỳ",
+			"description": "Chu kỳ",
 			"configurable": true,
 			"extensible": false,
 			"isUnique": false,
@@ -22,51 +23,19 @@
 				{
 					"valueType": "Integer",
 					"value": 1,
+					"valueOptions": [1, 3, 6, 7, 12, 14],
 					"isDefault": true,
-					"unitOfMeasure": "month",
-					"@type": "IntegerCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "Integer",
-					"value": 3,
-					"isDefault": false,
-					"unitOfMeasure": "month",
-					"@type": "IntegerCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "Integer",
-					"value": 6,
-					"isDefault": false,
-					"unitOfMeasure": "month",
-					"@type": "IntegerCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "Integer",
-					"value": 7,
-					"isDefault": false,
-					"unitOfMeasure": "month",
-					"@type": "IntegerCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "Integer",
-					"value": 12,
-					"isDefault": false,
-					"unitOfMeasure": "month",
-					"@type": "IntegerCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "Integer",
-					"value": 14,
-					"isDefault": false,
-					"unitOfMeasure": "month",
+					"unitOfMeasure": "",
 					"@type": "IntegerCharacteristicValueSpecification"
 				}
 			]
 		},
 		{
-			"id": "id-number",
-			"name": "Number",
-			"description": "Number",
+			"#commnent": "//* ******** Beauty Number ******** *//",
+			"id": "char-spec-2",
+			"code": "msisdn",
+			"name": "Số thuê bao",
+			"description": "Số thuê bao",
 			"configurable": true,
 			"extensible": false,
 			"isUnique": false,
@@ -85,9 +54,343 @@
 			]
 		},
 		{
-			"id": "id-Roaming-Options",
-			"name": "Roaming Options",
-			"description": "Roaming",
+			"#commnent": "//* ******** Voice ******** *//",
+			"id": "char-spec-3",
+			"code": "usageLimit",
+			"name": "Số phút thoại",
+			"description": "Số phút thoại",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-5",
+			"code": "nationalVoiceMinute",
+			"name": "Số phút thoại trong nước",
+			"description": "Số phút thoại trong nước",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-6",
+			"code": "onnetVoiceMinute",
+			"name": "Số phút thoại nội mạng",
+			"description": "Số phút thoại nội mạng",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 2000,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-7",
+			"code": "offnetVoiceMinute",
+			"name": "Số phút thoại ngoại mạng",
+			"description": "Số phút thoại ngoại mạng",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 250,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-8",
+			"code": "internationVoiceMinute",
+			"name": "Số phút thoại quốc tế",
+			"description": "Số phút thoại quốc tế",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"#commnent": "//* ******** SMS ******** *//",
+			"id": "char-spec-9",
+			"code": "smsUnits",
+			"name": "Số SMS thường",
+			"description": "Số SMS thường",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-10",
+			"code": "onnetVnpSmsUnits",
+			"name": "Số SMS nội mạng VNP",
+			"description": "Số SMS nội mạng VNP",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-11",
+			"code": "offnetVnpSmsUnits",
+			"name": "Số SMS ngoại mạng",
+			"description": "Số SMS ngoại mạng",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-12",
+			"code": "onnetVnptSmsUnits",
+			"name": "Số SMS nội bộ VNPT",
+			"description": "Số SMS nội bộ VNPT",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-13",
+			"code": "offnetVnptSmsUnits",
+			"name": "Số SMS ngoại mạng VNPT",
+			"description": "Số SMS ngoại mạng VNPT",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-14",
+			"code": "nationalSmsUnits",
+			"name": "Số SMS trong nước",
+			"description": "Số SMS trong nước",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-15",
+			"code": "internationSmsUnits",
+			"name": "Số SMS quốc tế",
+			"description": "Số SMS quốc tế",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-16",
+			"code": "mmsUnits",
+			"name": "Số MMS",
+			"description": "Số MMS",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"#commnent": "//* ******** Data ******** *//",
+			"id": "char-spec-17",
+			"code": "dataVolume",
+			"name": "Số GB truy cập",
+			"description": "Số GB truy cập",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": -1,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-18",
+			"code": "dataVolumePerDay",
+			"name": "Số GB truy cập/ngày",
+			"description": "Số GB truy cập/ngày",
+			"configurable": false,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "Integer",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "Integer",
+					"value": 8,
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "IntegerCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-19",
+			"code": "freeIP",
+			"name": "Danh sách IP truy cập miễn phí",
+			"description": "Danh sách IP truy cập miễn phí",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -98,7 +401,7 @@
 			"characteristicValueSpecification": [
 				{
 					"valueType": "String",
-					"value": "",
+					"value": "Zalo,Facebook,Tiktok,Youtube,Whatsapp",
 					"isDefault": true,
 					"unitOfMeasure": "",
 					"@type": "StringCharacteristicValueSpecification"
@@ -106,30 +409,11 @@
 			]
 		},
 		{
-			"id": "id-Barring-Options",
-			"name": "Barring Options",
-			"description": "Barring Options",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "String",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "String",
-					"value": "",
-					"isDefault": true,
-					"unitOfMeasure": "",
-					"@type": "StringCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-communityMaxMember",
-			"name": "communityMaxMember",
-			"description": "communityMaxMember",
+			"#commnent": "//* ******** Community ******** *//",
+			"id": "char-spec-20",
+			"code": "communityMaxMember",
+			"name": "Số thành viên tối đa của nhóm",
+			"description": "Số thành viên tối đa của nhóm",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -148,9 +432,10 @@
 			]
 		},
 		{
-			"id": "id-communityDataVolumePerDay",
-			"name": "communityDataVolumePerDay",
-			"description": "communityDataVolumePerDay",
+			"id": "char-spec-21",
+			"code": "communityDataVolumePerDay",
+			"name": "Số GB truy cập/ngày của thành viên",
+			"description": "Số GB truy cập/ngày của thành viên",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -161,17 +446,18 @@
 			"characteristicValueSpecification": [
 				{
 					"valueType": "Integer",
-					"value": 8,
+					"value": 1,
 					"isDefault": true,
-					"unitOfMeasure": "GB",
+					"unitOfMeasure": "",
 					"@type": "IntegerCharacteristicValueSpecification"
 				}
 			]
 		},
 		{
-			"id": "id-communityMembers",
-			"name": "communityMembers",
-			"description": "communityMembers",
+			"id": "char-spec-22",
+			"code": "communityMembers",
+			"name": "Danh sách thành viên của nhóm",
+			"description": "Danh sách thành viên của nhóm",
 			"configurable": true,
 			"extensible": false,
 			"isUnique": false,
@@ -182,7 +468,7 @@
 			"characteristicValueSpecification": [
 				{
 					"valueType": "String",
-					"value": "01912,0914",
+					"value": "0912345678,0934125678",
 					"isDefault": true,
 					"unitOfMeasure": "",
 					"@type": "StringCharacteristicValueSpecification"
@@ -190,9 +476,10 @@
 			]
 		},
 		{
-			"id": "id-communityMemberFeePerMonth",
-			"name": "communityMemberFeePerMonth",
-			"description": "communityMemberFeePerMonth",
+			"id": "char-spec-23",
+			"code": "communityMemberFeePerMonth",
+			"name": "Phí thành viên",
+			"description": "Phí thành viên",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -205,99 +492,17 @@
 					"valueType": "Integer",
 					"value": 15000,
 					"isDefault": true,
-					"unitOfMeasure": "Đồng",
+					"unitOfMeasure": "",
 					"@type": "IntegerCharacteristicValueSpecification"
 				}
 			]
 		},
 		{
-			"id": "id-usageLimit",
-			"name": "usageLimit",
-			"description": "usageLimit",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "Integer",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "Integer",
-					"value": -1,
-					"isDefault": true,
-					"unitOfMeasure": "minute",
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-onnetVoiceMinute",
-			"name": "onnetVoiceMinute",
-			"description": "onnetVoiceMinute",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "Integer",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "Integer",
-					"value": 2000,
-					"isDefault": true,
-					"unitOfMeasure": "minute",
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-offnetVoiceMinute",
-			"name": "offnetVoiceMinute",
-			"description": "offnetVoiceMinute",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "Integer",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "Integer",
-					"value": 250,
-					"isDefault": true,
-					"unitOfMeasure": "minute",
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-nationalVoiceMinute",
-			"name": "nationalVoiceMinute",
-			"description": "nationalVoiceMinute",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "Integer",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "Integer",
-					"value": -1,
-					"isDefault": true,
-					"unitOfMeasure": "minute",
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-contentList",
-			"name": "Content List",
-			"description": "Content List",
+			"#commnent": "//* ******** Content ******** *//",
+			"id": "char-spec-24",
+			"code": "contentList",
+			"name": "Danh sách kênh nội dung được xem",
+			"description": "Danh sách kênh nội dung được xem",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -309,65 +514,19 @@
 				{
 					"valueType": "String",
 					"value": "MyTV SportTV",
+					"valueOptions": "MyTV SportTV,Galaxy,VieOn,FPT Play,OnPlus",
 					"isDefault": true,
-					"unitOfMeasure": "",
-					"@type": "StringCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "String",
-					"value": "Galaxy",
-					"isDefault": false,
-					"unitOfMeasure": "",
-					"@type": "StringCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "String",
-					"value": "VieOn",
-					"isDefault": false,
-					"unitOfMeasure": "",
-					"@type": "StringCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "String",
-					"value": "FPT Play",
-					"isDefault": false,
-					"unitOfMeasure": "",
-					"@type": "StringCharacteristicValueSpecification"
-				},
-				{
-					"valueType": "String",
-					"value": "OnPlus",
-					"isDefault": false,
 					"unitOfMeasure": "",
 					"@type": "StringCharacteristicValueSpecification"
 				}
 			]
 		},
 		{
-			"id": "id-dataVolumePerDay",
-			"name": "DataVolumePerDay",
-			"description": "DataVolumePerDay",
-			"configurable": false,
-			"extensible": false,
-			"isUnique": false,
-			"valueType": "Integer",
-			"minCardinality": 1,
-			"maxCardinality": 1,
-			"@type": "CharacteristicSpecification",
-			"characteristicValueSpecification": [
-				{
-					"valueType": "Integer",
-					"value": 8,
-					"isDefault": true,
-					"unitOfMeasure": "GB",
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
-		},
-		{
-			"id": "id-freeIP",
-			"name": "Free IP",
-			"description": "Free IP",
+			"#commnent": "//* ******** 5G ******** *//",
+			"id": "char-spec-25",
+			"code": "option5G",
+			"name": "Tùy chọn 5G",
+			"description": "Tùy chọn 5G",
 			"configurable": false,
 			"extensible": false,
 			"isUnique": false,
@@ -378,9 +537,54 @@
 			"characteristicValueSpecification": [
 				{
 					"valueType": "String",
-					"value": "Zalo/Facebook/Tiktok/Youtube/Whatsapp",
+					"value": "VolTE,VOWifi",
 					"isDefault": true,
-					"unitOfMeasure": "GB",
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"#commnent": "//* ******** Others ******** *//",
+			"id": "char-spec-26",
+			"code": "RoamingOptions",
+			"name": "Roaming Options",
+			"description": "Roaming",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
+					"@type": "StringCharacteristicValueSpecification"
+				}
+			]
+		},
+		{
+			"id": "char-spec-27",
+			"code": "BarringOptions",
+			"name": "Barring Options",
+			"description": "Barring Options",
+			"configurable": true,
+			"extensible": false,
+			"isUnique": false,
+			"valueType": "String",
+			"minCardinality": 1,
+			"maxCardinality": 1,
+			"@type": "CharacteristicSpecification",
+			"characteristicValueSpecification": [
+				{
+					"valueType": "String",
+					"value": "",
+					"isDefault": true,
+					"unitOfMeasure": "",
 					"@type": "StringCharacteristicValueSpecification"
 				}
 			]
@@ -390,56 +594,16 @@
 		{
 			"@type": "ServiceSpecificationRef",
 			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-RecurringPackage",
-			"name": "CFS Recurring Package",
-			"@referredType": "CustomerFacingServiceSpecification",
-			"version": "1"
-		},
-		{
-			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
 			"id": "id-CFS-MobileLine",
 			"name": "CFS Mobile Line",
-			"@referredType": "CustomerFacingServiceSpecification",
-			"version": "1"
-		},
-		{
-			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-CommunityPackage",
-			"name": "CFS Community Package",
-			"@referredType": "CustomerFacingServiceSpecification",
-			"version": "1"
-		},
-		{
-			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-NationalPackage",
-			"name": "CFS National Package",
-			"@referredType": "CustomerFacingServiceSpecification",
-			"version": "1"
-		},
-		{
-			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-VAS",
-			"name": "CFS VAS",
-			"@referredType": "CustomerFacingServiceSpecification",
-			"version": "1"
-		},
-		{
-			"@type": "ServiceSpecificationRef",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Service/ServiceSpecificationRef.schema.json",
-			"id": "id-CFS-Data",
-			"name": "CFS Data",
 			"@referredType": "CustomerFacingServiceSpecification",
 			"version": "1"
 		}
 	],
 	"lastUpdate": "2025-04-12T14:19:41.48Z",
 	"lifecycleStatus": "In design",
-	"name": "PS VIP 199",
-	"id": "id-PS-VIP199",
+	"name": "PS Mobile Line",
+	"id": "Product-Specification-1",
 	"validFor": {
 		"startDateTime": "2025-04-01T17:00:00Z",
 		"endDateTime": "2025-04-16T17:00:00Z"
