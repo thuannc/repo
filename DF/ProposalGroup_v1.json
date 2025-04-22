@@ -1,0 +1,52 @@
+[
+{
+    "id": "channel-group-1",
+    "code": "Channel",
+    "name": "Kênh bán",
+    "description": "Kênh bán",
+    "state": "active",
+    "proposalSpecification":[],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+},
+{
+    "id": "channel-group-2",
+    "code": "Qualification",
+    "name": "Điều kiện cung cấp",
+    "description": "Điều kiện cung cấp",
+    "state": "active",
+    "proposalSpecification":[],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+},
+{
+    "id": "channel-group-3",
+    "code": "Price",
+    "name": "Giá",
+    "description": "Giá",
+    "state": "active",
+    "proposalSpecification":[],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+},
+{
+    "id": "channel-group-4",
+    "code": "Commitment",
+    "name": "Cam kết",
+    "description": "Giá",
+    "state": "active",
+    "proposalSpecification":[],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+},
+{
+    "id": "channel-group-4",
+    "code": "Offer",
+    "name": "Ưu đãi",
+    "description": "Ưu đãi",
+    "state": "active",
+    "proposalSpecification":[],
+    "@type": "ProposalGroup",
+    "@baseType": "ProposalGroup"
+},
+]
