@@ -1,31 +1,52 @@
 {
-    "id": "5351",
-    "name": "Ưu đãi data",
-    "description": "Ưu đãi data",
-    "state": "active",
-    "proposalSpecification":[
+  "id": "proposal-group-1",
+  "code": "interest-telecom",
+  "groupType": "Interest",
+  "name": "Dịch vụ viễn thông",
+  "description": "Dịch vụ viễn thông",
+  "state": "active",
+  "proposalSpecification": [
+    {
+      "id": "proposal-spec-1",
+      "name": "Gọi nội mạng VNP",
+      "shortDescription": "Gọi nội mạng VNP {1}",
+      "description": "Gọi nội mạng VNP {1}",
+      "attribute": [
         {
-            "id": "PD-1",
-            "name": "Ưu đãi nội mạng",
-            "description":"",
-            "@type": "ProposalSpecificationRef",
-            "@referredType": "ProposalSpecification"
-        },
-        {
-            "id": "PD-2",
-            "name": "Ưu đãi ngoại mạng",
-            "description":"",
-            "@type": "ProposalSpecificationRef",
-            "@referredType": "ProposalSpecification"
-        },
-        {
-            "id": "PD-3",
-            "name": "Ưu đãi quốc tế",
-            "description":"",
-            "@type": "ProposalSpecificationRef",
-            "@referredType": "ProposalSpecification"
+          "id": "1",
+          "code": "proposal-spec-1-1",
+          "title": "Số phút",
+          "dataType": "string",
+          "value": "2000",
+          "layout": {
+            "ctlType": "TEXTBOX"
+          }
         }
-    ],
-    "@type": "ProposalGroup",
-    "@baseType": "ProposalGroup"
+      ],
+      "@type": "ProposalSpecification",
+      "@baseType": "ProposalSpecification"
+    },
+    {
+      "id": "proposal-spec-2",
+      "name": "Gọi liên mạng trong nước",
+      "shortDescription": "Gọi liên mạng trong nước {1}",
+      "description": "Gọi liên mạng trong nước {1}",
+      "attribute": [
+        {
+          "id": "1",
+          "code": "proposal-spec-2-1",
+          "title": "Số phút",
+          "dataType": "string",
+          "value": "200",
+          "layout": {
+            "ctlType": "TEXTBOX"
+          }
+        }
+      ],
+      "@type": "ProposalSpecification",
+      "@baseType": "ProposalSpecification"
+    },
+  ],
+  "@type": "ProposalGroup",
+  "@baseType": "ProposalGroup"
 }
