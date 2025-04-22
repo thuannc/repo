@@ -1,6 +1,7 @@
 {
   "id": "proposal-group-1",
   "code": "interest-telecom",
+  "#commnent": "//* ******** groupType = ["Channel","Price","Interest","Commitment","Qualification","Other"] ******** *//",
   "groupType": "Interest",
   "name": "Dịch vụ viễn thông",
   "description": "Dịch vụ viễn thông",
