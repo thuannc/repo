@@ -1,84 +1,201 @@
-{
-	"@type": "ProductOfferingPriceMatrix",
-	"@baseType": "ProductOfferingPrice",
-	"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOfferingPrice.schema.json",
-	"description": "POP VIP 199 chu kỳ 1 tháng",
-	"version": "1",
-	"name": "VIP 199 Chu kỳ 1 tháng",
-	"priceType": "nonRecurring",
-	"lastUpdate": "2025-04-13T20:00:28.25Z",
-	"lifecycleStatus": "In design",
-	"id": "prod-offer-price-1",
-	"validFor": {
-		"startDateTime": "2025-03-31T17:00:00Z",
-		"endDateTime": "2025-06-24T17:00:00Z"
+[
+	{
+		"@type": "ProductOfferingPriceMatrix",
+		"@baseType": "ProductOfferingPrice",
+		"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOfferingPrice.schema.json",
+		"description": "POP VIP 199 chu kỳ 1 tháng",
+		"version": "1",
+		"name": "VIP 199 Chu kỳ 1 tháng",
+		"priceType": "nonRecurring",
+		"lastUpdate": "2025-04-13T20:00:28.25Z",
+		"lifecycleStatus": "In design",
+		"id": "prod-offer-price-1",
+		"validFor": {
+			"startDateTime": "2025-03-31T17:00:00Z",
+			"endDateTime": "2025-06-24T17:00:00Z"
+		},
+		"prodSpecCharValueUse": [
+			{
+				"id": "char-spec-1",
+				"@type": "ProductSpecificationCharacteristicValueUse",
+				"valueType": "Integer",
+				"productSpecCharacteristicValue": [
+					{
+						"valueType": "Integer",
+						"value": 1,
+						"@type": "IntegerCharacteristicValueSpecification"
+					}
+				]
+			}
+		],
+		"price": {
+			"unit": "Đồng",
+			"value": 180909,
+			"blockSize": 1,
+			"overagePrice": 0
+		},
+		"tax": [
+			{
+				"taxCategory": "VAT",
+				"taxRate": 10,
+				"@type": "TaxItem"
+			}
+		],
+		"popRelationship": [
+			{
+				"id": "prod-offer-price-2",
+				"relationshipType": "matrixCell",
+				"validFor": {
+					"startDateTime": "2025-04-05T17:00:00Z",
+					"endDateTime": "2025-04-24T17:00:00Z"
+				},
+				"@referredType": "ProductOfferingPriceMatrixCell",
+				"@type": "ProductOfferingPriceRelationship",
+				"@baseType": "",
+				"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+			},
+			{
+				"id": "prod-offer-price-3",
+				"relationshipType": "matrixCell",
+				"validFor": {
+					"startDateTime": "2025-04-05T17:00:00Z",
+					"endDateTime": "2025-04-24T17:00:00Z"
+				},
+				"@referredType": "ProductOfferingPriceMatrixCell",
+				"@type": "ProductOfferingPriceRelationship",
+				"@baseType": "",
+				"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+			},
+			{
+				"id": "prod-offer-price-4",
+				"relationshipType": "matrixCell",
+				"validFor": {
+					"startDateTime": "2025-04-05T17:00:00Z",
+					"endDateTime": "2025-04-24T17:00:00Z"
+				},
+				"@referredType": "ProductOfferingPriceMatrixCell",
+				"@type": "ProductOfferingPriceRelationship",
+				"@baseType": "",
+				"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
+			}
+		]
 	},
-	"prodSpecCharValueUse": [
-		{
-			"id": "char-spec-1",
-			"@type": "ProductSpecificationCharacteristicValueUse",
-			"valueType": "Integer",
-			"productSpecCharacteristicValue": [
-				{
-					"valueType": "Integer",
-					"value": 1,
-					"@type": "IntegerCharacteristicValueSpecification"
-				}
-			]
+	{
+		"@type": "ProductOfferingPrice",
+		"@baseType": "ProductOfferingPrice",
+		"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOfferingPrice.schema.json",
+		"description": "POP VIP 199 chu kỳ 3 tháng",
+		"version": "1",
+		"name": "VIP 199 3 tháng",
+		"priceType": "nonRecurring",
+		"lastUpdate": "2025-04-13T20:00:28.25Z",
+		"lifecycleStatus": "In design",
+		"id": "prod-offer-price-2",
+		"validFor": {
+			"startDateTime": "2025-03-31T17:00:00Z",
+			"endDateTime": "2025-06-24T17:00:00Z"
+		},
+		"prodSpecCharValueUse": [
+			{
+				"id": "char-spec-1",
+				"@type": "ProductSpecificationCharacteristicValueUse",
+				"valueType": "Integer",
+				"productSpecCharacteristicValue": [
+					{
+						"valueType": "Integer",
+						"value": 3,
+						"@type": "IntegerCharacteristicValueSpecification"
+					}
+				]
+			}
+		],
+		"price": {
+			"unit": "VNĐ",
+			"value": 542727,
+			"blockSize": 1,
+			"overagePrice": 0
 		}
-	],
-	"price": {
-		"unit": "VNĐ",
-		"value": 180909
 	},
-	"percentage": 0,
-	"tax": [
-		{
-			"taxAmount": {
-				"unit": "VNĐ",
-				"value": 18091
-			},
-			"taxCategory": "VAT",
-			"taxRate": 10,
-			"@type": "TaxItem"
+	{
+		"@type": "ProductOfferingPrice",
+		"@baseType": "ProductOfferingPrice",
+		"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOfferingPrice.schema.json",
+		"description": "POP VIP 199 chu kỳ 7 tháng",
+		"version": "1",
+		"name": "VIP 199 7 tháng",
+		"priceType": "nonRecurring",
+		"lastUpdate": "2025-04-13T20:00:28.25Z",
+		"lifecycleStatus": "In design",
+		"id": "prod-offer-price-3",
+		"validFor": {
+			"startDateTime": "2025-03-31T17:00:00Z",
+			"endDateTime": "2025-06-24T17:00:00Z"
+		},
+		"prodSpecCharValueUse": [
+			{
+				"id": "char-spec-1",
+				"@type": "ProductSpecificationCharacteristicValueUse",
+				"valueType": "Integer",
+				"productSpecCharacteristicValue": [
+					{
+						"valueType": "Integer",
+						"value": 6,
+						"@type": "IntegerCharacteristicValueSpecification"
+					},
+					{
+						"valueType": "Integer",
+						"value": 7,
+						"@type": "IntegerCharacteristicValueSpecification"
+					}
+				]
+			}
+		],
+		"price": {
+			"unit": "VNĐ",
+			"value": 1085454,
+			"blockSize": 1,
+			"overagePrice": 0
 		}
-	],
-	"popRelationship": [
-        {
-			"id": "prod-offer-price-2",
-			"relationshipType": "matrixCell",
-			"validFor": {
-				"startDateTime": "2025-04-05T17:00:00Z",
-				"endDateTime": "2025-04-24T17:00:00Z"
-			},
-			"@referredType": "ProductOfferingPriceMatrixCell",
-			"@type": "ProductOfferingPriceRelationship",
-			"@baseType": "",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
-        },
-		{
-			"id": "prod-offer-price-3",
-			"relationshipType": "matrixCell",
-			"validFor": {
-				"startDateTime": "2025-04-05T17:00:00Z",
-				"endDateTime": "2025-04-24T17:00:00Z"
-			},
-			"@referredType": "ProductOfferingPriceMatrixCell",
-			"@type": "ProductOfferingPriceRelationship",
-			"@baseType": "",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
-        },
-		{
-			"id": "prod-offer-price-4",
-			"relationshipType": "matrixCell",
-			"validFor": {
-				"startDateTime": "2025-04-05T17:00:00Z",
-				"endDateTime": "2025-04-24T17:00:00Z"
-			},
-			"@referredType": "ProductOfferingPriceMatrixCell",
-			"@type": "ProductOfferingPriceRelationship",
-			"@baseType": "",
-			"@schemaLocation": "https://mycsp.com:8080/tmf-api/schemas/Product/ProductOfferingPriceRelationship.schema.json"
-        }
-	]
-}
+	},
+	{
+		"@type": "ProductOfferingPrice",
+		"@baseType": "ProductOfferingPrice",
+		"@schemaLocation": "https://mycsp.com:8080/tmf-api/schema/Product/ProductOfferingPrice.schema.json",
+		"description": "POP VIP 199 chu kỳ 14 tháng",
+		"version": "1",
+		"name": "VIP 199 14 tháng",
+		"priceType": "nonRecurring",
+		"lastUpdate": "2025-04-13T20:00:28.25Z",
+		"lifecycleStatus": "In design",
+		"id": "prod-offer-price-4",
+		"validFor": {
+			"startDateTime": "2025-03-31T17:00:00Z",
+			"endDateTime": "2025-06-24T17:00:00Z"
+		},
+		"prodSpecCharValueUse": [
+			{
+				"id": "char-spec-1",
+				"@type": "ProductSpecificationCharacteristicValueUse",
+				"valueType": "Integer",
+				"productSpecCharacteristicValue": [
+					{
+						"valueType": "Integer",
+						"value": 12,
+						"@type": "IntegerCharacteristicValueSpecification"
+					},
+					{
+						"valueType": "Integer",
+						"value": 14,
+						"@type": "IntegerCharacteristicValueSpecification"
+					}
+				]
+			}
+		],
+		"price": {
+			"unit": "VNĐ",
+			"value": 2170908,
+			"blockSize": 1,
+			"overagePrice": 0
+		}
+	}
+]
