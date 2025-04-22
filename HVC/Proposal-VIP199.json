@@ -1,0 +1,978 @@
+{
+    "id": "proposal-1",
+    "name": "VIP199",
+    "description": "Gói HVC VIP199",
+    "groups": [
+        {
+            "id": "proposal-group-1",
+            "name": "Giá",
+            "groupType": "Price",
+            "description": "Mô tả các chu kỳ và giá theo từng chu kỳ",
+            "specifications": [
+                {
+                    "id": "proposal-specification-11",
+                    "name": "Chu kỳ đăng ký",
+                    "shortDescription": "{1} tháng",
+                    "description": "Chu kỳ đăng ký gói {1} tháng",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-111",
+                            "code": "registration_cycle",
+                            "title": "Chu kỳ đăng ký",
+                            "dataType": "number",
+                            "value": 1,
+                            "valueOptions": [
+                                1,
+                                3,
+                                6,
+                                12
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-12",
+                    "name": "Chu kỳ gia hạn",
+                    "shortDescription": "{1} tháng",
+                    "description": "Chu kỳ gia hạn gói {1} tháng",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-121",
+                            "code": "renew_cycle",
+                            "title": "Chu kỳ gia hạn",
+                            "dataType": "number",
+                            "value": 1,
+                            "valueOptions": [
+                                1,
+                                3,
+                                7,
+                                14
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-13",
+                    "name": "Giá gói",
+                    "shortDescription": "{1} đồng",
+                    "description": "Giá gói {1} đồng",
+                    "attribute": [
+                        {
+                            "id": "535proposal-attribute-131032",
+                            "code": "price",
+                            "title": "Giá",
+                            "dataType": "number",
+                            "value": 199000
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-2",
+            "name": "Ưu đãi",
+            "groupType": "Interest",
+            "description": "Ưu đãi",
+            "specifications": [
+                {
+                    "id": "proposal-specification-21",
+                    "name": "Thoại nội mạng VNP",
+                    "shortDescription": "{1} phút",
+                    "description": "Thoại nội mạng VNP {1} phút",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-211",
+                            "code": "volume",
+                            "title": "Phút thoại",
+                            "dataType": "number",
+                            "value": 2000
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-22",
+                    "name": "Thoại liên mạng trong nước",
+                    "shortDescription": "{1} phút",
+                    "description": "Thoại liên mạng trong nước {1} phút",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-221",
+                            "code": "volume",
+                            "title": "Phút thoại",
+                            "dataType": "number",
+                            "value": 250
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-23",
+                    "name": "Data",
+                    "shortDescription": "{1} GB/{2}",
+                    "description": "Data truy cập {1} GB/{2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-231",
+                            "code": "quantity",
+                            "title": "Dung lượng",
+                            "dataType": "number",
+                            "value": 8
+                        },
+                        {
+                            "id": "proposal-attribute-232",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Ngày",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-24",
+                    "name": "Data IP",
+                    "shortDescription": "Miễn phí truy cập {1}",
+                    "description": "Free data truy cập ứng dụng {1}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-241",
+                            "code": "ip",
+                            "title": "Ứng dụng",
+                            "dataType": "string",
+                            "value": [
+                                "Zalo",
+                                "Facebook",
+                                "Tiktok",
+                                "Youtube",
+                                "Whatsapp"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-25",
+                    "name": "Dịch vụ Add-on",
+                    "shortDescription": "{1}",
+                    "description": "Dịch vụ cộng thêm {1}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-251",
+                            "code": "service",
+                            "title": "Dịch vụ",
+                            "dataType": "string",
+                            "value": "MyTV (VTVCab + SPOTV)"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-26",
+                    "name": "Dịch vụ khác",
+                    "shortDescription": "Dịch vụ khác {1}",
+                    "description": "Dịch vụ khác {1} (kích hoạt mặc định theo gói HVC).",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-261",
+                            "code": "other_service",
+                            "title": "Dịch vụ khác",
+                            "dataType": "string",
+                            "value": [
+                                "Volte, Volwifi"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-3",
+            "name": "Tính năng chia sẻ Data",
+            "groupType": "Interest",
+            "description": "Tính năng chia sẻ Data",
+            "specifications": [
+                {
+                    "id": "proposal-specification-31",
+                    "name": "Mô tả tính năng",
+                    "shortDescription": "Mô tả tính năng {1}",
+                    "description": "Mô tả tính năng {1}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-311",
+                            "code": "function_description",
+                            "title": "Mô tả tính năng",
+                            "dataType": "string",
+                            "value": "Cho phép thuê bao đăng ký gói HVC (TB chủ) add thêm thành viên:\n - Số lượng thành viên theo từng gói; thành viên add thêm là TB phát triển số mới.\n - Mỗi thành viên được add thêm TB chủ sẽ thanh toán thêm 2 hoặc 3 thành viên (số PTM); thu thêm 15K/1TB đồng.\n - TB chủ và TB thành viên được gọi cho nhau miễn phí (gồm cả chủ nhóm và thành viên gọi cho nhau; thành viên gọi cho nhau).\n - TB chủ được chia sẻ data cho TB thành viên XX GB/1TB"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-32",
+                    "name": "Số lượng TB thành viên",
+                    "shortDescription": "Số lượng TB thành viên {1}",
+                    "description": "Số lượng TB thành viên {1}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-321",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": 2
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-33",
+                    "name": "Hạn mức chia sẻ",
+                    "shortDescription": "Hạn mức chia sẻ {1} GB/{3}",
+                    "description": "Hạn mức chia sẻ {1} GB/{3}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-331",
+                            "code": "quantity",
+                            "title": "Dung lượng",
+                            "dataType": "number",
+                            "value": 1
+                        },
+                        {
+                            "id": "proposal-attribute-332",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Ngày",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-34",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-341",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Đăng ký thêm thành viên"
+                        },
+                        {
+                            "id": "proposal-attribute-342",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "TTV_VIPxx_Số thuê bao thành viên"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-34",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-341",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Thay đổi thành viên"
+                        },
+                        {
+                            "id": "proposal-attribute-342",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "TDTV_VIPxx_Số TV cũ_ Số TV mới"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-34",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-341",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Hủy thành viên"
+                        },
+                        {
+                            "id": "proposal-attribute-342",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "XTV_VIPxx_Số thuê bao thành viên"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-34",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-341",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Tra cứu thành viên"
+                        },
+                        {
+                            "id": "proposal-attribute-342",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "TRACUUTV_VIPxx"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-34",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-341",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Thành viên yêu cầu hủy nhóm chia sẻ"
+                        },
+                        {
+                            "id": "proposal-attribute-342",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "XTV_VIPxx"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-4",
+            "name": "Đối tượng đăng ký",
+            "groupType": "Qualification",
+            "description": "Đối tượng đăng ký",
+            "specifications": [
+                {
+                    "id": "proposal-specification-41",
+                    "name": "Thuê bao trả trước PTM",
+                    "shortDescription": "Thuê bao phát triển mới trong vòng {1} {2}",
+                    "description": "Thuê bao phát triển mới trong vòng {1} {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-411",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": 30
+                        },
+                        {
+                            "id": "proposal-attribute-412",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Ngày",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-42",
+                    "name": "Thuê bao chuyển mạng giữ số MNP",
+                    "shortDescription": "Thuê bao chuyển mạng giữ số MNP trong vòng {1} {2}",
+                    "description": "Thuê bao chuyển mạng giữ số MNP trong vòng {1} {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-421",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": 30
+                        },
+                        {
+                            "id": "proposal-attribute-422",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Ngày",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-43",
+                    "name": "Thuê bao trả trước hiện hữu",
+                    "shortDescription": "Thuê bao trả trước hiện hữu {Đang không có gói KMCB, không bao gồm thuê bao EzCom) có tiêu dùng (không bao gồm CVQT và GTGT) bình quân {1} {2} liên kề đều {3} {4} VND.",
+                    "description": "\"Thuê bao trả trước hiện hữu {Đang không có gói KMCB, không bao gồm thuê bao EzCom) có tiêu dùng (không bao gồm CVQT và GTGT) bình quân {1} {2} liên kề đều {3} {4} VND. Ghi chú: Xét TKC 3 tháng liền kề thì những TB Kích hoạt chưa đủ 3 tháng; hoặc không PSC 1 tháng thì coi TKC/DT = 0; Nếu khoá 2C 2 tháng liên tục đối với TS loại khỏi tập.\"",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-431",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": 3
+                        },
+                        {
+                            "id": "proposal-attribute-432",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Tháng",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-433",
+                            "code": "operator",
+                            "title": "Toán tử",
+                            "dataType": "string",
+                            "value": "<=",
+                            "valueOptions": [
+                                "<=",
+                                ">=",
+                                "=",
+                                "<",
+                                ">"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-434",
+                            "code": "amount",
+                            "title": "Số tiền",
+                            "dataType": "number",
+                            "value": 199000
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-44",
+                    "name": "Thuê bao trả sau hiện hữu chuyển sang trả trước",
+                    "shortDescription": "Thuê bao trả sau hiện hữu chuyển sang trả trước hoạt động có tiêu dùng TKC (không bao gồm CVQT và GTGT) bình quân {1} {2} liền kề đều {3} {4} VND",
+                    "description": "Thuê bao trả sau hiện hữu chuyển sang trả trước hoạt động có tiêu dùng TKC (không bao gồm CVQT và GTGT) bình quân {1} {2} liền kề đều {3} {4} VND",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-441",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": 3
+                        },
+                        {
+                            "id": "proposal-attribute-442",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Tháng",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-443",
+                            "code": "operator",
+                            "title": "Toán tử",
+                            "dataType": "string",
+                            "value": "<=",
+                            "valueOptions": [
+                                "<=",
+                                ">=",
+                                "=",
+                                "<",
+                                ">"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-444",
+                            "code": "amount",
+                            "title": "Số tiền",
+                            "dataType": "number",
+                            "value": "199000"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-45",
+                    "name": "Thuê bao trả sau PTM",
+                    "shortDescription": "Thuê bao trả sau PTM gồm {1}",
+                    "description": "Thuê bao trả sau PTM gồm {1}",
+                    "attribute": [
+                        {
+                            "id": "535351",
+                            "code": "condition",
+                            "title": "Điều kiện",
+                            "dataType": "string",
+                            "value": [
+                                "Thuê bao trả sau hòa mạng mới",
+                                "Thuê bao MNP PI trả sau trong tháng hòa mạng",
+                                "Thuê bao di động trả trước kích hoạt mới và chuyển sang trả sau ngay trong tháng"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-46",
+                    "name": "Thuê bao trả sau hiện hữu",
+                    "shortDescription": "Thuê bao trả sau hiện hữu (đang không có gói ALO/tích hợp, không bao gồm thuê bao ezcom) có tiêu dùng (không bao gồm CVQT và GTGT) bình quân {1} {2} liên kề đều {3} {4} VND.",
+                    "description": "\"Thuê bao trả sau hiện hữu (đang không có gói ALO/tích hợp, không bao gồm thuê bao ezcom) có tiêu dùng (không bao gồm CVQT và GTGT) bình quân {1} {2} liên kề đều {3} {4} VND. Ghi chú: Xét doanh thu 3 tháng liền kề thì những TB Kích hoạt chưa đủ 3 tháng; hoặc không PSC 1 tháng thì coi TKC/DT = 0; Nếu khoá 2C 2 tháng liên tục đối với TS loại khỏi tập.\"",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-461",
+                            "code": "quantity",
+                            "title": "Số lượng",
+                            "dataType": "number",
+                            "value": "3"
+                        },
+                        {
+                            "id": "proposal-attribute-462",
+                            "code": "cycle",
+                            "title": "Chu kỳ",
+                            "dataType": "string",
+                            "value": "Tháng",
+                            "valueOptions": [
+                                "Ngày",
+                                "Tháng",
+                                "Năm"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-463",
+                            "code": "operator",
+                            "title": "Toán tử",
+                            "dataType": "string",
+                            "value": "<=",
+                            "valueOptions": [
+                                "<=",
+                                ">=",
+                                "=",
+                                "<",
+                                ">"
+                            ]
+                        },
+                        {
+                            "id": "proposal-attribute-464",
+                            "code": "amount",
+                            "title": "Số tiền",
+                            "dataType": "number",
+                            "value": 199000
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-6",
+            "name": "Cú pháp với gói main",
+            "groupType": "Qualification",
+            "description": "Cú pháp với gói main",
+            "specifications": [
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-611",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Đăng ký"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả trước"
+                        },
+                        {
+                            "id": "proposal-attribute-613",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "DK <dấu cách><mã gói main> gửi 900 hoặc <mã gói main> gửi 900"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-611",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Hủy"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả trước"
+                        },
+                        {
+                            "id": "535242",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "HUY <mã gói main> gửi 900"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "535241",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Tra cứu"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả trước"
+                        },
+                        {
+                            "id": "535242",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "TRACUU <Tên gói> gửi 900"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-611",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Đăng ký"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả sau"
+                        },
+                        {
+                            "id": "proposal-attribute-613",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "DK <dấu cách><mã gói main> gửi 888 hoặc <mã gói main> gửi 888"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-611",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Hủy"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả sau"
+                        },
+                        {
+                            "id": "535242",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "HUY <mã gói main> gửi 888"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-61",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1} {2}: {3}",
+                    "description": "Cú pháp {1} {2}: {3}",
+                    "attribute": [
+                        {
+                            "id": "535241",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Tra cứu"
+                        },
+                        {
+                            "id": "proposal-attribute-612",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả sau"
+                        },
+                        {
+                            "id": "535242",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "DATA gửi 888"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-7",
+            "name": "Cú pháp với gói Add-on",
+            "groupType": "Qualification",
+            "description": "Cú pháp với gói Add-on",
+            "specifications": [
+                {
+                    "id": "proposal-specification-71",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-711",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Đăng ký"
+                        },
+                        {
+                            "id": "proposal-attribute-712",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "DK <dấu cách><mã gói add on> gửi 888 hoặc <mã gói add on> gửi 888 HUY <mã gói add on> gửi đến số 888 (Hiệu lực tức thì)"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-71",
+                    "name": "Cú pháp",
+                    "shortDescription": "Cú pháp {1}: {2}",
+                    "description": "Cú pháp {1}: {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-711",
+                            "code": "action",
+                            "title": "Thao tác",
+                            "dataType": "string",
+                            "value": "Hủy"
+                        },
+                        {
+                            "id": "proposal-attribute-712",
+                            "code": "content",
+                            "title": "Nội dung",
+                            "dataType": "string",
+                            "value": "HUY <mã gói add on> gửi đến số 888 (Hiệu lực tức thì)"
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        },
+        {
+            "id": "proposal-group-5",
+            "name": "Kênh đăng ký",
+            "groupType": "Qualification",
+            "description": "Kênh đăng ký",
+            "specifications": [
+                {
+                    "id": "proposal-specification-51",
+                    "name": "Kênh đăng ký",
+                    "shortDescription": "Kênh đăng ký {1}: {2}",
+                    "description": "Với gói {1} thì đăng ký tại kênh {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-511",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả trước"
+                        },
+                        {
+                            "id": "proposal-attribute-512",
+                            "code": "channel",
+                            "title": "Kênh đăng ký",
+                            "dataType": "string",
+                            "value": [
+                                "SMS",
+                                "SMCS",
+                                "VNPT Shop",
+                                "App Employee",
+                                "App MyVNPT",
+                                "VNPT Pay",
+                                "App Digishop",
+                                "CCOS, VNPT Shop",
+                                "Web Digishop",
+                                "CCBS"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                },
+                {
+                    "id": "proposal-specification-51",
+                    "name": "Kênh đăng ký",
+                    "shortDescription": "Kênh đăng ký {1}: {2}",
+                    "description": "Với gói {1} thì đăng ký tại kênh {2}",
+                    "attribute": [
+                        {
+                            "id": "proposal-attribute-511",
+                            "code": "sups_type",
+                            "title": "Loại gói",
+                            "dataType": "string",
+                            "value": "Trả sau"
+                        },
+                        {
+                            "id": "proposal-attribute-512",
+                            "code": "channel",
+                            "title": "Kênh đăng ký",
+                            "dataType": "string",
+                            "value": [
+                                "CCBS",
+                                "SMS",
+                                "CCOS",
+                                "MyVNPT",
+                                "App Employee",
+                                "App Digishop",
+                                "Web Digishop",
+                                "VNPT Pay"
+                            ]
+                        }
+                    ],
+                    "@type": "ProposalSpecification",
+                    "@baseType": "ProposalSpecification"
+                }
+            ],
+            "@type": "ProposalGroup",
+            "@baseType": "ProposalGroup"
+        }
+    ],
+    "@type": "Proposal",
+    "@baseType": "Proposal"
+}
