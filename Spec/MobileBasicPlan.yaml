@@ -16,6 +16,7 @@ Mobile Line (PS):
         Characteristic:
             Common:
                 cycleCount:1
+                cycleDuration:30
                 advanceRenewalDays:7
                 maxRenewalRetries:6
             BeautyNumber: 
@@ -45,6 +46,9 @@ Mobile Line (PS):
                 communityDataVolumePerDay:1 GB
                 communityMembers:0915043388,0915043399
                 communityMemberFeePerMonth:15 K
+                communityFreeVoicePerCall:0 min
+                communityFreeVoice:300 min
+                communityResetCycle:Monthly
             Content:
                 contentList: MyTV SportTV/Galaxy/VieOn/FPT Play/OnPlus
             5G:
