@@ -16,6 +16,8 @@ Mobile Line (PS):
         Characteristic:
             Common:
                 cycleCount:1
+                advanceRenewalDays:7
+                maxRenewalRetries:6
             BeautyNumber: 
                 msisdn:84915043333
             Voice:
@@ -36,6 +38,7 @@ Mobile Line (PS):
             Data:
                 dataVolume: 100/200/500/1000 min
                 dataVolumePerDay:2/5/10 GB
+                dataResetCycle: Daily/Monthly
                 freeIP:Zalo/Facebook/Tiktok/Youtube/Whatsapp
             Community:
                 communityMaxMember:2    
