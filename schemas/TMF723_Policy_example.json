@@ -134,7 +134,7 @@
     "isResultNegated":"boolean"
   },
   
-  "PolicyAction":{
+  "PolicyCondition":{
     "#PolicyConditionAtomic":{"@type":"PolicyConditionAtomic"},
     "#PolicyConditionComposite":{"@type":"PolicyConditionRefOrValue"}
   },
