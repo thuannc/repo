@@ -40,105 +40,64 @@
           }
         }
       },
-      "ManagedPolicyAction": {
-        "description": "Managed PolicyAction",
+      "PolicyManagedEntity": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
+            "$ref": "#/components/schemas/Entity"
           },
           {
-            "$ref": "#/components/schemas/PolicyAction"
+            "description": "Fields required for managed (reusable) Policy entities",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of the Policy Entity"
+              },
+              "version": {
+                "type": "string",
+                "description": "Version of the Policy Entity"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of the Policy Entity"
+              },
+              "lifecycleState": {
+                "type": "string",
+                "description": "Lifecycle state of the Policy Entity",
+                "enum": [
+                  "inDesign",
+                  "designed",
+                  "active",
+                  "retired",
+                  "rejected"
+                ]
+              },
+              "validFor": {
+                "$ref": "#/components/schemas/TimePeriod"
+              },
+              "note": {
+                "type": "array",
+                "description": "Comments related to Policy Entity",
+                "items": {
+                  "$ref": "#/components/schemas/Note"
+                }
+              }
+            }
           }
         ],
         "discriminator": {
           "propertyName": "@type",
           "mapping": {
-            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
-          }
-        }
-      },
-      "ManagedPolicyCondition": {
-        "description": "Managed PolicyCondition",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyCondition"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition"
-          }
-        }
-      },
-      "ManagedPolicyConstraint": {
-        "description": "Managed PolicyConstraint",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyConstraint"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint"
-          }
-        }
-      },
-      "ManagedPolicyExpression": {
-        "description": "Managed PolicyExpression",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyExpression"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
-          }
-        }
-      },
-      "ManagedPolicyOperator": {
-        "description": "Managed PolicyOperator",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyOperator"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
-          }
-        }
-      },
-      "ManagedPolicyVariable": {
-        "description": "Managed PolicyVariable",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyVariable"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyVariable": "#/components/schemas/ManagedPolicyVariable"
+            "PolicyManagedEntity": "#/components/schemas/PolicyManagedEntity",
+            "PolicyDomain": "#/components/schemas/PolicyDomain",
+            "PolicyCatalog": "#/components/schemas/PolicyCatalog",
+            "ManagedPolicyVariable": "#/components/schemas/ManagedPolicyVariable",
+            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator",
+            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression",
+            "ManagedPolicyEvent": "#/components/schemas/ManagedPolicyEvent",
+            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint",
+            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition",
+            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction",
+            "ManagedPolicy": "#/components/schemas/ManagedPolicy"
           }
         }
       },
@@ -161,83 +120,36 @@
           }
         }
       },
-      "PolicyAction": {
-        "type": "object",
-        "description": "",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyActionAtomic"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyActionComposite"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyActionAtomic": "#/components/schemas/PolicyActionAtomic",
-            "PolicyActionComposite": "#/components/schemas/PolicyActionComposite"
-          }
-        }
-      },
-      "PolicyActionAtomic": {
+      
+"PolicySet": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/PolicyActionBase"
+            "$ref": "#/components/schemas/PolicyBase"
           },
           {
-            "description": "",
+            "type": "object",
+            "description": "A PolicySet is an aggregation of PolicyRules or PolicySets combined according to provided algorithm",
             "properties": {
               "@type": {
                 "type": "string"
               },
-              "action": {
-                "$ref": "#/components/schemas/PolicyStatement"
-              }
-            }
-          }
-        ]
-      },
-      "PolicyActionBase": {
-        "description": "A superclass (set of shared properties) inherited by PolicyActionAtomic and PolicyActionComposite.",
-        "properties": {
-          "constraint": {
-            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
-          },
-          "executedAt": {
-            "type": "array",
-            "description": "Defines when will this action be triggered, before Policy calculation, or after what calculated PolicyEffect",
-            "items": {
-              "type": "string",
-              "enum": [
-                "beforeAll",
-                "beforePolicy",
-                "onPermit",
-                "onDeny",
-                "onIndeterminate",
-                "onResolved",
-                "always",
-                "afterAll"
-              ]
-            }
-          }
-        }
-      },
-      "PolicyActionComposite": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyActionBase"
-          },
-          {
-            "description": "",
-            "properties": {
-              "@type": {
-                "type": "string"
+              "combiningAlgorithm": {
+                "type": "string",
+                "description": "defines a procedure for arriving at the result given the individual results of PolicyRule evaluations: \n * DenyOverrides - if a Policy element is encountered that evaluates to DENY, then, regardless of the evaluation result of the other Policy elements, the combined result is DENY. \n * PermitOverrides - if a Policy element is encountered that evaluates to PERMIT, then, regardless of the evaluation result of the other Policy elements, the combined result is PERMIT. \n * FirstApplicable - the combined result is the same as the result of successfull evaluating the first Policy. \n * OnlyOneApplicable - The result of this combining algorithm ensures that one and only one Policy is applicable by virtue of their targets.  If no Policy applies, then the result is NOT_APPLICABLE, but if more than one Policy is applicable, then the result is INDETERMINATE.  When exactly one Policy is applicable, the result of the combining algorithm is the result of that Policy. \n * DenyUnlessPermit - intended for those cases where a PERMIT decision should have priority over a DENY decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result. \n * PermitUnlessDeny - intended for those cases where a DENY decision should have priority over a PERMIT decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result.",
+                "enum": [
+                  "DenyOverrides",
+                  "PermitOverrides",
+                  "FirstApplicable",
+                  "OnlyOneApplicable",
+                  "DenyUnlessPermit",
+                  "PermitUnlessDeny"
+                ]
               },
-              "action": {
+              "policyRelationship": {
                 "type": "array",
+                "description": "List of all Policies that need to be executed",
                 "items": {
-                  "$ref": "#/components/schemas/PolicyActionRelationship"
+                  "$ref": "#/components/schemas/PolicyRelationship"
                 },
                 "minItems": 1
               }
@@ -245,58 +157,32 @@
           }
         ]
       },
-      "PolicyActionRef": {
+      "PolicyRule": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/Reference"
+            "$ref": "#/components/schemas/PolicyBase"
           },
           {
             "type": "object",
-            "description": "Reference to PolicyAction object",
+            "description": "A PolicyRule is an intelligent data container. It contains data that define how the PolicyRule is used in a managed environment as well as a specification of behavior that dictates how the managed entities that it applies to will interact. The contained data is of four types: \n * data and metadata that define the semantics and behavior of the policy rule and the behavior that it imposes on the rest of the system,\n * a group of events that can be used to trigger the evaluation of the condition clause of a policy rule,\n * a group of conditions aggregated by the PolicyRule,\n * group of actions aggregated by the PolicyRule.",
             "properties": {
               "@type": {
                 "type": "string"
+              },
+              "targetPolicyEffect": {
+                "type": "string",
+                "description": "If underlying PolicyCondition resolves to TRUE, denotes target effect of a PolicyRule. If PolicyCondition is not resolved, then Policy effect is marked INDETERMINATE. If Policy is not run at all (because of Policy Constraints), then Policy effect is marked NOT_APPLICABLE.",
+                "enum": [
+                  "Permit",
+                  "Deny"
+                ]
+              },
+              "policyConditionRefOrValue": {
+                "$ref": "#/components/schemas/PolicyConditionRefOrValue"
               }
             }
           }
         ]
-      },
-      "PolicyActionRefOrValue": {
-        "type": "object",
-        "description": "Container for PolicyAction Reference or unmanaged PolicyAction object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyActionRef"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyAction"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyActionRef": "#/components/schemas/PolicyActionRef",
-            "PolicyAction": "#/components/schemas/PolicyAction",
-            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
-          }
-        }
-      },
-      "PolicyActionRelationship": {
-        "type": "object",
-        "description": "Contains details of a PolicyActionRelationship",
-        "properties": {
-          "priority": {
-            "type": "integer",
-            "description": "Sequence value when PolicyEvent has to be executed in a specific order. Higher value means greater priority. Priority is not absolute, but relative in hierarchy.",
-            "default": 0
-          },
-          "constraint": {
-            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
-          },
-          "policyActionRefOrValue": {
-            "$ref": "#/components/schemas/PolicyActionRefOrValue"
-          }
-        }
       },
       "PolicyBase": {
         "description": "A superclass (set of shared properties) inherited by PolicyRule and PolicySet.",
@@ -352,75 +238,40 @@
           }
         }
       },
-      "PolicyCatalog": {
-        "allOf": [
+      "PolicyConditionRefOrValue": {
+        "type": "object",
+        "description": "Container for PolicyCondition Reference or unmanaged PolicyCondition object",
+        "oneOf": [
           {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
+            "$ref": "#/components/schemas/PolicyConditionRef"
           },
           {
-            "description": "A logical container of all Policy entites. Used to extract Policy details and provide it to the Policy Execution engine",
-            "properties": {
-              "policyDomainFilter": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Reference"
-                }
-              },
-              "policy": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicy"
-                }
-              },
-              "policyEvent": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyEvent"
-                }
-              },
-              "policyCondition": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyCondition"
-                }
-              },
-              "policyExpression": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyExpression"
-                }
-              },
-              "policyOperator": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyOperator"
-                }
-              },
-              "policyVariable": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyVariable"
-                }
-              },
-              "policyAction": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyAction"
-                }
-              },
-              "policyConstraint": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/ManagedPolicyConstraint"
-                }
-              }
-            }
+            "$ref": "#/components/schemas/PolicyCondition"
           }
         ],
         "discriminator": {
           "propertyName": "@type",
           "mapping": {
-            "PolicyCatalog": "#/components/schemas/PolicyCatalog"
+            "PolicyConditionRef": "#/components/schemas/PolicyConditionRef",
+            "PolicyCondition": "#/components/schemas/PolicyCondition",
+            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition"
+          }
+        }
+      },
+      "ManagedPolicyCondition": {
+        "description": "Managed PolicyCondition",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyCondition"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition"
           }
         }
       },
@@ -505,26 +356,347 @@
           }
         ]
       },
-      "PolicyConditionRefOrValue": {
+      "PolicyStatement": {
         "type": "object",
-        "description": "Container for PolicyCondition Reference or unmanaged PolicyCondition object",
+        "description": "PolicyStatement is a definition of a: \n * query statement that resolves to boolean value or \n * command statement that is changing a value",
         "oneOf": [
           {
-            "$ref": "#/components/schemas/PolicyConditionRef"
+            "$ref": "#/components/schemas/PolicyOperatorRefOrValue"
           },
           {
-            "$ref": "#/components/schemas/PolicyCondition"
+            "$ref": "#/components/schemas/PolicyExpressionRefOrValue"
           }
         ],
         "discriminator": {
           "propertyName": "@type",
           "mapping": {
-            "PolicyConditionRef": "#/components/schemas/PolicyConditionRef",
-            "PolicyCondition": "#/components/schemas/PolicyCondition",
-            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition"
+            "PolicyOperatorRefOrValue": "#/components/schemas/PolicyOperatorRefOrValue",
+            "PolicyExpressionRefOrValue": "#/components/schemas/PolicyExpressionRefOrValue"
           }
         }
       },
+"PolicyActionRelationship": {
+        "type": "object",
+        "description": "Contains details of a PolicyActionRelationship",
+        "properties": {
+          "priority": {
+            "type": "integer",
+            "description": "Sequence value when PolicyEvent has to be executed in a specific order. Higher value means greater priority. Priority is not absolute, but relative in hierarchy.",
+            "default": 0
+          },
+          "constraint": {
+            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
+          },
+          "policyActionRefOrValue": {
+            "$ref": "#/components/schemas/PolicyActionRefOrValue"
+          }
+        }
+      },
+
+      
+      "ManagedPolicyAction": {
+        "description": "Managed PolicyAction",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyAction"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
+          }
+        }
+      },
+      
+      "ManagedPolicyConstraint": {
+        "description": "Managed PolicyConstraint",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyConstraint"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint"
+          }
+        }
+      },
+      "ManagedPolicyExpression": {
+        "description": "Managed PolicyExpression",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyExpression"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
+          }
+        }
+      },
+      "ManagedPolicyOperator": {
+        "description": "Managed PolicyOperator",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyOperator"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
+          }
+        }
+      },
+      "ManagedPolicyVariable": {
+        "description": "Managed PolicyVariable",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyVariable"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyVariable": "#/components/schemas/ManagedPolicyVariable"
+          }
+        }
+      },
+      
+      "PolicyAction": {
+        "type": "object",
+        "description": "",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PolicyActionAtomic"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyActionComposite"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyActionAtomic": "#/components/schemas/PolicyActionAtomic",
+            "PolicyActionComposite": "#/components/schemas/PolicyActionComposite"
+          }
+        }
+      },
+      "PolicyActionAtomic": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyActionBase"
+          },
+          {
+            "description": "",
+            "properties": {
+              "@type": {
+                "type": "string"
+              },
+              "action": {
+                "$ref": "#/components/schemas/PolicyStatement"
+              }
+            }
+          }
+        ]
+      },
+      "PolicyOperatorRefOrValue": {
+        "type": "object",
+        "description": "Container for PolicyOperator Reference or unmanaged PolicyOperator object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PolicyOperatorRef"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyOperator"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyOperatorRef": "#/components/schemas/PolicyOperatorRef",
+            "PolicyOperator": "#/components/schemas/PolicyOperator",
+            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
+          }
+        }
+      },
+      "PolicyActionBase": {
+        "description": "A superclass (set of shared properties) inherited by PolicyActionAtomic and PolicyActionComposite.",
+        "properties": {
+          "constraint": {
+            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
+          },
+          "executedAt": {
+            "type": "array",
+            "description": "Defines when will this action be triggered, before Policy calculation, or after what calculated PolicyEffect",
+            "items": {
+              "type": "string",
+              "enum": [
+                "beforeAll",
+                "beforePolicy",
+                "onPermit",
+                "onDeny",
+                "onIndeterminate",
+                "onResolved",
+                "always",
+                "afterAll"
+              ]
+            }
+          }
+        }
+      },
+      "PolicyActionComposite": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyActionBase"
+          },
+          {
+            "description": "",
+            "properties": {
+              "@type": {
+                "type": "string"
+              },
+              "action": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PolicyActionRelationship"
+                },
+                "minItems": 1
+              }
+            }
+          }
+        ]
+      },
+      "PolicyActionRef": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Reference"
+          },
+          {
+            "type": "object",
+            "description": "Reference to PolicyAction object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "PolicyActionRefOrValue": {
+        "type": "object",
+        "description": "Container for PolicyAction Reference or unmanaged PolicyAction object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PolicyActionRef"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyAction"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyActionRef": "#/components/schemas/PolicyActionRef",
+            "PolicyAction": "#/components/schemas/PolicyAction",
+            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
+          }
+        }
+      },
+      
+      
+      "PolicyCatalog": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "description": "A logical container of all Policy entites. Used to extract Policy details and provide it to the Policy Execution engine",
+            "properties": {
+              "policyDomainFilter": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Reference"
+                }
+              },
+              "policy": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicy"
+                }
+              },
+              "policyEvent": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyEvent"
+                }
+              },
+              "policyCondition": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyCondition"
+                }
+              },
+              "policyExpression": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyExpression"
+                }
+              },
+              "policyOperator": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyOperator"
+                }
+              },
+              "policyVariable": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyVariable"
+                }
+              },
+              "policyAction": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyAction"
+                }
+              },
+              "policyConstraint": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ManagedPolicyConstraint"
+                }
+              }
+            }
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyCatalog": "#/components/schemas/PolicyCatalog"
+          }
+        }
+      },
+      
+      
       "PolicyConstraint": {
         "description": "Any kind of condition that needs to be confirmed in order to proceed with next step",
         "oneOf": [
@@ -774,67 +946,7 @@
           }
         }
       },
-      "PolicyManagedEntity": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Entity"
-          },
-          {
-            "description": "Fields required for managed (reusable) Policy entities",
-            "properties": {
-              "name": {
-                "type": "string",
-                "description": "Name of the Policy Entity"
-              },
-              "version": {
-                "type": "string",
-                "description": "Version of the Policy Entity"
-              },
-              "description": {
-                "type": "string",
-                "description": "Description of the Policy Entity"
-              },
-              "lifecycleState": {
-                "type": "string",
-                "description": "Lifecycle state of the Policy Entity",
-                "enum": [
-                  "inDesign",
-                  "designed",
-                  "active",
-                  "retired",
-                  "rejected"
-                ]
-              },
-              "validFor": {
-                "$ref": "#/components/schemas/TimePeriod"
-              },
-              "note": {
-                "type": "array",
-                "description": "Comments related to Policy Entity",
-                "items": {
-                  "$ref": "#/components/schemas/Note"
-                }
-              }
-            }
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyManagedEntity": "#/components/schemas/PolicyManagedEntity",
-            "PolicyDomain": "#/components/schemas/PolicyDomain",
-            "PolicyCatalog": "#/components/schemas/PolicyCatalog",
-            "ManagedPolicyVariable": "#/components/schemas/ManagedPolicyVariable",
-            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator",
-            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression",
-            "ManagedPolicyEvent": "#/components/schemas/ManagedPolicyEvent",
-            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint",
-            "ManagedPolicyCondition": "#/components/schemas/ManagedPolicyCondition",
-            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction",
-            "ManagedPolicy": "#/components/schemas/ManagedPolicy"
-          }
-        }
-      },
+      
       "PolicyOperator": {
         "allOf": [
           {
@@ -874,26 +986,7 @@
           }
         ]
       },
-      "PolicyOperatorRefOrValue": {
-        "type": "object",
-        "description": "Container for PolicyOperator Reference or unmanaged PolicyOperator object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyOperatorRef"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyOperator"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyOperatorRef": "#/components/schemas/PolicyOperatorRef",
-            "PolicyOperator": "#/components/schemas/PolicyOperator",
-            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
-          }
-        }
-      },
+      
       "PolicyRef": {
         "allOf": [
           {
@@ -967,88 +1060,9 @@
           }
         }
       },
-      "PolicyRule": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyBase"
-          },
-          {
-            "type": "object",
-            "description": "A PolicyRule is an intelligent data container. It contains data that define how the PolicyRule is used in a managed environment as well as a specification of behavior that dictates how the managed entities that it applies to will interact. The contained data is of four types: \n * data and metadata that define the semantics and behavior of the policy rule and the behavior that it imposes on the rest of the system,\n * a group of events that can be used to trigger the evaluation of the condition clause of a policy rule,\n * a group of conditions aggregated by the PolicyRule,\n * group of actions aggregated by the PolicyRule.",
-            "properties": {
-              "@type": {
-                "type": "string"
-              },
-              "targetPolicyEffect": {
-                "type": "string",
-                "description": "If underlying PolicyCondition resolves to TRUE, denotes target effect of a PolicyRule. If PolicyCondition is not resolved, then Policy effect is marked INDETERMINATE. If Policy is not run at all (because of Policy Constraints), then Policy effect is marked NOT_APPLICABLE.",
-                "enum": [
-                  "Permit",
-                  "Deny"
-                ]
-              },
-              "policyConditionRefOrValue": {
-                "$ref": "#/components/schemas/PolicyConditionRefOrValue"
-              }
-            }
-          }
-        ]
-      },
-      "PolicySet": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyBase"
-          },
-          {
-            "type": "object",
-            "description": "A PolicySet is an aggregation of PolicyRules or PolicySets combined according to provided algorithm",
-            "properties": {
-              "@type": {
-                "type": "string"
-              },
-              "combiningAlgorithm": {
-                "type": "string",
-                "description": "defines a procedure for arriving at the result given the individual results of PolicyRule evaluations: \n * DenyOverrides - if a Policy element is encountered that evaluates to DENY, then, regardless of the evaluation result of the other Policy elements, the combined result is DENY. \n * PermitOverrides - if a Policy element is encountered that evaluates to PERMIT, then, regardless of the evaluation result of the other Policy elements, the combined result is PERMIT. \n * FirstApplicable - the combined result is the same as the result of successfull evaluating the first Policy. \n * OnlyOneApplicable - The result of this combining algorithm ensures that one and only one Policy is applicable by virtue of their targets.  If no Policy applies, then the result is NOT_APPLICABLE, but if more than one Policy is applicable, then the result is INDETERMINATE.  When exactly one Policy is applicable, the result of the combining algorithm is the result of that Policy. \n * DenyUnlessPermit - intended for those cases where a PERMIT decision should have priority over a DENY decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result. \n * PermitUnlessDeny - intended for those cases where a DENY decision should have priority over a PERMIT decision, and an INDETERMINATE or NOT_APPLICABLE must never be the result.",
-                "enum": [
-                  "DenyOverrides",
-                  "PermitOverrides",
-                  "FirstApplicable",
-                  "OnlyOneApplicable",
-                  "DenyUnlessPermit",
-                  "PermitUnlessDeny"
-                ]
-              },
-              "policyRelationship": {
-                "type": "array",
-                "description": "List of all Policies that need to be executed",
-                "items": {
-                  "$ref": "#/components/schemas/PolicyRelationship"
-                },
-                "minItems": 1
-              }
-            }
-          }
-        ]
-      },
-      "PolicyStatement": {
-        "type": "object",
-        "description": "PolicyStatement is a definition of a: \n * query statement that resolves to boolean value or \n * command statement that is changing a value",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyOperatorRefOrValue"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyExpressionRefOrValue"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyOperatorRefOrValue": "#/components/schemas/PolicyOperatorRefOrValue",
-            "PolicyExpressionRefOrValue": "#/components/schemas/PolicyExpressionRefOrValue"
-          }
-        }
-      },
+      
+      
+      
       "PolicyVariable": {
         "type": "object",
         "description": "A PolicyVariable is an entity for modeling different types of variables that can be used to form a PolicyCondition statement. It can be static or dynamic.",
