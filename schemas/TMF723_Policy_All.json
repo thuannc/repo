@@ -120,8 +120,7 @@
           }
         }
       },
-      
-"PolicySet": {
+      "PolicySet": {
         "allOf": [
           {
             "$ref": "#/components/schemas/PolicyBase"
@@ -375,74 +374,23 @@
           }
         }
       },
-"PolicyActionRelationship": {
+      "PolicyOperatorRefOrValue": {
         "type": "object",
-        "description": "Contains details of a PolicyActionRelationship",
-        "properties": {
-          "priority": {
-            "type": "integer",
-            "description": "Sequence value when PolicyEvent has to be executed in a specific order. Higher value means greater priority. Priority is not absolute, but relative in hierarchy.",
-            "default": 0
-          },
-          "constraint": {
-            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
-          },
-          "policyActionRefOrValue": {
-            "$ref": "#/components/schemas/PolicyActionRefOrValue"
-          }
-        }
-      },
-
-      
-      "ManagedPolicyAction": {
-        "description": "Managed PolicyAction",
-        "allOf": [
+        "description": "Container for PolicyOperator Reference or unmanaged PolicyOperator object",
+        "oneOf": [
           {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
+            "$ref": "#/components/schemas/PolicyOperatorRef"
           },
           {
-            "$ref": "#/components/schemas/PolicyAction"
+            "$ref": "#/components/schemas/PolicyOperator"
           }
         ],
         "discriminator": {
           "propertyName": "@type",
           "mapping": {
-            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
-          }
-        }
-      },
-      
-      "ManagedPolicyConstraint": {
-        "description": "Managed PolicyConstraint",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyConstraint"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint"
-          }
-        }
-      },
-      "ManagedPolicyExpression": {
-        "description": "Managed PolicyExpression",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/PolicyManagedEntity"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyExpression"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
+            "PolicyOperatorRef": "#/components/schemas/PolicyOperatorRef",
+            "PolicyOperator": "#/components/schemas/PolicyOperator",
+            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
           }
         }
       },
@@ -463,6 +411,167 @@
           }
         }
       },
+      "PolicyOperator": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Extensible"
+          },
+          {
+            "type": "object",
+            "description": "A PolicyOperator is a class that defines possible operations with needed operands on a specific variables",
+            "properties": {
+              "variable": {
+                "$ref": "#/components/schemas/PolicyVariableRefOrValue"
+              }
+            }
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyOperator": "#/components/schemas/PolicyOperator",
+            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
+          }
+        }
+      },
+      "PolicyOperatorRef": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Reference"
+          },
+          {
+            "type": "object",
+            "description": "Reference to managed PolicyOperator object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "PolicyExpressionRefOrValue": {
+        "type": "object",
+        "description": "Container for PolicyExpression Reference or unmanaged PolicyExpression object",
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/PolicyExpressionRef"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyExpression"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "PolicyExpressionRef": "#/components/schemas/PolicyExpressionRef",
+            "PolicyExpression": "#/components/schemas/PolicyExpression",
+            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
+          }
+        }
+      },
+      "ManagedPolicyExpression": {
+        "description": "Managed PolicyExpression",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyExpression"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
+          }
+        }
+      },
+      "PolicyExpression": {
+        "type": "object",
+        "description": "PolicyExpression is a constraint based on text expression and parsed by an Expression Language (SpEL, JS, Groovy, FEEL, ...)",
+        "properties": {
+          "@type": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string",
+            "description": "Expression language command"
+          },
+          "expressionLanguage": {
+            "description": "Defines expression language used to build expression",
+            "type": "string",
+            "example": "JS"
+          }
+        }
+      },
+      "PolicyExpressionRef": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Reference"
+          },
+          {
+            "type": "object",
+            "description": "Reference to managed PolicyExpression object",
+            "properties": {
+              "@type": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "PolicyActionRelationship": {
+        "type": "object",
+        "description": "Contains details of a PolicyActionRelationship",
+        "properties": {
+          "priority": {
+            "type": "integer",
+            "description": "Sequence value when PolicyEvent has to be executed in a specific order. Higher value means greater priority. Priority is not absolute, but relative in hierarchy.",
+            "default": 0
+          },
+          "constraint": {
+            "$ref": "#/components/schemas/PolicyConstraintRefOrValue"
+          },
+          "policyActionRefOrValue": {
+            "$ref": "#/components/schemas/PolicyActionRefOrValue"
+          }
+        }
+      },
+      "ManagedPolicyAction": {
+        "description": "Managed PolicyAction",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyAction"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyAction": "#/components/schemas/ManagedPolicyAction"
+          }
+        }
+      },
+      "ManagedPolicyConstraint": {
+        "description": "Managed PolicyConstraint",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PolicyManagedEntity"
+          },
+          {
+            "$ref": "#/components/schemas/PolicyConstraint"
+          }
+        ],
+        "discriminator": {
+          "propertyName": "@type",
+          "mapping": {
+            "ManagedPolicyConstraint": "#/components/schemas/ManagedPolicyConstraint"
+          }
+        }
+      },
       "ManagedPolicyVariable": {
         "description": "Managed PolicyVariable",
         "allOf": [
@@ -480,7 +589,6 @@
           }
         }
       },
-      
       "PolicyAction": {
         "type": "object",
         "description": "",
@@ -517,26 +625,6 @@
             }
           }
         ]
-      },
-      "PolicyOperatorRefOrValue": {
-        "type": "object",
-        "description": "Container for PolicyOperator Reference or unmanaged PolicyOperator object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyOperatorRef"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyOperator"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyOperatorRef": "#/components/schemas/PolicyOperatorRef",
-            "PolicyOperator": "#/components/schemas/PolicyOperator",
-            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
-          }
-        }
       },
       "PolicyActionBase": {
         "description": "A superclass (set of shared properties) inherited by PolicyActionAtomic and PolicyActionComposite.",
@@ -621,8 +709,6 @@
           }
         }
       },
-      
-      
       "PolicyCatalog": {
         "allOf": [
           {
@@ -695,8 +781,6 @@
           }
         }
       },
-      
-      
       "PolicyConstraint": {
         "description": "Any kind of condition that needs to be confirmed in order to proceed with next step",
         "oneOf": [
@@ -892,101 +976,6 @@
           }
         }
       },
-      "PolicyExpression": {
-        "type": "object",
-        "description": "PolicyExpression is a constraint based on text expression and parsed by an Expression Language (SpEL, JS, Groovy, FEEL, ...)",
-        "properties": {
-          "@type": {
-            "type": "string"
-          },
-          "expression": {
-            "type": "string",
-            "description": "Expression language command"
-          },
-          "expressionLanguage": {
-            "description": "Defines expression language used to build expression",
-            "type": "string",
-            "example": "JS"
-          }
-        }
-      },
-      "PolicyExpressionRef": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Reference"
-          },
-          {
-            "type": "object",
-            "description": "Reference to managed PolicyExpression object",
-            "properties": {
-              "@type": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      "PolicyExpressionRefOrValue": {
-        "type": "object",
-        "description": "Container for PolicyExpression Reference or unmanaged PolicyExpression object",
-        "oneOf": [
-          {
-            "$ref": "#/components/schemas/PolicyExpressionRef"
-          },
-          {
-            "$ref": "#/components/schemas/PolicyExpression"
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyExpressionRef": "#/components/schemas/PolicyExpressionRef",
-            "PolicyExpression": "#/components/schemas/PolicyExpression",
-            "ManagedPolicyExpression": "#/components/schemas/ManagedPolicyExpression"
-          }
-        }
-      },
-      
-      "PolicyOperator": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Extensible"
-          },
-          {
-            "type": "object",
-            "description": "A PolicyOperator is a class that defines possible operations with needed operands on a specific variables",
-            "properties": {
-              "variable": {
-                "$ref": "#/components/schemas/PolicyVariableRefOrValue"
-              }
-            }
-          }
-        ],
-        "discriminator": {
-          "propertyName": "@type",
-          "mapping": {
-            "PolicyOperator": "#/components/schemas/PolicyOperator",
-            "ManagedPolicyOperator": "#/components/schemas/ManagedPolicyOperator"
-          }
-        }
-      },
-      "PolicyOperatorRef": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Reference"
-          },
-          {
-            "type": "object",
-            "description": "Reference to managed PolicyOperator object",
-            "properties": {
-              "@type": {
-                "type": "string"
-              }
-            }
-          }
-        ]
-      },
-      
       "PolicyRef": {
         "allOf": [
           {
@@ -1060,9 +1049,6 @@
           }
         }
       },
-      
-      
-      
       "PolicyVariable": {
         "type": "object",
         "description": "A PolicyVariable is an entity for modeling different types of variables that can be used to form a PolicyCondition statement. It can be static or dynamic.",
