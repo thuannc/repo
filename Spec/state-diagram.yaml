@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+scale 1200 width
+
+state reservation: bảng subadmin.reserved_list
+state DL_package: được đăng ký gói SPS, chỉ có vỏ
+state DL_package: chu kỳ 7 ngày
+state main_state {
+    state expire: N thời điểm hết hạn gói
+    state near_expire
+    state retry_renew: retry gia hạn theo chu kỳ cấu hình
+    state recharge_renew: retry gia hạn theo sự kiện nạp thẻ
+    state recharge_renew: đợi nạp thẻ theo số ngày extend_recharge
+    state renew: gia hạn gói bình thường
+    state renew_0K: gia hạn gói không mất phí
+
+    [*] --> active
+    active -> near_expire
+    active --> terminate: chủ động hủy gói
+    near_expire ---> expire
+    near_expire --> terminate: chủ động hủy gói
+    expire ---> renew: extension = Y
+    expire ---> renew_0K: đã thanh toán trước, \nextension = Y
+    expire ----> terminate: extension = N
+    expire ----> terminate: chủ động hủy gói
+    renew --> active: thành công
+    renew ---> retry_renew
+    renew ---> terminate: chủ động hủy gói
+    renew_0K --> active: thành công
+    renew_0K --> terminate: chủ động hủy gói
+    retry_renew --> active: thành công
+    retry_renew ------> recharge_renew: hết số lần retry + \nhỗ trợ nạp thẻ (tb trả trước + \nextend_recharge > 0)
+    retry_renew --> terminate: hết số lần retry + \nkhông hỗ trợ nạp thẻ (tb trả sau \nhoặc extend_recharge = 0)
+    retry_renew --> terminate: chủ động hủy gói
+    recharge_renew --> active: thành công
+    recharge_renew ----> terminate: qua recharge_end_date
+    recharge_renew ----> terminate: chủ động hủy gói
+    terminate --> [*]
+}
+state prepayment_TKC: thanh toán trước gia hạn qua TKC, api cf_ghx
+state prepayment_PAY: thanh toán trước gia hạn qua ví
+state emulate: giả lập record sr.package_data để đến hạn gia hạn
+state tc_renew: KH chủ động từ chối gia hạn
+
+[*] ---> main_state: DK
+[*] ---> reservation: DL
+[*] ---> DL_package: DL_v2
+reservation ---> main_state: KH gui 888 để đăng ký gói 0K
+reservation ---> main_state: hết hạn, job ActivateEZD500 đăng ký gói 0K
+DL_package ---> main_state: DK gui 888 để đăng ký gói 0K
+DL_package ---> main_state: hết hạn, job ExtendService gia hạn sang gói 0K
+tc_renew -> near_expire: set extension = N
+
+prepayment_TKC --> renew_0K: hết hạn
+prepayment_PAY --> renew_0K: hết hạn
+emulate --> renew: hết hạn
+
+state subscriber_state{
+    state topup: nạp thẻ tb trả trước
+    state unlock: mở khóa 2C tb trả sau
+    state lock_kit_restore: khôi phục gói cho tb bị lock kit sau khi đóng kit lại
+    topup --> recharge_renew : job retryExtend30days, gia hạn gói
+    unlock --> main_state: job retry_on_unlock, đăng ký lại gói
+    lock_kit_restore --> main_state: api cf_lockkit_restore_package, đăng ký lại gói với giá 0K
+}
+
+@enduml
