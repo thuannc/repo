@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Terminate
+msisdn
+service_code
+expiry_flag
+force_ignore_prepaid_flag<
+
+:lookup sup of service_code;
+
+if(exists?) is (yes) then
+    switch(active, extend, payment)
+        case (Deactive, Extend, Prepaid)
+            #gray:How? In renew process?;
+        case (None, *, Prepaid)
+            :Safe Terminate|
+        case (Active, NotExtend, Prepaid)
+            :Safe Terminate|
+        case (*, Extend, Prepaid)
+            :Safe Terminate|
+        case (*, *, NoPrepaid)
+            :Terminate or Expiry|
+    endswitch
+else (no)
+    :Error>
+endif
+
+stop
+
+
+partition "Safe Terminate" {
+    start
+    if(force_ignore_prepaid_flag) then (no)
+        :Warn subscriber|
+    else (yes)
+        :Terminate or Expiry|
+    endif
+    stop
+}
+partition "Terminate or Expiry" {
+    start
+    if(expiry_flag?) then (no)
+        :"Terminate"|
+    else (yes)
+        :"Stop Extend|
+    endif
+    stop
+}
+
+@enduml
