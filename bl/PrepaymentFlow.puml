@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Prepayment
+msisdn
+service_code<
+
+:lookup sup of service_code;
+
+if(exists?) is (yes) then
+    switch(active, extend, payment)
+        case (Active, NotExtend, Prepaid)
+            #gray:How?;
+        case (*, *, Prepaid)
+            :Block>
+        case (Active, NotExtend, NotPrepaid)
+            :Block>
+        case (*, Extend, NoPrepaid)
+            :"Do Prepayment"|
+    endswitch
+
+else (no)
+    :Error>
+endif
+
+stop
+
+@enduml
