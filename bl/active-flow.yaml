@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Activate
+msisdn
+service_code<
+
+:lookup sup of service_code;
+
+if(exists?) is (yes) then
+    switch(active, extend, prepayment)
+        case (None, *, Prepaid)
+            :"Active Hold or SimBundle"|
+        case (Active, Extend, *)
+            :"Replace Sup"|
+        case (Deactivated, Extend, *)
+            :"Renew"|
+        case (Active, NotExtend, *)
+            :Block>
+    endswitch
+else
+    :lookup base-sup of service_code;
+
+    :start "New Activated"|
+endif
+
+stop
+
+@enduml
