@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Activate
+msisdn
+service_code<
+
+:lookup sup of serviceId;
+
+if(exists?) is (yes) then
+    switch(active, extend, prepayment)
+        case (None, *, Prepaid)
+            :"Active Hold or SimBundle"|
+            stop
+        case (Active, Extend, Prepaid)
+            : "Active PrePay"|
+            stop
+        case (Active, Extend, None)
+            : "Active"|
+              if( regtime >= maxcount) is (yes) then
+                 stop
+              else (no)
+                 :"Replace Sup";
+              endif
+        case (Deactivated, Extend, *)
+            :"Renew";
+        case (Active, NotExtend, *)
+            stop
+    endswitch
+else
+    :lookup base-sup of service_code;
+         if( regtime >= maxcount) is (yes) then
+                         stop
+          else (no)
+             :start "New Activated"|
+          endif
+
+endif
+
+stop
+
+@enduml
