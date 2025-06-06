@@ -1,0 +1,85 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+
+actor "prov client" as prov_client
+
+component "Prov Layer" as prov_server {
+    'collections "Usecase dispatchers" as usecase_dispatcher
+
+    component "Charge System" as charge_system
+    component "Prov Spi" as prov_spi
+    component "EPC" as epc
+
+    database "prov db" as prov_db
+    note right of prov_db
+        Lưu subscription, history
+        db vnp
+    end note
+
+    component "Cores Viễn thông" as cores_vt
+    component "Prov route" as prov_route
+
+    component "Business Layer" as business_layer {
+        interface "usecase start" as usecase_x
+        component "Loaders/Readers" as loader {
+            agent "EPC loader" as epc_loader
+            agent "Subscriber loaders" as sub_loader
+            agent "Subscription loaders" as sup_loader
+            agent "Offer loaders" as offer_loader
+            agent "Agent loaders" as agent_loader
+        }
+        collections "Usecase dispatchers" as usecase_transformer
+        note left of usecase_transformer
+            Chuyển đổi usecase agent gửi vào
+            thành các usecase thực tế, VD:
+            agent.usecase = DK
+            bl.usecase =
+             DK đè gói nếu gói hiện có
+             ko tương thích gói mới
+        end note
+        component "Usecases" as usecase {
+            collections "Usecase Validators" as usecase_validators
+            collections "Offer Validators/Filters" as offer_validators
+            collections "Price Calculator" as price_calculator
+            collections "Offer Calculator" as offer_calculator
+            collections "Price Validators" as price_validators
+            agent "Charge" as bl_charge
+            agent "Call Spi" as bl_call_spi
+            agent "Save transaction" as bl_save_transaction
+        }
+        usecase_x -> epc_loader
+        epc_loader --> sub_loader
+        epc_loader .. epc : load chính sách gói\n(valid rules, price rules,\n offer rules)
+
+        sub_loader -> sup_loader
+        sub_loader .. cores_vt : load profiles
+
+        sup_loader --> offer_loader
+        sup_loader .. prov_db : load subscription
+
+        offer_loader .. prov_spi : load offer hiện có của sub
+        offer_loader -> agent_loader
+        agent_loader .. prov_db : load agent
+
+        agent_loader --> usecase_transformer
+        usecase_transformer --> usecase_validators
+        usecase_validators --> price_calculator
+        price_calculator -> price_validators
+        price_validators .. charge_system : nếu cần
+
+        price_validators --> offer_calculator
+        offer_calculator -> offer_validators : test conflict?
+
+        offer_validators --> bl_charge
+        bl_charge .. charge_system : charge, nếu cần
+        bl_charge -> bl_call_spi
+        bl_call_spi .. prov_spi : exec Offers
+        bl_call_spi --> bl_save_transaction
+        bl_save_transaction -- prov_db : lưu transaction
+    }
+
+}
+prov_client --> prov_route : Gửi prov request (msisdn + service + usecase + agent)
+prov_route --> usecase_x
+
+@enduml
