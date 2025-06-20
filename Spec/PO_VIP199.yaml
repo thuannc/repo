@@ -8,10 +8,12 @@
 			Char:
 				onetimeCharge.amount:199000
 				msisdn:0915043333
-			(RFS) onetimeChare_OCC_VIP199: 
-				amount:100
-				unit:VND
-				msisdn:0915043333
+			(RFS) onetimeChare_OCC: 
+				Name: OCS
+				Char:
+					amount:100
+					unit:VND
+					msisdn:0915043333
 		(CFS) onnet1VoiceFree_XinY:
 			Name:Thoại nội mạng di động VNP 
 			Char:
