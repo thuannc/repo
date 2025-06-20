@@ -25,7 +25,7 @@
 				onnet1VoiceFree_XinY.cycleLength:1
 				onnet1VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) OCS_onnet1VoiceFre :
+			(RFS) OCS_onnet1VoiceFree :
 				Name:OCS
 				Char:
 					onnet1VoiceFree_XinY.volume:2000
