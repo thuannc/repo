@@ -7,12 +7,15 @@
 			Name: Trừ tiền gói từ TKC
 			Char:
 				onetimeCharge.amount:199000
+    				onetimeCharge.unit:VND
+    				onetimeCharge.balanceType:0
 				msisdn:0915043333
-			(RFS) OCC_onetimeChare: 
+			(RFS) OCC_onetimeCharge: 
 				Name: OCS
 				Char:
-					amount:100
-					unit:VND
+					onetimeCharge.amount:100
+					onetimeCharge.unit:VND
+     					onetimeCharge.balanceType:0
 					msisdn:0915043333
 		(CFS) onnet1VoiceFree_XinY:
 			Name:Thoại nội mạng di động VNP 
