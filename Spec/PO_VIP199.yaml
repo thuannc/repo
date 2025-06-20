@@ -41,17 +41,17 @@
 				onnet2VoiceFree_XinY.cycleLength:1
 				onnet2VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) OCS_onnet1VoiceFree_XinY :
+			(RFS) OCS_onnet2VoiceFree_XinY :
 				Name: OCS
 				Char:
 					onnet2VoiceFree_XinY.volume:250
 					onnet2VoiceFree_XinY.unitOfMeasure:minute
 					onnet2VoiceFree_XinY.cycleLength:1
 					onnet2VoiceFree_XinY.cycleUOM:month
-					msisdn:0915043333
-					OCS_onnet1VoiceFree_XinY.offerId: 8102
-					OCS_onnet1VoiceFree_XinY.daId: 802
-					OCS_onnet1VoiceFree_XinY.dedicatedAccountUnitType: 0
+					msisdn: 0915043333
+					onnet2VoiceFree_XinY.offerId: 8102
+					onnet2VoiceFree_XinY.daId: 802
+					onnet2VoiceFree_XinY.dedicatedAccountUnitType: 0
 		(CFS) offnet2VoiceFree_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
