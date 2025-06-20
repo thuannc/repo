@@ -11,7 +11,7 @@
     				onetimeCharge.balanceType:0
 				msisdn:0915043333
 			(RFS) OCC_onetimeCharge: 
-				Name: OCS
+				Name: OCC
 				Char:
 					onetimeCharge.amount:100
 					onetimeCharge.unit:VND
@@ -25,8 +25,8 @@
 				onnet1VoiceFree_XinY.cycleLength:1
 				onnet1VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) OCS_onnet1VoiceFree :
-				Name:OCS
+			(RFS) OCSAIR_onnet1VoiceFree :
+				Name:OCSAIR
 				Char:
 					onnet1VoiceFree_XinY.volume:2000
 					onnet1VoiceFree_XinY.unitOfMeasure:minute
@@ -82,15 +82,15 @@
 				dataVolume_XinY_stop.cycleLength:1
 				dataVolume_XinY_stop.cycleUOM:day
 				msisdn:0915043333
-			(RFS) OCS_offnet2VoiceFree_XinY :
-				Name: OCS
+			(RFS) PCRF_offnet2VoiceFree_XinY :
+				Name: PCRF
 				Char:
 					dataVolume_XinY_stop.volume:8
 					dataVolume_XinY_stop.unitOfMeasure:minute
 					dataVolume_XinY_stop.cycleLength:GB
 					dataVolume_XinY_stop.cycleUOM:day
 					msisdn:0915043333
-					OCS_offnet2VoiceFree_XinY.groupId: BIG
+					PCRF_offnet2VoiceFree_XinY.groupId: BIG
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
@@ -101,6 +101,7 @@
 				Char:
 					OCS_freeIP_Z.contentList: vnEdu,Zalo,FB...
 					msisdn:0915043333
+     				Feature: AddOffer
 		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
 			Char:
