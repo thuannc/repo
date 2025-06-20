@@ -79,7 +79,7 @@
 				dataVolume_XinY_stop.cycleLength:1
 				dataVolume_XinY_stop.cycleUOM:day
 				msisdn:0915043333
-			(RFS) offnet2VoiceFree_XinY :
+			(RFS) OCS_offnet2VoiceFree_XinY :
 				Name: OCS
 				Char:
 					dataVolume_XinY_stop.volume:8
@@ -93,10 +93,10 @@
 			Char:
 				freeIP_Z.contentList: vnEdu,Zalo,FB...
 				msisdn:0915043333
-			(RFS) freeIP_Z:
+			(RFS) OCS_freeIP_Z:
 				Name: OCS
 				Char:
-					freeIP_Z.contentList: vnEdu,Zalo,FB...
+					OCS_freeIP_Z.contentList: vnEdu,Zalo,FB...
 					msisdn:0915043333
 		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
@@ -107,7 +107,7 @@
 				communityDataShare_XforY.cycleLength:1
 				communityDataShare_XforY.cycleUOM:day
 				msisdn:0915043333
-			(RFS) communityDataShare_XforY :
+			(RFS) OCS_communityDataShare_XforY :
 				Name: OCS
 				Char:
 					communityDataShare_XforY.maxMember:2
