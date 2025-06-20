@@ -8,7 +8,7 @@
 			Char:
 				onetimeCharge.amount:199000
 				msisdn:0915043333
-			(RFS) onetimeChare_OCC: 
+			(RFS) OCC_onetimeChare: 
 				Name: OCS
 				Char:
 					amount:100
@@ -22,7 +22,7 @@
 				onnet1VoiceFree_XinY.cycleLength:1
 				onnet1VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) onnet1VoiceFree_XinY_OCS :
+			(RFS) OCS_onnet1VoiceFre :
 				Name:OCS
 				Char:
 					onnet1VoiceFree_XinY.volume:2000
@@ -30,9 +30,9 @@
 					onnet1VoiceFree_XinY.cycleLength:1
 					onnet1VoiceFree_XinY.cycleUOM:month
 					msisdn:0915043333
-					onnet1VoiceFree_XinY_OCS.offerId: 8101
-					onnet1VoiceFree_XinY_OCS.daId: 801
-					onnet1VoiceFree_XinY_OCS.dedicatedAccountUnitType: 0
+					OCS_onnet1VoiceFree_XinY.offerId: 8101
+					OCS_onnet1VoiceFree_XinY.daId: 801
+					OCS_onnet1VoiceFree_XinY.dedicatedAccountUnitType: 0
 		(CFS) onnet2VoiceFree_XinY:
 			Name: Thoại nội mạng cố định VNPT
 			Char:
@@ -41,7 +41,7 @@
 				onnet2VoiceFree_XinY.cycleLength:1
 				onnet2VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) onnet1VoiceFree_XinY_OCS :
+			(RFS) OCS_onnet1VoiceFree_XinY :
 				Name: OCS
 				Char:
 					onnet2VoiceFree_XinY.volume:250
@@ -49,9 +49,9 @@
 					onnet2VoiceFree_XinY.cycleLength:1
 					onnet2VoiceFree_XinY.cycleUOM:month
 					msisdn:0915043333
-					onnet1VoiceFree_XinY_OCS.offerId: 8102
-					onnet1VoiceFree_XinY_OCS.daId: 802
-					onnet1VoiceFree_XinY_OCS.dedicatedAccountUnitType: 0
+					OCS_onnet1VoiceFree_XinY.offerId: 8102
+					OCS_onnet1VoiceFree_XinY.daId: 802
+					OCS_onnet1VoiceFree_XinY.dedicatedAccountUnitType: 0
 		(CFS) offnet2VoiceFree_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
@@ -60,7 +60,7 @@
 				offnet2VoiceFree_XinY.cycleLength:1
 				offnet2VoiceFree_XinY.cycleUOM:month
 				msisdn:0915043333
-			(RFS) offnet2VoiceFree_XinY_OCS :
+			(RFS) OCS_offnet2VoiceFree_XinY :
 				Name: OCS
 				Char:
 					offnet2VoiceFree_XinY.volume:250
@@ -68,9 +68,9 @@
 					offnet2VoiceFree_XinY.cycleLength:1
 					offnet2VoiceFree_XinY.cycleUOM:month
 					msisdn:0915043333
-					offnet2VoiceFree_XinY_OCS.offerId: 8102
-					offnet2VoiceFree_XinY_OCS.daId: 802
-					offnet2VoiceFree_XinY_OCS.dedicatedAccountUnitType: 0
+					OCS_offnet2VoiceFree_XinY.offerId: 8102
+					OCS_offnet2VoiceFree_XinY.daId: 802
+					OCS_offnet2VoiceFree_XinY.dedicatedAccountUnitType: 0
 		(CFS) dataVolume_XinY_stop :
 			Name: Data cơ bản hết dung lượng dừng truy cập
 			Char:
@@ -79,7 +79,7 @@
 				dataVolume_XinY_stop.cycleLength:1
 				dataVolume_XinY_stop.cycleUOM:day
 				msisdn:0915043333
-			(RFS) offnet2VoiceFree_XinY_OCS :
+			(RFS) offnet2VoiceFree_XinY :
 				Name: OCS
 				Char:
 					dataVolume_XinY_stop.volume:8
@@ -87,7 +87,7 @@
 					dataVolume_XinY_stop.cycleLength:GB
 					dataVolume_XinY_stop.cycleUOM:day
 					msisdn:0915043333
-					offnet2VoiceFree_XinY_OCS.groupId: BIG
+					OCS_offnet2VoiceFree_XinY.groupId: BIG
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
@@ -107,7 +107,7 @@
 				communityDataShare_XforY.cycleLength:1
 				communityDataShare_XforY.cycleUOM:day
 				msisdn:0915043333
-			(RFS) communityDataShare_XforY_OCS :
+			(RFS) communityDataShare_XforY :
 				Name: OCS
 				Char:
 					communityDataShare_XforY.maxMember:2
@@ -116,40 +116,40 @@
 					communityDataShare_XforY.cycleLength:1
 					communityDataShare_XforY.cycleUOM:day
 					msisdn:0915043333
-					communityDataShare_XforY_OCS.offerId: ?
-					communityDataShare_XforY_OCS.daId: ?
+					OCS_communityDataShare_XforY.offerId: ?
+					OCS_communityDataShare_XforY.daId: ?
 		(CFS) communityCallFree :
 			Name: Gọi miễn phí trong nhóm
 			Char:
 				msisdn:0915043333
-			(RFS) communityCallFree_OCS :
+			(RFS) OCS_communityCallFree :
 				Name: OCS
 				Char:
 					msisdn:0915043333
-					communityCallFree_OCS.offerId: ?
-					communityCallFree_OCS.daId: ?
+					OCS_communityCallFree.offerId: ?
+					OCS_communityCallFree.daId: ?
 		(CFS) addonFreeContent_X :
 			Name: Miễn phí truy cập nội dung
 			Char:
 				addonFreeContent_X.contentList:MyTV,SportTV
 				msisdn:0915043333
-			(RFS) addonFreeContent_X :
+			(RFS) OCS_addonFreeContent_X :
 				Name: OCS
 				Char:
 					addonFreeContent_X.contentList:MyTV,SportTV
 					msisdn:0915043333
-					addonFreeContent_X_OCS.offerId: ?
-					addonFreeContent_X_OCS.daId: ?
+					OCS_addonFreeContent_X.offerId: ?
+					OCS_addonFreeContent_X.daId: ?
 		(CFS) advance5GCallOption_X :
 			Name: Quyền sử dụng thoại trên 5G
 			Char:
 				advance5GCallOption_X.voice5G: VoLTE,VoWifi
 				msisdn:0915043333
-			(RFS) addonFreeContent_X :
+			(RFS) OCS_addonFreeContent_X :
 				Name: OCS
 				Char:
 					advance5GCallOption_X.voice5G: VoLTE,VoWifi
 					msisdn:0915043333
-					advance5GCallOption_X_OCS.offerId: ?
-					advance5GCallOption_X_OCS.daId: ?
+					OCS_advance5GCallOption_X.offerId: ?
+					OCS_advance5GCallOption_X.daId: ?
 @endyaml
