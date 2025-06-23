@@ -127,7 +127,7 @@
 				communityDataShare_XforY.cycleLength:1
 				communityDataShare_XforY.cycleUOM:day
 				msisdn:0915043333
-			(RFS) OCSAIR_communityDataShare_XforY :
+			(RFS) PCRF_communityDataShare_XforY :
 				Name: OCSAIR
 				Char:
 					communityDataShare_XforY.maxMember:2
@@ -136,8 +136,8 @@
 					communityDataShare_XforY.cycleLength:1
 					communityDataShare_XforY.cycleUOM:day
 					msisdn:0915043333
-					OCSAIR_communityDataShare_XforY.offerId: 880000
-					OCSAIR_communityDataShare_XforY.memberType: Owner 
+					PCRF_communityDataShare_XforY.offerId: 880000
+					PCRF_communityDataShare_XforY.memberType: Owner 
      				Feature:addFFList
 		(CFS) communityCallFree :
 			Name: Gọi miễn phí trong nhóm
@@ -167,7 +167,7 @@
 			Char:
 				advance5GCallOption_X.voice5G: VoLTE,VoWifi
 				msisdn:0915043333
-			(RFS) OCSAIR_addonFreeContent_X :
+			(RFS) OCSAIR_advance5GCallOption_X :
 				Name: OCSAIR
 				Char:
 					advance5GCallOption_X.voice5G: VoLTE,VoWifi
