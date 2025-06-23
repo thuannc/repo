@@ -1,0 +1,97 @@
+@startyaml
+!theme plain
+
+
+(RFS) OCC_onetimeCharge: 
+  Name: OCC
+  Char:
+    onetimeCharge.amount:100
+    onetimeCharge.unit:VND
+    msisdn:0915043333
+      OCC_onetimeCharge.balanceType:0
+    OCC_onetimeCharge.serviceIdentifier:7525
+    OCC_onetimeCharge.subscriberType:0
+    OCC_onetimeCharge.AVP: 440
+
+(RFS) OCSAIR_voiceFreeOnnet1 :
+  Name:OCSAIR
+  Char:
+    voiceFreeOnnet1_XinY.volume:2000
+    voiceFreeOnnet1_XinY.unitOfMeasure:minute
+    voiceFreeOnnet1_XinY.cycleLength:1
+    voiceFreeOnnet1_XinY.cycleUOM:month
+    msisdn:0915043333
+    OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
+    OCSAIR_voiceFreeOnnet1_XinY.daId: 801
+    OCSAIR_voiceFreeOnnet1_XinY.daUnitType: 0
+
+(RFS) OCSAIR_voiceFreeOnnet2_XinY :
+  Name: OCSAIR
+  Char:
+    voiceFreeOnnet2_XinY.volume:250
+    voiceFreeOnnet2_XinY.unitOfMeasure:minute
+    voiceFreeOnnet2_XinY.cycleLength:1
+    voiceFreeOnnet2_XinY.cycleUOM:month
+    msisdn: 0915043333
+    OCSAIR_voiceFreeOnnet2_XinY.offerId: 8102
+    OCSAIR_voiceFreeOnnet2_XinY.daId: 802
+    OCSAIR_voiceFreeOnnet2_XinY.daUnitType: 0
+
+(RFS) OCSAIR_voiceFreeOffnet2_XinY :
+  Name: OCSAIR
+  Char:
+    voiceFreeOffnet2_XinY.volume:250
+    voiceFreeOffnet2_XinY.unitOfMeasure:minute
+    voiceFreeOffnet2_XinY.cycleLength:1
+    voiceFreeOffnet2_XinY.cycleUOM:month
+    msisdn:0915043333
+    OCSAIR_voiceFreeOffnet2_XinY.offerId: 8102
+    OCSAIR_voiceFreeOffnet2_XinY.daId: 802
+    OCSAIR_voiceFreeOffnet2_XinY.daUnitType: 0
+
+(RFS) PCRF_voiceFreeOffnet2_XinY :
+  Name: PCRF
+  Char:
+    dataVolume_XinY_stop.volume:8
+    dataVolume_XinY_stop.unitOfMeasure:minute
+    dataVolume_XinY_stop.cycleLength:GB
+    dataVolume_XinY_stop.cycleUOM:day
+    msisdn:0915043333
+    PCRF_voiceFreeOffnet2_XinY.groupId: BIG
+(RFS) PCRF_freeIP_Z:
+  Name: PCRF
+  Char:
+    freeIP_Z.contentList: vnEdu,Zalo,FB...
+    msisdn:0915043333
+    PCRF_freeIP_Z.groupId: ?
+(RFS) OCSAIR_communityDataShare_XforY :
+  Name: OCSAIR
+  Char:
+    communityDataShare_XforY.maxMember:2
+    communityDataShare_XforY.volume:8
+    communityDataShare_XforY.unitOfMeasure:GB
+    communityDataShare_XforY.cycleLength:1
+    communityDataShare_XforY.cycleUOM:day
+    msisdn:0915043333
+    OCSAIR_communityDataShare_XforY.offerId: 880000
+    OCSAIR_communityDataShare_XforY.memberType: Owner 
+(RFS) OCSAIR_communityCallFree :
+  Name: OCSAIR
+  Char:
+    msisdn:0915043333
+    OCSAIR_communityCallFree.offerId: ?
+    OCSAIR_communityCallFree.daId: ?
+(RFS) PCRF_addonFreeContent_X :
+  Name: PCRF
+  Char:
+    addonFreeContent_X.contentList:MyTV,SportTV
+    msisdn:0915043333
+    PCRF_addonFreeContent_X.groupId: ?
+(RFS) OCSAIR_addonFreeContent_X :
+  Name: OCSAIR
+  Char:
+    advance5GCallOption_X.voice5G: VoLTE,VoWifi
+    msisdn:0915043333
+    OCSAIR_advance5GCallOption_X.offerId: ?
+    OCSAIR_advance5GCallOption_X.daId: ?
+@endyaml
