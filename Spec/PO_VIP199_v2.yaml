@@ -130,7 +130,7 @@
 					msisdn:0915043333
 					OCSAIR_communityDataShare_XforY.offerId: 880000
 					OCSAIR_communityDataShare_XforY.memberType: Owner 
-     				Feature:?
+     				Feature:addFFList
 		(CFS) communityCallFree :
 			Name: Gọi miễn phí trong nhóm
 			Char:
