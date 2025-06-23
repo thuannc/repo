@@ -8,7 +8,7 @@
     onetimeCharge.amount:100
     onetimeCharge.unit:VND
     msisdn:0915043333
-      OCC_onetimeCharge.balanceType:0
+    OCC_onetimeCharge.balanceType:0
     OCC_onetimeCharge.serviceIdentifier:7525
     OCC_onetimeCharge.subscriberType:0
     OCC_onetimeCharge.AVP: 440
