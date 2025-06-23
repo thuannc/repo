@@ -110,7 +110,15 @@
 					msisdn:0915043333
 					PCRF_freeIP_Z.groupId: ?
      				Feature:SET
-		(CFS) communityDataShare_XforY :
+		(CFS) communityCreateFnF_X:
+  			Name: Tạo nhóm
+     		(CFS) communityAddMemberFnF_X:
+  			Name: Thêm thành viên nhóm
+     		(CFS) communityRemoveMemberFnF_X:
+  			Name: Hủy thành viên nhóm
+     		(CFS) communityRemoveFnF_X:
+  			Name: Hủy nhóm
+  		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
 			Char:
 				communityDataShare_XforY.maxMember:2
