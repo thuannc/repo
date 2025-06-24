@@ -12,8 +12,7 @@
 			(RFS) OCC_onetimeCharge: 
 				Name: OCC
 				Char:
-					onetimeCharge.amount:100
-					onetimeCharge.unit:VND
+					onetimeCharge.amount:100 VND
 					msisdn:0915043333
      				OCC_onetimeCharge.balanceType:0
 					OCC_onetimeCharge.serviceIdentifier:7525
@@ -23,18 +22,14 @@
 		(CFS) voiceFreeOnnet1_XinY:
 			Name:Thoại nội mạng di động VNP 
 			Char:
-				voiceFreeOnnet1_XinY.volume:2000
-				voiceFreeOnnet1_XinY.unitOfMeasure:minute
-				voiceFreeOnnet1_XinY.cycleLength:1
-				voiceFreeOnnet1_XinY.cycleUOM:month
+				voiceFreeOnnet1_XinY.volume:2000 minute
+				voiceFreeOnnet1_XinY.cycleLength:1 month
 				msisdn:0915043333
 			(RFS) OCSAIR_voiceFreeOnnet1 :
 				Name:OCSAIR
 				Char:
-					voiceFreeOnnet1_XinY.volume:2000
-					voiceFreeOnnet1_XinY.unitOfMeasure:minute
-					voiceFreeOnnet1_XinY.cycleLength:1
-					voiceFreeOnnet1_XinY.cycleUOM:month
+					voiceFreeOnnet1_XinY.volume:2000 minute
+					voiceFreeOnnet1_XinY.cycleLength:1 month
 					msisdn:0915043333
 					OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
 					OCSAIR_voiceFreeOnnet1_XinY.daId: 801
@@ -43,18 +38,14 @@
 		(CFS) voiceFreeOnnet2_XinY:
 			Name: Thoại nội mạng cố định VNPT
 			Char:
-				voiceFreeOnnet2_XinY.volume:250
-				voiceFreeOnnet2_XinY.unitOfMeasure:minute
-				voiceFreeOnnet2_XinY.cycleLength:1
-				voiceFreeOnnet2_XinY.cycleUOM:month
+				voiceFreeOnnet2_XinY.volume:250 minute
+				voiceFreeOnnet2_XinY.cycleLength:1 month
 				msisdn:0915043333
 			(RFS) OCSAIR_voiceFreeOnnet2_XinY :
 				Name: OCSAIR
 				Char:
-					voiceFreeOnnet2_XinY.volume:250
-					voiceFreeOnnet2_XinY.unitOfMeasure:minute
-					voiceFreeOnnet2_XinY.cycleLength:1
-					voiceFreeOnnet2_XinY.cycleUOM:month
+					voiceFreeOnnet2_XinY.volume:250 minute
+					voiceFreeOnnet2_XinY.cycleLength:1 month
 					msisdn: 0915043333
 					OCSAIR_voiceFreeOnnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOnnet2_XinY.daId: 802
@@ -63,18 +54,14 @@
 		(CFS) voiceFreeOffnet2_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
-				voiceFreeOffnet2_XinY.volume:250
-				voiceFreeOffnet2_XinY.unitOfMeasure:minute
-				voiceFreeOffnet2_XinY.cycleLength:1
-				voiceFreeOffnet2_XinY.cycleUOM:month
+				voiceFreeOffnet2_XinY.volume:250 minute
+				voiceFreeOffnet2_XinY.cycleLength:1 month
 				msisdn:0915043333
 			(RFS) OCSAIR_voiceFreeOffnet2_XinY :
 				Name: OCSAIR
 				Char:
-					voiceFreeOffnet2_XinY.volume:250
-					voiceFreeOffnet2_XinY.unitOfMeasure:minute
-					voiceFreeOffnet2_XinY.cycleLength:1
-					voiceFreeOffnet2_XinY.cycleUOM:month
+					voiceFreeOffnet2_XinY.volume:250 minute
+					voiceFreeOffnet2_XinY.cycleLength:1 month
 					msisdn:0915043333
 					OCSAIR_voiceFreeOffnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet2_XinY.daId: 802
@@ -83,18 +70,14 @@
 		(CFS) dataVolume_XinY_stop :
 			Name: Data cơ bản hết dung lượng dừng truy cập
 			Char:
-				dataVolume_XinY_stop.volume:8
-				dataVolume_XinY_stop.unitOfMeasure:GB
-				dataVolume_XinY_stop.cycleLength:1
-				dataVolume_XinY_stop.cycleUOM:day
+				dataVolume_XinY_stop.volume:8 GB
+				dataVolume_XinY_stop.cycleLength:1 day
 				msisdn:0915043333
 			(RFS) PCRF_dataVolume_XinY_stop :
 				Name: PCRF
 				Char:
-					dataVolume_XinY_stop.volume:8
-					dataVolume_XinY_stop.unitOfMeasure:minute
-					dataVolume_XinY_stop.cycleLength:GB
-					dataVolume_XinY_stop.cycleUOM:day
+					dataVolume_XinY_stop.volume:8 GB
+					dataVolume_XinY_stop.cycleLength:1 day
 					msisdn:0915043333
 					PCRF_dataVolume_XinY_stop.groupId: BIG
      				Feature:SET
@@ -112,29 +95,48 @@
      				Feature:SET
 		(CFS) communityCreateFnF_X:
   			Name: Tạo nhóm
-     		(CFS) communityAddMemberFnF_X:
+     			Char:
+				communityDataShare_XforY.maxMember:2
+				msisdn:0915043333
+    			(RFS) UCIP_communityCreateFnF_X :
+				Name: UCIP
+				Char:
+					communityDataShare_XforY.maxMember:2
+					msisdn:0915043333
+					UCIP_communityCreateFnF_X.communityId: 880000
+					UCIP_communityCreateFnF_X.memberType: Owner 
+     					UCIP_communityCreateFnF_X.actionType: ADD/SET/DELETE 
+     				Feature:UpdateFaFList
+     		(CFS) communityRemoveFnF_X:
+  			Name: Hủy nhóm
+     			Char:
+				msisdn:0915043333
+    			(RFS) UCIP_communityCreateFnF_X :
+				Name: UCIP
+				Char:
+					communityDataShare_XforY.maxMember:2
+					msisdn:0915043333
+					UCIP_communityCreateFnF_X.communityId: 880000
+					UCIP_communityCreateFnF_X.actionType: DELETE 
+     				Feature:UpdateFaFList
+       		(CFS) communityAddMemberFnF_X:
   			Name: Thêm thành viên nhóm
      		(CFS) communityRemoveMemberFnF_X:
   			Name: Hủy thành viên nhóm
-     		(CFS) communityRemoveFnF_X:
-  			Name: Hủy nhóm
+     		
   		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
 			Char:
 				communityDataShare_XforY.maxMember:2
-				communityDataShare_XforY.volume:1
-				communityDataShare_XforY.unitOfMeasure:GB
-				communityDataShare_XforY.cycleLength:1
-				communityDataShare_XforY.cycleUOM:day
+				communityDataShare_XforY.volume:1 GB
+				communityDataShare_XforY.cycleLength:1 day
 				msisdn:0915043333
 			(RFS) PCRF_communityDataShare_XforY :
 				Name: OCSAIR
 				Char:
 					communityDataShare_XforY.maxMember:2
-					communityDataShare_XforY.volume:8
-					communityDataShare_XforY.unitOfMeasure:GB
-					communityDataShare_XforY.cycleLength:1
-					communityDataShare_XforY.cycleUOM:day
+					communityDataShare_XforY.volume:8 GB
+					communityDataShare_XforY.cycleLength:1 day
 					msisdn:0915043333
 					PCRF_communityDataShare_XforY.offerId: 880000
 					PCRF_communityDataShare_XforY.memberType: Owner 
