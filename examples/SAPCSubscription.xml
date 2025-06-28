@@ -1,0 +1,129 @@
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/"
+	xmlns:sapc="http://schemas.ericsson.com/activation/pcrf/">
+	<soapenv:Header>
+		<cai3:SessionId>d78e0fd9ff6c436984bd4d998633487a</cai3:SessionId>
+	</soapenv:Header>
+	<soapenv:Body>
+		<cai3:Set>
+			<cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/activation/pcrf/</cai3:MOType>
+			<cai3:MOId>
+				<sapc:pcSubscriberId>123456</sapc:pcSubscriberId>
+			</cai3:MOId>
+			<cai3:MOAttributes>
+				<sapc:SetSAPCSubscription pcSubscriberId="123456">
+					<sapc:pcTrafficId pcTrafficId="123456">
+						<sapc:pcTrafficId>123456</sapc:pcTrafficId>
+					</sapc:pcTrafficId>
+					<sapc:pcSubscribedService pcSubscribedService="SubsService1" xsi:nil="true"/>
+					<sapc:pcBlacklistService pcBlacklistService="BlkService1">
+						<sapc:pcBlacklistService>BlkService1</sapc:pcBlacklistService>
+					</sapc:pcBlacklistService>
+					<sapc:pcFamilyId>Family1</sapc:pcFamilyId>
+					<sapc:pcGroup pcGroupId="Group1">SAPC Provisioning over CAI3G
+						<sapc:pcGroupId>Group1</sapc:pcGroupId>
+						<sapc:pcGroupPriority>1</sapc:pcGroupPriority>
+						<sapc:pcGroupStartDate>01-01-2012T22:00:00</sapc:pcGroupStartDate>
+						<sapc:pcGroupEndDate>01-01-2015</sapc:pcGroupEndDate>
+						<sapc:pcGroupInstancesContracted>5</sapc:pcGroupInstancesContracted>
+					</sapc:pcGroup>
+					<sapc:pcGroup pcGroupId="Group2">SAPC Provisioning over CAI3G
+						<sapc:pcGroupId>Group2</sapc:pcGroupId>
+						<sapc:pcGroupPriority>2</sapc:pcGroupPriority>
+						<sapc:pcGroupStartDate>01-01-2012T22:00:00</sapc:pcGroupStartDate>
+						<sapc:pcGroupEndDate>01-01-2015</sapc:pcGroupEndDate>
+						<sapc:pcGroupInstancesContracted>5</sapc:pcGroupInstancesContracted>
+					</sapc:pcGroup>
+					<sapc:pcGroup pcGroupId="Group3">SAPC Provisioning over CAI3G
+						<sapc:pcGroupId>Group3</sapc:pcGroupId>
+						<sapc:pcGroupPriority>3</sapc:pcGroupPriority>
+						<sapc:pcGroupStartDate>01-01-2012T22:00:00</sapc:pcGroupStartDate>
+						<sapc:pcGroupEndDate>01-01-2015</sapc:pcGroupEndDate>
+						<sapc:pcGroupInstancesContracted>5</sapc:pcGroupInstancesContracted>
+					</sapc:pcGroup>
+					<sapc:pcNotificationData>
+						<sapc:pcNotificationSMS pcNotificationSMS="+34600123456" xsi:nil="true"/>
+						<sapc:pcNotificationEmail pcNotificationEmail="subscriber1@operator.network.com">
+							<sapc:pcNotificationEmail>subscriber1@operator.network.com</sapc:pcNotificationEmail>
+						</sapc:pcNotificationEmail>
+					</sapc:pcNotificationData>
+					<sapc:pcAccumulatedData>
+            {
+              "reportingGroups": [
+                {
+                  "name": "reportingGroupName",
+                  "restartInfo": "07-09-2011T11:18:43",
+                  "subscriberGroupName": "GroupName",
+                  "subscriptionDate": "07-09-2012T10:08:53",
+                  "selected": "yes",
+                  "validityTime": 300,
+                  "instanceStarted": 0,
+                  "absoluteAccumulated": {
+                    "ulVolume": 1,
+                    "dlVolume": 2,
+                    "bidirVolume": 3,
+                    "time": 200,
+                    "instanceInUse": "10-01-2019T00:00:00,15-01-2019T00:00:00/1",
+                    "overlapInstanceUsed": [
+                      "01-01-2019T00:00:00,31-01-2019T00:00:00/1",
+                      "12-01-2019T00:00:00,13-01-2019T00:00:00/1"
+                    ],
+                    "expiryDate": {
+                      "volume": "04-03-2012T21:10:30",
+                      "time": "01-04-2009T20:12:14"
+                    },
+                    "previousExpiryDate": {
+                      "volume": "01-01-2008T12:12:12",
+                      "time": "06-08-2011T08:08:08"
+                    },
+                    "resetPeriod": {
+                      "volume": "monthly",
+                      "time": "monthly"
+                    },
+                    "counters": [
+                      {
+                        "name": "counterName",
+                        "ulVolume": 1,
+                        "dlVolume": 2,
+                        "bidirVolume": 3,
+                        "time": 200
+                      }
+                    ]
+                  }
+                }
+              ],
+              "version": "2"
+            }
+          </sapc:pcAccumulatedData>
+					<sapc:pcSubcriberQualificationData>
+						<sapc:pcQoSProfileId>111</sapc:pcQoSProfileId>
+						<sapc:pcContentFilteringProfileId>222</sapc:pcContentFilteringProfileId>
+						<sapc:pcCustomerId>KKJ876JHL98</sapc:pcCustomerId>
+						<sapc:pcRoutingProfileId>333</sapc:pcRoutingProfileId>
+						<sapc:pcSubscriberChargingProfile>
+							<sapc:pcSubscriberChargingProfileId>444</sapc:pcSubscriberChargingProfileId>
+							<sapc:pcSubscriberChargingProfileName>SubsChargingProfile1</sapc:pcSubscriberChargingProfileName>
+						</sapc:pcSubscriberChargingProfile>
+						<sapc:pcBearerQoSProfileName>
+							<sapc:pcMaxBearerQoSProfileName>QosProfileHigh</sapc:pcMaxBearerQoSProfileName>
+							<sapc:pcMinBearerQoSProfileName>QosProfileLow</sapc:pcMinBearerQoSProfileName>
+						</sapc:pcBearerQoSProfileName>
+						<sapc:pcServicestoRedirect>SubsService1,SubsService2</sapc:pcServicestoRedirect>
+					</sapc:pcServicestoRedirect>
+					<sapc:pcGeneralProfileName>SCEFixedAccessProfile1</sapc:pcGeneralProfileName>
+					<sapc:pcSpId>1</sapc:pcSpId>
+					<sapc:pcPresenceAreaName>0</sapc:pcPresenceAreaName>
+					<sapc:pcPdnGwName>KarlskronaGw1</sapc:pcPdnGwName>
+				</sapc:pcSubcriberQualificationData>
+				<sapc:pcEnableMasc>false</sapc:pcEnableMasc>
+				<sapc:pcEventTriggers pcEventTriggers="0">
+					<sapc:pcEventTriggers>1</sapc:pcEventTriggers>
+				</sapc:pcEventTriggers>
+				<sapc:pcOperatorSpecificInfo pcOperatorSpecificInfo="age:34">
+					<sapc:pcOperatorSpecificInfo>age:34</sapc:pcOperatorSpecificInfo>
+				</sapc:pcOperatorSpecificInfo>
+			</sapc:SetSAPCSubscription>
+		</cai3:MOAttributes>
+	</cai3:Set>
+</soapenv:Body>undefined</soapenv:Envelope>
