@@ -1,0 +1,89 @@
+Đăng ký
+home.flow.reg_register.00_00 = home/ep_ccbs_reg_check.groovy
+home.flow.reg_register.00_05 = home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid}
+home.flow.reg_register.00_10 = home/ep_dhsxkd_reg_check_fiber.groovy
+home.flow.reg_register.00_15 = home/ep_dhsxkd_register_fiber.groovy
+home.flow.reg_register.00_20 = home/ep_spx_dc.groovy?action=ACTIVE
+home.flow.reg_register.00_90 = home/ep_ocs_get.groovy?target=${msisdn}
+home.flow.reg_register.01_00 = home/ep_ocs_reg_check.groovy?target=${msisdn}
+home.flow.reg_register.05_00 = home/ep_ocs_create_master_sharing.groovy?da1409Value=${data_goi}&groupName=${serviceid}
+home.flow.reg_register.08_10 = home/ep_ocs_create_master_bonus.groovy
+home.flow.reg_register.08_14 = home/ep_pcrf_get.groovy?target=${msisdn}
+home.flow.reg_register.08_15 = home/ep_pcrf_create_datasharing_group.groovy
+home.flow.reg_register.08_20 = home/ep_pcrf_set_gxgy.groovy
+home.flow.reg_register.10 = home/ep_ccbs_reg_register.groovy
+home.flow.reg_register.15 = home/ep_dbvnp_reg_register.groovy
+home.flow.reg_register.16 = home/ep_dbsr_add_data_family.groovy?target=${msisdn}
+home.flow.reg_register.20 = home/ep_ppgw_community_add_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+
+Hủy tức thì (admin)
+home.flow.dereg_deregister.00_01 = home/ep_ccbs_dereg_check_deregister.groovy
+home.flow.dereg_deregister.00_02 = home/ep_ccbs_get_members.groovy
+home.flow.dereg_deregister.00_03 = home/ep_pcrf_get.groovy?targets=${msisdn}|${listmember}
+home.flow.dereg_deregister.00_04 = home/ep_ocs_get.groovy?uc=true&targets=${msisdn}|${listmember}
+home.flow.dereg_deregister.01 = home/ep_spx_dc.groovy?action=DEACTIVE
+home.flow.dereg_deregister.05 = home/ep_dhsxkd_dereg_deregister.groovy
+home.flow.dereg_deregister.10 = home/ep_dbvnp_dereg_deregister_or_expire.groovy
+home.flow.dereg_deregister.15 = home/ep_ccbs_dereg_deregister.groovy
+home.flow.dereg_deregister.16 = home/ep_dbsr_delete_data_family.groovy?target=${msisdn}|${listmember}
+home.flow.dereg_deregister.20_01 = home/ep_pcrf_delete_datasharing_group.groovy?targets=${msisdn}|${listmember}
+home.flow.dereg_deregister.20_02 = home/ep_pcrf_reset_gxgy.groovy?targets=${msisdn}|${listmember}
+home.flow.dereg_deregister.30_00 = home/ep_ocs_delete_member.groovy?targets=${listmember.replace(msisdn,'')}
+home.flow.dereg_deregister.30_01 = home/ep_ocs_delete_master_sharing.groovy?target=${msisdn}
+home.flow.dereg_deregister.30_02 = home/ep_ocs_delete_master_bonus.groovy?target=${msisdn}
+home.flow.dereg_deregister.40_00 = home/ep_ppgw_community_del_member.groovy?targets=${listmember}&community_id=${circlename}&community_type=MEMBER
+home.flow.dereg_deregister.40_01 = home/ep_ppgw_community_del_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+Hủy tức hiệu lực cuối tháng
+home.flow.dereg_expire.00_01 = home/ep_ccbs_dereg_check_deregister.groovy
+home.flow.dereg_expire.00_02 = home/ep_ccbs_get_members.groovy
+home.flow.dereg_expire.00_03 = home/ep_ocs_get.groovy?target=${msisdn}
+home.flow.dereg_expire.20 = home/ep_dhsxkd_dereg_expire.groovy
+home.flow.dereg_expire.30 = home/ep_dbvnp_dereg_deregister_or_expire.groovy?expire=true
+home.flow.dereg_expire.50 = home/ep_ccbs_dereg_expire.groovy
+home.flow.dereg_expire.60_00 = home/ep_spx_dc_script.groovy?action=mytvnet_unregister&target=${msisdn}
+home.flow.dereg_expire.60_01 = home/ep_ocs_expire_master_sharing.groovy
+home.flow.dereg_expire.60_02 = home/ep_ocs_expire_master_bonus.groovy
+home.flow.dereg_expire.70 = home/ep_ocs_expire_member_sharing.groovy?targets=${listmember}
+Job clear gói hủy hiệu lực cuối tháng
+home.flow.job_finish_expire.00_00 = home/ep_ccbs_get_members.groovy
+home.flow.job_finish_expire.00_01 = home/ep_pcrf_get.groovy?targets=${msisdn}|${listmember}
+home.flow.job_finish_expire.00_02 = home/ep_ocs_get.groovy?targets=${msisdn}|${listmember}
+home.flow.job_finish_expire.00_05 = home/ep_ocs_test_link.groovy?targets=${msisdn}|${listmember}
+home.flow.job_finish_expire.09 = home/ep_spx_dc.groovy?action=DEACTIVE&target=${msisdn}
+home.flow.job_finish_expire.10 = home/ep_dbsr_delete_data_family.groovy?target=${msisdn}|${listmember}
+home.flow.job_finish_expire.10.run_condition = all_done == faslse
+home.flow.job_finish_expire.10.mandatory = false
+home.flow.job_finish_expire.20_01 = home/ep_pcrf_delete_datasharing_group.groovy?targets=${msisdn}|${listmember}
+home.flow.job_finish_expire.20_01.run_condition = all_done == faslse
+home.flow.job_finish_expire.20_01.mandatory = false
+home.flow.job_finish_expire.20_02 = home/ep_pcrf_reset_gxgy.groovy?targets=${msisdn}|${listmember}
+home.flow.job_finish_expire.20_02.run_condition = all_done == faslse
+home.flow.job_finish_expire.20_02.mandatory = false
+home.flow.job_finish_expire.30_00 = home/ep_ocs_delete_member.groovy?targets=${listmember.replace(msisdn,'')}
+home.flow.job_finish_expire.30_00.run_condition = all_done == faslse
+home.flow.job_finish_expire.30_00.mandatory = false
+home.flow.job_finish_expire.40_00 = home/ep_ppgw_community_del_member.groovy?targets=${listmember}&community_id=${circlename}&community_type=MEMBER
+home.flow.job_finish_expire.40_00.run_condition = all_done == faslse
+home.flow.job_finish_expire.40_00.mandatory = false
+home.flow.job_finish_expire.40_01 = home/ep_ppgw_community_del_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+home.flow.job_finish_expire.40_01.run_condition = all_done == faslse
+home.flow.job_finish_expire.40_01.mandatory = false
+Nâng gói (hiệu lực tháng sau)
+
+home.flow.upd_upgrade.00_00 = home/ep_ocs_get.groovy?targets=${msisdn}
+home.flow.upd_upgrade.00_01 = home/ep_ccbs_upd_check.groovy
+home.flow.upd_upgrade.00_02 = home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid_new}
+home.flow.upd_upgrade.00_04 = home/ep_spx_dc_script.groovy?action=checkchangeservice
+#job cuoi thang xu ly
+#home.flow.upd_upgrade.00_05 = home/ep_spx_dc_script.groovy?action=changeservice
+#home.flow.upd_upgrade.00_05.mandatory = false
+home.flow.upd_upgrade.01 = home/ep_dhsxkd_upd_upgrade.groovy
+home.flow.upd_upgrade.05 = home/ep_ocs_upd_upgrade.groovy?target=${msisdn}&groupName=${serviceid_new}
+home.flow.upd_upgrade.20 = home/ep_ccbs_upd_upgrade.groovy
+home.flow.upd_upgrade.25 = home/ep_dbvnp_upd_upgrade.groovy
+home.flow.upd_upgrade.30 = home/ep_sps_dc.groovy?action=DEACTIVE&target=${msisdn}&groupName=${serviceid}
+home.flow.upd_upgrade.31 = home/ep_sps_dc.groovy?action=ACTIVE&target=${msisdn}&groupName=${serviceid_new}
+Job setup nâng gói chạy đầu tháng
+
+home.flow.job_setup_change_package.00_05 = home/ep_spx_dc_script.groovy?action=changeservice
+
