@@ -49,21 +49,19 @@
 						</sapc:pcNotificationEmail>
 					</sapc:pcNotificationData>
 					<sapc:pcLimitUsage>
-					{
+{
   "reportingGroups": [
     {
       "name": "3000",
-      "description": "BIG_DPM",
-      "sliceVolume": 30720,
-      "subscriptionDate": "27-03-2022T10:15",
-      "subscriptionType": "postpaid",
-      "useRolloverFirst": "true",
+      "description": "MAX_Speed128_64",
+      "sliceVolume": 1024,
+      "subscriptionDate": "01-08-2020T12:00",
+      "subscriptionType": "prepaid",
       "absoluteLimits": {
         "resetPeriod": {
-          "volume": "daily 10:15"
+          "volume": "monthly day 1 00:00"
         },
-        "rolloverLimit": "100%",
-        "bidirVolume": 4194304
+        "bidirVolume": 50240000
       }
     }
   ]
