@@ -1,0 +1,17 @@
+{
+  "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "MAX_Speed128_64",
+      "sliceVolume": 1024,
+      "subscriptionDate": "01-08-2020T12:00",
+      "subscriptionType": "prepaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "monthly day 1 00:00"
+        },
+        "bidirVolume": 50240000
+      }
+    }
+  ]
+}
