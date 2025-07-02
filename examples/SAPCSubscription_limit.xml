@@ -48,53 +48,29 @@
 							<sapc:pcNotificationEmail>subscriber1@operator.network.com</sapc:pcNotificationEmail>
 						</sapc:pcNotificationEmail>
 					</sapc:pcNotificationData>
+					<sapc:pcLimitUsage>
+					{
+  "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "BIG_DPM",
+      "sliceVolume": 30720,
+      "subscriptionDate": "27-03-2022T10:15",
+      "subscriptionType": "postpaid",
+      "useRolloverFirst": "true",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "daily 10:15"
+        },
+        "rolloverLimit": "100%",
+        "bidirVolume": 4194304
+      }
+    }
+  ]
+}	
+					</sapc:pcLimitUsage>
 					<sapc:pcAccumulatedData>
-            {
-              "reportingGroups": [
-                {
-                  "name": "reportingGroupName",
-                  "restartInfo": "07-09-2011T11:18:43",
-                  "subscriberGroupName": "GroupName",
-                  "subscriptionDate": "07-09-2012T10:08:53",
-                  "selected": "yes",
-                  "validityTime": 300,
-                  "instanceStarted": 0,
-                  "absoluteAccumulated": {
-                    "ulVolume": 1,
-                    "dlVolume": 2,
-                    "bidirVolume": 3,
-                    "time": 200,
-                    "instanceInUse": "10-01-2019T00:00:00,15-01-2019T00:00:00/1",
-                    "overlapInstanceUsed": [
-                      "01-01-2019T00:00:00,31-01-2019T00:00:00/1",
-                      "12-01-2019T00:00:00,13-01-2019T00:00:00/1"
-                    ],
-                    "expiryDate": {
-                      "volume": "04-03-2012T21:10:30",
-                      "time": "01-04-2009T20:12:14"
-                    },
-                    "previousExpiryDate": {
-                      "volume": "01-01-2008T12:12:12",
-                      "time": "06-08-2011T08:08:08"
-                    },
-                    "resetPeriod": {
-                      "volume": "monthly",
-                      "time": "monthly"
-                    },
-                    "counters": [
-                      {
-                        "name": "counterName",
-                        "ulVolume": 1,
-                        "dlVolume": 2,
-                        "bidirVolume": 3,
-                        "time": 200
-                      }
-                    ]
-                  }
-                }
-              ],
-              "version": "2"
-            }
+            
           </sapc:pcAccumulatedData>
 					<sapc:pcSubcriberQualificationData>
 						<sapc:pcQoSProfileId>111</sapc:pcQoSProfileId>
