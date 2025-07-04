@@ -1,183 +1,182 @@
 @startyaml
 !theme plain
-(PS) PS_BASE:
+
 	(PS) SS_CHARGE:
 		(CFS) onetimeCharge:
 			Name: Trừ tiền gói từ TKC
 			Char:
-				onetimeCharge.amount:199000
-    			onetimeCharge.unit:VND
-				msisdn:0915043333
+				onetimeCharge.amount: 199000
+				onetimeCharge.unit: VND
+				msisdn: 0915043333
 			(RFS) OCC_onetimeCharge: 
 				Name: OCC
 				Char:
-					onetimeCharge.amount:100 VND
-					msisdn:0915043333
-     				OCC_onetimeCharge.balanceType:0
-					OCC_onetimeCharge.serviceIdentifier:7525
-					OCC_onetimeCharge.subscriberType:0
+					onetimeCharge.amount: 100 VND
+					msisdn: 0915043333
+					OCC_onetimeCharge.balanceType: 0
+					OCC_onetimeCharge.serviceIdentifier: 7525
+					OCC_onetimeCharge.subscriberType: 0
 					OCC_onetimeCharge.AVP: 440
-     				Feature:DirectDebit
+					Feature: DirectDebit
 	(PS) SS_VOICE:
 		(CFS) voiceFreeOnnet1_XinY:
-			Name:Thoại nội mạng di động VNP 
+			Name: Thoại nội mạng di động VNP 
 			Char:
-				voiceFreeOnnet1_XinY.volume:2000 minute
-				voiceFreeOnnet1_XinY.cycleLength:1 month
-				msisdn:0915043333
+				voiceFreeOnnet1_XinY.volume: 2000 minute
+				voiceFreeOnnet1_XinY.cycleLength: 1 month
+				msisdn: 0915043333
 			(RFS) OCSAIR_voiceFreeOnnet1 :
-				Name:OCSAIR
+				Name: OCSAIR
 				Char:
-					voiceFreeOnnet1_XinY.volume:2000 minute
-					voiceFreeOnnet1_XinY.cycleLength:1 month
-					msisdn:0915043333
+					voiceFreeOnnet1_XinY.volume: 2000 minute
+					voiceFreeOnnet1_XinY.cycleLength: 1 month
+					msisdn: 0915043333
 					OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
 					OCSAIR_voiceFreeOnnet1_XinY.daId: 801
 					OCSAIR_voiceFreeOnnet1_XinY.daUnitType: 0
-     				Feature:UpdateOffer
+					Feature: UpdateOffer
 		(CFS) voiceFreeOnnet2_XinY:
 			Name: Thoại nội mạng cố định VNPT
 			Char:
-				voiceFreeOnnet2_XinY.volume:250 minute
-				voiceFreeOnnet2_XinY.cycleLength:1 month
-				msisdn:0915043333
+				voiceFreeOnnet2_XinY.volume: 250 minute
+				voiceFreeOnnet2_XinY.cycleLength: 1 month
+				msisdn: 0915043333
 			(RFS) OCSAIR_voiceFreeOnnet2_XinY :
 				Name: OCSAIR
 				Char:
-					voiceFreeOnnet2_XinY.volume:250 minute
-					voiceFreeOnnet2_XinY.cycleLength:1 month
+					voiceFreeOnnet2_XinY.volume: 250 minute
+					voiceFreeOnnet2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
 					OCSAIR_voiceFreeOnnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOnnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOnnet2_XinY.daUnitType: 0
-     				Feature:UpdateOffer
+					Feature: UpdateOffer
 		(CFS) voiceFreeOffnet2_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
-				voiceFreeOffnet2_XinY.volume:250 minute
-				voiceFreeOffnet2_XinY.cycleLength:1 month
-				msisdn:0915043333
+				voiceFreeOffnet2_XinY.volume: 250 minute
+				voiceFreeOffnet2_XinY.cycleLength: 1 month
+				msisdn: 0915043333
 			(RFS) OCSAIR_voiceFreeOffnet2_XinY :
 				Name: OCSAIR
 				Char:
-					voiceFreeOffnet2_XinY.volume:250 minute
-					voiceFreeOffnet2_XinY.cycleLength:1 month
-					msisdn:0915043333
+					voiceFreeOffnet2_XinY.volume: 250 minute
+					voiceFreeOffnet2_XinY.cycleLength: 1 month
+					msisdn: 0915043333
 					OCSAIR_voiceFreeOffnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet2_XinY.daUnitType: 0
-     				Feature:UpdateOffer
+					Feature: UpdateOffer
 	(PS) SS_DATA:	
 		(CFS) dataVolume_XinY_stop :
 			Name: Data cơ bản hết dung lượng dừng truy cập
 			Char:
-				dataVolume_XinY_stop.volume:8 GB
-				dataVolume_XinY_stop.cycleLength:1 day
-				msisdn:0915043333
+				dataVolume_XinY_stop.volume: 8 GB
+				dataVolume_XinY_stop.cycleLength: 1 day
+				msisdn: 0915043333
 			(RFS) PCRF_dataVolume_XinY_stop :
 				Name: PCRF
 				Char:
-					dataVolume_XinY_stop.volume:8 GB
-					dataVolume_XinY_stop.cycleLength:1 day
-					msisdn:0915043333
+					dataVolume_XinY_stop.volume: 8 GB
+					dataVolume_XinY_stop.cycleLength: 1 day
+					msisdn: 0915043333
 					PCRF_dataVolume_XinY_stop.groupId: BIG
-     				Feature:SET
+					Feature: SET
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
 				freeIP_Z.contentList: vnEdu,Zalo,FB...
-				msisdn:0915043333
+				msisdn: 0915043333
 			(RFS) PCRF_freeIP_Z:
 				Name: PCRF
 				Char:
 					freeIP_Z.contentList: vnEdu,Zalo,FB...
-					msisdn:0915043333
+					msisdn: 0915043333
 					PCRF_freeIP_Z.groupId: ?
-     				Feature:SET
+					Feature: SET
 	(PS) SS_COMMUNITY:		
 		(CFS) communityCreateFnF_X:
-  			Name: Tạo nhóm
-     			Char:
-				communityDataShare_XforY.maxMember:2
-				msisdn:0915043333
-    			(RFS) UCIP_communityCreateFnF_X :
+			Name: Tạo nhóm
+			Char:
+				communityDataShare_XforY.maxMember: 2
+				msisdn: 0915043333
+			(RFS) UCIP_communityCreateFnF_X :
 				Name: UCIP
 				Char:
-					communityDataShare_XforY.maxMember:2
-					msisdn:0915043333
+					communityDataShare_XforY.maxMember: 2
+					msisdn: 0915043333
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.memberType: Owner 
-     					UCIP_communityCreateFnF_X.actionType: ADD/SET/DELETE 
-     				Feature:UpdateFaFList
-     		(CFS) communityRemoveFnF_X:
-  			Name: Hủy nhóm
-     			Char:
-				msisdn:0915043333
-    			(RFS) UCIP_communityCreateFnF_X :
+					UCIP_communityCreateFnF_X.actionType: ADD/SET/DELETE 
+					Feature: UpdateFaFList
+		(CFS) communityRemoveFnF_X:
+			Name: Hủy nhóm
+			Char:
+				msisdn: 0915043333
+			(RFS) UCIP_communityCreateFnF_X :
 				Name: UCIP
 				Char:
-					communityDataShare_XforY.maxMember:2
-					msisdn:0915043333
+					communityDataShare_XforY.maxMember: 2
+					msisdn: 0915043333
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.actionType: DELETE 
-     				Feature:UpdateFaFList
-       		(CFS) communityAddMemberFnF_X:
-  			Name: Thêm thành viên nhóm
-     		(CFS) communityRemoveMemberFnF_X:
-  			Name: Hủy thành viên nhóm
-     		
-  		(CFS) communityDataShare_XforY :
+					Feature: UpdateFaFList
+		(CFS) communityAddMemberFnF_X:
+			Name: Thêm thành viên nhóm
+		(CFS) communityRemoveMemberFnF_X:
+			Name: Hủy thành viên nhóm
+		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
 			Char:
-				communityDataShare_XforY.maxMember:2
-				communityDataShare_XforY.volume:1 GB
-				communityDataShare_XforY.cycleLength:1 day
-				msisdn:0915043333
+				communityDataShare_XforY.maxMember: 2
+				communityDataShare_XforY.volume: 1 GB
+				communityDataShare_XforY.cycleLength: 1 day
+				msisdn: 0915043333
 			(RFS) PCRF_communityDataShare_XforY :
 				Name: OCSAIR
 				Char:
-					communityDataShare_XforY.maxMember:2
-					communityDataShare_XforY.volume:8 GB
-					communityDataShare_XforY.cycleLength:1 day
-					msisdn:0915043333
+					communityDataShare_XforY.maxMember: 2
+					communityDataShare_XforY.volume: 8 GB
+					communityDataShare_XforY.cycleLength: 1 day
+					msisdn: 0915043333
 					PCRF_communityDataShare_XforY.offerId: 880000
 					PCRF_communityDataShare_XforY.memberType: Owner 
-     				Feature:addFFList
+				Feature: addFFList
 		(CFS) communityCallFree :
 			Name: Gọi miễn phí trong nhóm
 			Char:
-				msisdn:0915043333
+				msisdn: 0915043333
 			(RFS) OCSAIR_communityCallFree :
 				Name: OCSAIR
 				Char:
-					msisdn:0915043333
+					msisdn: 0915043333
 					OCSAIR_communityCallFree.offerId: ?
 					OCSAIR_communityCallFree.daId: ?
-     				Feature:?
+				Feature: ?
 	(PS) SS_ADDON:					
 		(CFS) addonFreeContent_X :
 			Name: Miễn phí truy cập nội dung
 			Char:
-				addonFreeContent_X.contentList:MyTV,SportTV
-				msisdn:0915043333
+				addonFreeContent_X.contentList: MyTV,SportTV
+				msisdn: 0915043333
 			(RFS) PCRF_addonFreeContent_X :
 				Name: PCRF
 				Char:
-					addonFreeContent_X.contentList:MyTV,SportTV
-					msisdn:0915043333
+					addonFreeContent_X.contentList: MyTV,SportTV
+					msisdn: 0915043333
 					PCRF_addonFreeContent_X.groupId: ?
-     				Feature:?
+				Feature: ?
 		(CFS) advance5GCallOption_X :
 			Name: Quyền sử dụng thoại trên 5G
 			Char:
 				advance5GCallOption_X.voice5G: VoLTE,VoWifi
-				msisdn:0915043333
+				msisdn: 0915043333
 			(RFS) OCSAIR_advance5GCallOption_X :
 				Name: OCSAIR
 				Char:
 					advance5GCallOption_X.voice5G: VoLTE,VoWifi
-					msisdn:0915043333
+					-msisdn: 0915043333
 					OCSAIR_advance5GCallOption_X.offerId: ?
 					OCSAIR_advance5GCallOption_X.daId: ?
-     				Feature:?
+				Feature: ?
 @endyaml
