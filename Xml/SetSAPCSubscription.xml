@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<soapenv:Envelope
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header>
+		<SessionId
+			xmlns="http://schemas.ericsson.com/cai3g1.2/" soapenv:mustUnderstand="0">a065cd3bb9cb4e39a1e7ed32af43b3e1
+		</SessionId>******
+	</soapenv:Header>
+	<soapenv:Body>
+		<cai3:Set
+			xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">
+			<cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+			<cai3:MOId>
+				<sapc:pcSubscriberId
+					xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/">84837987710
+				</sapc:pcSubscriberId>
+			</cai3:MOId>
+			<cai3:MOAttributes>
+				<sapc:SetSAPCSubscription
+					xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" pcSubscriberId="84837987710">
+					<sapc:pcGroup
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" pcGroupId="PAYGO" xsi:nil="true"/>
+						<sapc:pcGroup pcGroupId="Z120_BTE">
+							<sapc:pcGroupId>Z120_BTE</sapc:pcGroupId>
+							<sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
+						</sapc:pcGroup>
+						<sapc:pcGroup pcGroupId="MI_MYTV">
+							<sapc:pcGroupId>MI_MYTV</sapc:pcGroupId>
+							<sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
+						</sapc:pcGroup>
+						<sapc:pcLimitUsage>{"reportingGroups":[{"name":"3000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":11534336}},{"name":"4000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":2097152}}]}</sapc:pcLimitUsage>
+						<sapc:pcSubcriberQualificationData>
+							<sapc:pcRoutingProfileId>15-06-2025 17:43:39.872334000</sapc:pcRoutingProfileId>
+						</sapc:pcSubcriberQualificationData>
+					</sapc:SetSAPCSubscription>
+				</cai3:MOAttributes>
+			</cai3:Set>
+		</soapenv:Body>
+	</soapenv:Envelope>
