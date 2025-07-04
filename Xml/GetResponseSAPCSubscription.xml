@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<S:Envelope
+	xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:cai3g="http://schemas.ericsson.com/cai3g1.2/">
+	<S:Header>
+		<cai3g:SessionId>******</cai3g:SessionId>
+	</S:Header>
+	<S:Body>
+		<GetResponse
+			xmlns="http://schemas.ericsson.com/cai3g1.2/">
+			<MOAttributes>
+				<ns:GetResponseSAPCSubscription
+					xmlns:ns="http://schemas.ericsson.com/ma/SAPC/" pcSubscriberId="84837987710">
+					<ns:pcSubscriberId>84837987710</ns:pcSubscriberId>
+					<ns:pcGroup pcGroupId="Z120_BTE">
+						<ns:pcGroupId>Z120_BTE</ns:pcGroupId>
+						<ns:pcGroupStartDate>15-06-2025T17:43</ns:pcGroupStartDate>
+					</ns:pcGroup>
+					<ns:pcGroup pcGroupId="MI_MYTV">
+						<ns:pcGroupId>MI_MYTV</ns:pcGroupId>
+						<ns:pcGroupStartDate>15-06-2025T17:43</ns:pcGroupStartDate>
+					</ns:pcGroup>
+					<ns:pcNotificationData>
+						<ns:pcNotificationSMS pcNotificationSMS="84837987710">
+							<ns:pcNotificationSMS>84837987710</ns:pcNotificationSMS>
+						</ns:pcNotificationSMS>
+					</ns:pcNotificationData>
+					<ns:pcLimitUsage>{"reportingGroups":[{"name":"3000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":11534336}},{"name":"4000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":2097152}}]}</ns:pcLimitUsage>
+					<ns:pcAccumulatedData>{"reportingGroups":[{"absoluteAccumulated":{"bidirVolume":0,"expiryDate":{"volume":"01-07-2025T00:24:51"},"previousExpiryDate":{"time":"15-06-2025T17:43","volume":"28-06-2025T00:20:48"},"resetPeriod":{"volume":"daily 00:??"}},"name":"3000","selected":"yes","subscriberGroupName":"","subscriptionDate":"15-06-2025T17:43","useRolloverFirst":true,"validityTime":13059},{"absoluteAccumulated":{"bidirVolume":2147586291,"expiryDate":{"volume":"01-07-2025T00:24:51"},"previousExpiryDate":{"time":"15-06-2025T17:43","volume":"28-06-2025T00:20:48"},"resetPeriod":{"volume":"daily 00:??"}},"name":"4000","selected":"yes","subscriberGroupName":"","subscriptionDate":"15-06-2025T17:43","useRolloverFirst":true,"validityTime":13059}],"version":"2.4"}</ns:pcAccumulatedData>
+					<ns:pcSubcriberQualificationData>
+						<ns:pcRoutingProfileId>15-06-2025 17:43:39.872334000</ns:pcRoutingProfileId>
+					</ns:pcSubcriberQualificationData>
+				</ns:GetResponseSAPCSubscription>
+			</MOAttributes>
+		</GetResponse>
+	</S:Body>
+</S:Envelope>
