@@ -29,7 +29,38 @@
 							<sapc:pcGroupId>MI_MYTV</sapc:pcGroupId>
 							<sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
 						</sapc:pcGroup>
-						<sapc:pcLimitUsage>{"reportingGroups":[{"name":"3000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":11534336}},{"name":"4000","description":"MI_YOLO125Z_3M","sliceVolume":10240,"subscriptionDate":"15-06-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:??"},"bidirVolume":2097152}}]}</sapc:pcLimitUsage>
+						<sapc:pcLimitUsage>
+							{
+							  "reportingGroups": [
+								{
+								  "name": "3000",
+								  "description": "MI_YOLO125Z_3M",
+								  "sliceVolume": 10240,
+								  "subscriptionDate": "15-06-2025T17:43",
+								  "subscriptionType": "postpaid",
+								  "absoluteLimits": {
+									"resetPeriod": {
+									  "volume": "daily 00:??"
+									},
+									"bidirVolume": 11534336
+								  }
+								},
+								{
+								  "name": "4000",
+								  "description": "MI_YOLO125Z_3M",
+								  "sliceVolume": 10240,
+								  "subscriptionDate": "15-06-2025T17:43",
+								  "subscriptionType": "postpaid",
+								  "absoluteLimits": {
+									"resetPeriod": {
+									  "volume": "daily 00:??"
+									},
+									"bidirVolume": 2097152
+								  }
+								}
+							  ]
+							}
+						</sapc:pcLimitUsage>
 						<sapc:pcSubcriberQualificationData>
 							<sapc:pcRoutingProfileId>15-06-2025 17:43:39.872334000</sapc:pcRoutingProfileId>
 						</sapc:pcSubcriberQualificationData>
