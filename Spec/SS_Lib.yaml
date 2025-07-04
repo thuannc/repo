@@ -1,7 +1,7 @@
 @startyaml
 !theme plain
 
-	(PS) SS_CHARGE:
+	(SSGroup) SS_CHARGE:
 		(CFS) onetimeCharge:
 			Name: Trừ tiền gói từ TKC
 			Char:
@@ -18,7 +18,7 @@
 					OCC_onetimeCharge.subscriberType: 0
 					OCC_onetimeCharge.AVP: 440
 					Feature: DirectDebit
-	(PS) SS_VOICE:
+	(SSGroup) SS_VOICE:
 		(CFS) voiceFreeOnnet1_XinY:
 			Name: Thoại nội mạng di động VNP 
 			Char:
@@ -51,6 +51,38 @@
 					OCSAIR_voiceFreeOnnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOnnet2_XinY.daUnitType: 0
 					Feature: UpdateOffer
+		(CFS) voiceFreeOnnet_XinY:
+			Name: Thoại nội mạng cố định đến các số thuê bao
+			Char:
+				voiceFreeOnnet_XinY.volume: 250 minute
+				voiceFreeOnnet_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeOnnet_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeOnnet_XinY.volume: 250 minute
+					voiceFreeOnnet_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeOnnet_XinY.offerId: 8102
+					OCSAIR_voiceFreeOnnet_XinY.daId: 802
+					OCSAIR_voiceFreeOnnet_XinY.daUnitType: 0
+					Feature: UpdateOffer
+		(CFS) voiceFreeOffnet1_XinY :
+			Name: Thoại ngoại mạng (không gồm cố định/GPhone) VNPT
+			Char:
+				voiceFreeOffnet1_XinY.volume: 250 minute
+				voiceFreeOffnet1_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeOffnet1_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeOffnet1_XinY.volume: 250 minute
+					voiceFreeOffnet1_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeOffnet1_XinY.offerId: 8102
+					OCSAIR_voiceFreeOffnet1_XinY.daId: 802
+					OCSAIR_voiceFreeOffnet1_XinY.daUnitType: 0
+					Feature: UpdateOffer					
 		(CFS) voiceFreeOffnet2_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
@@ -67,7 +99,168 @@
 					OCSAIR_voiceFreeOffnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet2_XinY.daUnitType: 0
 					Feature: UpdateOffer
-	(PS) SS_DATA:	
+		(CFS) voiceFreeOffnet3_XinY :
+			Name: Thoại ngoại mạng di động ngoài VNP
+			Char:
+				voiceFreeOffnet3_XinY.volume: 250 minute
+				voiceFreeOffnet3_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeOffnet3_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeOffnet3_XinY.volume: 250 minute
+					voiceFreeOffnet3_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeOffnet3_XinY.offerId: 8102
+					OCSAIR_voiceFreeOffnet3_XinY.daId: 802
+					OCSAIR_voiceFreeOffnet3_XinY.daUnitType: 0
+					Feature: UpdateOffer
+		(CFS) voiceFreeOffnet4_XinY :
+			Name: Thoại ngoại mạng cố định ngoài VNPT
+			Char:
+				voiceFreeOffnet4_XinY.volume: 250 minute
+				voiceFreeOffnet4_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeOffnet4_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeOffnet4_XinY.volume: 250 minute
+					voiceFreeOffnet4_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeOffnet4_XinY.offerId: 8102
+					OCSAIR_voiceFreeOffnet4_XinY.daId: 802
+					OCSAIR_voiceFreeOffnet4_XinY.daUnitType: 0
+					Feature: UpdateOffer
+		(CFS) voiceFreeNational1_XinY :
+			Name: Thoại trong nước không gồm VNPT
+			Char:
+				voiceFreeNational1_XinY.volume: 250 minute
+				voiceFreeNational1_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeNational1_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeNational1_XinY.volume: 250 minute
+					voiceFreeNational1_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeNational1_XinY.offerId: 8102
+					OCSAIR_voiceFreeNational1_XinY.daId: 802
+					OCSAIR_voiceFreeNational1_XinY.daUnitType: 0
+					Feature: UpdateOffer	
+		(CFS) voiceFreeNational2_XinY :
+			Name: Thoại trong nước (ngoại mạng trong nước + cố định VNPT)
+			Char:
+				voiceFreeNational2_XinY.volume: 250 minute
+				voiceFreeNational2_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_voiceFreeNational2_XinY :
+				Name: OCSAIR
+				Char:
+					voiceFreeNational2_XinY.volume: 250 minute
+					voiceFreeNational2_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_voiceFreeNational2_XinY.offerId: 8102
+					OCSAIR_voiceFreeNational2_XinY.daId: 802
+					OCSAIR_voiceFreeNational2_XinY.daUnitType: 0
+					Feature: UpdateOffer	
+	(SSGroup) SS_SMS:	
+		(CFS) smsOnnet1_XinY :
+			Name: Tin nhắn nội mạng VNP
+			Char:
+				smsOnnet1_XinY.volume: 250 sms
+				smsOnnet1_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsOnnet1_XinY :
+				Name: OCSAIR
+				Char:
+					smsOnnet1_XinY.volume: 250 sms
+					smsOnnet1_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsOnnet1_XinY.offerId: 8102
+					OCSAIR_smsOnnet1_XinY.daId: 802
+					OCSAIR_smsOnnet1_XinY.daUnitType: 0
+					Feature: UpdateOffer	
+		(CFS) smsOnnet2_XinY :
+			Name: Tin nhắn nội mạng VNPT
+			Char:
+				smsOnnet2_XinY.volume: 250 sms
+				smsOnnet2_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsOnnet2_XinY :
+				Name: OCSAIR
+				Char:
+					smsOnnet2_XinY.volume: 250 sms
+					smsOnnet2_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsOnnet2_XinY.offerId: 8102
+					OCSAIR_smsOnnet2_XinY.daId: 802
+					OCSAIR_smsOnnet2_XinY.daUnitType: 0
+					Feature: UpdateOffer		
+		(CFS) smsOffnet1_XinY :
+			Name: Tin nhắn ngoại mạng VNP
+			Char:
+				smsOffnet1_XinY.volume: 250 sms
+				smsOffnet1_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsOffnet1_XinY :
+				Name: OCSAIR
+				Char:
+					smsOffnet1_XinY.volume: 250 sms
+					smsOffnet1_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsOffnet1_XinY.offerId: 8102
+					OCSAIR_smsOffnet1_XinY.daId: 802
+					OCSAIR_smsOffnet1_XinY.daUnitType: 0
+					Feature: UpdateOffer	
+		(CFS) smsOffnet2_XinY :
+			Name: Tin nhắn ngoại mạng VNPT
+			Char:
+				smsOffnet2_XinY.volume: 250 sms
+				smsOffnet2_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsOffnet2_XinY :
+				Name: OCSAIR
+				Char:
+					smsOffnet2_XinY.volume: 250 sms
+					smsOffnet2_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsOffnet2_XinY.offerId: 8102
+					OCSAIR_smsOffnet2_XinY.daId: 802
+					OCSAIR_smsOffnet2_XinY.daUnitType: 0
+					Feature: UpdateOffer
+		(CFS) smsNational_XinY :
+			Name: Tin nhắn trong nước
+			Char:
+				smsNational_XinY.volume: 250 sms
+				smsNational_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsNational_XinY :
+				Name: OCSAIR
+				Char:
+					smsNational_XinY.volume: 250 sms
+					smsNational_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsNational_XinY.offerId: 8102
+					OCSAIR_smsNational_XinY.daId: 802
+					OCSAIR_smsNational_XinY.daUnitType: 0
+					Feature: UpdateOffer	
+		(CFS) smsInternational_XinY :
+			Name: Tin nhắn quốc tế
+			Char:
+				smsInternational_XinY.volume: 250 sms
+				smsInternational_XinY.cycleLength: 1 month
+				msisdn: 0915043333
+			(RFS) OCSAIR_smsInternational_XinY :
+				Name: OCSAIR
+				Char:
+					smsInternational_XinY.volume: 250 sms
+					smsInternational_XinY.cycleLength: 1 month
+					msisdn: 0915043333
+					OCSAIR_smsInternational_XinY.offerId: 8102
+					OCSAIR_smsInternational_XinY.daId: 802
+					OCSAIR_smsInternational_XinY.daUnitType: 0
+					Feature: UpdateOffer
+	(SSGroup) SS_DATA:	
 		(CFS) dataVolume_XinY_stop :
 			Name: Data cơ bản hết dung lượng dừng truy cập
 			Char:
@@ -82,6 +275,143 @@
 					msisdn: 0915043333
 					PCRF_dataVolume_XinY_stop.groupId: BIG
 					Feature: SET
+		(CFS) dataVolume_XinY_limit :
+			Name: Data cơ bản hết dung lượng hạ băng thông
+			Char:
+				dataVolume_XinY_limit.volume: 8 GB
+				dataVolume_XinY_limit.cycleLength: 1 day
+				dataVolume_XinY_limit.qosLimit: 128_64
+				msisdn: 0915043333
+			(RFS) PCRF_dataVolume_XinY_limit :
+				Name: PCRF
+				Char:
+					dataVolume_XinY_limit.volume: 8 GB
+					dataVolume_XinY_limit.cycleLength: 1 day
+					dataVolume_XinY_limit.qosLimit: 128_64
+					msisdn: 0915043333
+					PCRF_dataVolume_XinY_limit.groupId: BIG
+					Feature: SET
+					
+		(CFS) dataInZone_XinY_stop :
+			Name: Data trong vùng hết dung lượng dừng truy cập
+			Char:
+				dataVolume_XinY_stop.volume: 8 GB
+				dataVolume_XinY_stop.cycleLength: 1 day
+				msisdn: 0915043333
+			(RFS) PCRF_dataInZone_XinY_stop :
+				Name: PCRF
+				Char:
+					dataInZone_XinY_stop.volume: 8 GB
+					dataInZone_XinY_stop.cycleLength: 1 day
+					msisdn: 0915043333
+					PCRF_dataInZone_XinY_stop.groupId: BIG
+					Feature: SET
+		(CFS) dataInZone_XinY_limit :
+			Name: Data trong vùng hết dung lượng hạ băng thông
+			Char:
+				dataInZone_XinY_limit.volume: 8 GB
+				dataInZone_XinY_limit.cycleLength: 1 day
+				dataInZone_XinY_limit.qosLimit: 128_64
+				msisdn: 0915043333
+			(RFS) PCRF_dataInZone_XinY_limit :
+				Name: PCRF
+				Char:
+					dataInZone_XinY_limit.volume: 8 GB
+					dataInZone_XinY_limit.cycleLength: 1 day
+					dataInZone_XinY_limit.qosLimit: 128_64
+					msisdn: 0915043333
+					PCRF_dataInZone_XinY_limit.groupId: BIG
+					Feature: SET
+		(CFS) dataOutZone_XinY_stop :
+			Name: Data trong vùng hết dung lượng dừng truy cập
+			Char:
+				dataOutZone_XinY_stop.volume: 8 GB
+				dataOutZone_XinY_stop.cycleLength: 1 day
+				msisdn: 0915043333
+			(RFS) PCRF_dataOutZone_XinY_stop :
+				Name: PCRF
+				Char:
+					dataOutZone_XinY_stop.volume: 8 GB
+					dataOutZone_XinY_stop.cycleLength: 1 day
+					msisdn: 0915043333
+					PCRF_dataOutZone_XinY_stop.groupId: BIG
+					Feature: SET
+		(CFS) dataOutZone_XinY_limit :
+			Name: Data trong vùng hết dung lượng hạ băng thông
+			Char:
+				dataOutZone_XinY_limit.volume: 8 GB
+				dataOutZone_XinY_limit.cycleLength: 1 day
+				dataOutZone_XinY_limit.qosLimit: 128_64
+				msisdn: 0915043333
+			(RFS) PCRF_dataOutZone_XinY_limit :
+				Name: PCRF
+				Char:
+					dataOutZone_XinY_limit.volume: 8 GB
+					dataOutZone_XinY_limit.cycleLength: 1 day
+					dataOutZone_XinY_limit.qosLimit: 128_64
+					msisdn: 0915043333
+					PCRF_dataOutZone_XinY_limit.groupId: BIG
+					Feature: SET
+		(CFS) dataPeakHour_XinY_stop :
+			Name: Data trong vùng hết dung lượng dừng truy cập
+			Char:
+				dataPeakHour_XinY_stop.volume: 8 GB
+				dataPeakHour_XinY_stop.cycleLength: 1 day
+				msisdn: 0915043333
+			(RFS) PCRF_dataPeakHour_XinY_stop :
+				Name: PCRF
+				Char:
+					dataPeakHour_XinY_stop.volume: 8 GB
+					dataPeakHour_XinY_stop.cycleLength: 1 day
+					msisdn: 0915043333
+					PCRF_dataPeakHour_XinY_stop.groupId: BIG
+					Feature: SET
+		(CFS) dataPeakHour_XinY_limit :
+			Name: Data trong vùng hết dung lượng hạ băng thông
+			Char:
+				dataPeakHour_XinY_limit.volume: 8 GB
+				dataPeakHour_XinY_limit.cycleLength: 1 day
+				dataPeakHour_XinY_limit.qosLimit: 128_64
+				msisdn: 0915043333
+			(RFS) PCRF_dataPeakHour_XinY_limit :
+				Name: PCRF
+				Char:
+					dataPeakHour_XinY_limit.volume: 8 GB
+					dataPeakHour_XinY_limit.cycleLength: 1 day
+					dataPeakHour_XinY_limit.qosLimit: 128_64
+					msisdn: 0915043333
+					PCRF_dataPeakHour_XinY_limit.groupId: BIG
+					Feature: SET						
+		(CFS) dataOffPeakHour_XinY_stop :
+			Name: Data trong vùng hết dung lượng dừng truy cập
+			Char:
+				dataOffPeakHour_XinY_stop.volume: 8 GB
+				dataOffPeakHour_XinY_stop.cycleLength: 1 day
+				msisdn: 0915043333
+			(RFS) PCRF_dataOffPeakHour_XinY_stop :
+				Name: PCRF
+				Char:
+					dataOffPeakHour_XinY_stop.volume: 8 GB
+					dataOffPeakHour_XinY_stop.cycleLength: 1 day
+					msisdn: 0915043333
+					PCRF_dataOffPeakHour_XinY_stop.groupId: BIG
+					Feature: SET
+		(CFS) dataOffPeakHour_XinY_limit :
+			Name: Data trong vùng hết dung lượng hạ băng thông
+			Char:
+				dataOffPeakHour_XinY_limit.volume: 8 GB
+				dataOffPeakHour_XinY_limit.cycleLength: 1 day
+				dataOffPeakHour_XinY_limit.qosLimit: 128_64
+				msisdn: 0915043333
+			(RFS) PCRF_dataOffPeakHour_XinY_limit :
+				Name: PCRF
+				Char:
+					dataOffPeakHour_XinY_limit.volume: 8 GB
+					dataOffPeakHour_XinY_limit.cycleLength: 1 day
+					dataOffPeakHour_XinY_limit.qosLimit: 128_64
+					msisdn: 0915043333
+					PCRF_dataOffPeakHour_XinY_limit.groupId: BIG
+					Feature: SET						
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
@@ -94,7 +424,73 @@
 					msisdn: 0915043333
 					PCRF_freeIP_Z.groupId: ?
 					Feature: SET
-	(PS) SS_COMMUNITY:		
+		(CFS) dataRoamingInZone1_XinY :
+			Name: Data chuyển vùng phạm vi các nước
+			Char:
+				dataRoamingInZone1_XinY.volume: 8 GB
+				dataRoamingInZone1_XinY.cycleLength: 1 day
+				dataRoamingInZone1_XinY.nationalList: China,USA
+				msisdn: 0915043333
+			(RFS) PCRF_dataRoamingInZone1_XinY :
+				Name: PCRF
+				Char:
+					dataRoamingInZone1_XinY.volume: 8 GB
+					dataRoamingInZone1_XinY.cycleLength: 1 day
+					dataRoamingInZone1_XinY.nationalList: China,USA
+					msisdn: 0915043333
+					PCRF_dataRoamingInZone1_XinY.groupId: BIG
+					Feature: SET					
+		(CFS) dataUnlimitedOnFlight :
+			Name: Không giới hạn lưu lượng Data trên máy bay trong ngày
+			Char:
+				msisdn: 0915043333
+			(RFS) PCRF_dataUnlimitedOnFlight :
+				Name: PCRF
+				Char:
+					msisdn: 0915043333
+					PCRF_dataUnlimitedOnFlight.groupId: BIG
+					Feature: SET					
+		(CFS) dataRollover_X :
+			Name: Miễn phí X GB /ngày, cộng dồn trong tháng
+			Char:
+				dataRollover_X.volume: 8 GB
+				dataRollover_X.cycleLength: 1 month			
+				msisdn: 0915043333
+			(RFS) PCRF_dataRollover_X :
+				Name: PCRF
+				Char:
+					dataRollover_X.volume: 8 GB
+					dataRollover_X.cycleLength: 1 month					
+					msisdn: 0915043333
+					PCRF_dataRollover_X.groupId: BIG
+					Feature: SET
+	(SSGroup) SS_ADDON:					
+		(CFS) addonFreeContent_X :
+			Name: Miễn phí truy cập nội dung
+			Char:
+				addonFreeContent_X.contentList: MyTV,SportTV
+				msisdn: 0915043333
+			(RFS) PCRF_addonFreeContent_X :
+				Name: PCRF
+				Char:
+					addonFreeContent_X.contentList: MyTV,SportTV
+					msisdn: 0915043333
+					PCRF_addonFreeContent_X.groupId: ?
+				Feature: ?
+		(CFS) advance5GCallOption_X :
+			Name: Quyền sử dụng thoại trên 5G
+			Char:
+				advance5GCallOption_X.voice5G: VoLTE,VoWifi
+				msisdn: 0915043333
+			(RFS) OCSAIR_advance5GCallOption_X :
+				Name: OCSAIR
+				Char:
+					advance5GCallOption_X.voice5G: VoLTE,VoWifi
+					-msisdn: 0915043333
+					OCSAIR_advance5GCallOption_X.offerId: ?
+					OCSAIR_advance5GCallOption_X.daId: ?
+				Feature: ?					
+	(SSGroup) SS_COMMUNITY:		
 		(CFS) communityCreateFnF_X:
 			Name: Tạo nhóm
 			Char:
@@ -153,30 +549,5 @@
 					OCSAIR_communityCallFree.offerId: ?
 					OCSAIR_communityCallFree.daId: ?
 				Feature: ?
-	(PS) SS_ADDON:					
-		(CFS) addonFreeContent_X :
-			Name: Miễn phí truy cập nội dung
-			Char:
-				addonFreeContent_X.contentList: MyTV,SportTV
-				msisdn: 0915043333
-			(RFS) PCRF_addonFreeContent_X :
-				Name: PCRF
-				Char:
-					addonFreeContent_X.contentList: MyTV,SportTV
-					msisdn: 0915043333
-					PCRF_addonFreeContent_X.groupId: ?
-				Feature: ?
-		(CFS) advance5GCallOption_X :
-			Name: Quyền sử dụng thoại trên 5G
-			Char:
-				advance5GCallOption_X.voice5G: VoLTE,VoWifi
-				msisdn: 0915043333
-			(RFS) OCSAIR_advance5GCallOption_X :
-				Name: OCSAIR
-				Char:
-					advance5GCallOption_X.voice5G: VoLTE,VoWifi
-					-msisdn: 0915043333
-					OCSAIR_advance5GCallOption_X.offerId: ?
-					OCSAIR_advance5GCallOption_X.daId: ?
-				Feature: ?
+
 @endyaml
