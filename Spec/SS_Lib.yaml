@@ -291,69 +291,43 @@
 					msisdn: 0915043333
 					PCRF_dataVolume_XinY_limit.groupId: BIG
 					Feature: SET
-					
-		(CFS) dataInZone_XinY_stop :
-			Name: Data trong vùng hết dung lượng dừng truy cập
+     		(CFS) dataZone_XinY_stop :
+			Name: Data trong/ngoài vùng hết dung lượng dừng truy cập
 			Char:
-				dataVolume_XinY_stop.volume: 8 GB
-				dataVolume_XinY_stop.cycleLength: 1 day
+				dataZone_XinY_stop.volumeIZ: 8 GB
+    				dataZone_XinY_stop.volumeOZ: 2 GB
+				dataZone_XinY_stop.cycleLength: 1 day
+				dataZone_XinY_stop.qosLimit: 128_64
 				msisdn: 0915043333
-			(RFS) PCRF_dataInZone_XinY_stop :
+			(RFS) PCRF_dataZone_XinY_stop :
 				Name: PCRF
 				Char:
-					dataInZone_XinY_stop.volume: 8 GB
-					dataInZone_XinY_stop.cycleLength: 1 day
+					dataZone_XinY_stop.volumeIZ: 8 GB
+    					dataZone_XinY_stop.volumeOZ: 2 GB
+					dataZone_XinY_stop.cycleLength: 1 day
 					msisdn: 0915043333
-					PCRF_dataInZone_XinY_stop.groupId: BIG
+					PCRF_dataZone_XinY_stop.groupId: BIG
 					Feature: SET
-		(CFS) dataInZone_XinY_limit :
-			Name: Data trong vùng hết dung lượng hạ băng thông
+		(CFS) dataZone_XinY_limit :
+			Name: Data trong/ngoài vùng hết dung lượng hạ băng thông
 			Char:
-				dataInZone_XinY_limit.volume: 8 GB
-				dataInZone_XinY_limit.cycleLength: 1 day
-				dataInZone_XinY_limit.qosLimit: 128_64
+				dataZone_XinY_limit.volumeIZ: 8 GB
+    				dataZone_XinY_limit.volumeOZ: 2 GB
+				dataZone_XinY_limit.cycleLength: 1 day
+				dataZone_XinY_limit.qosLimit: 128_64
 				msisdn: 0915043333
-			(RFS) PCRF_dataInZone_XinY_limit :
+			(RFS) PCRF_dataZone_XinY_limit :
 				Name: PCRF
 				Char:
-					dataInZone_XinY_limit.volume: 8 GB
-					dataInZone_XinY_limit.cycleLength: 1 day
-					dataInZone_XinY_limit.qosLimit: 128_64
+					dataZone_XinY_limit.volumeIZ: 8 GB
+    					dataZone_XinY_limit.volumeOZ: 2 GB
+					dataZone_XinY_limit.cycleLength: 1 day
+					dataZone_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
-					PCRF_dataInZone_XinY_limit.groupId: BIG
-					Feature: SET
-		(CFS) dataOutZone_XinY_stop :
-			Name: Data trong vùng hết dung lượng dừng truy cập
-			Char:
-				dataOutZone_XinY_stop.volume: 8 GB
-				dataOutZone_XinY_stop.cycleLength: 1 day
-				msisdn: 0915043333
-			(RFS) PCRF_dataOutZone_XinY_stop :
-				Name: PCRF
-				Char:
-					dataOutZone_XinY_stop.volume: 8 GB
-					dataOutZone_XinY_stop.cycleLength: 1 day
-					msisdn: 0915043333
-					PCRF_dataOutZone_XinY_stop.groupId: BIG
-					Feature: SET
-		(CFS) dataOutZone_XinY_limit :
-			Name: Data trong vùng hết dung lượng hạ băng thông
-			Char:
-				dataOutZone_XinY_limit.volume: 8 GB
-				dataOutZone_XinY_limit.cycleLength: 1 day
-				dataOutZone_XinY_limit.qosLimit: 128_64
-				msisdn: 0915043333
-			(RFS) PCRF_dataOutZone_XinY_limit :
-				Name: PCRF
-				Char:
-					dataOutZone_XinY_limit.volume: 8 GB
-					dataOutZone_XinY_limit.cycleLength: 1 day
-					dataOutZone_XinY_limit.qosLimit: 128_64
-					msisdn: 0915043333
-					PCRF_dataOutZone_XinY_limit.groupId: BIG
+					PCRF_dataZone_XinY_limit.groupId: MaxSpeed128_64
 					Feature: SET
 		(CFS) dataPeakHour_XinY_stop :
-			Name: Data trong vùng hết dung lượng dừng truy cập
+			Name: Data giờ cao điểm hết dung lượng dừng truy cập
 			Char:
 				dataPeakHour_XinY_stop.volume: 8 GB
 				dataPeakHour_XinY_stop.cycleLength: 1 day
@@ -367,7 +341,7 @@
 					PCRF_dataPeakHour_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataPeakHour_XinY_limit :
-			Name: Data trong vùng hết dung lượng hạ băng thông
+			Name: Data giờ cao điểm hết dung lượng hạ băng thông
 			Char:
 				dataPeakHour_XinY_limit.volume: 8 GB
 				dataPeakHour_XinY_limit.cycleLength: 1 day
@@ -383,7 +357,7 @@
 					PCRF_dataPeakHour_XinY_limit.groupId: BIG
 					Feature: SET						
 		(CFS) dataOffPeakHour_XinY_stop :
-			Name: Data trong vùng hết dung lượng dừng truy cập
+			Name: Data giờ thấp điểm hết dung lượng dừng truy cập
 			Char:
 				dataOffPeakHour_XinY_stop.volume: 8 GB
 				dataOffPeakHour_XinY_stop.cycleLength: 1 day
@@ -397,7 +371,7 @@
 					PCRF_dataOffPeakHour_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataOffPeakHour_XinY_limit :
-			Name: Data trong vùng hết dung lượng hạ băng thông
+			Name: Data giờ thấp điểm hết dung lượng hạ băng thông
 			Char:
 				dataOffPeakHour_XinY_limit.volume: 8 GB
 				dataOffPeakHour_XinY_limit.cycleLength: 1 day
