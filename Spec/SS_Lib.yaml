@@ -294,33 +294,34 @@
      		(CFS) dataZone_XinY_stop :
 			Name: Data trong/ngoài vùng hết dung lượng dừng truy cập
 			Char:
-				dataZone_XinY_stop.volumeIZ: 8 GB
-    				dataZone_XinY_stop.volumeOZ: 2 GB
+				dataZone_XinY_stop.volume: 8 GB
+    				dataZone_XinY_stop.volume1: 2 GB
 				dataZone_XinY_stop.cycleLength: 1 day
-				dataZone_XinY_stop.qosLimit: 128_64
+				dataZone_XinY_stop.qosLimit: Zero
 				msisdn: 0915043333
 			(RFS) PCRF_dataZone_XinY_stop :
 				Name: PCRF
 				Char:
-					dataZone_XinY_stop.volumeIZ: 8 GB
-    					dataZone_XinY_stop.volumeOZ: 2 GB
+					dataZone_XinY_stop.volume: 8 GB
+    					dataZone_XinY_stop.volume1: 2 GB
 					dataZone_XinY_stop.cycleLength: 1 day
+     					dataZone_XinY_stop.qosLimit: Zero
 					msisdn: 0915043333
 					PCRF_dataZone_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataZone_XinY_limit :
 			Name: Data trong/ngoài vùng hết dung lượng hạ băng thông
 			Char:
-				dataZone_XinY_limit.volumeIZ: 8 GB
-    				dataZone_XinY_limit.volumeOZ: 2 GB
+				dataZone_XinY_limit.volume: 8 GB
+    				dataZone_XinY_limit.volume1: 2 GB
 				dataZone_XinY_limit.cycleLength: 1 day
 				dataZone_XinY_limit.qosLimit: 128_64
 				msisdn: 0915043333
 			(RFS) PCRF_dataZone_XinY_limit :
 				Name: PCRF
 				Char:
-					dataZone_XinY_limit.volumeIZ: 8 GB
-    					dataZone_XinY_limit.volumeOZ: 2 GB
+					dataZone_XinY_limit.volume: 8 GB
+    					dataZone_XinY_limit.volume1: 2 GB
 					dataZone_XinY_limit.cycleLength: 1 day
 					dataZone_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
