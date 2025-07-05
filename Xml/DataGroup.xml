@@ -1,0 +1,67 @@
+<!-- Hết dung lượng dừng truy cập -->
+<sapc:pcGroupId>BIG_DPM</sapc:pcGroupId>
+  <sapc:pcLimitUsage>
+  {
+  "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "BIG_DPM",
+      "sliceVolume": 30720,
+      "subscriptionDate": "27-03-2022T10:15",
+      "subscriptionType": "postpaid",
+      "useRolloverFirst": "true",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "daily 10:15"
+        },
+        "rolloverLimit": "100%",
+        "bidirVolume": 4194304
+      }
+    }
+  ]
+}  
+  </sapc:pcLimitUsage>
+
+<!-- Hết dung lượng hạ băng thông -->
+ <sapc:pcGroupId>MAX_Speed128_64</sapc:pcGroupId>
+ <sapc:pcLimitUsage>
+   {
+  "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "MAX_Speed128_64",
+      "sliceVolume": 1024,
+      "subscriptionDate": "01-08-2020T12:00",
+      "subscriptionType": "prepaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "monthly day 1 00:00"
+        },
+        "bidirVolume": 50240000
+      }
+    }
+  ]
+}
+ </sapc:pcLimitUsage>
+
+<!-- Roaming -->
+ <sapc:pcLimitUsage>
+   {
+  "reportingGroups": [
+    {
+      "name": "2000",
+      "description": "RX_Services",
+      "sliceVolume": 512,
+      "subscriptionDate": "13-11-2018T00:00",
+      "subscriptionType": "prepaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "monthly day 1 00:00"
+        },
+        "bidirVolume": 10240
+      }
+    }
+  ]
+}
+ </sapc:pcLimitUsage>                  
+
