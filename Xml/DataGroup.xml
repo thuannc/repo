@@ -44,6 +44,39 @@
 }
  </sapc:pcLimitUsage>
 
+<!-- InZone=3000, OutZone=4000 -->
+<ns:pcLimitUsage>
+  {
+    "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "MI_YOLO125Z_3M",
+      "sliceVolume": 10240,
+      "subscriptionDate": "15-06-2025T17:43",
+      "subscriptionType": "postpaid",
+      "absoluteLimits": {
+      "resetPeriod": {
+        "volume": "daily 00:??"
+      },
+      "bidirVolume": 11534336
+      }
+    },
+    {
+      "name": "4000",
+      "description": "MI_YOLO125Z_3M",
+      "sliceVolume": 10240,
+      "subscriptionDate": "15-06-2025T17:43",
+      "subscriptionType": "postpaid",
+      "absoluteLimits": {
+      "resetPeriod": {
+        "volume": "daily 00:??"
+      },
+      "bidirVolume": 2097152
+      }
+    }
+    ]
+  }
+</ns:pcLimitUsage>
 <!-- Roaming -->
  <sapc:pcLimitUsage>
    {
