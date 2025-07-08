@@ -328,23 +328,26 @@
 					PCRF_dataZone_XinY_limit.groupId: MaxSpeed128_64
 					Feature: SET
 		(CFS) dataPeakHour_XinY_stop :
-			Name: Data giờ cao điểm hết dung lượng dừng truy cập
+			Name: Data giờ cao điểm/thấp điểm hết dung lượng dừng truy cập
 			Char:
 				dataPeakHour_XinY_stop.volume: 8 GB
+    				dataPeakHour_XinY_stop.volume1: 2 GB
 				dataPeakHour_XinY_stop.cycleLength: 1 day
 				msisdn: 0915043333
 			(RFS) PCRF_dataPeakHour_XinY_stop :
 				Name: PCRF
 				Char:
 					dataPeakHour_XinY_stop.volume: 8 GB
+     					dataPeakHour_XinY_stop.volume1: 2 GB
 					dataPeakHour_XinY_stop.cycleLength: 1 day
 					msisdn: 0915043333
 					PCRF_dataPeakHour_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataPeakHour_XinY_limit :
-			Name: Data giờ cao điểm hết dung lượng hạ băng thông
+			Name: Data giờ cao điểm/thấp điểm hết dung lượng hạ băng thông
 			Char:
 				dataPeakHour_XinY_limit.volume: 8 GB
+    				dataPeakHour_XinY_limit.volume1: 2 GB
 				dataPeakHour_XinY_limit.cycleLength: 1 day
 				dataPeakHour_XinY_limit.qosLimit: 128_64
 				msisdn: 0915043333
@@ -352,41 +355,13 @@
 				Name: PCRF
 				Char:
 					dataPeakHour_XinY_limit.volume: 8 GB
+     					dataPeakHour_XinY_limit.volume1: 2 GB
 					dataPeakHour_XinY_limit.cycleLength: 1 day
 					dataPeakHour_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
 					PCRF_dataPeakHour_XinY_limit.groupId: BIG
 					Feature: SET						
-		(CFS) dataOffPeakHour_XinY_stop :
-			Name: Data giờ thấp điểm hết dung lượng dừng truy cập
-			Char:
-				dataOffPeakHour_XinY_stop.volume: 8 GB
-				dataOffPeakHour_XinY_stop.cycleLength: 1 day
-				msisdn: 0915043333
-			(RFS) PCRF_dataOffPeakHour_XinY_stop :
-				Name: PCRF
-				Char:
-					dataOffPeakHour_XinY_stop.volume: 8 GB
-					dataOffPeakHour_XinY_stop.cycleLength: 1 day
-					msisdn: 0915043333
-					PCRF_dataOffPeakHour_XinY_stop.groupId: BIG
-					Feature: SET
-		(CFS) dataOffPeakHour_XinY_limit :
-			Name: Data giờ thấp điểm hết dung lượng hạ băng thông
-			Char:
-				dataOffPeakHour_XinY_limit.volume: 8 GB
-				dataOffPeakHour_XinY_limit.cycleLength: 1 day
-				dataOffPeakHour_XinY_limit.qosLimit: 128_64
-				msisdn: 0915043333
-			(RFS) PCRF_dataOffPeakHour_XinY_limit :
-				Name: PCRF
-				Char:
-					dataOffPeakHour_XinY_limit.volume: 8 GB
-					dataOffPeakHour_XinY_limit.cycleLength: 1 day
-					dataOffPeakHour_XinY_limit.qosLimit: 128_64
-					msisdn: 0915043333
-					PCRF_dataOffPeakHour_XinY_limit.groupId: BIG
-					Feature: SET						
+							
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
