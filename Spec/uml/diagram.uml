@@ -1,7 +1,7 @@
 @startuml
 actor User
-participant "Provision" as pro
-participant "QualifyAPI" as qAPI
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
 
 participant "VNP/SR/CCBS/KMCB DB" as db
 
