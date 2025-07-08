@@ -1,0 +1,23 @@
+@startuml
+actor User
+participant "Provision" as pro
+participant "QualifyAPI" as qAPI
+
+participant "VNP/SR/CCBS/KMCB DB" as db
+
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+
+
+User -> pro: Product Order
+pro -> qAPI: checkQualification Req
+qAPI -> db: queryData
+db --> qAPI: returnData
+qAPI --> pro: checkQualification Resp
+pro --> ocs: updateOffer Req
+ocs --> pro: updateOffer Resp
+pro --> pcrf: setSAPC Req
+pcrf --> pro: setSAPC Resp
+pro --> User: Display data
+
+@enduml
