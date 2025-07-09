@@ -1,0 +1,59 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+
+participant "VNP/SR/CCBS/KMCB DB" as db
+
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+
+User -> pro: Register HVC
+pro -> db: home/ep_ccbs_reg_check.groovy
+db -> pro: Resp
+pro -> ocs: GetBalanceAndDate${msisdn}
+ocs -> pro: GetBalanceAndDate Resp
+pro -> pro: ActiveCheck
+pro -> db: home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid}
+db -> pro: Resp
+
+pro -> db: ep_spx_dc?action=ACTIVE
+db -> pro: Resp
+
+pro -> ocs: offerInformationList${msisdn} Req
+ocs -> pro: offerInformationList Resp
+
+pro -> ocs: UpdateBalanceAndDate Req
+ocs -> pro: UpdateBalanceAndDate Resp
+pro -> ocs: UpdateOffer Req
+ocs -> pro: UpdateOffer Resp
+pro -> ocs: UpdateUsageThresholdsAndCounters Req
+ocs -> pro: UpdateUsageThresholdsAndCounters Resp
+
+pro -> ocs: UpdateOffer Req
+ocs -> pro: UpdateOffer Resp
+
+pro -> ocs: UpdateBalanceAndDate Req
+ocs -> pro: UpdateBalanceAndDate Resp
+
+pro -> pcrf: sapc/querySub Req
+pcrf -> pro: sapc/querySub Resp
+
+pro -> pcrf: sapc/modifyGroups Req
+pcrf -> pro: sapc/modifyGroups Resp
+
+pro -> db: home/ep_ccbs_reg_register.groovy
+db -> pro: registerData
+
+pro -> db: home/ep_dbvnp_reg_register.groovy
+db -> pro: registerData
+
+pro -> db: home/ep_dbsr_add_data_family.groovy?target=${msisdn}
+db -> pro: Resp
+
+pro -> hss: hss/set Req
+hss -> pro: hss/set Resp
+
+pro --> User: Display data
+@enduml
