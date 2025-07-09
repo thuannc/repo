@@ -13,6 +13,11 @@ participant "SPS/SPX" as sps
 
 User -> pro: Register HVC
 pro -> db: home/ep_ccbs_reg_check.groovy
+
+db -> db: select package_config
+db -> db: execute pkg_home_bundle.check_dangky_goi_func
+db -> db: execute pkg_home_bundle.dangkygoi_func
+
 db -> pro: Resp
 pro -> ocs: home/ep_ocs_get.groovy?target=${msisdn}
 ocs -> ocs: GetBalanceAndDate
