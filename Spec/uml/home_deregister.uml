@@ -1,0 +1,62 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+
+participant "VNP/SR/CCBS/KMCB DB" as db
+
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+participant "PPGW" as ppgw
+participant "SPS/SPX" as sps
+participant "SMS" as sms
+User -> pro: DeRegister HVC
+pro -> db: home/ep_ccbs_dereg_check_deregister.groovy
+db -> pro: Resp
+pro -> ocs: home/ep_ccbs_get_members.groovy
+ocs -> pro: Resp
+pro -> pcrf: home/ep_pcrf_get.groovy?targets=${msisdn}|${listmember}
+pcrf -> pro: Resp
+pro -> ocs: home/ep_ocs_get.groovy?uc=true&targets=${msisdn}|${listmember}
+ocs -> pro: Resp
+
+pro -> sps: home/ep_spx_dc.groovy?action=DEACTIVE
+sps -> pro: Resp
+
+pro -> db: home/ep_dbvnp_dereg_deregister_or_expire.groovy
+db -> pro: Resp
+
+pro -> db: home/ep_ccbs_dereg_deregister.groovy
+db -> pro: Resp
+pro -> sms: home/ep_sms.groovy?targets=${listmember}&master=${msisdn}&case_name=dereg_deregister
+sms -> pro: Resp
+
+
+pro -> db: home/ep_dbsr_delete_data_family.groovy?targets=${msisdn}|${listmember}
+db -> pro: Resp
+
+pro -> pcrf: home/ep_pcrf_delete_datasharing_group.groovy?targets=${msisdn}|${listmember}
+pcrf -> pro: Resp
+
+pro -> pcrf: home/ep_pcrf_reset_gxgy.groovy?targets=${msisdn}|${listmember}
+pcrf -> pro: Resp
+
+pro -> ocs: home/ep_ocs_delete_member.groovy?targets=${listmember.replace(msisdn,'')}
+ocs -> pro: Resp
+
+pro -> ocs: home/ep_ocs_delete_master_sharing.groovy?target=${msisdn}
+ocs -> pro: Resp
+
+pro -> ocs: home/ep_ocs_delete_master_bonus.groovy?target=${msisdn}
+ocs -> pro: Resp
+
+pro -> ppgw: home/ep_ppgw_community_del_member.groovy?targets=${listmember.replace(msisdn,'')}&community_id=${circlename}&community_type=MEMBER
+ppgw -> pro: Resp
+pro -> ppgw: home/ep_ppgw_community_del_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+ppgw -> pro: Resp
+pro -> sps: home/ep_sps_allowance.groovy?targets=${msisdn}|${listmember}&action=delete
+sps -> pro: Resp
+
+pro --> User: Display data
+@enduml
