@@ -1,0 +1,39 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+participant "VNP/SR/CCBS/KMCB DB" as db
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+participant "PPGW" as ppgw
+participant "SPS/SPX" as sps
+participant "SMS" as sms
+
+User -> pro: leave group HVC
+pro -> db: home/ep_ccbs_grpmng_leave_check.groovy?target=${msisdn}
+db -> pro: Resp
+pro -> db: home/ep_ccbs_get_members.groovy
+db -> pro: Resp
+pro -> ocs: home/ep_ocs_get.groovy?target=${member}
+ocs ->pro: Resp
+pro -> db:home/ep_dbvnp_delete_member.groovy
+db -> pro: Resp
+pro -> db: home/ep_dbsr_delete_data_family.groovy?target=${member}
+db -> pro: Resp
+pro -> db: home/ep_ccbs_grpmng_leave.groovy?target=${member}&master=${chunhom}
+db -> pro: Resp
+pro -> ocs: home/ep_ocs_delete_member.groovy?target=${member}
+ocs -> pro: Resp
+pro -> pcrf: home/ep_pcrf_get.groovy?target=${member}
+pcrf -> pro: Resp
+pro -> pcrf: home/ep_pcrf_delete_datasharing_group.groovy?target=${member}
+pcrf -> pro: Resp
+pro -> pcrf: home/ep_pcrf_reset_gxgy.groovy?target=${member}
+pcrf -> pro: Resp
+pro -> ppgw: home/ep_ppgw_community_del_member.groovy?target=${member}&community_id=${circlename}&community_type=MEMBER
+ppgw -> pro: Resp
+pro -> sps:home/ep_sps_allowance.groovy?targets=${member}&action=delete
+sps -> pro: Resp
+pro --> User: Display data
+@enduml
