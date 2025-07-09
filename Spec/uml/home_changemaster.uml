@@ -1,0 +1,60 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+participant "VNP/SR/CCBS/KMCB DB" as db
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+participant "PPGW" as ppgw
+participant "SPS/SPX" as sps
+participant "SMS" as sms
+
+User -> pro: change master HVC
+pro -> db: home/ep_ccbs_get_members.groovy
+db -> pro: Resp
+
+pro -> db: home/ep_ccbs_change_master_check.groovy
+db -> pro: Resp
+
+pro -> ocs: home/ep_ocs_get.groovy?targets=${msisdn}|${msisdnkey}
+ocs -> pro: Resp
+
+ocs -> sps: home/ep_sps_reg_check.groovy?target=${msisdnkey}&groupName=${serviceid}
+sps -> pro: Resp
+
+pro -> ocs: home/ep_ocs_active_check.groovy?target=${msisdnkey}
+ocs -> pro: Resp
+
+pro -> ocs: home/ep_ocs_active_check.groovy?target=${msisdn}
+ocs -> pro: Resp
+
+ocs -> sps: home/ep_spx_dc_script.groovy?action=checkchangemsisdn
+sps -> pro: Resp
+
+pro -> db: home/ep_dbvnp_change_master.groovy
+db -> pro: Resp
+
+pro -> db: home/ep_ccbs_change_master.groovy
+db -> pro: Resp
+
+pro -> ocs: home/ep_ocs_copy_master_sharing.groovy
+ocs -> pro: Resp
+
+pro -> ocs: home/ep_ocs_add_member.groovy?master=${msisdnkey}&targets=${listmember.replace(msisdnkey,'')}|${msisdn}
+ocs -> pro: Resp
+
+pro -> sps: home/ep_spx_dc_script.groovy?action=changemsisdn
+sps -> pro: Resp
+
+pro -> sps: home/ep_spx_dc_script.groovy?action=mytvnet_unregister&target=${msisdn}
+sps -> pro: Resp
+
+pro -> sps: home/ep_sps_dc.groovy?action=EXPIRE&target=${msisdn}
+sps -> pro: Resp
+
+pro -> sps: home/ep_sps_dc.groovy?action=ACTIVE&target=${msisdnkey}
+sps -> pro: Resp
+
+pro --> User: Display data
+@enduml
