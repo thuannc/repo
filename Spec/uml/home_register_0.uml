@@ -1,0 +1,61 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+
+participant "VNP/SR/CCBS/KMCB DB" as db
+
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+participant "PPGW" as ppgw
+participant "SPS/SPX" as sps
+
+User -> pro: Register HVC
+pro -> db: home/ep_ccbs_reg_check.groovy
+db -> pro: Resp
+pro -> ocs: home/ep_ocs_get.groovy?target=${msisdn}
+ocs -> pro: Resp
+pro -> db: home/ep_ocs_active_check.groovy?target=${msisdn}
+db -> pro: Resp
+pro -> sps: home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid}
+sps -> pro: Resp
+
+pro -> sps: home/ep_spx_dc.groovy?action=ACTIVE
+sps -> pro: Resp
+
+pro -> ocs: home/ep_ocs_reg_check.groovy?target=${msisdn}
+ocs -> pro: Resp
+
+pro -> ocs: home/ep_ocs_create_master_sharing.groovy?da1409Value=${data_goi}&groupName=${serviceid}
+ocs -> pro: Resp
+pro -> ocs: home/ep_ocs_create_master_bonus.groovy
+ocs -> pro: Resp
+
+
+pro -> pcrf: home/ep_pcrf_get.groovy?target=${msisdn}
+pcrf -> pro: Resp
+
+pro -> pcrf: home/ep_pcrf_create_datasharing_group.groovy
+pcrf -> pro: Resp
+
+pro -> db: home/ep_ccbs_reg_register.groovy
+db -> pro: registerData
+
+pro -> db: home/ep_dbvnp_reg_register.groovy
+db -> pro: registerData
+
+pro -> db: home/ep_dbsr_add_data_family.groovy?target=${msisdn}
+db -> pro: Resp
+
+pro -> pcrf: home/ep_pcrf_set_gxgy.groovy
+pcrf -> pro: Resp
+
+pro -> ppgw: home/ep_ppgw_community_add_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+ppgw -> pro: Resp
+
+pro -> sps: home/ep_sps_allowance.groovy?targets=${msisdn}
+sps -> pro: hss/set Resp
+
+pro --> User: Display data
+@enduml
