@@ -96,5 +96,34 @@
     }
   ]
 }
- </sapc:pcLimitUsage>                  
+ </sapc:pcLimitUsage>    
+
+<!-- -->
+<sapc:SetSAPCSubscription xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" pcSubscriberId="84888636368">
+                    <sapc:pcGroup pcGroupId="RX">
+                        <sapc:pcGroupId>RX</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>07-07-2025T10:32</sapc:pcGroupStartDate>
+                        <sapc:pcGroupEndDate>31-07-2025T10:32</sapc:pcGroupEndDate>
+                    </sapc:pcGroup>
+                    <sapc:pcGroup pcGroupId="Z120_BTE">
+                        <sapc:pcGroupId>Z120_BTE</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
+                    </sapc:pcGroup>
+                    <sapc:pcLimitUsage>{"reportingGroups":[{"name":"3000","description":"Z120_BTE","sliceVolume":10240,"subscriptionDate":"07-07-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:00"},"bidirVolume":11534336}},{"name":"4000","description":"Z120_BTE","sliceVolume":10240,"subscriptionDate":"07-07-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:00"},"bidirVolume":2097152}}
+                , {
+                                    "name": "2000",
+                                    "description": "RX",
+                                    "sliceVolume": 419430,
+                                    "subscriptionDate": "07-07-2025T10:32",
+                                    "subscriptionType": "postpaid",
+                                    "useRolloverFirst": "true",
+                                    "absoluteLimits": {
+                                        "resetPeriod": {
+                                            "volume": "monthly day 1 00:00"
+                                        },
+                                        "rolloverLimit": "100%",
+                                        "bidirVolume": 2097152
+                                    }
+                                }]}</sapc:pcLimitUsage>
+                </sapc:SetSAPCSubscription>
 
