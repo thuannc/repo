@@ -3,66 +3,124 @@ actor User
 participant "Provisioning System" as pro
 participant "Qualify API" as qAPI
 
+participant "SPS/SPX" as sps
 participant "VNP/SR/CCBS/KMCB DB" as db
 
+participant "ITLayer" as itl
 participant "OCS" as ocs
 participant "PCRF" as pcrf
 participant "HSS/HLR" as hss
 participant "PPGW" as ppgw
-participant "SPS/SPX" as sps
 
 User -> pro: Register HVC
-pro -> db: home/ep_ccbs_reg_check.groovy
+alt home/ep_ccbs_reg_check.groovy
+else Lấy danh sách dispatchId
+pro -> db: dispatchId=select package_config
+else Kiểm tra đk gói
+pro -> db: execute pkg_home_bundle.check_dangky_goi_func
+else Đăng ký gói
+pro -> db: execute pkg_home_bundle.dangkygoi_func
+end
 
-db -> db: select package_config
-db -> db: execute pkg_home_bundle.check_dangky_goi_func
-db -> db: execute pkg_home_bundle.dangkygoi_func
+alt home/ep_ocs_get.groovy?target=${msisdn}
+else Lấy DA
+pro -> ocs: ocs_da$target=GetBalanceAndDate
+else Lấy UC
+pro -> ocs: ocs_uc$target=GetUsageThresholdsAndCounters
+else Lấy UT
+pro -> pro: Resp ocs_uc_$target
+end
 
-db -> pro: Resp
-pro -> ocs: home/ep_ocs_get.groovy?target=${msisdn}
-ocs -> ocs: GetBalanceAndDate
-ocs -> ocs: GetUsageThresholdsAndCounters 
-ocs -> pro: Resp
-pro -> db: home/ep_ocs_active_check.groovy?target=${msisdn}
-db -> pro: Resp
-pro -> sps: home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid}
-sps -> pro: Resp
+alt home/ep_ocs_active_check.groovy?target=${msisdn}
+else Kiểm tra trên OCS TB đang hoạt động
+pro -> pro: _testActive(ocs_da_$target)
+else Kiểm tra trong db VNP TB khoá
+pro -> db: select subadmin.thue_bao
+end
 
-pro -> sps: home/ep_spx_dc.groovy?action=ACTIVE
-sps -> pro: Resp
+alt home/ep_sps_reg_check.groovy?target=${msisdn}&groupName=${serviceid}
+else checkCondition
+pro -> sps: execute sr.check_condition_package(msisdn,product_name)
+else checkConditionSub
+pro -> itl: retrieveSubscriber(msisdn)
+pro -> db: execute sr.promo_get_info_spi(msisdn,product_name,COSname,AccAlo,ActiveDate)
+end
 
-pro -> ocs: home/ep_ocs_reg_check.groovy?target=${msisdn}
-ocs -> pro: Resp
+alt home/ep_spx_dc.groovy?action=ACTIVE
+else Thêm gói
+pro -> sps: sps/AddPackageSPS(group_name,command)
+end
 
-pro -> ocs: home/ep_ocs_create_master_sharing.groovy?da1409Value=${data_goi}&groupName=${serviceid}
-ocs -> pro: Resp
-pro -> ocs: home/ep_ocs_create_master_bonus.groovy
-ocs -> pro: Resp
+alt home/ep_ocs_reg_check.groovy?target=${msisdn}
+else Kiểm tra điều kiện thuê bao iTelecom (prefix=8487)
+pro -> pro: !$target.startWith("8487")
+else Kiểm tra điều kiện thuê bao đang sử dụng gói khác
+pro -> pro: ocs_da_$target.offerInformationList != 800012
+else Có sử dụng gói hiện tại (trùng offerId)
+    pro -> ocs: DeleteOffer(800012)
+end
+
+alt home/ep_ocs_create_master_sharing.groovy?da1409Value=${data_goi}&groupName=${serviceid}
+    pro -> ocs: UpdateBalanceAndDate (set da 1409, expiry=2037)
+    pro -> ocs: UpdateOffer (offerProviderID = msisdn,offerId=800032)
+    pro -> ocs: UpdateUsageThresholdsAndCounters (reset UC, UT = maxUT)
+    pro -> ocs: UpdateOffer (GroupName = groupName, offerId = 428601)
+else Thuê bao trả trước
+    pro -> ocs: UpdateOffer (GroupName = groupName, offerId = 428602)
+else Add offer 93000 cho chủ nhóm
+    pro -> ocs: UpdateOffer (Expiry = Ngày 1 tháng sau, offerId = 93000)
+end
+
+alt home/ep_ocs_create_master_bonus.groovy
+pro -> ocs: UpdateBalanceAndDate (dedicatedAccountValueNew, expiryDate = tháng sau, dedicatedAccountUnitType, dedicatedAccountID)
+pro -> ocs: UpdateOffer (GroupName = groupName, offerID=428601, expiryDate = 2037)
+end
+
+alt home/ep_pcrf_get.groovy?target=${msisdn}
+    pro -> pcrf: ep_pcrf_get_$target=querySub($target)
+end
+alt home/ep_pcrf_create_datasharing_group.groovy
+else Kiểm tra số máy có trong ep_pcrf_get_$target
+    pro -> pro: querySub()
+else Có
+    pro -> pcrf: modifyGroups($target,groupId,"PAYGO")
+else Không
+    pro -> pcrf: createSubWithGroups($target,groupId)
+end
 
 
-pro -> pcrf: home/ep_pcrf_get.groovy?target=${msisdn}
-pcrf -> pro: Resp
+alt home/ep_ccbs_reg_register.groovy
+    pro -> db: excecute  pkg_home_bundle.dangkygoi_func()
+end
 
-pro -> pcrf: home/ep_pcrf_create_datasharing_group.groovy
-pcrf -> pro: Resp
+alt home/ep_dbvnp_reg_register.groovy
+    pro -> db: excecute pkg_family_data_ocs.register_family_with_time_end()
+end
 
-pro -> db: home/ep_ccbs_reg_register.groovy
-db -> pro: registerData
+alt home/ep_dbsr_add_data_family.groovy?target=${msisdn}
+    pro -> db: insert sr.data_family
+end
 
-pro -> db: home/ep_dbvnp_reg_register.groovy
-db -> pro: registerData
+alt home/ep_pcrf_set_gxgy.groovy Thiết lập Profile, GPRS
+    pro -> db: select subadmin.thue_bao
+    pro -> pcrf: hss/set(profile=30)
+    pro -> pcrf: hss/set(profile=profile)
+    pro -> sps: sps/setServiceSPS("SPS_PRODUCT_HRL_GPRS")
+end
+alt home/ep_ppgw_community_add_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+    pro -> ppgw: gdvpOCS(community_id,community_type)
+end
 
-pro -> db: home/ep_dbsr_add_data_family.groovy?target=${msisdn}
-db -> pro: Resp
-
-pro -> pcrf: home/ep_pcrf_set_gxgy.groovy
-pcrf -> pro: Resp
-
-pro -> ppgw: home/ep_ppgw_community_add_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
-ppgw -> pro: Resp
-
-pro -> sps: home/ep_sps_allowance.groovy?targets=${msisdn}
-sps -> pro: hss/set Resp
+alt home/ep_sps_allowance.groovy?targets=${msisdn}
+else allowance
+    pro -> sps: sps/allowance(msisdn,action_type,service_code)
+else promo
+    pro -> sps: sps/promo(msisdn,action_type,service_code)
+else promo_delete
+    pro -> sps: sps/promo_delete(msisdn,action_type,service_code)
+else direct_edit
+    pro -> sps: sps/direct_edit(msisdn,action_type,service_code)
+end
 
 pro --> User: Display data
 @enduml
