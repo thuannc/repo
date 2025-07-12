@@ -1,0 +1,147 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "Qualify API" as qAPI
+
+participant "VNP/SR/CCBS/KMCB DB" as db
+
+participant "OCS" as ocs
+participant "PCRF" as pcrf
+participant "HSS/HLR" as hss
+participant "PPGW" as ppgw
+participant "SPS/SPX" as sps
+participant "SMS" as sms
+User -> pro: DeRegister HVC
+
+alt home/ep_ccbs_dereg_check_deregister.groovy
+else isHomeCombo
+    pro -> db: CCBS-select package_id from admin_v2.package_config
+else check
+    pro -> db: CCBS-execute admin_v2.pkg_home_bundle.check_huygoi_func()
+end
+
+alt home/ep_ccbs_get_members.groovy
+else get package list
+    pro -> db: CCBS-select admin_v2.package_data
+else get package info
+    pro -> db: CCBS-select admin_v2.package_config
+else get community_id
+    pro -> db: CCBS-select admin_v2.CALLING_circle_DETAIL
+end
+
+alt home/ep_pcrf_get.groovy?targets=${msisdn}|${listmember}
+    pro -> pcrf: ep_pcrf_get_$target=querySub($target)
+end
+
+alt home/ep_ocs_get.groovy?uc=true&targets=${msisdn}|${listmember}
+else Lấy DA
+    pro -> ocs: ocs_da$target=GetBalanceAndDate
+else Lấy UC
+    pro -> ocs: ocs_uc$target=GetUsageThresholdsAndCounters
+else Lấy UT
+    pro -> pro: Resp ocs_uc_$target
+end
+
+alt home/ep_spx_dc.groovy?action=DEACTIVE
+else Thêm gói
+    pro -> sps: sps/AddPackageSPS(group_name,command)
+end
+
+alt home/ep_dbvnp_dereg_deregister_or_expire.groovy
+else Xoá dữ liệu xấu
+    pro -> db: VNP-update subadmin.spi_subscriber_services_active
+else Xoá dịch vụ
+    pro -> db: VNP-execute PKG_FAMILY_DATA_OCS.delete_family_srv_with_timeEnd(?,?,?)
+end
+
+alt home/ep_ccbs_dereg_deregister.groovy
+else Huỷ dịch vụ, chuyển loại
+    pro -> db: CCBS-execute pkg_home_bundle.remove_package_chuyenloai_func(?,?,?,?,?, ?,?)
+end
+alt home/ep_sms.groovy?targets=${listmember}&master=${msisdn}&case_name=dereg_deregister
+else Gửi thông báo cho KH
+    pro -> sms: SmsClient.smt(msisdn,msg)
+end
+
+
+alt home/ep_dbsr_delete_data_family.groovy?targets=${msisdn}|${listmember}
+else Xoá gói dữ liệu
+    pro -> db: SR-delete sr.data_family
+end
+
+alt home/ep_pcrf_delete_datasharing_group.groovy?targets=${msisdn}|${listmember}
+else
+    pro -> pcrf: modifyGroups($target,"PAYGO",groupId)
+end
+
+alt home/ep_pcrf_reset_gxgy.groovy?targets=${msisdn}|${listmember}
+else Lấy thông tin
+    pro -> db: VNP-select subadmin.thue_bao
+else
+    pro -> hss: hss/set(IMSI=msin,profile="30")
+    pro -> hss: hss/set(IMSI=msin,profile="10"/"20")
+else Chuyển sang GPRS nếu có
+    pro -> db: VNP-select SUBADMIN.su_dung_dv
+    pro -> sps: sps/setServiceSPS(product="SPS_PRODUCT_HLR_GPRS")
+end
+
+alt home/ep_ocs_delete_member.groovy?targets=${listmember.replace(msisdn,'')}
+else Xoá offer 800012
+    pro -> ocs: DeleteOffer(msisdn,"800012")
+else Xoá offer 800032
+    pro -> ocs: DeleteOffer(msisdn,"800032")
+end
+
+alt home/ep_ocs_delete_master_sharing.groovy?target=${msisdn}
+else Xoá offer 800032
+    pro -> ocs: DeleteOffer(msisdn,"800032")
+end
+
+alt home/ep_ocs_delete_master_bonus.groovy?target=${msisdn}
+/'
+1) Add Provider Account Offer 800032	"Expirydate=2037 offerProviderID=stb chủ nhóm (chính mình)"	Cho stb chủ nhóm	UpdateOffer
+2) Xóa hạn mức của thuê bao chủ nhóm 	Set hạn mức UT 80000310 Cho stb chủ nhóm về giá trị mặc định 999999999999	Bước này được thực hiện nhằm đảm bảo chủ nhóm không bị set hạn mức do vô tình đã bị set hạn mức trước đó
+3) Reset bộ đếm UC sử dụng data dung lượng chung	Reset UC 8000031 về giá trị 0	"Cho stb chủ nhóm Cho stb thành viên"
+4) "Add offer PC 428601"	"Expirydate=2037 Set attibute GroupName của Offer là tên gói, vd HOME1=>HOME15"	Cho stb chủ nhóm
+5) Add offer PC 428602	Set Expirydate=ngày 1 tháng sau 	"Cho stb chủ nhóm - Trả trước"
+6) Set giá trị DA 1409	"Set giá trị data dùng chung, đơn vị là octet Expiredate=ngày 1 tháng sau"	Cho stb chủ nhóm
+7) Add offer 93000	Expirydate=2037	Cho stb chủ nhóm	UpdateOffer
+'/
+else context="home"
+pro -> ocs: DeleteOffer(msisdn,"800032")
+pro -> ocs: DeleteUsageThresholds(msisdn,"80000310")
+pro -> ocs: DeleteUsageThresholds(msisdn,"80000410")
+pro -> ocs: DeleteOffer(msisdn,"428601")
+pro -> ocs: DeleteOffer(msisdn,"428602")
+pro -> ocs: DeleteOffer(msisdn,"93000")
+pro -> ocs: DeleteDedicatedAccounts(msisdn,"1409")
+else context="vpgd"
+    loop offerId in 800011|800012|428201|428202|428203|91000|100149
+        pro -> ocs: DeleteOffer(msisdn,offerId)
+    end
+    pro -> ocs: DeleteDedicatedAccounts(msisdn,"1109")
+end
+
+alt home/ep_ppgw_community_del_member.groovy?targets=${listmember.replace(msisdn,'')}&community_id=${circlename}&community_type=MEMBER
+else
+    pro -> ppgw: cancel_gdvpOCS(target,community_id,community_type)
+end
+
+alt home/ep_ppgw_community_del_member.groovy?target=${msisdn}&community_id=${circlename}&community_type=OWNER
+else
+    pro -> ppgw: cancel_gdvpOCS(msisdn,community_id,community_type)
+end
+
+alt home/ep_sps_allowance.groovy?targets=${msisdn}|${listmember}&action=delete
+else allowance
+    pro -> sps: sps/allowance(msisdn,action_type,service_code)
+else promo
+    pro -> sps: sps/promo(msisdn,action_type,service_code)
+else promo_delete
+    pro -> sps: sps/promo_delete(msisdn,action_type,service_code)
+else direct_edit
+    pro -> sps: sps/direct_edit(msisdn,action_type,service_code)
+end
+
+pro --> User: Display data
+@enduml
