@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/deployment-diagram
+!theme plain
+
+actor cn_post
+actor cn_pps
+
+package "CCBS" as CCBS{
+    collections "các gói VIP#" as PKG_VIP_POST
+    control "gia hạn gói VIP#" as JOB_RENEW_POST
+}
+
+package "KMCB" as KMCB{
+    collections "các gói VIP#" as PKG_VIP_PPS
+    control "gia hạn gói VIP#" as JOB_RENEW_PPS
+}
+
+package PPGW as PPGW{
+
+}
+
+package "OCS" as OCS{
+    collections "các gói ưu đãi voice" as OFFER_VOICE
+    collections "các gói ưu đãi sms" as OFFER_SMS
+    collections "các gói ưu đãi data (share)" as OFFER_DATA
+}
+
+package "GDVP" as GDVP{
+    interface  "api(s) nhóm" as COMMUNITY
+    interface  "các gói ưu đãi topping (media)" as OFFER_TOPPING
+    interface "api(s) topping" as OFFER_TOPPING_API
+    control "gia hạn phí thành viên" as JOB_COMMUNITY_RENEW
+    control "chuyển ưu đãi topping \n (hiệu lực cuối tháng)" as JOB_TOPPING_CHANGE
+    control "hủy ưu đãi topping \n (hiệu lực cuối tháng)" as JOB_TOPPING_CANCEL
+}
+
+package "Gia hạn Data" as DATA_RENEW_JOBS{
+    control "gia hạn gói multiSim" as JOB_RENEW_MULTI_SIM
+}
+
+cn_post --> CCBS : đăng ký \n hủy
+cn_pps --> KMCB : đăng ký \n hủy
+cn_post ---> GDVP #line:blue;text:blue : quản lý tv \n quản lý topping
+cn_pps ---> GDVP #line:blue;text:blue : quản lý tv \n quản lý topping
+
+KMCB --> OCS
+CCBS --> PPGW
+PPGW --> OCS
+
+KMCB ---> GDVP
+CCBS ---> GDVP
+
+CCBS <--- DATA_RENEW_JOBS : truy vẫn CN HVC
+KMCB <--- DATA_RENEW_JOBS : truy vẫn CN HVC
+@enduml
