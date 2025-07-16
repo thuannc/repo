@@ -14,6 +14,7 @@
 				Char:
 					onetimeCharge.amount:100 VND
 					msisdn:0915043333
+     				OCC.resourceType: occ
      				OCC_onetimeCharge.balanceType:0
 					OCC_onetimeCharge.serviceIdentifier:7525
 					OCC_onetimeCharge.subscriberType:0
@@ -31,6 +32,7 @@
 					voiceFreeOnnet1_XinY.volume:2000 minute
 					voiceFreeOnnet1_XinY.cycleLength:1 month
 					msisdn:0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
 					OCSAIR_voiceFreeOnnet1_XinY.daId: 801
 					OCSAIR_voiceFreeOnnet1_XinY.daUnitType: 0
@@ -47,6 +49,7 @@
 					voiceFreeOnnet2_XinY.volume:250 minute
 					voiceFreeOnnet2_XinY.cycleLength:1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOnnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOnnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOnnet2_XinY.daUnitType: 0
@@ -63,6 +66,7 @@
 					voiceFreeOffnet2_XinY.volume:250 minute
 					voiceFreeOffnet2_XinY.cycleLength:1 month
 					msisdn:0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOffnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet2_XinY.daUnitType: 0
@@ -79,6 +83,7 @@
 					dataVolume_XinY_stop.volume:8 GB
 					dataVolume_XinY_stop.cycleLength:1 day
 					msisdn:0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataVolume_XinY_stop.groupId: BIG
      				Feature:SET
 		(CFS) freeIP_Z:
@@ -91,6 +96,7 @@
 				Char:
 					freeIP_Z.contentList: vnEdu,Zalo,FB...
 					msisdn:0915043333
+					PCRF.resourceType: pcrf
 					PCRF_freeIP_Z.groupId: ?
      				Feature:SET
 		(CFS) communityCreateFnF_X:
@@ -103,6 +109,7 @@
 				Char:
 					communityDataShare_XforY.maxMember:2
 					msisdn:0915043333
+					OCS.resourceType: ocs
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.memberType: Owner 
      					UCIP_communityCreateFnF_X.actionType: ADD/SET/DELETE 
@@ -116,6 +123,7 @@
 				Char:
 					communityDataShare_XforY.maxMember:2
 					msisdn:0915043333
+					OCS.resourceType: ocs
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.actionType: DELETE 
      				Feature:UpdateFaFList
@@ -138,6 +146,7 @@
 					communityDataShare_XforY.volume:8 GB
 					communityDataShare_XforY.cycleLength:1 day
 					msisdn:0915043333
+					PCRF.resourceType: pcrf
 					PCRF_communityDataShare_XforY.offerId: 880000
 					PCRF_communityDataShare_XforY.memberType: Owner 
      				Feature:addFFList
@@ -162,6 +171,7 @@
 				Char:
 					addonFreeContent_X.contentList:MyTV,SportTV
 					msisdn:0915043333
+					PCRF.resourceType: pcrf
 					PCRF_addonFreeContent_X.groupId: ?
      				Feature:?
 		(CFS) advance5GCallOption_X :
@@ -174,6 +184,7 @@
 				Char:
 					advance5GCallOption_X.voice5G: VoLTE,VoWifi
 					msisdn:0915043333
+					OCS.resourceType: ocs
 					OCSAIR_advance5GCallOption_X.offerId: ?
 					OCSAIR_advance5GCallOption_X.daId: ?
      				Feature:?
