@@ -13,6 +13,7 @@
 				Char:
 					onetimeCharge.amount: 100 VND
 					msisdn: 0915043333
+					OCC.resourceType: occ
 					OCC_onetimeCharge.balanceType: 0
 					OCC_onetimeCharge.serviceIdentifier: 7525
 					OCC_onetimeCharge.subscriberType: 0
@@ -31,6 +32,7 @@
 					voiceFreeOnnet1_XinY.volume: 2000 minute
 					voiceFreeOnnet1_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
 					OCSAIR_voiceFreeOnnet1_XinY.daId: 801
 					OCSAIR_voiceFreeOnnet1_XinY.daUnitType: 0
@@ -47,6 +49,7 @@
 					voiceFreeOnnet2_XinY.volume: 250 minute
 					voiceFreeOnnet2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOnnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOnnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOnnet2_XinY.daUnitType: 0
@@ -63,6 +66,7 @@
 					voiceFreeOnnet_XinY.volume: 250 minute
 					voiceFreeOnnet_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOnnet_XinY.offerId: 8102
 					OCSAIR_voiceFreeOnnet_XinY.daId: 802
 					OCSAIR_voiceFreeOnnet_XinY.daUnitType: 0
@@ -79,6 +83,7 @@
 					voiceFreeOffnet1_XinY.volume: 250 minute
 					voiceFreeOffnet1_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOffnet1_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet1_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet1_XinY.daUnitType: 0
@@ -95,6 +100,7 @@
 					voiceFreeOffnet2_XinY.volume: 250 minute
 					voiceFreeOffnet2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOffnet2_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet2_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet2_XinY.daUnitType: 0
@@ -111,6 +117,7 @@
 					voiceFreeOffnet3_XinY.volume: 250 minute
 					voiceFreeOffnet3_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOffnet3_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet3_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet3_XinY.daUnitType: 0
@@ -127,6 +134,7 @@
 					voiceFreeOffnet4_XinY.volume: 250 minute
 					voiceFreeOffnet4_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeOffnet4_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet4_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet4_XinY.daUnitType: 0
@@ -143,6 +151,7 @@
 					voiceFreeNational1_XinY.volume: 250 minute
 					voiceFreeNational1_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeNational1_XinY.offerId: 8102
 					OCSAIR_voiceFreeNational1_XinY.daId: 802
 					OCSAIR_voiceFreeNational1_XinY.daUnitType: 0
@@ -159,6 +168,7 @@
 					voiceFreeNational2_XinY.volume: 250 minute
 					voiceFreeNational2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_voiceFreeNational2_XinY.offerId: 8102
 					OCSAIR_voiceFreeNational2_XinY.daId: 802
 					OCSAIR_voiceFreeNational2_XinY.daUnitType: 0
@@ -176,6 +186,7 @@
 					smsOnnet1_XinY.volume: 250 sms
 					smsOnnet1_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsOnnet1_XinY.offerId: 8102
 					OCSAIR_smsOnnet1_XinY.daId: 802
 					OCSAIR_smsOnnet1_XinY.daUnitType: 0
@@ -192,6 +203,7 @@
 					smsOnnet2_XinY.volume: 250 sms
 					smsOnnet2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsOnnet2_XinY.offerId: 8102
 					OCSAIR_smsOnnet2_XinY.daId: 802
 					OCSAIR_smsOnnet2_XinY.daUnitType: 0
@@ -208,6 +220,7 @@
 					smsOffnet1_XinY.volume: 250 sms
 					smsOffnet1_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsOffnet1_XinY.offerId: 8102
 					OCSAIR_smsOffnet1_XinY.daId: 802
 					OCSAIR_smsOffnet1_XinY.daUnitType: 0
@@ -224,6 +237,7 @@
 					smsOffnet2_XinY.volume: 250 sms
 					smsOffnet2_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsOffnet2_XinY.offerId: 8102
 					OCSAIR_smsOffnet2_XinY.daId: 802
 					OCSAIR_smsOffnet2_XinY.daUnitType: 0
@@ -240,6 +254,7 @@
 					smsNational_XinY.volume: 250 sms
 					smsNational_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsNational_XinY.offerId: 8102
 					OCSAIR_smsNational_XinY.daId: 802
 					OCSAIR_smsNational_XinY.daUnitType: 0
@@ -256,6 +271,7 @@
 					smsInternational_XinY.volume: 250 sms
 					smsInternational_XinY.cycleLength: 1 month
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_smsInternational_XinY.offerId: 8102
 					OCSAIR_smsInternational_XinY.daId: 802
 					OCSAIR_smsInternational_XinY.daUnitType: 0
@@ -273,6 +289,7 @@
 					dataVolume_XinY_stop.volume: 8 GB
 					dataVolume_XinY_stop.cycleLength: 1 day
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataVolume_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataVolume_XinY_limit :
@@ -289,6 +306,7 @@
 					dataVolume_XinY_limit.cycleLength: 1 day
 					dataVolume_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataVolume_XinY_limit.groupId: BIG
 					Feature: SET
      		(CFS) dataZone_XinY_stop :
@@ -303,10 +321,11 @@
 				Name: PCRF
 				Char:
 					dataZone_XinY_stop.volume: 8 GB
-    					dataZone_XinY_stop.volume1: 2 GB
+    				dataZone_XinY_stop.volume1: 2 GB
 					dataZone_XinY_stop.cycleLength: 1 day
-     					dataZone_XinY_stop.qosLimit: Zero
+     				dataZone_XinY_stop.qosLimit: Zero
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataZone_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataZone_XinY_limit :
@@ -321,26 +340,28 @@
 				Name: PCRF
 				Char:
 					dataZone_XinY_limit.volume: 8 GB
-    					dataZone_XinY_limit.volume1: 2 GB
+    				dataZone_XinY_limit.volume1: 2 GB
 					dataZone_XinY_limit.cycleLength: 1 day
 					dataZone_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataZone_XinY_limit.groupId: MaxSpeed128_64
 					Feature: SET
 		(CFS) dataPeakHour_XinY_stop :
 			Name: Data giờ cao điểm/thấp điểm hết dung lượng dừng truy cập
 			Char:
 				dataPeakHour_XinY_stop.volume: 8 GB
-    				dataPeakHour_XinY_stop.volume1: 2 GB
+    			dataPeakHour_XinY_stop.volume1: 2 GB
 				dataPeakHour_XinY_stop.cycleLength: 1 day
 				msisdn: 0915043333
 			(RFS) PCRF_dataPeakHour_XinY_stop :
 				Name: PCRF
 				Char:
 					dataPeakHour_XinY_stop.volume: 8 GB
-     					dataPeakHour_XinY_stop.volume1: 2 GB
+     				dataPeakHour_XinY_stop.volume1: 2 GB
 					dataPeakHour_XinY_stop.cycleLength: 1 day
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataPeakHour_XinY_stop.groupId: BIG
 					Feature: SET
 		(CFS) dataPeakHour_XinY_limit :
@@ -355,10 +376,11 @@
 				Name: PCRF
 				Char:
 					dataPeakHour_XinY_limit.volume: 8 GB
-     					dataPeakHour_XinY_limit.volume1: 2 GB
+     				dataPeakHour_XinY_limit.volume1: 2 GB
 					dataPeakHour_XinY_limit.cycleLength: 1 day
 					dataPeakHour_XinY_limit.qosLimit: 128_64
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataPeakHour_XinY_limit.groupId: BIG
 					Feature: SET						
 							
@@ -372,6 +394,7 @@
 				Char:
 					freeIP_Z.contentList: vnEdu,Zalo,FB...
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_freeIP_Z.groupId: ?
 					Feature: SET
 		(CFS) dataRoamingInZone1_XinY :
@@ -388,6 +411,7 @@
 					dataRoamingInZone1_XinY.cycleLength: 1 day
 					dataRoamingInZone1_XinY.nationalList: China,USA
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataRoamingInZone1_XinY.groupId: BIG
 					Feature: SET					
 		(CFS) dataUnlimitedOnFlight :
@@ -398,6 +422,7 @@
 				Name: PCRF
 				Char:
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataUnlimitedOnFlight.groupId: BIG
 					Feature: SET					
 		(CFS) dataRollover_X :
@@ -412,6 +437,7 @@
 					dataRollover_X.volume: 8 GB
 					dataRollover_X.cycleLength: 1 month					
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_dataRollover_X.groupId: BIG
 					Feature: SET
 	(SSGroup) SS_ADDON:					
@@ -425,6 +451,7 @@
 				Char:
 					addonFreeContent_X.contentList: MyTV,SportTV
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_addonFreeContent_X.groupId: ?
 				Feature: ?
 		(CFS) advance5GCallOption_X :
@@ -436,7 +463,8 @@
 				Name: OCSAIR
 				Char:
 					advance5GCallOption_X.voice5G: VoLTE,VoWifi
-					-msisdn: 0915043333
+					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_advance5GCallOption_X.offerId: ?
 					OCSAIR_advance5GCallOption_X.daId: ?
 				Feature: ?					
@@ -451,6 +479,7 @@
 				Char:
 					communityDataShare_XforY.maxMember: 2
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.memberType: Owner 
 					UCIP_communityCreateFnF_X.actionType: ADD/SET/DELETE 
@@ -464,6 +493,7 @@
 				Char:
 					communityDataShare_XforY.maxMember: 2
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					UCIP_communityCreateFnF_X.communityId: 880000
 					UCIP_communityCreateFnF_X.actionType: DELETE 
 					Feature: UpdateFaFList
@@ -485,6 +515,7 @@
 					communityDataShare_XforY.volume: 8 GB
 					communityDataShare_XforY.cycleLength: 1 day
 					msisdn: 0915043333
+					PCRF.resourceType: pcrf
 					PCRF_communityDataShare_XforY.offerId: 880000
 					PCRF_communityDataShare_XforY.memberType: Owner 
 				Feature: addFFList
@@ -496,6 +527,7 @@
 				Name: OCSAIR
 				Char:
 					msisdn: 0915043333
+					OCS.resourceType: ocs
 					OCSAIR_communityCallFree.offerId: ?
 					OCSAIR_communityCallFree.daId: ?
 				Feature: ?
