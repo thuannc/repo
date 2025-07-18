@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Project Task Management Schema",
+  "type": "object",
+  "properties": {
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the project",
+            "pattern": "^[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the project",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the project",
+            "maxLength": 1000
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Project start date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Project end date"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["not_started", "in_progress", "completed", "on_hold"],
+            "description": "Current status of the project"
+          },
+          "manager": {
+            "$ref": "#/definitions/user",
+            "description": "Project manager"
+          },
+          "tasks": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/task" },
+            "description": "List of tasks in the project"
+          }
+        },
+        "required": ["id", "name", "status"],
+        "additionalProperties": false
+      }
+    },
+    "users": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/user" },
+      "description": "List of users involved in the project"
+    }
+  },
+  "definitions": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the user",
+          "pattern": "^[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the user",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "User's email address"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin", "manager", "member"],
+          "description": "User's role in the project"
+        }
+      },
+      "required": ["id", "name", "email", "role"],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the task",
+          "pattern": "^[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the task",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the task",
+          "maxLength": 1000
+        },
+        "status": {
+          "type": "string",
+          "enum": ["todo", "in_progress", "done"],
+          "description": "Current status of the task"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Task priority"
+        },
+        "dueDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Task due date"
+        },
+        "assignee": {
+          "$ref": "#/definitions/user",
+          "description": "User assigned to the task"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "Task ID of a dependent task",
+            "pattern": "^[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}$"
+          },
+          "description": "List of task IDs that this task depends on"
+        }
+      },
+      "required": ["id", "title", "status"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["projects"],
+  "additionalProperties": false
+}
