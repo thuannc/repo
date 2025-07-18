@@ -1,0 +1,113 @@
+{
+  "projects": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "key": "WEBRED",
+      "name": "Website Redesign",
+      "description": "Redesign company website to improve user experience",
+      "lead": {
+        "id": "789abc12-34de-56fg-78hi-901234567890",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "role": "manager",
+        "directoryId": "1"
+      },
+      "startDate": "2025-07-01",
+      "status": "in_progress",
+      "issues": [
+        {
+          "id": "223e4567-e89b-12d3-a456-426614174001",
+          "key": "WEBRED-1",
+          "summary": "Design Homepage",
+          "description": "Create wireframes and mockups for the homepage",
+          "issueType": "task",
+          "status": "in_progress",
+          "priority": "high",
+          "dueDate": "2025-08-15",
+          "assignee": {
+            "id": "456def34-56gh-78ij-90kl-123456789012",
+            "name": "John Smith",
+            "email": "john.smith@example.com",
+            "role": "member",
+            "directoryId": "1"
+          },
+          "workflowStep": {
+            "stepId": "1",
+            "name": "In Progress",
+            "startDate": "2025-07-10"
+          },
+          "created": "2025-07-05",
+          "updated": "2025-07-12",
+          "projectId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        {
+          "id": "323e4567-e89b-12d3-a456-426614174002",
+          "key": "WEBRED-2",
+          "summary": "Develop Backend API",
+          "description": "Implement REST API for user authentication",
+          "issueType": "task",
+          "status": "todo",
+          "priority": "medium",
+          "dueDate": "2025-09-30",
+          "assignee": {
+            "id": "456def34-56gh-78ij-90kl-123456789012",
+            "name": "John Smith",
+            "email": "john.smith@example.com",
+            "role": "member",
+            "directoryId": "1"
+          },
+          "workflowStep": {
+            "stepId": "2",
+            "name": "To Do",
+            "startDate": "2025-07-15"
+          },
+          "created": "2025-07-06",
+          "updated": "2025-07-15",
+          "projectId": "123e4567-e89b-12d3-a456-426614174000",
+          "dependencies": ["223e4567-e89b-12d3-a456-426614174001"]
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "789abc12-34de-56fg-78hi-901234567890",
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "role": "manager",
+      "directoryId": "1",
+      "active": true
+    },
+    {
+      "id": "456def34-56gh-78ij-90kl-123456789012",
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "role": "member",
+      "directoryId": "1",
+      "active": true
+    }
+  ],
+  "workflows": [
+    {
+      "id": "10000",
+      "name": "jira_default",
+      "steps": [
+        {
+          "stepId": "1",
+          "name": "In Progress",
+          "status": "in_progress"
+        },
+        {
+          "stepId": "2",
+          "name": "To Do",
+          "status": "todo"
+        },
+        {
+          "stepId": "3",
+          "name": "Done",
+          "status": "done"
+        }
+      ]
+    }
+  ]
+}
