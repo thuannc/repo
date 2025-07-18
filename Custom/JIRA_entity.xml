@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entitymodel PUBLIC "-//OFBiz//DTD Entity Model//EN" "http://www.ofbiz.org/dtds/entitymodel.dtd">
+<entitymodel>
+  <title>Entity Model for JIRA</title>
+  <description>None</description>
+  <copyright>Copyright (c) 2002-2023 Atlassian</copyright>
+  <author>The Atlassian Dev Team</author>
+  <version>1.0</version>
+
+  <!-- Project Entity -->
+  <entity entity-name="Project" table-name="project" package-name="">
+    <field name="id" type="numeric" col-name="ID"/>
+    <field name="pkey" type="short-varchar" col-name="pkey"/>
+    <field name="pname" type="long-varchar" col-name="pname"/>
+    <field name="description" type="very-long"/>
+    <field name="lead" type="long-varchar"/>
+    <prim-key field="id"/>
+    <index name="project_key_idx" unique="true">
+      <index-field name="pkey"/>
+    </index>
+  </entity>
+
+  <!-- Issue Entity -->
+  <entity entity-name="Issue" table-name="jiraissue" package-name="">
+    <field name="id" type="numeric" col-name="ID"/>
+    <field name="pkey" type="short-varchar" col-name="issuenum"/>
+    <field name="project" type="numeric"/>
+    <field name="summary" type="long-varchar"/>
+    <field name="description" type="very-long"/>
+    <field name="issuetype" type="short-varchar"/>
+    <field name="priority" type="short-varchar"/>
+    <field name="assignee" type="long-varchar"/>
+    <field name="created" type="date-time"/>
+    <field name="updated" type="date-time"/>
+    <field name="duedate" type="date-time"/>
+    <prim-key field="id"/>
+    <relation type="one" rel-entity-name="Project">
+      <key-map field-name="project" rel-field-name="id"/>
+    </relation>
+  </entity>
+
+  <!-- User Entity -->
+  <entity entity-name="User" table-name="cwd_user" package-name="">
+    <field name="id" type="numeric" col-name="id"/>
+    <field name="user_name" type="long-varchar"/>
+    <field name="lower_user_name" type="long-varchar"/>
+    <field name="email_address" type="long-varchar"/>
+    <field name="active" type="numeric"/>
+    <field name="directory_id" type="numeric"/>
+    <prim-key field="id"/>
+  </entity>
+
+  <!-- Workflow Step Entity -->
+  <entity entity-name="OSCurrentStep" table-name="OS_CURRENTSTEP" package-name="">
+    <field name="id" type="numeric" col-name="ID"/>
+    <field name="entry_id" type="numeric"/>
+    <field name="step_id" type="numeric"/>
+    <field name="start_date" type="date-time"/>
+    <field name="status" type="short-varchar"/>
+    <prim-key field="id"/>
+    <relation type="one" rel-entity-name="Issue">
+      <key-map field-name="entry_id" rel-field-name="workflow_id"/>
+    </relation>
+  </entity>
+</entitymodel>
