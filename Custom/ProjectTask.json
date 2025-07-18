@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "Website Redesign",
+      "description": "Redesign company website to improve user experience",
+      "startDate": "2025-07-01",
+      "endDate": "2025-12-31",
+      "status": "in_progress",
+      "manager": {
+        "id": "789abc12-34de-56fg-78hi-901234567890",
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "role": "manager"
+      },
+      "tasks": [
+        {
+          "id": "223e4567-e89b-12d3-a456-426614174001",
+          "title": "Design Homepage",
+          "description": "Create wireframes and mockups for the homepage",
+          "status": "in_progress",
+          "priority": "high",
+          "dueDate": "2025-08-15",
+          "assignee": {
+            "id": "456def34-56gh-78ij-90kl-123456789012",
+            "name": "John Smith",
+            "email": "john.smith@example.com",
+            "role": "member"
+          },
+          "dependencies": []
+        },
+        {
+          "id": "323e4567-e89b-12d3-a456-426614174002",
+          "title": "Develop Backend API",
+          "description": "Implement REST API for user authentication",
+          "status": "todo",
+          "priority": "medium",
+          "dueDate": "2025-09-30",
+          "assignee": {
+            "id": "456def34-56gh-78ij-90kl-123456789012",
+            "name": "John Smith",
+            "email": "john.smith@example.com",
+            "role": "member"
+          },
+          "dependencies": ["223e4567-e89b-12d3-a456-426614174001"]
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "789abc12-34de-56fg-78hi-901234567890",
+      "name": "Jane Doe",
+      "email": "jane.doe@example.com",
+      "role": "manager"
+    },
+    {
+      "id": "456def34-56gh-78ij-90kl-123456789012",
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "role": "member"
+    }
+  ]
+}
