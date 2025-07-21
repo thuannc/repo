@@ -14,7 +14,25 @@
               <sapc:pcGroupId>Z120_BTE</sapc:pcGroupId>
               <sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
             </sapc:pcGroup>            
-            <sapc:pcLimitUsage>{"reportingGroups":[{"name":"3000","description":"Z120_BTE","sliceVolume":10240,"subscriptionDate":"07-07-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"daily 00:00"},"bidirVolume":11534336}}]}</sapc:pcLimitUsage>
+            <sapc:pcLimitUsage>
+              {
+  "reportingGroups": [
+    {
+      "name": "3000",
+      "description": "Z120_BTE",
+      "sliceVolume": 10240,
+      "subscriptionDate": "07-07-2025T17:43",
+      "subscriptionType": "postpaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "daily 00:00"
+        },
+        "bidirVolume": 11534336
+      }
+    }
+  ]
+}
+            </sapc:pcLimitUsage>
           </sapc:SetSAPCSubscription>
         </cai3:MOAttributes>
       </cai3:Set>
