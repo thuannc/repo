@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header>
+        <SessionId xmlns="http://schemas.ericsson.com/cai3g1.2/" soapenv:mustUnderstand="0">9bcbd38d84a94d5b9327c0953c0c82ef</SessionId>******
+    </soapenv:Header>
+    <soapenv:Body>
+        <cai3:Set xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">
+            <cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+            <cai3:MOId>
+                <sapc:pcSubscriberId xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/">84913451145</sapc:pcSubscriberId>
+            </cai3:MOId>
+            <cai3:MOAttributes>
+                <sapc:SetSAPCSubscription xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" pcSubscriberId="84913451145">
+                    <sapc:pcGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" pcGroupId="PAYGO" xsi:nil="true"/>
+                    <sapc:pcGroup pcGroupId="WhiteNight">
+                        <sapc:pcGroupId>WhiteNight</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>06-07-2025T08:05</sapc:pcGroupStartDate>
+                    </sapc:pcGroup>
+                    <sapc:pcLimitUsage>
+{
+  "reportingGroups": [
+    {
+      "name": "8301",
+      "description": "MI_TD49",
+      "sliceVolume": 10240,
+      "subscriptionDate": "06-07-2025T08:05",
+      "subscriptionType": "prepaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "32 days"
+        },
+        "bidirVolume": 104857600
+      }
+    }
+  ]
+}
+                    </sapc:pcLimitUsage>
+                    <sapc:pcSubcriberQualificationData>
+                        <sapc:pcRoutingProfileId>06-07-2025 08:05:16.527199000</sapc:pcRoutingProfileId>
+                    </sapc:pcSubcriberQualificationData>
+                </sapc:SetSAPCSubscription>
+            </cai3:MOAttributes>
+        </cai3:Set>
+    </soapenv:Body>
+</soapenv:Envelope>
