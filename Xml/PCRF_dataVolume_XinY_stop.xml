@@ -1,0 +1,43 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/" xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" >
+    <soapenv:Header>
+        <cai3:SessionId>359a4aba18b04aa18cc4b889a2c4681b</cai3:SessionId>
+    </soapenv:Header>
+    <soapenv:Body>
+        <cai3:Set>
+            <cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+            <cai3:MOId>
+                <sapc:pcSubscriberId>84888636368</sapc:pcSubscriberId>
+            </cai3:MOId>
+            <cai3:MOAttributes>
+                <sapc:SetSAPCSubscription pcSubscriberId="84888636368">
+                    <sapc:pcGroup pcGroupId="BIG">
+                        <sapc:pcGroupId>BIG</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>07-07-2025T10:32</sapc:pcGroupStartDate>
+                        <sapc:pcGroupEndDate>07-07-2025T10:32</sapc:pcGroupEndDate>
+                    </sapc:pcGroup>
+                    <sapc:pcLimitUsage xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/">
+                        {
+                            "reportingGroups": [
+                                {
+                                    "name": "3000",
+                                    "description": "BIG",
+                                    "sliceVolume": 419430,
+                                    "subscriptionDate": "07-07-2025T10:32",
+                                    "subscriptionType": "postpaid",
+                                    "useRolloverFirst": "true",
+                                    "absoluteLimits": {
+                                        "resetPeriod": {
+                                            "volume": "daily 00:00"
+                                        },
+                                        "rolloverLimit": "100%",
+                                        "bidirVolume": 2097152
+                                    }
+                                }
+                            ]
+                        }  
+                                </sapc:pcLimitUsage>
+                </sapc:SetSAPCSubscription>
+            </cai3:MOAttributes>
+        </cai3:Set>
+    </soapenv:Body>
+</soapenv:Envelope>
