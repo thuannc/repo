@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/" xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" >
+    <soapenv:Header>
+        <cai3:SessionId>10035b2f8a1749df9ff494e50483de45</cai3:SessionId>
+    </soapenv:Header>
+    <soapenv:Body>
+        <cai3:Set>
+            <cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+            <cai3:MOId>
+                <sapc:pcSubscriberId>84888636368</sapc:pcSubscriberId>
+            </cai3:MOId>
+            <cai3:MOAttributes>
+                <sapc:SetSAPCSubscription pcSubscriberId="84888636368">
+                    <sapc:pcGroup pcGroupId="RX">
+                        <sapc:pcGroupId>RX</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>07-07-2025T10:32</sapc:pcGroupStartDate>
+                        <sapc:pcGroupEndDate>07-07-2025T10:32</sapc:pcGroupEndDate>
+                    </sapc:pcGroup>
+                    <sapc:pcLimitUsage xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/">{"reportingGroups":[{"name":"2000","description":"RX","sliceVolume":10240,"subscriptionDate":"07-07-2025T17:43","subscriptionType":"postpaid","absoluteLimits":{"resetPeriod":{"volume":"30 days"},"bidirVolume":11534336}}]}</sapc:pcLimitUsage>
+                </sapc:SetSAPCSubscription>
+            </cai3:MOAttributes>
+        </cai3:Set>
+    </soapenv:Body>
+</soapenv:Envelope>
