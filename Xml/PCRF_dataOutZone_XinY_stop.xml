@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header>
+        <SessionId xmlns="http://schemas.ericsson.com/cai3g1.2/" soapenv:mustUnderstand="0">93f144a64f6047f3818849921d000f2b</SessionId>******
+    </soapenv:Header>
+    <soapenv:Body>
+        <cai3:Set xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/">
+            <cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+            <cai3:MOId>
+                <sapc:pcSubscriberId xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/">84888636368</sapc:pcSubscriberId>
+            </cai3:MOId>
+            <cai3:MOAttributes>
+                <sapc:SetSAPCSubscription xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" pcSubscriberId="84888636368">
+                    <sapc:pcGroup pcGroupId="Z120_BTE">
+                        <sapc:pcGroupId>Z120_BTE</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>15-06-2025T17:43</sapc:pcGroupStartDate>
+                    </sapc:pcGroup>
+                    <sapc:pcLimitUsage>
+                      {
+  "reportingGroups": [
+    {
+      "name": "4000",
+      "description": "Z120_BTE",
+      "sliceVolume": 10240,
+      "subscriptionDate": "07-07-2025T17:43",
+      "subscriptionType": "postpaid",
+      "absoluteLimits": {
+        "resetPeriod": {
+          "volume": "daily 00:00"
+        },
+        "bidirVolume": 2097152
+      }
+    }
+  ]
+}
+                    </sapc:pcLimitUsage>
+                </sapc:SetSAPCSubscription>
+            </cai3:MOAttributes>
+        </cai3:Set>
+    </soapenv:Body>
+</soapenv:Envelope>
