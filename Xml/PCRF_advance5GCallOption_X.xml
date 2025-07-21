@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cai3="http://schemas.ericsson.com/cai3g1.2/" xmlns:sapc="http://schemas.ericsson.com/ma/SAPC/" >
+    <soapenv:Header>
+        <cai3:SessionId>fc2c8a3e98e1431da5b52383de882550</cai3:SessionId>
+    </soapenv:Header>
+    <soapenv:Body>
+        <cai3:Set>
+            <cai3:MOType>SAPCSubscription@http://schemas.ericsson.com/ma/SAPC/</cai3:MOType>
+            <cai3:MOId>
+                <sapc:pcSubscriberId >84888636368</sapc:pcSubscriberId>
+            </cai3:MOId>
+            <cai3:MOAttributes>
+                <sapc:SetSAPCSubscription pcSubscriberId="84888636368">
+                    <sapc:pcGroup pcGroupId="Volte">
+                        <sapc:pcGroupId>Volte</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>07-07-2025T10:32</sapc:pcGroupStartDate>
+                        <sapc:pcGroupEndDate>07-07-2025T10:32</sapc:pcGroupEndDate>
+                    </sapc:pcGroup>
+                    <sapc:pcGroup pcGroupId="Volwifi">
+                        <sapc:pcGroupId>Volwifi</sapc:pcGroupId>
+                        <sapc:pcGroupStartDate>07-07-2025T10:32</sapc:pcGroupStartDate>
+                        <sapc:pcGroupEndDate>07-07-2025T10:32</sapc:pcGroupEndDate>
+                    </sapc:pcGroup>
+                </sapc:SetSAPCSubscription>
+            </cai3:MOAttributes>
+        </cai3:Set>
+    </soapenv:Body>
+</soapenv:Envelope>
