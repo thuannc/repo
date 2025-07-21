@@ -519,6 +519,16 @@
 					PCRF_communityDataShare_XforY.offerId: 880000
 					PCRF_communityDataShare_XforY.memberType: Owner 
 				Feature: addFFList
+				
+			(RFS) PCRF_communityDataShare_XforY :
+				Name: PCRF
+				Char:
+					PCRF_communityDataShare_XforY.cycleLength: 1 month
+					msisdn: 0915043333
+					PCRF.resourceType: pcrf
+					PCRF_communityDataShare_XforY.groupId: HVC_OCS
+					PCRF_communityDataShare_XforY.pcSubscriberChangingSystemName: OCSE
+					Feature: SET
 		(CFS) communityCallFree :
 			Name: Gọi miễn phí trong nhóm
 			Char:
