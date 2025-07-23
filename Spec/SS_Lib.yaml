@@ -36,7 +36,7 @@
 					OCSAIR_voiceFreeOnnet1_XinY.offerId: 8101
 					OCSAIR_voiceFreeOnnet1_XinY.daId: 801
 					OCSAIR_voiceFreeOnnet1_XinY.daUnitType: 0
-					Feature: UpdateOffer
+					Feature: [AIRU_UpdateOffer_Offer-register,AIRU_UpdateOffer_Offer-deregister]
 		(CFS) voiceFreeOnnet2_XinY:
 			Name: Thoại nội mạng cố định VNPT
 			Char:
@@ -291,6 +291,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataVolume_XinY_stop.groupId: BIG
+					PCRF_dataVolume_XinY_stop.usageGroupId: 3000
 					Feature: SET
 		(CFS) dataVolume_XinY_limit :
 			Name: Data cơ bản hết dung lượng hạ băng thông
@@ -308,12 +309,13 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataVolume_XinY_limit.groupId: BIG
+					PCRF_dataVolume_XinY_limit.usageGroupId: 3000
 					Feature: SET
      		(CFS) dataZone_XinY_stop :
 			Name: Data trong/ngoài vùng hết dung lượng dừng truy cập
 			Char:
 				dataZone_XinY_stop.volume: 8 GB
-    				dataZone_XinY_stop.volume1: 2 GB
+    			dataZone_XinY_stop.volume1: 2 GB
 				dataZone_XinY_stop.cycleLength: 1 day
 				dataZone_XinY_stop.qosLimit: Zero
 				msisdn: 0915043333
@@ -323,16 +325,17 @@
 					dataZone_XinY_stop.volume: 8 GB
     				dataZone_XinY_stop.volume1: 2 GB
 					dataZone_XinY_stop.cycleLength: 1 day
-     				dataZone_XinY_stop.qosLimit: Zero
+					dataZone_XinY_stop.qosLimit: Zero
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataZone_XinY_stop.groupId: BIG
+					PCRF_dataZone_XinY_stop.usageGroupId: 3000,4000
 					Feature: SET
 		(CFS) dataZone_XinY_limit :
 			Name: Data trong/ngoài vùng hết dung lượng hạ băng thông
 			Char:
 				dataZone_XinY_limit.volume: 8 GB
-    				dataZone_XinY_limit.volume1: 2 GB
+    			dataZone_XinY_limit.volume1: 2 GB
 				dataZone_XinY_limit.cycleLength: 1 day
 				dataZone_XinY_limit.qosLimit: 128_64
 				msisdn: 0915043333
@@ -346,6 +349,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataZone_XinY_limit.groupId: MaxSpeed128_64
+					PCRF_dataZone_XinY_limit.usageGroupId: 3000,4000
 					Feature: SET
 		(CFS) dataPeakHour_XinY_stop :
 			Name: Data giờ cao điểm/thấp điểm hết dung lượng dừng truy cập
@@ -363,6 +367,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataPeakHour_XinY_stop.groupId: BIG
+					PCRF_dataPeakHour_XinY_stop.usageGroupId: 3000
 					Feature: SET
 		(CFS) dataPeakHour_XinY_limit :
 			Name: Data giờ cao điểm/thấp điểm hết dung lượng hạ băng thông
@@ -382,6 +387,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataPeakHour_XinY_limit.groupId: BIG
+					PCRF_dataPeakHour_XinY_limit.usageGroupId: 3000
 					Feature: SET						
 							
 		(CFS) freeIP_Z:
@@ -396,6 +402,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_freeIP_Z.groupId: ?
+					PCRF_freeIP_Z.usageGroupId: 3000
 					Feature: SET
 		(CFS) dataRoamingInZone1_XinY :
 			Name: Data chuyển vùng phạm vi các nước
@@ -413,6 +420,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataRoamingInZone1_XinY.groupId: BIG
+					PCRF_dataRoamingInZone1_XinY.usageGroupId: 3000
 					Feature: SET					
 		(CFS) dataUnlimitedOnFlight :
 			Name: Không giới hạn lưu lượng Data trên máy bay trong ngày
@@ -424,6 +432,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataUnlimitedOnFlight.groupId: BIG
+					PCRF_dataUnlimitedOnFlight.usageGroupId: 3000
 					Feature: SET					
 		(CFS) dataRollover_X :
 			Name: Miễn phí X GB /ngày, cộng dồn trong tháng
@@ -439,6 +448,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataRollover_X.groupId: BIG
+					PCRF_dataRollover_X.usageGroupId: 3000
 					Feature: SET
 	(SSGroup) SS_ADDON:					
 		(CFS) addonFreeContent_X :
@@ -453,6 +463,7 @@
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_addonFreeContent_X.groupId: ?
+					PCRF_addonFreeContent_X.usageGroupId: 3000
 				Feature: ?
 		(CFS) advance5GCallOption_X :
 			Name: Quyền sử dụng thoại trên 5G
@@ -508,17 +519,24 @@
 				communityDataShare_XforY.volume: 1 GB
 				communityDataShare_XforY.cycleLength: 1 day
 				msisdn: 0915043333
-			(RFS) PCRF_communityDataShare_XforY :
+			(RFS) OCS_communityDataShare_XforY :
 				Name: OCSAIR
 				Char:
-					communityDataShare_XforY.maxMember: 2
 					communityDataShare_XforY.volume: 8 GB
 					communityDataShare_XforY.cycleLength: 1 day
 					msisdn: 0915043333
-					PCRF.resourceType: pcrf
-					PCRF_communityDataShare_XforY.offerId: 880000
-					PCRF_communityDataShare_XforY.memberType: Owner 
-				Feature: addFFList
+					OCS.resourceType: ocs
+					OCS_communityDataShare_XforY.serviceId:VIP199
+					OCS_communityDataShare_XforY.offerId: 880000
+					OCS_communityDataShare_XforY.ecmsOfferId: 880002
+					OCS_communityDataShare_XforY.shareOfferId: 880001
+					OCS_communityDataShare_XforY.threadholdOfferId: 428681
+					OCS_communityDataShare_XforY.usageThreadholdId: 42868101
+					OCS_communityDataShare_XforY.daId: 8800
+					OCS_communityDataShare_XforY.daUnitType: 6			
+					OCS_communityDataShare_XforY.cycle:Day
+					OCS_communityDataShare_XforY.memberType: Owner 
+				Feature: AIRU_UpdateOffer_Offer-register
 				
 			(RFS) PCRF_communityDataShare_XforY :
 				Name: PCRF
