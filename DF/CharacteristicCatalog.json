@@ -23,6 +23,6 @@
             "@baseType": "CharacteristicSpecification"
         }
     ],
-    "@type": "CharacteristicCategory",
-    "@baseType": "Category"
+    "@type": "CharacteristicCatalog",
+    "@baseType": "Catalog"
 }
