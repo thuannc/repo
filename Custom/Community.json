@@ -1,3 +1,28 @@
 {
-  
+      "id": "83000001",
+      "communityGroup":"HVC",
+      "serviceId":"VIP199",
+      "name": "Website Redesign",
+      "description": "Redesign company website to improve user experience",
+      "status":"ACTIVE",
+      "createdDate":"",
+      "modifiedDate":""
+      "@type":"Community",
+      "@baseType":"Community",
+      "owner":"84915043333",
+      "member" [
+          {
+            "msisdn":"0915043388",
+            "status":"ACTIVE",
+            "createdDate":"",
+            "modifiedDate":""
+          },
+          {
+            "msisdn":"0915043399",
+            "status":"ACTIVE",
+            "createdDate":"",
+            "modifiedDate":""
+          }
+        
+      ]
 }
