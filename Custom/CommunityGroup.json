@@ -1,6 +1,7 @@
 {
   "id":"1",
   "name":"HVC",
+  "code":"HVC",
   "description":"",
   "startIndex":83000000,
   "endIndex":83999999,
