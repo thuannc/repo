@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "status": "ACTIVE",
+  "msisdn": "0915043399",
+  "serviceId": "VIP199",
+  "offerId": 8101,
+  "productId": 71,
+  "createdDate": "2025-07-23T07:50:03.025Z",
+  "modifiedDate": "2025-07-23T07:50:03.025Z",
+  "@type": "OfferInstance"
+}
