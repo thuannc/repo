@@ -1,0 +1,35 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "OCS" as ocs
+participant "SOI" as soi
+participant "PCRF" as pcrf
+
+User -> pro: Delete Member HVC
+
+
+alt Nhóm
+    else OCSAIR_communityDeleteMember_X
+    alt
+        else 2. Huỷ thành viên nhóm
+            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateCommunityList_DeleteMember
+    end
+end
+
+alt Chia sẻ dữ liệu trong nhóm
+else OCSAIR_communityAddMember_X
+    alt
+        else 1. Link Offer cho thành viên nhóm
+            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
+        else 2. Ecms Offer cho thành viên nhóm
+                pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
+        else 3. Reset UC cho thành viên nhóm
+            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateUsageThresholdsAndCounters_ResetUC
+    end
+end
+alt Data
+else Huỷ nhóm cho thành viên nhóm
+pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
+end
+pro --> User: Display data
+@enduml
