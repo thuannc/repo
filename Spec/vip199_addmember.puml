@@ -1,0 +1,34 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "OCS" as ocs
+participant "SOI" as soi
+participant "PCRF" as pcrf
+
+User -> pro: Add Member HVC
+
+
+alt Nhóm
+    else OCSAIR_communityAddMember_X
+    alt
+        else 2. Thêm thành viên nhóm
+            pro -->ocs: OCSAIR_communityAddMember_X.OCSAIRU_UpdateCommunityList_Normal
+    end
+end
+
+alt Chia sẻ dữ liệu trong nhóm
+else OCSAIR_communityAddMember_X
+    alt
+        else 1. Link Offer cho thành viên nhóm
+            pro -->ocs: OCSAIR_communityAddMember_X.OCSAIRU_UpdateOffer_Link
+        else 2. Ecms Offer cho thành viên nhóm
+                pro -->ocs: OCSAIR_communityAddMember_X.OCSAIRU_UpdateOffer_ECMS
+        else 3. Reset UC cho thành viên nhóm
+            pro -->ocs: OCSAIR_communityAddMember_X.OCSAIRU_UpdateUsageThresholdsAndCounters_ResetUC
+        else 4. Set UT cho thuê bao thành viên
+                pro -->ocs: OCSAIR_communityAddMember_X.OCSAIRU_UpdateUsageThresholdsAndCounters_SetUT
+    end
+end
+
+pro --> User: Display data
+@enduml
