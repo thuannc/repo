@@ -13,11 +13,11 @@ else OCSAIR_communityAddMember_X
         else 1. Link Offer cho thành viên nhóm
             pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
         else 2. Ecms Offer cho thành viên nhóm
-                pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
+            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
         else 3. Reset UC cho thành viên nhóm
             pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateUsageThresholdsAndCounters_ResetUC
         else 4. Huỷ thành viên nhóm
-                pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateCommunityList_DeleteMember
+            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateCommunityList_DeleteMember
     end
 end
 
