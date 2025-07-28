@@ -17,33 +17,35 @@ end
 alt Huỷ chia sẻ dữ liệu trong nhóm
 else OCSAIR_communityDataShare_XforY
     alt
-        else 1. Link Offer cho chủ nhóm
+        else 1. Xoá chủ nhóm khỏi community
+            pro -->ocs: SOI_community_X.OCSAIRU_UpdateCommunityList_DeleteMember
+        else 2. Xoá thành viên nhóm khỏi community
+            pro --> ocs: OCSAIR_communityDataShare_XforY.OCSAIR_communityDeleteMember_X
+        else 3. Link Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRA_DeleteOffer_NoProduct
-        else 2. Ecms Offer cho chủ nhóm
-                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRA_DeleteOffer_NoProduct
-        else 3. Share Offer cho chủ nhóm
+        else 4. Ecms Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRA_DeleteOffer_NoProduct
-        else 4. Share Data cho chủ nhóm
-                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateBalanceAndDate_ShareData
-        else 5. Daily Offer cho chủ nhóm
+        else 5. Share Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRA_DeleteOffer_NoProduct
-        else 6. Threadholds cho chủ nhóm
-                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateUsageThresholdsAndCounters_SetUT
+        else 6. Share Data cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateBalanceAndDate_ShareData
+        else 7. Daily Offer cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRA_DeleteOffer_NoProduct
+        else 8. Threadholds cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateUsageThresholdsAndCounters_SetUT
     end
 end
 
 alt Data
-else Huỷ nhóm cho chủ nhóm
-pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
-else Huỷ miễn phí truy cập nội dung
-    pro -> pcrf: PCRF_freeIP_Z.SetSAPCSubscription_deregister
+    else Huỷ nhóm cho chủ nhóm
+        pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
+    else Huỷ miễn phí truy cập nội dung
+        pro -> pcrf: PCRF_freeIP_Z.SetSAPCSubscription_deregister
 end
 alt Community
     else SOI_community_X
     alt
-        else 1. Huỷ chủ nhóm
-            pro -->ocs: SOI_community_X.OCSAIRU_UpdateCommunityList_DeleteMember
-        else 2. Xoá nhóm
+        else 1. Xoá nhóm
             pro -->soi: SOI_community_X.SOI_CommunityDelete
 
     end
