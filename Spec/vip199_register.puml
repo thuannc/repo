@@ -16,27 +16,27 @@ end
 alt Nhóm
     else SOI_community_X
     alt
-        else 1. Tạo nhóm
+        else Tạo nhóm
             pro -->soi: SOI_community_X.OCSSOI_communityCreate_X
-        else 2. Thêm chủ nhóm
-            pro -->ocs: SOI_community_X.OCSAIRU_UpdateCommunityList_Normal
     end
 end
 
 alt Chia sẻ dữ liệu trong nhóm
 else OCSAIR_communityDataShare_XforY
     alt
-        else 1. Link Offer cho chủ nhóm
+        else 1. Thêm chủ nhóm vào community
+                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateCommunityList_Normal
+        else 2. Link Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_Link
-        else 2. Ecms Offer cho chủ nhóm
+        else 3. Ecms Offer cho chủ nhóm
                 pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_ECMS
-        else 3. Share Offer cho chủ nhóm
+        else 4. Share Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_Share
-        else 4. Share Data cho chủ nhóm
+        else 5. Share Data cho chủ nhóm
                 pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateBalanceAndDate_ShareData
-        else 5. Daily Offer cho chủ nhóm
+        else 6. Daily Offer cho chủ nhóm
             pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_DailyUT
-        else 6. Threadholds cho chủ nhóm
+        else 7. Threadholds cho chủ nhóm
                 pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateUsageThresholdsAndCounters_SetUT
 
     end
