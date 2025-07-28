@@ -1,0 +1,53 @@
+@startuml
+actor User
+participant "Provisioning System" as pro
+participant "OCS" as ocs
+participant "SOI" as soi
+participant "PCRF" as pcrf
+
+User -> pro: Register HVC
+
+alt Voice SMS
+else Thoại nội mạng
+pro -> ocs: OCSAIR_voiceFreeOnnet1.OCSAIRU_UpdateOffer_Normal
+else Thoại liên mạng
+pro -> ocs: voiceFreeOffnet2_XinY.OCSAIRU_UpdateOffer_Normal
+end
+alt Nhóm
+    else SOI_community_X
+    alt
+        else 1. Tạo nhóm
+            pro -->soi: SOI_community_X.OCSSOI_communityCreate_X
+        else 2. Thêm chủ nhóm
+            pro -->ocs: SOI_community_X.OCSAIRU_UpdateCommunityList_Normal
+    end
+end
+
+alt Chia sẻ dữ liệu trong nhóm
+else OCSAIR_communityDataShare_XforY
+    alt
+        else 1. Link Offer cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_Link
+        else 2. Ecms Offer cho chủ nhóm
+                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_ECMS
+        else 3. Share Offer cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_Share
+        else 4. Share Data cho chủ nhóm
+                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateBalanceAndDate_ShareData
+        else 5. Daily Offer cho chủ nhóm
+            pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateOffer_DailyUT
+        else 6. Threadholds cho chủ nhóm
+                pro -->ocs: OCSAIR_communityDataShare_XforY.OCSAIRU_UpdateUsageThresholdsAndCounters_SetUT
+
+    end
+end
+
+alt Data
+else Gán nhóm cho chủ nhóm
+pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_register
+else Miễn phí truy cập nội dung
+    pro -> pcrf: PCRF_freeIP_Z.SetSAPCSubscription_register
+end
+
+pro --> User: Display data
+@enduml
