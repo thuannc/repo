@@ -21,8 +21,8 @@ else OCSAIR_communityAddMember_X
     end
 end
 
-alt PCRF-Data
-else Huỷ nhóm cho thành viên nhóm
+alt PCRF-Chia sẻ dữ liệu trong nhóm
+else Huỷ thành viên khỏi nhóm
     pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
 end
 pro --> User: Display data
