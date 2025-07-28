@@ -7,16 +7,7 @@ participant "PCRF" as pcrf
 
 User -> pro: Delete Member HVC
 
-
-alt Nhóm
-    else OCSAIR_communityDeleteMember_X
-    alt
-        else 2. Huỷ thành viên nhóm
-            pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateCommunityList_DeleteMember
-    end
-end
-
-alt Chia sẻ dữ liệu trong nhóm
+alt OCS-Chia sẻ dữ liệu trong nhóm
 else OCSAIR_communityAddMember_X
     alt
         else 1. Link Offer cho thành viên nhóm
@@ -25,11 +16,14 @@ else OCSAIR_communityAddMember_X
                 pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRA_DeleteOffer_NoProduct
         else 3. Reset UC cho thành viên nhóm
             pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateUsageThresholdsAndCounters_ResetUC
+        else 4. Huỷ thành viên nhóm
+                pro -->ocs: OCSAIR_communityDeleteMember_X.OCSAIRU_UpdateCommunityList_DeleteMember
     end
 end
-alt Data
+
+alt PCRF-Data
 else Huỷ nhóm cho thành viên nhóm
-pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
+    pro -> pcrf: PCRF_communityDataShare_XforY.SetSAPCSubscription_deregister
 end
 pro --> User: Display data
 @enduml
