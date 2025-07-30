@@ -1,0 +1,172 @@
+@startuml
+title Quy trình xử lý đăng ký dịch vụ
+
+skinparam noteFontSize 11
+
+actor User
+participant Provisioning
+participant RuleEngine
+participant CCBS_DB
+participant OCS
+participant PCRF
+
+User -> Provisioning: Đăng ký qua SMS/CCBS
+
+group Kiểm tra điều kiện mua hàng
+
+Provisioning -> RuleEngine: Kiểm tra điều kiện 
+RuleEngine -> RuleEngine: Kiểm tra điều kiện mua hàng
+note right of RuleEngine
+Thuê bao trả sau hòa mạng mới
+Thuê bao MNP PI trả sau trong tháng hòa mạng
+Thuê bao di động trả trước kích hoạt mới trước đó và chuyển sang trả sau ngay trong tháng.
+Thuê bao trả sau hiện hữu có tiêu dùng bình quân 3 tháng liền kề đều <= 199,000 đồng
+Thuê bao trả trước hiện hữu chuyển sang trả sau có tiêu dùng TKC bình quân 3 tháng liền kề đều <= 199,000 đồng
+Thuê bao không có gói chia sẻ
+end note
+
+RuleEngine --> Provisioning: Kết quả xử lý - OK
+
+alt Gói cước đăng ký là gói CKD phải đóng trước tiền gói
+RuleEngine -> RuleEngine: Kiểm tra đã đóng trước tiền gói
+RuleEngine --> Provisioning: Kết quả xử lý - OK
+end alt
+
+end group
+
+group Gán ưu đãi thoại
+
+Provisioning -> OCS: UpdateOffer 8101 - Gán ưu đãi thoại onnet (onnet1VoiceFree_XinY - 2000 phút/tháng)
+note right of Provisioning
+OfferId: 8101, daId: 801
+subscriberNumber: 84842125549
+expiryDateTime: <tính theo chu kỳ gói>
+dedicatedAccountValueNew: 120000
+end note
+OCS --> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateOffer 8106 - Gán ưu đãi thoại offnet (offnet2VoiceFree_XinY - 250 phút/tháng)
+note right of Provisioning
+OfferId: 8106, daId: 806
+subscriberNumber: 84842125549
+expiryDateTime: <tính theo chu kỳ gói>
+dedicatedAccountValueNew: 15000
+end note
+OCS --> Provisioning: Trả kết quả
+
+end group
+
+
+group Gán ưu đãi addon
+
+Provisioning -> PCRF: SetSAPCSubscription - FreeIP Zalo, FB, Youtube,...
+note right of Provisioning
+GroupId: ZALO
+GroupId: DIP_Meta
+GroupId: DIP_Youtube
+GroupId: TikTok
+GroupId: DIP_WhatsApp
+end note
+PCRF --> Provisioning: Trả kết quả
+
+Provisioning -> PCRF: SetSAPCSubscription - addonFreeContent_X
+note right of Provisioning
+GroupId: MI_MYTV
+end note
+PCRF --> Provisioning: Trả kết quả
+
+Provisioning -> PCRF: SetSAPCSubscription - volteCallService_X
+note right of Provisioning
+GroupId: VoLTE_group
+end note
+PCRF --> Provisioning: Trả kết quả
+
+end group
+
+group Gán tham số để gọi cho nhau miễn phí - communityCallFree
+
+Provisioning -> OCS: SOI - communityCreateRequest
+note right of Provisioning
+CommunityID: 8000003
+end note
+OCS --> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateCommunityList - Gán ID nhóm
+note right of Provisioning
+CommunityID: 8000003
+subscriberNumber: <số TB chủ nhóm>
+end note
+OCS --> Provisioning: Trả kết quả
+
+end group
+
+group Chia sẻ data trong nhóm
+
+Provisioning -> OCS: UpdateOffer - Gán Offer 880000 ODA_LinkOffer cho thuê bao chủ nhóm
+note right of Provisioning
+OfferId: 880000
+subscriberNumber: 842125549
+MemberType: Owner (chủ nhóm), Consumer (thành viên)
+Cycle: Daily
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: Gán Offer 880002 cho thuê bao chủ nhóm
+note right of Provisioning
+OfferId: 880002
+subscriberNumber: 84842125549
+MemberType: Owner (chủ nhóm), Consumer (thành viên)
+Cycle: Daily
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateOffer share, OfferId: 880001
+note right of Provisioning
+OfferId: 880002
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateBalanceAndDate DAId: 8800
+note right of Provisioning
+DAId: 8800
+dedicatedAccountValueNew: 8589934592
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: Gán Offer 428681 TT_PC_ODA_DAY_UT cho thuê bao chủ nhóm để cộng tài khoản 8GB / 1 ngày cho thuê bao chủ nhóm (PAM)
+note right of Provisioning
+OfferId: 428681
+usageThresholdID: 42868101
+usageThresholdValueNew: 8589934592
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateUsageThresholdsAndCounters- Reset UC cho thuê bao thành viên
+note right of Provisioning
+usageCounterID: 8800000
+usageCounterValueNew: 0
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> OCS: UpdateUsageThresholdsAndCounters - Set UT cho thuê bao thành viên
+note right of Provisioning
+usageThresholdID: 88000001
+usageThresholdValueNew: 1073741824
+end note
+OCS -->> Provisioning: Trả kết quả
+
+Provisioning -> PCF: SetSAPCSubscription + subscriberNumber - Gán GroupId cho thuê bao chủ nhóm để được hưởng Data của Offer 428681
+note right of Provisioning
+GroupId: HVC_OCS
+end note
+OCS -->> Provisioning: Trả kết quả
+
+end group
+
+alt Gói chu kỳ ngắn
+Provisioning -> OCS: deductBalance - Trừ tiền (199000 nếu đăng ký trước ngày 16, 99500 nếu đăng ký sau ngày 16)
+OCS -->> Provisioning: Trả kết quả
+end alt
+
+Provisioning --> User: Phản hồi kết quả
+@enduml
