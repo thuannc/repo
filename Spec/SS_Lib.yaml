@@ -1,6 +1,29 @@
 @startyaml
 !theme plain
-
+	(SSGroup) SS_FIBER:
+		(CFS) fiberVNN_X:
+			Name: Thoại nội mạng di động VNP 
+			Char:
+				fiberVNN_X.fiberSpeed: 80 Mbps
+				fiberVNN_X.fiberType: National
+				fiberVNN_X.mytvService: MyTV-Plus
+				fiberVNN_X.meshVolume: 1
+				fiberVNN_X.meshType: Mesh6
+				fiberVNN_X.freeFixedIP: 1
+				msisdn: 0915043333
+			(RFS) FIBER_fiberVNN_X :
+				Name: FIBER
+				Char:
+					fiberVNN_X.fiberSpeed: 80 Mbps
+					fiberVNN_X.fiberType: National
+					fiberVNN_X.mytvService: MyTV-Plus
+					fiberVNN_X.meshVolume: 1
+					fiberVNN_X.meshType: Mesh6
+					fiberVNN_X.freeFixedIP: 1
+					msisdn: 0915043333
+					Fiber.resourceType: fiber
+					FIBER_fiberVNN_X.packgageId: 12345
+					Feature: [register:Fiber_Register,deregister:Fiber_DeRegister]
 	(SSGroup) SS_CHARGE:
 		(CFS) onetimeCharge:
 			Name: Trừ tiền gói từ TKC
