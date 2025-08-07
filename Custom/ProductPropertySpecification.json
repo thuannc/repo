@@ -1,0 +1,49 @@
+{
+    "id": "1",
+    "code": "2vip199", // Mã sản phẩm PO
+    "parentCode": "vip199", // Mã sản phẩm PO cha
+    "productGroup": {
+        "id": "1",
+        "name": "TD49",
+        "@type": "ProductGroupRef",
+        "@referredType": "ProductGroup"
+    },
+    "description": "Danh sách tính chất của gói 2vip199",
+    "propertySpecification": [
+        {
+            "id": "1",
+            "name": "Gói liên kết",
+            "code": "linkedPackage",
+            "dataType": "Boolean",
+            "itemIndex": 0,
+            "description": "Tính chất Gói liên kết",
+            "version": "1",
+            "validFor": {
+                "startDateTime": "2023-10-01T00:00:00Z",
+                "endDateTime": "2024-10-01T00:00:00Z"
+            },
+            "@type": "ProductPropertySpecification",
+            "@baseType": "ProductPropertySpecification"
+        },
+        {
+            "id": "2",
+            "name": "Gói liên kết",
+            "code": "linkedPackage",
+            "dataType": "String",
+            "itemIndex": 1,
+            "description": "Tính chất Gói liên kết",
+            "version": "1",
+            "validFor": {
+                "startDateTime": "2023-10-01T00:00:00Z",
+                "endDateTime": "2024-10-01T00:00:00Z"
+            },
+            "@type": "ProductPropertySpecification",
+            "@baseType": "ProductPropertySpecification"
+        }
+    ],
+    "propertyItems": [
+        "true","XYZ"
+    ],
+    "@type": "ProductProperty",
+    "@baseType": "ProductProperty"
+}
