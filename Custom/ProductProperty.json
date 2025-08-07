@@ -1,0 +1,23 @@
+{
+    "id": "1",
+    "code": "2vip199", // Mã sản phẩm PO
+    "parentCode": "vip199", // Mã sản phẩm PO cha
+    "productGroup": {
+        "id": "1",
+        "name": "TD49",
+        "@type": "ProductGroupRef",
+        "@referredType": "ProductGroup"
+    },
+    "description": "Danh sách tính chất của gói 2vip199",
+    "productPropertySpecification": {
+        "id": "1",
+        "name": "TD49",
+        "@type": "ProductPropertySpecificationRef",
+        "@referredType": "ProductPropertySpecification"
+    },
+    "productPropertyItem": [
+        "true","XYZ"
+    ],
+    "@type": "ProductProperty",
+    "@baseType": "ProductProperty"
+}
