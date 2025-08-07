@@ -15,6 +15,7 @@
         "@type": "ProductPropertySpecificationRef",
         "@referredType": "ProductPropertySpecification"
     },
+    "propertyCount":10,
     "productPropertyItem": [
         "true","XYZ"
     ],
