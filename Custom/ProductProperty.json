@@ -1,7 +1,7 @@
 {
     "id": "1",
-    "code": "2vip199", // Mã sản phẩm PO
-    "parentCode": "vip199", // Mã sản phẩm PO cha
+    "code": "2vip199", 
+    "parentCode": "vip199", 
     "productGroup": {
         "id": "1",
         "name": "TD49",
