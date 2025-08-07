@@ -1,0 +1,14 @@
+{
+    "id": "1",
+    "name": "TD49",
+    "code": "td49",
+    "description": "Nhóm sản phẩm TD49",
+    "lifecycleStatus": "Active",
+    "version": "1",
+    "validFor": {
+        "startDateTime": "2023-10-01T00:00:00Z",
+        "endDateTime": "2024-10-01T00:00:00Z"
+    },
+    "@type": "ProductGroup",
+    "@baseType": "ProductGroup"
+}
