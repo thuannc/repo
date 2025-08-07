@@ -16,14 +16,8 @@
             "code": "linkedPackage",
             "dataType": "Boolean",
             "itemIndex": 0,
-            "description": "Tính chất Gói liên kết",
-            "version": "1",
-            "validFor": {
-                "startDateTime": "2023-10-01T00:00:00Z",
-                "endDateTime": "2024-10-01T00:00:00Z"
-            },
-            "@type": "ProductPropertySpecification",
-            "@baseType": "ProductPropertySpecification"
+            "@type": "ProductPropertyItemSpecification",
+            "@baseType": ""
         },
         {
             "id": "2",
@@ -31,19 +25,11 @@
             "code": "linkedPackage",
             "dataType": "String",
             "itemIndex": 1,
-            "description": "Tính chất Gói liên kết",
-            "version": "1",
-            "validFor": {
-                "startDateTime": "2023-10-01T00:00:00Z",
-                "endDateTime": "2024-10-01T00:00:00Z"
-            },
-            "@type": "ProductPropertySpecification",
-            "@baseType": "ProductPropertySpecification"
+            "@type": "ProductPropertyItemSpecification",
+            "@baseType": ""
         }
     ],
-    "propertyItems": [
-        "true","XYZ"
-    ],
-    "@type": "ProductProperty",
-    "@baseType": "ProductProperty"
+    
+    "@type": "ProductPropertySpecification",
+    "@baseType": "ProductPropertySpecification"
 }
