@@ -29,7 +29,7 @@
             "@baseType": ""
         }
     ],
-    
+    "propertyCount":10,
     "@type": "ProductPropertySpecification",
     "@baseType": "ProductPropertySpecification"
 }
