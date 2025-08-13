@@ -35,6 +35,39 @@ public class VIP499 {
         String serviceId = (String) ctx.get("serviceId");//VIP499
   }
   public static void Postpaid_deregister() {
+      //voiceAlo_Postpaid=A
+        //A--- OCSAIR_voiceAlo_Postpaid_deregister
+        String msisdn = (String) ctx.get("msisdn");//0915043333
+        String serviceId = (String) ctx.get("serviceId");//VIP499
+        String packageId = (String) ctx.get("packageId");//5600
+        String cycleLength = (String) ctx.get("cycleLength");//18 month
+        String cancelOfferId = (String) ctx.get("cancelOfferId");
+        String cancelRefillProfileId = (String) ctx.get("cancelRefillProfileId");
+        String cancelPamIndicator = (String) ctx.get("cancelPamIndicator");
+        String registerOfferId = (String) ctx.get("registerOfferId");//1100099
+        String registerRefillProfileId = (String) ctx.get("registerRefillProfileId");//ALMC
+        String registerPamIndicator = (String) ctx.get("registerPamIndicator");//9003
+
+        //communityDataShare_XforY_Postpaid=B
+        //B--- OCSAIR_communityDataShare_XforY_Postpaid_deregister
+        String msisdn = (String) ctx.get("msisdn");//0915043333
+        String daId = (String) ctx.get("daId");//1510
+        String daUnitType = (String) ctx.get("daUnitType");//6
+        String cycleLength = (String) ctx.get("cycleLength");//1 month
+        String linkOfferId = (String) ctx.get("linkOfferId");//"800072"
+        String shareOfferId = (String) ctx.get("shareOfferId");//810072
+        String changeOfferId = (String) ctx.get("changeOfferId");//810073
+        String dailyOfferId= (String) ctx.get("dailyOfferId");//1000510
+        String usageThresholdId= (String) ctx.get("usageThresholdId");//80000510
+
+        //communityCallFree_Postpaid =C+D
+        // C--- SOI_communityDelete_X_Postpaid --->
+        String msisdn = (String) ctx.get("msisdn");//0915043333
+        String serviceId = (String) ctx.get("serviceId");//VIP499
+        // D--- OCSAIR_communityCallFree_Postpaid.OCSAIRU_UpdateCommunityList_DeleteMember --->
+        // Không thực hiện do đã huỷ trong SOI_communityDelete_X_Postpaid
+        String msisdn = (String) ctx.get("msisdn");//0915043333
+        String serviceId = (String) ctx.get("serviceId");//VIP499
   }
 }
    
