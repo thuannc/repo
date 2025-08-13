@@ -1,0 +1,20 @@
+{
+      "id": "83000001",
+      "code":"VIP199_1T",
+      "parent":"VIP199",
+      "config":[
+        {
+            "name": "register_Postpaid",
+            "value":"[
+                    {\"code\":\"voiceFreeOnnet1_XinY\"},
+                    {\"code\":\"voiceFreeOffnet2_XinY\"},
+                    {\"code\":\"smsOnnet1_XinY\"},
+                    {\"code\":\"communityDataShare_XforY\"},
+                    {\"code\":\"communityCallFree\"},
+                    {\"code\":\"freeIP_Z\"},
+                    {\"code\":\"addonFreeContent_X\"},
+                    {\"code\":\"advance5GCallOption_X\"},
+                    {\"code\":\"onetimeCharge\"}
+               ]]"
+        }
+}
