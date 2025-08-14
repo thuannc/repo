@@ -8,7 +8,7 @@
 				onetimeCharge.amount: 199000
 				onetimeCharge.unit: VND
 				msisdn: 0915043333
-			(RFS) OCC_onetimeCharge: 
+			(RFS) OCC_onetimeCharge:
 				Name: OCC
 				Char:
 					onetimeCharge.amount: 100 VND
@@ -21,7 +21,7 @@
 					Feature: DirectDebit
 	(SSGroup) SS_VOICE:
 		(CFS) voiceFreeOnnet1_XinY:
-			Name: Thoại nội mạng di động VNP 
+			Name: Thoại nội mạng di động VNP
 			Char:
 				voiceFreeOnnet1_XinY.volume: 2000 minute
 				voiceFreeOnnet1_XinY.cycleLength: 1 month
@@ -87,7 +87,7 @@
 					OCSAIR_voiceFreeOffnet1_XinY.offerId: 8102
 					OCSAIR_voiceFreeOffnet1_XinY.daId: 802
 					OCSAIR_voiceFreeOffnet1_XinY.daUnitType: 0
-					Feature: UpdateOffer					
+					Feature: UpdateOffer
 		(CFS) voiceFreeOffnet2_XinY :
 			Name: Thoại ngoại mạng (gồm cố định/GPhone) VNPT
 			Char:
@@ -155,7 +155,7 @@
 					OCSAIR_voiceFreeNational1_XinY.offerId: 8102
 					OCSAIR_voiceFreeNational1_XinY.daId: 802
 					OCSAIR_voiceFreeNational1_XinY.daUnitType: 0
-					Feature: UpdateOffer	
+					Feature: UpdateOffer
 		(CFS) voiceFreeNational2_XinY :
 			Name: Thoại trong nước (ngoại mạng trong nước + cố định VNPT)
 			Char:
@@ -172,8 +172,8 @@
 					OCSAIR_voiceFreeNational2_XinY.offerId: 8102
 					OCSAIR_voiceFreeNational2_XinY.daId: 802
 					OCSAIR_voiceFreeNational2_XinY.daUnitType: 0
-					Feature: UpdateOffer	
-	(SSGroup) SS_SMS:	
+					Feature: UpdateOffer
+	(SSGroup) SS_SMS:
 		(CFS) smsOnnet1_XinY :
 			Name: Tin nhắn nội mạng VNP
 			Char:
@@ -190,7 +190,7 @@
 					OCSAIR_smsOnnet1_XinY.offerId: 8102
 					OCSAIR_smsOnnet1_XinY.daId: 802
 					OCSAIR_smsOnnet1_XinY.daUnitType: 0
-					Feature: UpdateOffer	
+					Feature: UpdateOffer
 		(CFS) smsOnnet2_XinY :
 			Name: Tin nhắn nội mạng VNPT
 			Char:
@@ -207,7 +207,7 @@
 					OCSAIR_smsOnnet2_XinY.offerId: 8102
 					OCSAIR_smsOnnet2_XinY.daId: 802
 					OCSAIR_smsOnnet2_XinY.daUnitType: 0
-					Feature: UpdateOffer		
+					Feature: UpdateOffer
 		(CFS) smsOffnet1_XinY :
 			Name: Tin nhắn ngoại mạng VNP
 			Char:
@@ -224,7 +224,7 @@
 					OCSAIR_smsOffnet1_XinY.offerId: 8102
 					OCSAIR_smsOffnet1_XinY.daId: 802
 					OCSAIR_smsOffnet1_XinY.daUnitType: 0
-					Feature: UpdateOffer	
+					Feature: UpdateOffer
 		(CFS) smsOffnet2_XinY :
 			Name: Tin nhắn ngoại mạng VNPT
 			Char:
@@ -258,7 +258,7 @@
 					OCSAIR_smsNational_XinY.offerId: 8102
 					OCSAIR_smsNational_XinY.daId: 802
 					OCSAIR_smsNational_XinY.daUnitType: 0
-					Feature: UpdateOffer	
+					Feature: UpdateOffer
 		(CFS) smsInternational_XinY :
 			Name: Tin nhắn quốc tế
 			Char:
@@ -276,7 +276,7 @@
 					OCSAIR_smsInternational_XinY.daId: 802
 					OCSAIR_smsInternational_XinY.daUnitType: 0
 					Feature: UpdateOffer
-	(SSGroup) SS_DATA:	
+	(SSGroup) SS_DATA:
 		(CFS) dataVolume_XinY_stop :
 			Name: Data cơ bản hết dung lượng dừng truy cập
 			Char:
@@ -317,17 +317,19 @@
 				dataZone_XinY_stop.volume: 8 GB
     			dataZone_XinY_stop.volume1: 2 GB
 				dataZone_XinY_stop.cycleLength: 1 day
+				dataZone_XinY_stop.cycleLength1: 1 month
 				dataZone_XinY_stop.qosLimit: Zero
 				msisdn: 0915043333
 			(RFS) PCRF_dataZone_XinY_stop :
 				Name: PCRF
 				Char:
 					dataZone_XinY_stop.volume: 8 GB
-    				dataZone_XinY_stop.volume1: 2 GB
 					dataZone_XinY_stop.cycleLength: 1 day
-					dataZone_XinY_stop.qosLimit: Zero
+    				dataZone_XinY_stop.volume1: 2 GB
+					dataZone_XinY_stop.cycleLength1: 1 month
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
+					PCRF_dataZone_XinY_stop.qosLimit: Zero
 					PCRF_dataZone_XinY_stop.groupId: BIG
 					PCRF_dataZone_XinY_stop.usageGroupId: 3000,4000
 					Feature: SET
@@ -335,9 +337,9 @@
 			Name: Data trong/ngoài vùng hết dung lượng hạ băng thông
 			Char:
 				dataZone_XinY_limit.volume: 8 GB
-    			dataZone_XinY_limit.volume1: 2 GB
 				dataZone_XinY_limit.cycleLength: 1 day
-				dataZone_XinY_limit.qosLimit: 128_64
+    			dataZone_XinY_limit.volume1: 2 GB
+				dataZone_XinY_limit.cycleLength1: 1 month
 				msisdn: 0915043333
 			(RFS) PCRF_dataZone_XinY_limit :
 				Name: PCRF
@@ -345,9 +347,10 @@
 					dataZone_XinY_limit.volume: 8 GB
     				dataZone_XinY_limit.volume1: 2 GB
 					dataZone_XinY_limit.cycleLength: 1 day
-					dataZone_XinY_limit.qosLimit: 128_64
+					dataZone_XinY_limit.cycleLength1: 1 month
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
+					PCRF_dataZone_XinY_limit.qosLimit: 128_64
 					PCRF_dataZone_XinY_limit.groupId: MaxSpeed128_64
 					PCRF_dataZone_XinY_limit.usageGroupId: 3000,4000
 					Feature: SET
@@ -388,8 +391,8 @@
 					PCRF.resourceType: pcrf
 					PCRF_dataPeakHour_XinY_limit.groupId: BIG
 					PCRF_dataPeakHour_XinY_limit.usageGroupId: 3000
-					Feature: SET						
-							
+					Feature: SET
+
 		(CFS) freeIP_Z:
 			Name: Data miễn phí truy cập ứng dụng/IP
 			Char:
@@ -421,7 +424,7 @@
 					PCRF.resourceType: pcrf
 					PCRF_dataRoamingInZone1_XinY.groupId: BIG
 					PCRF_dataRoamingInZone1_XinY.usageGroupId: 3000
-					Feature: SET					
+					Feature: SET
 		(CFS) dataUnlimitedOnFlight :
 			Name: Không giới hạn lưu lượng Data trên máy bay trong ngày
 			Char:
@@ -433,24 +436,24 @@
 					PCRF.resourceType: pcrf
 					PCRF_dataUnlimitedOnFlight.groupId: BIG
 					PCRF_dataUnlimitedOnFlight.usageGroupId: 3000
-					Feature: SET					
+					Feature: SET
 		(CFS) dataRollover_X :
 			Name: Miễn phí X GB /ngày, cộng dồn trong tháng
 			Char:
 				dataRollover_X.volume: 8 GB
-				dataRollover_X.cycleLength: 1 month			
+				dataRollover_X.cycleLength: 1 month
 				msisdn: 0915043333
 			(RFS) PCRF_dataRollover_X :
 				Name: PCRF
 				Char:
 					dataRollover_X.volume: 8 GB
-					dataRollover_X.cycleLength: 1 month					
+					dataRollover_X.cycleLength: 1 month
 					msisdn: 0915043333
 					PCRF.resourceType: pcrf
 					PCRF_dataRollover_X.groupId: BIG
 					PCRF_dataRollover_X.usageGroupId: 3000
 					Feature: SET
-	(SSGroup) SS_ADDON:					
+	(SSGroup) SS_ADDON:
 		(CFS) addonFreeContent_X :
 			Name: Miễn phí truy cập nội dung
 			Char:
@@ -478,8 +481,8 @@
 					addonMyTVFreeContent_X.cycleLength: 1 month
 					msisdn: 0915043333
 					MyTV.resourceType: mytv
-					MyTV_addonMyTVFreeContent_X.packageId: 
-				Feature: ?		
+					MyTV_addonMyTVFreeContent_X.packageId:
+				Feature: ?
 		(CFS) addonMBGFreeContent_XofY :
 			Name: Miễn phí truy cập nội dung
 			Char:
@@ -493,8 +496,8 @@
 					addonFreeContent_X.contentList: MyTV,SportTV
 					msisdn: 0915043333
 					MBG.resourceType: mbg
-					MBG_addonMBGFreeContent_XofY.packageId: 
-				Feature: ?		
+					MBG_addonMBGFreeContent_XofY.packageId:
+				Feature: ?
 		(CFS) advance5GCallOption_X :
 			Name: Quyền sử dụng thoại trên 5G
 			Char:
@@ -508,8 +511,8 @@
 					OCS.resourceType: ocs
 					OCSAIR_advance5GCallOption_X.offerId: ?
 					OCSAIR_advance5GCallOption_X.daId: ?
-				Feature: ?					
-	(SSGroup) SS_COMMUNITY:		
+				Feature: ?
+	(SSGroup) SS_COMMUNITY:
 		(CFS) communityCreate_X:
 			Name: Tạo nhóm
 			Char:
@@ -554,10 +557,10 @@
 					OCS_communityAddMember_X.ecmsOfferId: 880002
 					OCS_communityAddMember_X.usageCounterId: 800000
 					OCS_communityAddMember_X.usageThreadholdId: 88000001
-					OCS_communityAddMember_X.memberType: Consumer 
+					OCS_communityAddMember_X.memberType: Consumer
 				Feature: AIRU_UpdateOffer_Offer-addmember
 			(RFS) PCRF_communityDataMember_X :
-				Name: PCRF				
+				Name: PCRF
 				Char:
 					communityAddMember_X.volume: 1 GB
 					communityAddMember_X.cycleLength: 1 day
@@ -566,7 +569,7 @@
 					PCRF.resourceType: pcrf
 					PCRF_communityDataMember_X.groupId: HVC_OCS
 					PCRF_communityDataMember_X.pcSubscriberChangingSystemName: OCSE
-					Feature: SET	
+					Feature: SET
 		(CFS) communityDeleteMember_X:
 			Name: Hủy thành viên nhóm
 			Char:
@@ -584,14 +587,14 @@
 					OCS_communityDeleteMember_X.usageCounterId: 800000
 				Feature: AIRU_UpdateOffer_Offer-deletemember
 			(RFS) PCRF_communityDeleteMember_X :
-				Name: PCRF				
+				Name: PCRF
 				Char:
 					msisdn: 0915043333
 					msisdnMember: ?
 					PCRF.resourceType: pcrf
 					PCRF_communityDataMember_X.groupId: HVC_OCS
-					Feature: SET	
-					
+					Feature: SET
+
 		(CFS) communityDataShare_XforY :
 			Name: Chia sẻ trong nhóm
 			Char:
@@ -613,11 +616,11 @@
 					OCS_communityDataShare_XforY.threadholdOfferId: 428681
 					OCS_communityDataShare_XforY.usageThreadholdId: 42868101
 					OCS_communityDataShare_XforY.daId: 8800
-					OCS_communityDataShare_XforY.daUnitType: 6			
+					OCS_communityDataShare_XforY.daUnitType: 6
 					OCS_communityDataShare_XforY.cycle:Day
-					OCS_communityDataShare_XforY.memberType: Owner 
+					OCS_communityDataShare_XforY.memberType: Owner
 				Feature: AIRU_UpdateOffer_Offer-register
-				
+
 			(RFS) PCRF_communityDataShare_XforY :
 				Name: PCRF
 				Char:
