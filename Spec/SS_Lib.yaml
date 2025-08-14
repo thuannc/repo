@@ -1050,6 +1050,36 @@
 					PCRF_addonFreeContent_X.groupId: ?
 					PCRF_addonFreeContent_X.usageGroupId: 3000
 				Feature: ?
+		(CFS) addonMyTVFreeContent_X :
+			Name: Miễn phí truy cập nội dung
+			Char:
+				addonMyTVFreeContent_X.cycleLength: 1 month
+				addonMyTVFreeContent_X.contentList: MyTV,SportTV
+				msisdn: 0915043333
+			(RFS) MyTV_addonMyTVFreeContent_X :
+				Name: MyTV
+				Char:
+					addonMyTVFreeContent_X.contentList: MyTV,SportTV
+					addonMyTVFreeContent_X.cycleLength: 1 month
+					msisdn: 0915043333
+					MyTV.resourceType: mytv
+					MyTV_addonMyTVFreeContent_X.packageId: 
+				Feature: ?		
+		(CFS) addonMBGFreeContent_XofY :
+			Name: Miễn phí truy cập nội dung
+			Char:
+				addonMBGFreeContent_XofY.contentList: MyTV,SportTV
+				addonMBGFreeContent_XofY.cycleLength: 1 month
+				addonMBGFreeContent_XofY.maxOption: 2
+				msisdn: 0915043333
+			(RFS) MBG_addonMBGFreeContent_XofY :
+				Name: MBG
+				Char:
+					addonFreeContent_X.contentList: MyTV,SportTV
+					msisdn: 0915043333
+					MBG.resourceType: mbg
+					MBG_addonMBGFreeContent_XofY.packageId: 
+				Feature: ?		
 		(CFS) advance5GCallOption_X :
 			Name: Quyền sử dụng thoại trên 5G
 			Char:
