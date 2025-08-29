@@ -1,0 +1,423 @@
+{
+  "productSpecification": {
+    "@type": "ProductSpecification",
+    "id": "PROD_SPEC_MOBILE_PACKAGE_100MIN_250SMS_2GB",
+    "href": "https://api.tmforum-oda.com/product-catalog/productSpecification/PROD_SPEC_MOBILE_PACKAGE_100MIN_250SMS_2GB",
+    "name": "Gói Di Động Cơ Bản: 100 Phút Thoại Nội Mạng, 250 SMS, 2GB Data/Ngày",
+    "description": "Gói cước di động cung cấp 100 phút gọi nội mạng, 250 tin nhắn SMS, và 2GB dữ liệu mỗi ngày. Sau khi hết lưu lượng dữ liệu, băng thông sẽ bị bóp xuống 256Kbps để duy trì kết nối cơ bản.",
+    "brand": "TelcoProvider",
+    "isBundle": true,
+    "lastUpdate": "2025-08-29T15:43:00Z",
+    "lifecycleStatus": "Active",
+    "validFor": {
+      "startDateTime": "2025-08-29T00:00:00Z",
+      "endDateTime": "2026-08-29T23:59:59Z"
+    },
+    "version": "1.0",
+    "productSpecCharacteristic": [
+      {
+        "name": "VoiceMinutesOnNet",
+        "description": "Số phút gọi thoại nội mạng",
+        "valueType": "integer",
+        "configurable": false,
+        "unitOfMeasure": "minutes",
+        "productSpecCharacteristicValue": [
+          {
+            "valueType": "integer",
+            "isDefault": true,
+            "value": 100,
+            "unitOfMeasure": "minutes"
+          }
+        ]
+      },
+      {
+        "name": "SMSQuota",
+        "description": "Số lượng tin nhắn SMS",
+        "valueType": "integer",
+        "configurable": false,
+        "unitOfMeasure": "messages",
+        "productSpecCharacteristicValue": [
+          {
+            "valueType": "integer",
+            "isDefault": true,
+            "value": 250,
+            "unitOfMeasure": "messages"
+          }
+        ]
+      },
+      {
+        "name": "DataAllowance",
+        "description": "Lưu lượng dữ liệu hàng ngày",
+        "valueType": "integer",
+        "configurable": false,
+        "unitOfMeasure": "GB",
+        "productSpecCharacteristicValue": [
+          {
+            "valueType": "integer",
+            "isDefault": true,
+            "value": 2,
+            "unitOfMeasure": "GB",
+            "validFor": {
+              "startDateTime": "00:00:00",
+              "endDateTime": "23:59:59"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DataThrottlingPolicy",
+        "description": "Chính sách bóp băng thông sau khi hết lưu lượng",
+        "valueType": "string",
+        "configurable": false,
+        "productSpecCharacteristicValue": [
+          {
+            "valueType": "string",
+            "isDefault": true,
+            "value": "Sau khi hết 2GB/ngày, tốc độ giảm xuống 256Kbps"
+          }
+        ]
+      }
+    ],
+    "bundledProductSpecification": [],
+    "serviceSpecification": [
+      {
+        "@type": "CustomerFacingServiceSpecification",
+        "id": "CFS_MOBILE_VOICE_ONNET",
+        "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/CFS_MOBILE_VOICE_ONNET",
+        "name": "Mobile Voice On-Net Service",
+        "description": "Dịch vụ thoại nội mạng cung cấp 100 phút gọi miễn phí, sử dụng OCS để quản lý hạn mức và tính cước thời gian thực.",
+        "lifecycleStatus": "Active",
+        "serviceSpecCharacteristic": [
+          {
+            "name": "VoiceQuota",
+            "description": "Số phút gọi nội mạng",
+            "valueType": "integer",
+            "unitOfMeasure": "minutes",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": 100,
+                "unitOfMeasure": "minutes"
+              }
+            ]
+          },
+          {
+            "name": "CallQuality",
+            "description": "Chất lượng cuộc gọi",
+            "valueType": "string",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": "HD Voice supported"
+              }
+            ]
+          }
+        ],
+        "serviceSpecificationRelationship": [
+          {
+            "relationshipType": "composedOf",
+            "serviceSpecification": {
+              "@type": "ResourceFacingServiceSpecification",
+              "id": "RFS_VOICE_NETWORK",
+              "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/RFS_VOICE_NETWORK",
+              "name": "Voice Network RFS",
+              "description": "Dịch vụ hạ tầng mạng thoại, sử dụng OCS để quản lý hạn mức và tính cước. Hỗ trợ kết nối qua IMS Core.",
+              "lifecycleStatus": "Active",
+              "serviceSpecCharacteristic": [
+                {
+                  "name": "ChargingSystem",
+                  "description": "Hệ thống tính cước cho thoại",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "Online Charging System (OCS)"
+                    }
+                  ]
+                },
+                {
+                  "name": "CodecType",
+                  "description": "Loại codec sử dụng",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "AMR-WB"
+                    }
+                  ]
+                },
+                {
+                  "name": "RoutingPolicy",
+                  "description": "Chính sách định tuyến cuộc gọi",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "On-net routing via IMS core"
+                    }
+                  ]
+                }
+              ],
+              "resourceSpecification": [
+                {
+                  "id": "RES_OCS",
+                  "name": "Online Charging System",
+                  "description": "Hệ thống tính cước thời gian thực cho thoại và SMS",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_IMS_CORE",
+                  "name": "IMS Core Network",
+                  "description": "Tài nguyên IMS cho xử lý thoại",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_BASE_STATION",
+                  "name": "Base Station",
+                  "description": "Trạm phát sóng cho kết nối di động",
+                  "@type": "PhysicalResourceSpecification"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "@type": "CustomerFacingServiceSpecification",
+        "id": "CFS_MOBILE_SMS",
+        "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/CFS_MOBILE_SMS",
+        "name": "Mobile SMS Service",
+        "description": "Dịch vụ tin nhắn SMS cung cấp 250 tin nhắn miễn phí, sử dụng OCS để quản lý hạn mức.",
+        "lifecycleStatus": "Active",
+        "serviceSpecCharacteristic": [
+          {
+            "name": "SMSQuota",
+            "description": "Số lượng tin nhắn SMS",
+            "valueType": "integer",
+            "unitOfMeasure": "messages",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": 250,
+                "unitOfMeasure": "messages"
+              }
+            ]
+          },
+          {
+            "name": "MessageLength",
+            "description": "Độ dài tin nhắn tối đa",
+            "valueType": "integer",
+            "unitOfMeasure": "characters",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": 160,
+                "unitOfMeasure": "characters"
+              }
+            ]
+          }
+        ],
+        "serviceSpecificationRelationship": [
+          {
+            "relationshipType": "composedOf",
+            "serviceSpecification": {
+              "@type": "ResourceFacingServiceSpecification",
+              "id": "RFS_SMS_PLATFORM",
+              "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/RFS_SMS_PLATFORM",
+              "name": "SMS Platform RFS",
+              "description": "Dịch vụ hạ tầng SMS, sử dụng OCS để quản lý hạn mức và SMSC để định tuyến tin nhắn.",
+              "lifecycleStatus": "Active",
+              "serviceSpecCharacteristic": [
+                {
+                  "name": "ChargingSystem",
+                  "description": "Hệ thống tính cước cho SMS",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "Online Charging System (OCS)"
+                    }
+                  ]
+                },
+                {
+                  "name": "SMSCAddress",
+                  "description": "Địa chỉ SMSC",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "+1234567890"
+                    }
+                  ]
+                },
+                {
+                  "name": "MessagePrioritization",
+                  "description": "Chính sách ưu tiên tin nhắn",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "Standard delivery queue"
+                    }
+                  ]
+                }
+              ],
+              "resourceSpecification": [
+                {
+                  "id": "RES_OCS",
+                  "name": "Online Charging System",
+                  "description": "Hệ thống tính cước thời gian thực cho thoại và SMS",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_SMSC",
+                  "name": "Short Message Service Center",
+                  "description": "Trung tâm xử lý SMS",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_SIGNALING_NETWORK",
+                  "name": "Signaling Network",
+                  "description": "Mạng signaling cho SMS",
+                  "@type": "LogicalResourceSpecification"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "@type": "CustomerFacingServiceSpecification",
+        "id": "CFS_MOBILE_DATA",
+        "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/CFS_MOBILE_DATA",
+        "name": "Mobile Data Service",
+        "description": "Dịch vụ dữ liệu di động cung cấp 2GB/ngày, với chính sách throttling 256Kbps sau khi hết lưu lượng, sử dụng PCRF để quản lý chính sách.",
+        "lifecycleStatus": "Active",
+        "serviceSpecCharacteristic": [
+          {
+            "name": "DataQuota",
+            "description": "Lưu lượng dữ liệu hàng ngày",
+            "valueType": "integer",
+            "unitOfMeasure": "GB",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": 2,
+                "unitOfMeasure": "GB"
+              }
+            ]
+          },
+          {
+            "name": "ThrottlingPolicy",
+            "description": "Chính sách bóp băng thông",
+            "valueType": "string",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": "Tốc độ giảm xuống 256Kbps sau khi hết 2GB/ngày"
+              }
+            ]
+          },
+          {
+            "name": "NetworkType",
+            "description": "Loại mạng hỗ trợ",
+            "valueType": "string",
+            "serviceSpecCharacteristicValue": [
+              {
+                "value": "4G/5G"
+              }
+            ]
+          }
+        ],
+        "serviceSpecificationRelationship": [
+          {
+            "relationshipType": "composedOf",
+            "serviceSpecification": {
+              "@type": "ResourceFacingServiceSpecification",
+              "id": "RFS_DATA_BEARER",
+              "href": "https://api.tmforum-oda.com/service-catalog/serviceSpecification/RFS_DATA_BEARER",
+              "name": "Data Bearer RFS",
+              "description": "Dịch vụ hạ tầng dữ liệu di động, sử dụng PCRF để thực thi chính sách QoS và throttling sau khi hết 2GB/ngày.",
+              "lifecycleStatus": "Active",
+              "serviceSpecCharacteristic": [
+                {
+                  "name": "PolicySystem",
+                  "description": "Hệ thống quản lý chính sách",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "Policy and Charging Rules Function (PCRF)"
+                    }
+                  ]
+                },
+                {
+                  "name": "QoSProfile",
+                  "description": "Hồ sơ chất lượng dịch vụ",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "Best effort with throttling at 2GB"
+                    }
+                  ]
+                },
+                {
+                  "name": "ThrottlingThreshold",
+                  "description": "Ngưỡng throttling",
+                  "valueType": "integer",
+                  "unitOfMeasure": "GB",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": 2,
+                      "unitOfMeasure": "GB"
+                    }
+                  ]
+                },
+                {
+                  "name": "ThrottledSpeed",
+                  "description": "Tốc độ sau throttling",
+                  "valueType": "string",
+                  "serviceSpecCharacteristicValue": [
+                    {
+                      "value": "256Kbps"
+                    }
+                  ]
+                }
+              ],
+              "resourceSpecification": [
+                {
+                  "id": "RES_PCRF",
+                  "name": "Policy and Charging Rules Function",
+                  "description": "Hệ thống PCRF để quản lý chính sách QoS và throttling cho dữ liệu",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_PDN_GATEWAY",
+                  "name": "Packet Data Network Gateway",
+                  "description": "Gateway cho dữ liệu packet",
+                  "@type": "LogicalResourceSpecification"
+                },
+                {
+                  "id": "RES_BASE_STATION",
+                  "name": "Base Station",
+                  "description": "Trạm phát sóng cho kết nối data",
+                  "@type": "PhysicalResourceSpecification"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "resourceSpecification": [
+      {
+        "id": "RES_OCS",
+        "name": "Online Charging System",
+        "description": "Hệ thống tính cước thời gian thực cho thoại và SMS",
+        "@type": "LogicalResourceSpecification"
+      },
+      {
+        "id": "RES_PCRF",
+        "name": "Policy and Charging Rules Function",
+        "description": "Hệ thống PCRF để quản lý chính sách QoS và throttling cho dữ liệu",
+        "@type": "LogicalResourceSpecification"
+      }
+    ],
+    "relatedParty": [
+      {
+        "id": "TELCO_PROVIDER",
+        "href": "https://api.tmforum-oda.com/party-management/party/TELCO_PROVIDER",
+        "name": "Telco Provider",
+        "role": "Provider",
+        "@type": "PartyRole"
+      }
+    ]
+  }
+}
