@@ -1,18 +1,12 @@
-import com.example.subscription.repository.CustomerRepository;
-import com.example.subscription.repository.ProductOrderRepository;
-import com.example.subscription.scheduler.AutoRenewalJob;
-import com.example.subscription.service.QuoteService;
-import com.example.subscription.service.SubscriptionService;
-import org.quartz.*;
+```java
+package com.example.subscription;
+
+import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
 import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
-import org.springframework.data.repository.core.support.RepositoryFactorySupport;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = "com.example.subscription.repository")
@@ -20,33 +14,9 @@ public class SubscriptionRenewalApplication {
     public static void main(String[] args) {
         SpringApplication.run(SubscriptionRenewalApplication.class, args);
 
-        // Khởi tạo EntityManager và repositories thủ công
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("subscriptionPU");
-        EntityManager em = emf.createEntityManager();
-        RepositoryFactorySupport factory = new JpaRepositoryFactory(em);
-        CustomerRepository customerRepository = factory.getRepository(CustomerRepository.class);
-        ProductOrderRepository productOrderRepository = factory.getRepository(ProductOrderRepository.class);
-
-        // Khởi tạo services thủ công
-        QuoteService quoteService = new QuoteService();
-        SubscriptionService subscriptionService = new SubscriptionService(customerRepository, productOrderRepository, quoteService);
-
         // Khởi động Quartz Scheduler với cấu hình từ quartz.properties
         try {
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-
-            // Truyền SubscriptionService qua JobDataMap
-            JobDataMap jobDataMap = new JobDataMap();
-            jobDataMap.put("subscriptionService", subscriptionService);
-
-            // Cập nhật JobDataMap cho job đã định nghĩa trong quartz.properties
-            JobDetail job = JobBuilder.newJob(AutoRenewalJob.class)
-                    .withIdentity("autoRenewalJob", "group1")
-                    .usingJobData(jobDataMap)
-                    .build();
-
-            // Lập lịch job (trigger đã được cấu hình trong quartz.properties)
-            scheduler.scheduleJob(job);
             scheduler.start();
         } catch (SchedulerException e) {
             System.err.println("Failed to start Quartz Scheduler: " + e.getMessage());
@@ -56,7 +26,7 @@ public class SubscriptionRenewalApplication {
 ```
 
 ##### Entity: Customer (TMF629)
-<xaiArtifact artifact_id="58585013-effc-44e7-ad9a-cac1c6ccc664" artifact_version_id="f75ddb8f-795b-4238-badb-8f0c2e092dc0" title="Customer.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="50ee064e-8a11-4e7b-a38d-5918f3806560" artifact_version_id="cd12aff9-1924-445e-9032-963f90eea078" title="Customer.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -81,7 +51,7 @@ public class Customer {
 ```
 
 ##### Entity: ProductOrder (TMF622)
-<xaiArtifact artifact_id="e91a679c-242a-436b-a0aa-bb17bf410fa8" artifact_version_id="bd3da245-fd07-490f-98e2-ec6599d5bfbd" title="ProductOrder.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="94e93d51-29b8-4d14-b43a-08c006943004" artifact_version_id="e7482cad-0bc3-4fd7-84a4-a6570b32dbc8" title="ProductOrder.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -120,7 +90,7 @@ public class ProductOrder {
 ```
 
 ##### Entity: ProductOrderItem
-<xaiArtifact artifact_id="5428ab26-3091-4f97-a586-29c8d7117c79" artifact_version_id="f05fe739-40b5-4934-b28a-c78452609198" title="ProductOrderItem.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="f9834849-5de2-4d1e-8046-19021ba2a137" artifact_version_id="2063abab-daa4-48a9-bceb-511b76be36e7" title="ProductOrderItem.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -147,7 +117,7 @@ public class ProductOrderItem {
 ```
 
 ##### Entity: Product
-<xaiArtifact artifact_id="ff85ec40-d03e-48af-9a0d-8fee6277440a" artifact_version_id="e9548394-05a2-419d-b904-d19e4a30f769" title="Product.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="d8307bab-bf7e-4d2f-b02b-251ce7a58977" artifact_version_id="6c4c0a5a-2a28-435f-bf19-534c7d144cd2" title="Product.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -177,7 +147,7 @@ public class Product {
 ```
 
 ##### Entity: RelatedParty
-<xaiArtifact artifact_id="563f9bc5-c82e-40f4-86dc-c6a37ce3abaf" artifact_version_id="32a51258-c2ea-487a-85cc-fc51d4fa05cb" title="RelatedParty.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="e3e34c3b-48ee-4647-b7d8-a479431a8fd0" artifact_version_id="79076851-3d73-43b6-b13a-987d4f6bf785" title="RelatedParty.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -202,7 +172,7 @@ public class RelatedParty {
 ```
 
 ##### Repository: Customer và ProductOrder
-<xaiArtifact artifact_id="2548ff12-be80-4e9f-9fef-aa0f4514045e" artifact_version_id="31faf54e-e887-4e86-ac3e-1e0355fea17a" title="CustomerRepository.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="4e9208f9-4342-4ef5-96cd-d9c4f30be5fd" artifact_version_id="7025ba73-6ea5-4676-ae73-e51f8e46da7b" title="CustomerRepository.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.repository;
 
@@ -213,7 +183,7 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
 }
 ```
 
-<xaiArtifact artifact_id="e4bfba99-4b61-4098-aeb1-8f9b73afbd8d" artifact_version_id="a50d473d-8115-44a4-a845-f418e477beca" title="ProductOrderRepository.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="f5e4229a-1448-49b6-b23b-a8583759774e" artifact_version_id="86bc416f-edc6-44d2-9601-8bd600c99e97" title="ProductOrderRepository.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.repository;
 
@@ -231,7 +201,7 @@ public interface ProductOrderRepository extends JpaRepository<ProductOrder, Stri
 ```
 
 ##### DTO: Validation đầu vào
-<xaiArtifact artifact_id="f12b94e4-6e46-4790-bd07-659171dcfae4" artifact_version_id="090b3e84-03c1-4beb-a40f-f283375659aa" title="ProductOrderRequest.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="c82bfec3-86bc-4231-9e4e-bb88cbc15384" artifact_version_id="88ce0bba-cf54-4e53-a738-a142aef6de67" title="ProductOrderRequest.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.dto;
 
@@ -268,7 +238,7 @@ public class ProductOrderRequest {
 }
 ```
 
-<xaiArtifact artifact_id="71b58215-1506-47fe-8ea6-8913ee4b52fe" artifact_version_id="40f9f017-978a-496a-91fb-d1642ce46758" title="RenewRequest.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="cd18ed78-06b1-4a84-954c-06d40ff6e096" artifact_version_id="f5e7d6f7-a13c-482f-af23-c337afc54c37" title="RenewRequest.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.dto;
 
@@ -296,7 +266,7 @@ public class RenewRequest {
 ```
 
 ##### Service: QuoteService (mô phỏng TMF648)
-<xaiArtifact artifact_id="a80d88c5-56fb-4706-8fbc-701a7d480aa0" artifact_version_id="6955eccd-4cc8-45e5-a271-ec1f81ae09a5" title="QuoteService.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="7afa0bfa-402d-4ece-8a08-023f9dee52d9" artifact_version_id="840bd31e-8837-4c36-99da-3ea6cb7ad0a2" title="QuoteService.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.service;
 
@@ -310,7 +280,7 @@ public class QuoteService {
 ```
 
 ##### Service: SubscriptionService
-<xaiArtifact artifact_id="558eed92-507c-41f8-b88b-1d82b46a6c03" artifact_version_id="939375df-534d-4182-ba39-818a35417ccc" title="SubscriptionService.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="4461644c-d384-4cac-9519-de7816726eee" artifact_version_id="c0342fe3-3d59-4984-8f58-6728c62559d8" title="SubscriptionService.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.service;
 
@@ -441,15 +411,25 @@ public class SubscriptionService {
 ```
 
 ##### Quartz Job: AutoRenewalJob
-<xaiArtifact artifact_id="8c78beda-d78d-4dab-820b-4b789c2dda69" artifact_version_id="53bd7f00-6c91-4d44-a466-90000d80af2b" title="AutoRenewalJob.java" contentType="text/x-java-source">
+`AutoRenewalJob` tự khởi tạo `SubscriptionService` và các dependencies trong phương thức `execute`.
+
+<xaiArtifact artifact_id="8aa3231f-9cc3-4643-8eeb-c07769fde4bc" artifact_version_id="eb7f6b8c-29e6-4791-b311-4de49b59b669" title="AutoRenewalJob.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.scheduler;
 
 import com.example.subscription.entity.ProductOrder;
+import com.example.subscription.repository.CustomerRepository;
+import com.example.subscription.repository.ProductOrderRepository;
+import com.example.subscription.service.QuoteService;
 import com.example.subscription.service.SubscriptionService;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+import org.springframework.data.repository.core.support.RepositoryFactorySupport;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -457,8 +437,16 @@ import java.util.List;
 public class AutoRenewalJob implements Job {
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
-        // Lấy SubscriptionService từ JobDataMap
-        SubscriptionService subscriptionService = (SubscriptionService) context.getMergedJobDataMap().get("subscriptionService");
+        // Khởi tạo EntityManager và repositories thủ công
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("subscriptionPU");
+        EntityManager em = emf.createEntityManager();
+        RepositoryFactorySupport factory = new JpaRepositoryFactory(em);
+        CustomerRepository customerRepository = factory.getRepository(CustomerRepository.class);
+        ProductOrderRepository productOrderRepository = factory.getRepository(ProductOrderRepository.class);
+
+        // Khởi tạo services thủ công
+        QuoteService quoteService = new QuoteService();
+        SubscriptionService subscriptionService = new SubscriptionService(customerRepository, productOrderRepository, quoteService);
 
         // Tìm các đơn hàng sắp hết hạn trong 2 ngày
         LocalDateTime thresholdDate = LocalDateTime.now().plusDays(2);
@@ -475,12 +463,16 @@ public class AutoRenewalJob implements Job {
                 System.err.println("Failed to auto-renew product order: " + productOrder.getId() + ", error: " + e.getMessage());
             }
         }
+
+        // Đóng EntityManager
+        em.close();
+        emf.close();
     }
 }
 ```
 
 ##### Controller: SubscriptionController
-<xaiArtifact artifact_id="7abcb1f7-f33f-4aa7-b0d2-91b7da3983a1" artifact_version_id="038845f7-4e36-49ee-a789-b8194ef91024" title="SubscriptionController.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="160e574e-3306-4d29-ad58-f07397915089" artifact_version_id="2fa98ce4-6b95-4e2a-a2bc-ed6e9f793d95" title="SubscriptionController.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.controller;
 
@@ -586,7 +578,7 @@ public class SubscriptionController {
 ```
 
 ##### Cấu hình Persistence (cho H2 Database)
-<xaiArtifact artifact_id="3f1f3508-e3de-41cc-aa67-d5d42872b972" artifact_version_id="3acd11a0-c9a9-4840-90f4-00579b4d0709" title="persistence.xml" contentType="text/xml">
+<xaiArtifact artifact_id="da5cd7a2-403c-4fbc-9f88-8b8d3c347ae6" artifact_version_id="272ca160-ea52-4547-b380-101d839b0a00" title="persistence.xml" contentType="text/xml">
 ```xml
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -608,3 +600,4 @@ public class SubscriptionController {
         </properties>
     </persistence-unit>
 </persistence>
+```
