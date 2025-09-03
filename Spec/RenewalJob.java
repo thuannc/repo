@@ -1,5 +1,3 @@
-package com.example.subscription;
-
 import com.example.subscription.repository.CustomerRepository;
 import com.example.subscription.repository.ProductOrderRepository;
 import com.example.subscription.scheduler.AutoRenewalJob;
@@ -33,26 +31,22 @@ public class SubscriptionRenewalApplication {
         QuoteService quoteService = new QuoteService();
         SubscriptionService subscriptionService = new SubscriptionService(customerRepository, productOrderRepository, quoteService);
 
-        // Khởi động Quartz Scheduler
+        // Khởi động Quartz Scheduler với cấu hình từ quartz.properties
         try {
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 
-            // Định nghĩa Job và truyền SubscriptionService qua JobDataMap
+            // Truyền SubscriptionService qua JobDataMap
             JobDataMap jobDataMap = new JobDataMap();
             jobDataMap.put("subscriptionService", subscriptionService);
+
+            // Cập nhật JobDataMap cho job đã định nghĩa trong quartz.properties
             JobDetail job = JobBuilder.newJob(AutoRenewalJob.class)
                     .withIdentity("autoRenewalJob", "group1")
                     .usingJobData(jobDataMap)
                     .build();
 
-            // Định nghĩa Trigger với cú pháp crontab (1:00 AM hàng ngày)
-            Trigger trigger = TriggerBuilder.newTrigger()
-                    .withIdentity("autoRenewalTrigger", "group1")
-                    .withSchedule(CronScheduleBuilder.cronSchedule("0 0 1 * * ?"))
-                    .build();
-
-            // Lập lịch job
-            scheduler.scheduleJob(job, trigger);
+            // Lập lịch job (trigger đã được cấu hình trong quartz.properties)
+            scheduler.scheduleJob(job);
             scheduler.start();
         } catch (SchedulerException e) {
             System.err.println("Failed to start Quartz Scheduler: " + e.getMessage());
@@ -62,7 +56,7 @@ public class SubscriptionRenewalApplication {
 ```
 
 ##### Entity: Customer (TMF629)
-<xaiArtifact artifact_id="99b7331a-4f4e-4325-8d27-fa77ba661943" artifact_version_id="80f8cd49-6866-411e-a68a-fab318781d90" title="Customer.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="58585013-effc-44e7-ad9a-cac1c6ccc664" artifact_version_id="f75ddb8f-795b-4238-badb-8f0c2e092dc0" title="Customer.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -87,9 +81,7 @@ public class Customer {
 ```
 
 ##### Entity: ProductOrder (TMF622)
-Entity này được thiết kế để tuân thủ chuẩn TMF622, với các trường và quan hệ cần thiết.
-
-<xaiArtifact artifact_id="f887634c-4866-42d7-984e-29ef61a47361" artifact_version_id="688bc029-5828-4ad8-aeda-9c0e7a97924f" title="ProductOrder.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="e91a679c-242a-436b-a0aa-bb17bf410fa8" artifact_version_id="bd3da245-fd07-490f-98e2-ec6599d5bfbd" title="ProductOrder.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -128,7 +120,7 @@ public class ProductOrder {
 ```
 
 ##### Entity: ProductOrderItem
-<xaiArtifact artifact_id="cba038f6-973a-4ebe-9cc0-57545654067d" artifact_version_id="43eec107-1658-4efd-88df-0457536ac71f" title="ProductOrderItem.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="5428ab26-3091-4f97-a586-29c8d7117c79" artifact_version_id="f05fe739-40b5-4934-b28a-c78452609198" title="ProductOrderItem.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -155,7 +147,7 @@ public class ProductOrderItem {
 ```
 
 ##### Entity: Product
-<xaiArtifact artifact_id="3ec7cf02-07ee-4fa8-8aec-7577b7595e48" artifact_version_id="290c30e7-c035-4f36-8d7d-c10ffa06cd4c" title="Product.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="ff85ec40-d03e-48af-9a0d-8fee6277440a" artifact_version_id="e9548394-05a2-419d-b904-d19e4a30f769" title="Product.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -185,7 +177,7 @@ public class Product {
 ```
 
 ##### Entity: RelatedParty
-<xaiArtifact artifact_id="23fb1746-1572-4169-9ea1-760937063ab7" artifact_version_id="f6190110-a3bc-4357-ac0b-15274fbda30a" title="RelatedParty.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="563f9bc5-c82e-40f4-86dc-c6a37ce3abaf" artifact_version_id="32a51258-c2ea-487a-85cc-fc51d4fa05cb" title="RelatedParty.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.entity;
 
@@ -210,7 +202,7 @@ public class RelatedParty {
 ```
 
 ##### Repository: Customer và ProductOrder
-<xaiArtifact artifact_id="57bf120d-b462-43d3-b9d3-f62e25c590ac" artifact_version_id="b704a09c-fda6-4037-ab2d-84449ffc71b0" title="CustomerRepository.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="2548ff12-be80-4e9f-9fef-aa0f4514045e" artifact_version_id="31faf54e-e887-4e86-ac3e-1e0355fea17a" title="CustomerRepository.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.repository;
 
@@ -221,7 +213,7 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
 }
 ```
 
-<xaiArtifact artifact_id="de1530d2-18d3-4101-8421-46b120737463" artifact_version_id="f3473282-5009-42e0-a134-546ed3633b48" title="ProductOrderRepository.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="e4bfba99-4b61-4098-aeb1-8f9b73afbd8d" artifact_version_id="a50d473d-8115-44a4-a845-f418e477beca" title="ProductOrderRepository.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.repository;
 
@@ -239,14 +231,11 @@ public interface ProductOrderRepository extends JpaRepository<ProductOrder, Stri
 ```
 
 ##### DTO: Validation đầu vào
-Cập nhật DTO để phù hợp với cấu trúc TMF622.
-
-<xaiArtifact artifact_id="4af7e87f-75c9-4d31-b175-6d3e50fd1a9f" artifact_version_id="be8c5d6a-da9d-4bf6-af48-6274659f5abd" title="ProductOrderRequest.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="f12b94e4-6e46-4790-bd07-659171dcfae4" artifact_version_id="090b3e84-03c1-4beb-a40f-f283375659aa" title="ProductOrderRequest.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 public class ProductOrderRequest {
@@ -279,7 +268,7 @@ public class ProductOrderRequest {
 }
 ```
 
-<xaiArtifact artifact_id="9e61015b-991c-4a34-966d-b6673d7171a4" artifact_version_id="469e7041-5670-4c27-816a-86d93645cb25" title="RenewRequest.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="71b58215-1506-47fe-8ea6-8913ee4b52fe" artifact_version_id="40f9f017-978a-496a-91fb-d1642ce46758" title="RenewRequest.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.dto;
 
@@ -307,7 +296,7 @@ public class RenewRequest {
 ```
 
 ##### Service: QuoteService (mô phỏng TMF648)
-<xaiArtifact artifact_id="1170f450-6e2b-4465-b378-aa72b3d0f44c" artifact_version_id="46da60e4-85dd-4133-8126-038e99540a04" title="QuoteService.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="a80d88c5-56fb-4706-8fbc-701a7d480aa0" artifact_version_id="6955eccd-4cc8-45e5-a271-ec1f81ae09a5" title="QuoteService.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.service;
 
@@ -321,9 +310,7 @@ public class QuoteService {
 ```
 
 ##### Service: SubscriptionService
-Cập nhật để xử lý `ProductOrder` theo chuẩn TMF622.
-
-<xaiArtifact artifact_id="3f2b52bb-4bd9-4e59-a6e0-72d18d2ee8b0" artifact_version_id="b4e78e6d-3517-4c43-af93-fadebc9d1173" title="SubscriptionService.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="558eed92-507c-41f8-b88b-1d82b46a6c03" artifact_version_id="939375df-534d-4182-ba39-818a35417ccc" title="SubscriptionService.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.service;
 
@@ -454,7 +441,7 @@ public class SubscriptionService {
 ```
 
 ##### Quartz Job: AutoRenewalJob
-<xaiArtifact artifact_id="d9ab8b09-b97f-4ccf-bfff-cae4b1fe3b07" artifact_version_id="24b2fc5c-f85e-4932-bbf9-9410cf3b6cb0" title="AutoRenewalJob.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="8c78beda-d78d-4dab-820b-4b789c2dda69" artifact_version_id="53bd7f00-6c91-4d44-a466-90000d80af2b" title="AutoRenewalJob.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.scheduler;
 
@@ -493,7 +480,7 @@ public class AutoRenewalJob implements Job {
 ```
 
 ##### Controller: SubscriptionController
-<xaiArtifact artifact_id="02769cb3-7d28-42ad-82b5-8cd5252ab0d0" artifact_version_id="747fe199-f65f-4ff0-b7ae-4ad6a1bad58b" title="SubscriptionController.java" contentType="text/x-java-source">
+<xaiArtifact artifact_id="7abcb1f7-f33f-4aa7-b0d2-91b7da3983a1" artifact_version_id="038845f7-4e36-49ee-a789-b8194ef91024" title="SubscriptionController.java" contentType="text/x-java-source">
 ```java
 package com.example.subscription.controller;
 
@@ -559,7 +546,7 @@ public class SubscriptionController {
         return ResponseEntity.ok(productOrder);
     }
 
-    // TMF622 PATCH /productOrder/{id}
+    // TMF622 PATCH /productOrder/renew
     @PatchMapping("/renew")
     public ResponseEntity<ProductOrder> renewProductOrder(@Valid @RequestBody RenewRequest request) {
         ProductOrder productOrder = service.renewProductOrder(
@@ -599,7 +586,7 @@ public class SubscriptionController {
 ```
 
 ##### Cấu hình Persistence (cho H2 Database)
-<xaiArtifact artifact_id="a4a57cf6-03dc-4ce4-a10f-92d0ee76bc47" artifact_version_id="f924e033-e58e-4d4d-855b-f85eb27b7139" title="persistence.xml" contentType="text/xml">
+<xaiArtifact artifact_id="3f1f3508-e3de-41cc-aa67-d5d42872b972" artifact_version_id="3acd11a0-c9a9-4840-90f4-00579b4d0709" title="persistence.xml" contentType="text/xml">
 ```xml
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
