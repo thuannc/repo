@@ -1,0 +1,510 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DebtCollectionDataModel",
+  "description": "JSON Schema for Debt Collection Subsystem based on TM Forum SID Customer Bill Collection ABE and related Open APIs (TMF666, TMF676, TMF678), adhering to ODA architecture.",
+  "definitions": {
+    "BillingAccount": {
+      "type": "object",
+      "description": "Represents a customer's billing account as defined in SID Customer ABE and TMF666 Account Management API, used for tracking receivables and debt.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the billing account." },
+        "href": { "type": "string", "description": "Hyperlink reference to the billing account." },
+        "name": { "type": "string", "description": "Name of the billing account." },
+        "description": { "type": "string", "description": "Detailed description of the account." },
+        "state": {
+          "type": "string",
+          "enum": ["active", "inactive", "closed", "suspended"],
+          "description": "Lifecycle state of the account."
+        },
+        "accountType": { "type": "string", "description": "Type of account (e.g., billing, settlement)." },
+        "accountBalance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "amount": { "type": "number", "description": "Balance amount." },
+              "type": {
+                "type": "string",
+                "enum": ["currentBalance", "balanceDue", "overdueBalance"],
+                "description": "Type of balance."
+              },
+              "validFor": {
+                "type": "object",
+                "properties": {
+                  "startDateTime": { "type": "string", "format": "date-time", "description": "Start of validity period." },
+                  "endDateTime": { "type": "string", "format": "date-time", "description": "End of validity period." }
+                }
+              }
+            },
+            "required": ["amount", "type"]
+          },
+          "description": "Balances associated with the account, including overdue amounts."
+        },
+        "paymentPlan": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "description": "Unique identifier for the payment plan." },
+              "name": { "type": "string", "description": "Name of the payment plan." },
+              "numberOfPayments": { "type": "integer", "description": "Number of installments." },
+              "paymentFrequency": {
+                "type": "string",
+                "enum": ["weekly", "biweekly", "monthly", "quarterly"],
+                "description": "Frequency of payments."
+              },
+              "priority": { "type": "integer", "description": "Priority of the payment plan." },
+              "status": {
+                "type": "string",
+                "enum": ["active", "cancelled", "completed"],
+                "description": "Status of the payment plan."
+              },
+              "totalAmount": { "type": "number", "description": "Total amount to be paid." },
+              "validFor": {
+                "type": "object",
+                "properties": {
+                  "startDateTime": { "type": "string", "format": "date-time" },
+                  "endDateTime": { "type": "string", "format": "date-time" }
+                }
+              }
+            },
+            "required": ["id", "numberOfPayments", "paymentFrequency", "totalAmount"]
+          },
+          "description": "Payment plans for settling debts, as defined in SID."
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "description": "Identifier of the related party." },
+              "role": {
+                "type": "string",
+                "enum": ["customer", "payer", "guarantor"],
+                "description": "Role of the party."
+              }
+            },
+            "required": ["id", "role"]
+          },
+          "description": "Parties related to the billing account (e.g., customer)."
+        }
+      },
+      "required": ["id", "name", "state"],
+      "examples": [
+        {
+          "id": "BA-2025-1001",
+          "href": "https://api.example.com/billingAccounts/BA-2025-1001",
+          "name": "Nguyen Van A's Billing Account",
+          "description": "Primary billing account for mobile and broadband services",
+          "state": "active",
+          "accountType": "billing",
+          "accountBalance": [
+            {
+              "amount": 2500000,
+              "type": "balanceDue",
+              "validFor": {
+                "startDateTime": "2025-08-01T00:00:00+07:00",
+                "endDateTime": "2025-09-01T00:00:00+07:00"
+              }
+            },
+            {
+              "amount": 3000000,
+              "type": "currentBalance",
+              "validFor": {
+                "startDateTime": "2025-09-01T00:00:00+07:00",
+                "endDateTime": "2025-10-01T00:00:00+07:00"
+              }
+            }
+          ],
+          "paymentPlan": [
+            {
+              "id": "PP-2025-001",
+              "name": "Three-Month Installment Plan",
+              "numberOfPayments": 3,
+              "paymentFrequency": "monthly",
+              "priority": 1,
+              "status": "active",
+              "totalAmount": 2500000,
+              "validFor": {
+                "startDateTime": "2025-09-01T00:00:00+07:00",
+                "endDateTime": "2025-12-01T00:00:00+07:00"
+              }
+            }
+          ],
+          "relatedParty": [
+            {
+              "id": "CUST-2025-001",
+              "role": "customer"
+            }
+          ]
+        }
+      ]
+    },
+    "CustomerBill": {
+      "type": "object",
+      "description": "Represents an invoice or bill as defined in SID Customer Bill ABE and TMF678 Customer Bill Management API, central to identifying debt.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the bill." },
+        "href": { "type": "string", "description": "Hyperlink reference to the bill." },
+        "billNo": { "type": "string", "description": "Bill number for reference." },
+        "billDate": { "type": "string", "format": "date-time", "description": "Date the bill was issued." },
+        "paymentDueDate": { "type": "string", "format": "date-time", "description": "Due date for payment." },
+        "amountDue": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "number", "description": "Total amount due." },
+            "unit": { "type": "string", "description": "Currency unit (e.g., VND)." }
+          },
+          "description": "Total amount due on the bill."
+        },
+        "remainingAmount": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "number", "description": "Remaining unpaid amount." },
+            "unit": { "type": "string", "description": "Currency unit." }
+          },
+          "description": "Remaining unpaid amount (debt)."
+        },
+        "state": {
+          "type": "string",
+          "enum": ["new", "partial", "settled", "disputed", "cancelled"],
+          "description": "State of the bill."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["monthly", "one-time", "recurring"],
+          "description": "Category of the bill."
+        },
+        "billingPeriod": {
+          "type": "object",
+          "properties": {
+            "startDateTime": { "type": "string", "format": "date-time", "description": "Start of billing period." },
+            "endDateTime": { "type": "string", "format": "date-time", "description": "End of billing period." }
+          },
+          "description": "Period covered by the bill."
+        },
+        "appliedPayment": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/PaymentRef" },
+          "description": "Payments applied to the bill."
+        },
+        "billItem": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string", "description": "Unique identifier for the bill item." },
+              "amount": { "type": "number", "description": "Amount for the item." },
+              "description": { "type": "string", "description": "Description of the bill item." }
+            },
+            "required": ["id", "amount", "description"]
+          },
+          "description": "Detailed items on the bill."
+        },
+        "billingAccount": { "$ref": "#/definitions/BillingAccountRef", "description": "Reference to associated billing account." }
+      },
+      "required": ["id", "billDate", "paymentDueDate", "amountDue"],
+      "examples": [
+        {
+          "id": "BILL-2025-09-001",
+          "href": "https://api.example.com/customerBills/BILL-2025-09-001",
+          "billNo": "INV-2025-09-001",
+          "billDate": "2025-09-01T00:00:00+07:00",
+          "paymentDueDate": "2025-09-15T23:59:59+07:00",
+          "amountDue": {
+            "amount": 2500000,
+            "unit": "VND"
+          },
+          "remainingAmount": {
+            "amount": 1500000,
+            "unit": "VND"
+          },
+          "state": "partial",
+          "category": "monthly",
+          "billingPeriod": {
+            "startDateTime": "2025-08-01T00:00:00+07:00",
+            "endDateTime": "2025-08-31T23:59:59+07:00"
+          },
+          "appliedPayment": [
+            {
+              "id": "PAY-2025-001",
+              "href": "https://api.example.com/payments/PAY-2025-001"
+            }
+          ],
+          "billItem": [
+            {
+              "id": "ITEM-001",
+              "amount": 1000000,
+              "description": "Mobile data usage"
+            },
+            {
+              "id": "ITEM-002",
+              "amount": 1500000,
+              "description": "Broadband subscription"
+            }
+          ],
+          "billingAccount": {
+            "id": "BA-2025-1001",
+            "href": "https://api.example.com/billingAccounts/BA-2025-1001"
+          }
+        }
+      ]
+    },
+    "Payment": {
+      "type": "object",
+      "description": "Represents a payment or refund as defined in SID Payment ABE and TMF676 Payment Management API, used in debt resolution.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the payment." },
+        "href": { "type": "string", "description": "Hyperlink reference to the payment." },
+        "amount": {
+          "type": "object",
+          "properties": {
+            "amount": { "type": "number", "description": "Payment amount." },
+            "unit": { "type": "string", "description": "Currency unit." }
+          },
+          "description": "Amount of the payment."
+        },
+        "paymentDate": { "type": "string", "format": "date-time", "description": "Date of payment." },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "done", "rejected", "refunded"],
+          "description": "Payment status."
+        },
+        "paymentMethod": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string", "description": "Identifier of the payment method." },
+            "name": {
+              "type": "string",
+              "enum": ["Credit Card", "Bank Transfer", "Mobile Payment", "Cash"],
+              "description": "Name of the payment method."
+            }
+          },
+          "description": "Method used for payment."
+        },
+        "account": { "$ref": "#/definitions/BillingAccountRef", "description": "Associated billing account." }
+      },
+      "required": ["id", "amount", "paymentDate"],
+      "examples": [
+        {
+          "id": "PAY-2025-001",
+          "href": "https://api.example.com/payments/PAY-2025-001",
+          "amount": {
+            "amount": 1000000,
+            "unit": "VND"
+          },
+          "paymentDate": "2025-09-10T10:00:00+07:00",
+          "status": "done",
+          "paymentMethod": {
+            "id": "PM-001",
+            "name": "Mobile Payment"
+          },
+          "account": {
+            "id": "BA-2025-1001",
+            "href": "https://api.example.com/billingAccounts/BA-2025-1001"
+          }
+        }
+      ]
+    },
+    "DunningScenario": {
+      "type": "object",
+      "description": "Dunning strategy as defined in SID Customer Bill Collection ABE, specifying rules for debt collection.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the dunning scenario." },
+        "name": { "type": "string", "description": "Name of the dunning scenario." },
+        "description": { "type": "string", "description": "Detailed description of the scenario." },
+        "dunningRules": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/DunningRule" },
+          "description": "Ordered list of dunning rules."
+        },
+        "orderOfApplication": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "Order in which rules are applied."
+        },
+        "triggeringEvents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["billIssued", "paymentMissed", "billOverdue15Days", "billOverdue30Days", "billOverdue60Days"]
+          },
+          "description": "Events that trigger the scenario."
+        },
+        "requiredActions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["logActivity", "updateStatus", "notifyCustomer", "applyPenalty"]
+          },
+          "description": "Mandatory actions for the scenario."
+        },
+        "assignedTo": { "$ref": "#/definitions/BillingAccountRef", "description": "Assigned billing account." }
+      },
+      "required": ["id", "dunningRules"],
+      "examples": [
+        {
+          "id": "DS-2025-001",
+          "name": "Standard Dunning for Overdue Bills",
+          "description": "Dunning scenario for bills overdue by more than 15 days, escalating to service suspension after 30 days.",
+          "dunningRules": [
+            {
+              "id": "DR-001",
+              "triggeringEvents": ["billOverdue15Days"],
+              "conditions": ["noDisputeOpen", "balanceDue > 1000000"],
+              "actions": ["sendEmailReminder", "applyLateFee"]
+            },
+            {
+              "id": "DR-002",
+              "triggeringEvents": ["billOverdue30Days"],
+              "conditions": ["noPaymentReceived"],
+              "actions": ["sendSMSNotification", "suspendService"]
+            }
+          ],
+          "orderOfApplication": [1, 2],
+          "triggeringEvents": ["billIssued", "paymentMissed", "billOverdue15Days", "billOverdue30Days"],
+          "requiredActions": ["logActivity", "updateStatus", "notifyCustomer"],
+          "assignedTo": {
+            "id": "BA-2025-1001",
+            "href": "https://api.example.com/billingAccounts/BA-2025-1001"
+          }
+        }
+      ]
+    },
+    "DunningRule": {
+      "type": "object",
+      "description": "Specific rule within a dunning scenario as defined in SID Customer Bill Collection ABE.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the dunning rule." },
+        "triggeringEvents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["billOverdue15Days", "billOverdue30Days", "billOverdue60Days", "paymentMissed"]
+          },
+          "description": "Events that trigger the rule."
+        },
+        "conditions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Conditions to evaluate (e.g., no dispute in progress)."
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["sendEmailReminder", "sendSMSNotification", "applyLateFee", "suspendService", "escalateToAgency"]
+          },
+          "description": "Actions to perform when the rule is triggered."
+        }
+      },
+      "required": ["id", "actions"],
+      "examples": [
+        {
+          "id": "DR-001",
+          "triggeringEvents": ["billOverdue15Days"],
+          "conditions": ["noDisputeOpen", "balanceDue > 1000000"],
+          "actions": ["sendEmailReminder", "applyLateFee"]
+        }
+      ]
+    },
+    "DunningCase": {
+      "type": "object",
+      "description": "Instance of a dunning process for a specific account as defined in SID Customer Bill Collection ABE.",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier for the dunning case." },
+        "creationDate": { "type": "string", "format": "date-time", "description": "Date the case was created." },
+        "status": {
+          "type": "string",
+          "enum": ["new", "inProgress", "resolved", "escalated", "closed"],
+          "description": "Status of the dunning case."
+        },
+        "associatedAccount": { "$ref": "#/definitions/BillingAccountRef", "description": "Linked billing account." },
+        "appliedScenario": { "$ref": "#/definitions/DunningScenarioRef", "description": "Applied dunning scenario." },
+        "appliedRules": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/DunningRuleRef" },
+          "description": "Rules applied in the case."
+        }
+      },
+      "required": ["id", "creationDate", "associatedAccount"],
+      "examples": [
+        {
+          "id": "DC-2025-001",
+          "creationDate": "2025-09-16T08:00:00+07:00",
+          "status": "inProgress",
+          "associatedAccount": {
+            "id": "BA-2025-1001",
+            "href": "https://api.example.com/billingAccounts/BA-2025-1001"
+          },
+          "appliedScenario": {
+            "id": "DS-2025-001",
+            "href": "https://api.example.com/dunningScenarios/DS-2025-001"
+          },
+          "appliedRules": [
+            {
+              "id": "DR-001",
+              "href": "https://api.example.com/dunningRules/DR-001"
+            }
+          ]
+        }
+      ]
+    },
+    "BillingAccountRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifier of the billing account." },
+        "href": { "type": "string", "description": "Hyperlink reference to the billing account." }
+      },
+      "required": ["id"],
+      "examples": [
+        {
+          "id": "BA-2025-1001",
+          "href": "https://api.example.com/billingAccounts/BA-2025-1001"
+        }
+      ]
+    },
+    "DunningScenarioRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifier of the dunning scenario." },
+        "href": { "type": "string", "description": "Hyperlink reference to the dunning scenario." }
+      },
+      "required": ["id"],
+      "examples": [
+        {
+          "id": "DS-2025-001",
+          "href": "https://api.example.com/dunningScenarios/DS-2025-001"
+        }
+      ]
+    },
+    "DunningRuleRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifier of the dunning rule." },
+        "href": { "type": "string", "description": "Hyperlink reference to the dunning rule." }
+      },
+      "required": ["id"],
+      "examples": [
+        {
+          "id": "DR-001",
+          "href": "https://api.example.com/dunningRules/DR-001"
+        }
+      ]
+    },
+    "PaymentRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifier of the payment." },
+        "href": { "type": "string", "description": "Hyperlink reference to the payment." }
+      },
+      "required": ["id"],
+      "examples": [
+        {
+          "id": "PAY-2025-001",
+          "href": "https://api.example.com/payments/PAY-2025-001"
+        }
+      ]
+    }
+  }
+}
