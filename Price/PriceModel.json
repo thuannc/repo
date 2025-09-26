@@ -7,20 +7,7 @@
         {
           "@type": "ProductSpecificationCharacteristicValueUse",
           "name": "colour",
-          "productSpecCharacteristicValue": [
-            {
-              "value": "Green"
-            },
-            {
-              "value": "Yellow"
-            },
-            {
-              "value": "Orange"
-            },
-            {
-              "value": "Gold"
-            }
-          ],
+          "productSpecCharacteristicValue": [ {"value": "Green"}, {"value": "Yellow"}, {"value": "Orange"}, {"value": "Gold"}],
           "productSpecification": {
             "@type": "ProductSpecificationRef",
             "name": "handset PS"
