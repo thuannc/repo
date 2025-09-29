@@ -35,6 +35,12 @@
       "value": 50,
       "tiers":[{"upTo":999,"value":2,"blockSize":1}]
     },
+    "priceMode":"GRADUATED",
+    "tier":[{
+         "from":1,
+        "to":10,
+        "price":{"value":100,"unit":"VND"}
+    }],
     "percentage": 0,
     "productOfferingTerm": [
       {
