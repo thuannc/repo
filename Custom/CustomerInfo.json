@@ -1,4 +1,14 @@
 {
+  "@type": "Customer",
+  "href": "https://host:port/tmf-api/customerManagement/v5/customer/1140",
+  "id": "1140",
+  "name": "Moon Football Club",
+  "status": "Approved",
+  "statusReason": "Account details checked",
+  "validFor": {
+    "startDateTime": "2018-06-12T00:00:00Z",
+    "endDateTime": "2019-01-01T00:00:00Z"
+  },
   
   "msisdn":"0915043333",
   "customerType":"Normal",
@@ -16,7 +26,97 @@
   "currentProduct":[],
   "serviceProvider":"VNP",
   "continuosLock2":"1",
-  "inSameMonth":"0"
+  "inSameMonth":"0",
+
   
-  
+  "comments":"/****************************************************************************************************************/",
+  "engagedParty": {
+    "id": "500",
+    "name": "Happy Travellers",
+    "@referredType": "Organization",
+    "href": "https://host:port/tmf-api/partyManagement/v5/organization/500"
+  },
+  "account": [
+    {
+      "@type": "AccountRef",
+      "href": "https://host:port/tmf-api/settlementAccount/v5/settlementAccount/99807",
+      "id": "99807",
+      "@referredType": "SettlementAccount"
+    },
+    {
+      "@type": "AccountRef",
+      "href": "https://host:port/tmf-api/accountManagement/v5/account/8251",
+      "id": "8251",
+      "name": "Travel Account",
+      "@referredType": "BillingAccount",
+      "description": "Primary billing account"
+    }
+  ],
+  "paymentMethod": [
+    {
+      "@type": "PaymentMethodRef",
+      "href": "https://host:port/tmf-api/paymentMethods/v1/paymentMethod/9562",
+      "id": "9562",
+      "name": "professional payment",
+      "@referredType": "CreditCardPayment"
+    }
+  ],
+  "contactMedium": [
+    {
+      "@type": "PhoneContactMedium",
+      "preferred": true,
+      "contactType": "homePhone",
+      "validFor": {
+        "startDateTime": "2018-06-12T00:00:00Z",
+        "endDateTime": "2019-01-01T00:00:00Z"
+      },
+      "phoneNumber": "01 09 75 83 51"
+    },
+    {
+      "@type": "GeographicAddressContactMedium",
+      "preferred": false,
+      "contactType": "homeAddress",
+      "validFor": {
+        "startDateTime": "2018-06-12T00:00:00Z",
+        "endDateTime": "2019-01-01T00:00:00Z"
+      },
+      "city": "Paris",
+      "country": "France",
+      "postCode": "75014",
+      "street1": "15 Rue des Canards"
+    }
+  ],
+  "creditProfile": [
+    {
+      "@type": "CreditProfile",
+      "creditProfileDate": "2018-06-15T00:00:00Z",
+      "creditRiskRating": 4,
+      "creditScore": 5,
+      "validFor": {
+        "startDateTime": "2018-06-12T00:00:00Z",
+        "endDateTime": "2019-01-01T00:00:00Z"
+      }
+    }
+  ],
+  "agreement": [
+    {
+      "@type": "AgreementRef",
+      "href": "https://host:port/tmf-api/agreementManagement/v5/agreement/4721",
+      "id": "4721",
+      "name": "Summer Contract Agreement"
+    }
+  ],
+  "relatedParty": [
+    {
+      "@type": "RelatedPartyRefOrPartyRoleRef",
+      "role": "bill receiver",
+      "partyOrPartyRole": {
+        "href": "https://host:port/tmf-api/partyManagement/v5/organization/2777",
+        "id": "2777",
+        "name": "John Doe (Accounting) Ltd",
+        "@referredType": "Organization"
+      }
+    }
+  ]
 }
+
