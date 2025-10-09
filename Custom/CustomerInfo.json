@@ -1,0 +1,22 @@
+{
+  
+  "msisdn":"0915043333",
+  "customerType":"Normal",
+  "subscriberType":"Prepaid",
+  "changeSubscriberType":"1",
+  "activateDate":"10/10/2025'T'00:00:00",
+  "activateDuration":"0",
+  "operationState":"0",
+  "portabilityDate":"10/10/2025'T'00:00:00",
+  "portabilityState":"0",
+  "portabilityDuration":"0",
+  "subscriberSet":[],
+  "consumption":[],
+  "arpu":[],
+  "currentProduct":[],
+  "serviceProvider":"VNP",
+  "continuosLock2":"1",
+  "inSameMonth":"0"
+  
+  
+}
