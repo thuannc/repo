@@ -1,0 +1,55 @@
+@startuml
+actor Customer as usr
+participant "System" as sys
+== Gia hạn thành viên/add-on ==
+note right of sys
+    Ngày t=30/Cuối tháng
+end note
+sys -> sys: Gia hạn thành viên/add-on hàng tháng
+sys --> usr: Thông báo kết quả
+note right: Retry mỗi ngày 3 lần trong 30 ngày
+== Gia hạn trước ==
+    note right of sys
+    Ngày N-7
+    - GDV gọi điện mời gia hạn
+    end note
+    sys --> usr: Mời gia hạn trước
+    usr --> sys: Gửi tin nhắn gia hạn trước
+    sys --> sys: Gia hạn trước
+    sys --> usr: Thông báo kết quả gia hạn trước
+== Gia hạn ==
+    note right of sys
+    Ngày N-3
+    end note
+    sys --> usr: Thông báo sắp gia hạn tự động
+    note right of sys
+    Ngày N-1
+    end note
+    sys --> usr: Thông báo sắp gia hạn tự động
+    note right of sys
+    Ngày N-0
+    end note
+    sys --> sys: Huỷ ưu đãi gói hết hạn
+    sys --> usr: Gia hạn tự động
+    sys --> usr: Thông báo kết quả gia hạn
+
+== Gia hạn lại ==
+    note right of sys
+    Ngày N+t (t:1->10)
+    end note
+    sys --> sys: Thử lại gia hạn (nếu không GH thành công)
+    sys --> usr: Thông báo kết quả gia hạn
+    note left of usr
+    Ngày N+x
+    end note
+    usr --> sys: Khách hàng nạp thẻ
+    sys -> sys: Gia hạn
+    sys --> usr: Thông báo kết quả gia hạn
+== Huỷ gia hạn lại gói quá thời hạn gia hạn ==
+    note right of sys
+    Ngày N+90
+    end note
+    sys --> sys: Huỷ gói hết thời hạn GH
+    sys --> usr: Thông báo huỷ gói (nếu có)
+== ==
+@enduml
