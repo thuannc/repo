@@ -6,6 +6,9 @@
 	"name": "Athelstan Amos",
 	"description": "Athelstan Amos",
 	"isAppointmentRequired":"true",
+	"lifeCycleStatus":"active",
+	"standardDuration":"1",
+	"standardCapacityRequired":"1",
 	"workSpecRole":[{
 		"@type": "WorkSpecificationRole"
 		"name": "workSpecRole"
