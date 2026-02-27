@@ -12,5 +12,18 @@
 		"cost":{"amount":100,"units":""},
 		"skills":""
 	},
-	"organizationRoleName": "HaNoi"
+	"organizationRoleName": "HaNoi",
+	"workforceEmployeePool":[{
+		"@type": "WorkforceEmployeePool",
+		"name": "xxx",
+		"isWfSupplierEmployeePool": "false"
+	}],
+	"workforceResourcePool":[{
+		"@type": "WorkforceResourcePool",
+		"name": "xxx"
+	}],
+	"place":[{
+		"@type": "Place",
+		"name": "HaNoi"
+	}]
 }
