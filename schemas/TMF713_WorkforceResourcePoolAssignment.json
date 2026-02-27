@@ -1,0 +1,18 @@
+{
+	"@type": "WorkforceResourcePoolAssignment",
+	"@baseType": "WorkforcePoolAssignment",
+	"poolAssignmentRestriction": "false",
+	"validFor": {
+		"startDateTime": "2024-04-12T23:20:50.52Z",
+		"endDateTime": "2024-04-12T23:20:50.52Z"
+	},
+	"name": "xxx",
+	"workforceResourceRole":{
+		"@type": "WorkforceResourceRole",
+		"name": "Workforce resource assigned to Pool",
+	},
+	"workforceResourcePool":{
+		"@type": "WorkforceResourcePool",
+		"name": "Workforce resource pool contains workforce resource",
+	}
+}
