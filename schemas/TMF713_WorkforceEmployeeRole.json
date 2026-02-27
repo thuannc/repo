@@ -1,0 +1,16 @@
+{
+	"@type": "WorkforceEmployeeRole",
+	"partyRoleId": "HaNoi",
+	"status": "active",
+	"validFor": {
+		"startDateTime": "2024-04-12T23:20:50.52Z",
+		"endDateTime": "2024-04-12T23:20:50.52Z"
+	}
+	"name": "xxx",
+	"partyResource":{
+		"@type": "PartyResource",
+		"cost":{"amount":100,"units":""},
+		"skills":""
+	},
+	"skillLvel": "1"
+}
