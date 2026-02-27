@@ -1,0 +1,6 @@
+{
+	"@type": "WorkOrderRelationship",
+	"href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+	"id": "0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+	"relationshipType": "reliesOn"
+}
