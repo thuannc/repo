@@ -1,0 +1,20 @@
+{
+	"@type": "WorkSpecification",
+	"@baseType": "EntitySpecification",
+	"href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+	"id": "0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+	"name": "Athelstan Amos",
+	"description": "Athelstan Amos",
+	"isAppointmentRequired":"true",
+	"workSpecRelationship":[{
+		"@type": "WorkSpecificationRelationship",
+		"href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+		"id": "0a848092-9cea-4d64-b582-c8bcb8dd57ca",
+		"name": "Athelstan Amos",
+		"role": "reliesOn",
+		"relationshipType": "reliesOn",
+		"validFor": {
+			"startDateTime": "2018-09-21T23:20:50.52Z"
+		}
+	}]	
+}
