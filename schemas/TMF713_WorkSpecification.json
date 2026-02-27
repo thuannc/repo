@@ -6,6 +6,22 @@
 	"name": "Athelstan Amos",
 	"description": "Athelstan Amos",
 	"isAppointmentRequired":"true",
+	"workSpecRole":[{
+		"@type": "WorkSpecificationRole"
+		"name": "workSpecRole"
+	}],
+	"workSpecType":[{
+		"@type": "WorkSpecificationType",
+		"name": "workSpecType"
+	}],
+	"workSpecVersion":[{
+		"@type": "WorkSpecificationVersion",
+		"workSpecRevisionType": "1.0"
+	}],
+	"workSpecCost":[{
+		"@type": "WorkSpecificationVersion",
+		"costToBusiness": {"amount":100, "units":"VND" }
+	}],
 	"workSpecRelationship":[{
 		"@type": "WorkSpecificationRelationship",
 		"href": "https://mycsp.com/tmf-api/v5/workOrderManagement/workOrder/0a848092-9cea-4d64-b582-c8bcb8dd57ca",
