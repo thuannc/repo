@@ -1,0 +1,16 @@
+{
+	"@type": "WorkSpecFulfillmentRate",
+	"quantity": {"amount":1,"units":""},
+	"consumptionCapacity": "1",
+	"standardDivingTime":"1",
+	"workforceOrganizationRole":{
+		"@type": "WorkforceOrganizationRole"
+	},
+	"place":{
+		"@type": "Place",
+		"name": "HaNoi"
+	},
+	"workSpecification":{
+		"@type": "WorkSpecification"
+	}
+}
