@@ -1,1 +1,31 @@
 
+{
+		"@type": "WorkforceEmployeeAssignment",
+		"id": "50e8c30a-77f4-4308-804e-a24b321ff1e1",
+		"skillType": "FTTH Installation Engineer",
+		"state": "acknowledged",
+		"timeSlot": [{
+		"@type": "TimeSlot",
+			"validFor": {
+			"startDateTime": "2024-04-12T23:20:50.52Z",
+			"endDateTime": "2024-04-12T23:20:50.52Z"
+			}
+		}],
+		"workforceEmployee": {
+			"@type": "Individual",
+			"name": "Athelstan Amos",
+			"id":"12231244",
+			"contactMedium":[{
+				"@type": "PhoneContactMedium",
+				"@baseType": "ContactMedium",
+				"contactType": "private",
+				"id": "c0181f3d83e144a59162fd6136a98462",
+				"preferred": true,
+				"validFor": {
+					"startDateTime": "2018-09-21T23:20:50.52Z"
+				},
+				"verified": true,
+				"phoneNumber": "+1 202-918-2132"
+			}]
+		}
+	}
