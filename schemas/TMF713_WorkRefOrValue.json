@@ -39,8 +39,7 @@
 					"geographicAddressType": "Building"
 				},
 				{
-					"href": "https://mycsp.com/tmf-api/geographicLocationManagement/v5/geographicLocation/0c8563f3-26e6-4673-9f82-
-					9784d3df257d",
+					"href": "https://mycsp.com/tmf-api/geographicLocationManagement/v5/geographicLocation/0c8563f3-26e6-4673-9f82-9784d3df257d",
 					"id": "0c8563f3-26e6-4673-9f82-9784d3df257d",
 					"@type": "GeoJsonPolygon",
 					"coordinates": [
