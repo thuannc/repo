@@ -19,9 +19,7 @@
 		"role": "string",
 		"place": {
 			"@type": "GeographicSite",
-			"href": "https://mycsp.com/tmf-
-			api/geographicSiteManagement/v5/geographicSite/ae4b915f-16f5-4f05-a3c7-
-			8c6a99c7d24b",
+			"href": "https://mycsp.com/tmf-api/geographicSiteManagement/v5/geographicSite/ae4b915f-16f5-4f05-a3c7-8c6a99c7d24b",
 			"id": "ae4b915f-16f5-4f05-a3c7-8c6a99c7d24b",
 			"code": "BS-9283",
 			"description": "This is the site for the base station BS-9283",
